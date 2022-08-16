@@ -1,0 +1,20 @@
+{
+  "id": "swords-for-hire",
+  "listable": false,
+  "name": "Swords for Hire",
+  "rules": [
+    {
+      "name": "Fighting for Coin",
+      "description": ""
+    },
+    {
+      "id": "personality",
+      "name": "Personality",
+      "description": ""
+    }
+  ],
+  "characters": [
+    "mercenary-goon",
+    "rabbin-tood"
+  ]
+}

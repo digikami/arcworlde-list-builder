@@ -1,0 +1,68 @@
+{
+  "id": "common",
+  "name": "Common",
+  "armoury": [
+    {
+      "id": "arcanite-token",
+      "name": "Arcanite Token",
+      "type": "Item",
+      "baseCost": 10,
+      "description": ""
+    },
+    {
+      "id": "shield",
+      "name": "Shield",
+      "type": "Equipment",
+      "baseCost": 15,
+      "description": ""
+    },
+    {
+      "id": "spear",
+      "name": "Spear",
+      "type": "Equipment",
+      "baseCost": 10,
+      "description": ""
+    },
+    {
+      "id": "torch",
+      "name": "Torch",
+      "type": "Item",
+      "baseCost": 10,
+      "description": ""
+    },
+    {
+      "id": "two-handed-weapon",
+      "name": "Two Handed Weapon",
+      "type": "Equipment",
+      "baseCost": 10,
+      "description": ""
+    },
+    {
+      "id": "dual-weapons",
+      "name": "Dual Weapons",
+      "type": "Equipment",
+      "baseCost": 10,
+      "description": ""
+    },
+    {
+      "id": "light-armour",
+      "name": "Light Armour",
+      "type": "Equipment",
+      "baseCost": 20,
+      "description": ""
+    },
+    {
+      "id": "heavy-armour",
+      "name": "Heavy Armour",
+      "type": "Equipment",
+      "baseCost": 35,
+      "description": ""
+    }
+  ],
+  "rules": [
+    {
+      "id": "flamable",
+      "name": "Flamable"
+    }
+  ]
+}

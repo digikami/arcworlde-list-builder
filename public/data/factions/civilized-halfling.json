@@ -1,0 +1,341 @@
+{
+  "id": "civilized-halfling",
+  "name": "Halflings of Hobbleshire",
+  "listable": true,
+  "tags": ["halfling", "civilized"],
+  "rules": [
+    {
+      "name": "Civilized Lands",
+      "description": ""
+    },
+    {
+      "id": "make-orders",
+      "name": "Make Orders",
+      "description": ""
+    },
+    {
+      "id": "take-orders",
+      "name": "Take Orders",
+      "description": ""
+    }
+  ],
+  "spell_lists": [
+    {
+      "id": "cookbook",
+      "name": "The Grand Cookbook of Bulbo Chubb",
+      "spells": [
+        {
+          "name": "Hearty Veggie Soup",
+          "draw": 14,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "armoury": [
+    {
+      "id": "packed-lunch",
+      "name": "Packed Lunch",
+      "type": "Item",
+      "baseCost": 10,
+      "description": ""
+    },
+    {
+      "id": "halfling-ranged-weapon",
+      "name": "Halfling Ranged Weapon",
+      "type": "Equipment",
+      "baseCost": 15,
+      "description": "",
+      "modifications": {
+        "attacks": [{
+          "type": "ranged",
+          "name": "Shot",
+          "power": 5,
+          "special": "12\" range."
+        }]
+      }
+    },
+    {
+      "id": "town-banner",
+      "name": "Town Banner",
+      "type": "Item",
+      "baseCost": 15,
+      "description": ""
+    },
+    {
+      "id": "halfling-mount",
+      "name": "Halfling Mount",
+      "type": "Equipment",
+      "baseCost": 30,
+      "description": "",
+      "allow": ["halfling-sheriff", "halfling-militia", "halfling-town-guard"],
+      "modifications": {
+        "hp": 5,
+        "move": 4,
+        "rules": [
+          "bestiary:agile"
+        ]
+      }
+    },
+    {
+      "id": "potbelly-cauldron",
+      "name": "Potbelly Cauldron",
+      "type": "Equipment",
+      "baseCost": 30,
+      "description": "",
+      "allow": ["halfling-battle-cook"]
+    },
+    {
+      "id": "ranger-cloak",
+      "name": "Ranger Cloak",
+      "type": "Equipment",
+      "baseCost": 10,
+      "description": ""
+    }
+  ],
+  "characters": [
+    {
+      "id": "halfling-sheriff",
+      "name": "Halfling Sheriff",
+      "class": ["Commander"],
+      "baseCost": 80,
+
+      "ap": 4,
+      "move": 4,
+      "bravery": 9,
+      "hp": 10,
+      "attacks": [
+        {
+          "type": "melee",
+          "ap": 2,
+          "name": "Furious Wallop",
+          "power": 8,
+          "special": "If a Critical Hit is rolled, reduce the target Character's AP by 1 or their next Activation. This does not stack."
+        },
+        {
+          "type": "melee",
+          "ap": 1,
+          "name": "Hearty Stab",
+          "power": 5,
+          "special": "Critical Hits ignore Armour"
+        }
+      ],
+      "equipment": [
+        "common:light-armour"
+      ],
+      "items": [],
+      "rules": [
+        "civilized-halfling:make-orders",
+        {
+          "name": "Rousing Cheer",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "id": "halfling-battle-cook",
+      "name": "Halfling Battle Cook",
+      "class": ["Mage"],
+      "baseCost": 80,
+
+      "ap": 3,
+      "move": 4,
+      "bravery": 8,
+      "hp": 9,
+      "attacks": [
+        {
+          "type": "melee",
+          "ap": 2,
+          "name": "Spoon Whack",
+          "power": 5,
+          "special": "If a Critical Hit is rolled, reduce the target Character's AP by 1 or their next Activation. This does not stack."
+        }
+      ],
+      "equipment": [],
+      "items": [],
+      "rules": [
+        "civilized-halfling:make-orders"
+      ]
+    },
+    {
+      "id": "halfling-militia",
+      "name": "Halfling Militia",
+      "class": ["Unit"],
+      "baseCost": 40,
+
+      "ap": 2,
+      "move": 4,
+      "bravery": 7,
+      "hp": 6,
+      "attacks": [
+        {
+          "type": "melee",
+          "ap": 2,
+          "name": "Thwhack",
+          "power": 6,
+          "special": "A Critical Hit allows the player to re-roll 1 failed Hit."
+        },
+        {
+          "type": "melee",
+          "ap": 1,
+          "name": "Thrust",
+          "power": 4
+        }
+      ],
+      "equipment": [],
+      "items": [],
+      "rules": [
+        "civilized-halfling:take-orders"
+      ]
+    },
+    {
+      "id": "halfling-town-guard",
+      "name": "Halfling Town Guard",
+      "class": ["Elite"],
+      "baseCost": 70,
+
+      "ap": 3,
+      "move": 4,
+      "bravery": 8,
+      "hp": 7,
+      "attacks": [
+        {
+          "type": "melee",
+          "ap": 2,
+          "name": "Determined Hack",
+          "power": 7,
+          "special": "A Critical Hit breaks 1 Armour."
+        },
+        {
+          "type": "melee",
+          "ap": 1,
+          "name": "Chop",
+          "power": 4
+        }
+      ],
+      "equipment": [
+        "common:heavy-armour"
+      ],
+      "items": [],
+      "rules": [
+        "civilized-halfling:take-orders",
+        {
+          "name": "Bodyguard",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "id": "halfling-thing-flinger",
+      "name": "Halfling Thing-Flinger",
+      "class": ["Heavy"],
+      "baseCost": 200,
+
+      "ap": 3,
+      "move": 4,
+      "bravery": 7,
+      "hp": 20,
+      "attacks": [
+        {
+          "type": "melee",
+          "ap": 2,
+          "name": "Trample",
+          "power": 4,
+          "special": "If a Critical Hit is rolled, the target Character is Prone and the Thing-Flinger may move out of combat without penalties."
+        },
+        {
+          "type": "ranged",
+          "name": "And...FIRE!",
+          "power": 10,
+          "special": "20\" range. Requires a Hard Feat to Shoot."
+        }
+      ],
+      "equipment": [],
+      "items": [],
+      "rules": [
+        "common:flamable",
+        {
+          "name": "Crew",
+          "description": ""
+        },
+        {
+          "name": "Random Payload",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "id": "halfling-monster-hunter",
+      "name": "Halfling Monster Hunter",
+      "class": ["Irregular"],
+      "baseCost": 60,
+
+      "ap": 3,
+      "move": 4,
+      "bravery": 8,
+      "hp": 6,
+      "attacks": [
+        {
+          "type": "melee",
+          "ap": 2,
+          "name": "Cunning Thrust",
+          "power": 6,
+          "special": "Re-roll all failed Hits against Monsters or Titans. These cannot be re-rolled again."
+        },
+        {
+          "type": "ranged",
+          "name": "Lasso",
+          "power": 3,
+          "special": "6\" range. If a Critical Hit is rolled, the target may not move until the end of the round, and must achieve an Easy Feat to escape. A Character can be Lassoed by multiple Characters at the same time."
+        }
+      ],
+      "equipment": [],
+      "items": [],
+      "rules": [
+        {
+          "name": "Traps",
+          "description": ""
+        },
+        {
+          "name": "Dauntless",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "id": "halfling-trollhound",
+      "name": "Halfling Trollhound",
+      "class": ["Beast"],
+      "baseCost": 35,
+
+      "ap": 2,
+      "move": 6,
+      "bravery": 7,
+      "hp": 6,
+      "attacks": [
+        {
+          "type": "melee",
+          "ap": 1,
+          "name": "Bite",
+          "power": 5
+        }
+      ],
+      "equipment": [],
+      "items": [],
+      "rules": [
+        {
+          "name": "Agile",
+          "description": ""
+        },
+        {
+          "name": "Pack Hunter",
+          "description": ""
+        },
+        {
+          "name": "Cling On",
+          "description": ""
+        }
+      ]
+    }
+  ]
+}

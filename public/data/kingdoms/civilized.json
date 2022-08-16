@@ -1,0 +1,8 @@
+{
+  "id": "civilized",
+  "name": "The Civilized Nations",
+  "factions": [
+    "civilized-halfling",
+    "civilized-imperial"
+  ]
+}

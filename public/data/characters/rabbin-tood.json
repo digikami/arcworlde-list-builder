@@ -1,0 +1,38 @@
+{
+  "id": "rabbin-tood",
+  "factionId": "swords-for-hire",
+  "name": "Rabbin Tood",
+  "class": ["Sword for Hire"],
+  "baseCost": 65,
+
+  "ap": 3,
+  "move": 4,
+  "bravery": 8,
+  "hp": 10,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Gut Punch",
+      "power": 7,
+      "special": "If a Critical Hit is rolled, reduce the Target's AP by 1 for its next Activation. This does not stack."
+    },
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Shin Kick",
+      "power": 4
+    }
+  ],
+  "equipment": [
+    "civilized-halfling:halfling-ranged-weapon"
+  ],
+  "items": [],
+  "rules": [
+    "swords-for-hire:personality",
+    {
+      "name": "Expert Poacher", 
+      "description": ""
+    }
+  ]
+}

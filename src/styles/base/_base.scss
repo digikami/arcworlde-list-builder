@@ -1,0 +1,22 @@
+body {
+  position: relative;
+}
+*:focus-visible {
+  outline: 1px solid currentColor;
+  outline-offset: 2px;
+}
+
+.skip-links {
+  background-color: $primary;
+  text-align: center;
+}
+
+.skip-links a {
+  display: inline-block;
+  padding: 0.5rem;
+  color: $white;
+}
+
+.warband-member:nth-child(2n) {
+  background-color: $light;
+}

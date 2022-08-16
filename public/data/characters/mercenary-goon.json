@@ -1,0 +1,36 @@
+{
+  "id": "mercenary-goon",
+  "factionId": "swords-for-hire",
+  "name": "Mercenary Goon",
+  "class": ["Sword for Hire"],
+  "baseCost": 30,
+
+  "ap": 2,
+  "move": 4,
+  "bravery": 7,
+  "hp": 6,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Wallop",
+      "power": 6,
+      "special": "A Critical Hit allows the player to re-roll 1 failed Hit."
+    },
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Whack",
+      "power": 4
+    }
+  ],
+  "equipment": [
+  ],
+  "items": [],
+  "rules": [
+    {
+      "name": "Expendable", 
+      "description": ""
+    }
+  ]
+}

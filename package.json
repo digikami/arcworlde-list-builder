@@ -1,0 +1,80 @@
+{
+  "name": "arcworlde-list-builder",
+  "version": "1.0.0",
+  "description": "List builder for the ArcWorlde tabletop wargame",
+  "main": "index.js",
+  "scripts": {
+    "build": "gulp build",
+    "watch": "gulp buildWatch",
+    "start": "gulp start",
+    "dev": "gulp develop"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/digikami/arcworlde-list-builder.git"
+  },
+  "author": "Tomio Ueda",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/digikami/arcworlde-list-builder/issues"
+  },
+  "homepage": "https://github.com/digikami/arcworlde-list-builder#readme",
+  "devDependencies": {
+    "@babel/core": "^7.18.5",
+    "@babel/eslint-parser": "^7.18.2",
+    "@babel/preset-env": "^7.18.2",
+    "autoprefixer": "^10.4.7",
+    "babel-loader": "^8.2.5",
+    "core-js": "^3.23.3",
+    "css-loader": "^6.7.1",
+    "cssnano": "^5.1.12",
+    "del": "^6.1.1",
+    "express": "^4.18.1",
+    "gulp": "^4.0.2",
+    "gulp-eslint": "^6.0.0",
+    "gulp-express": "^0.3.5",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-load-plugins": "^2.0.7",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^9.0.1",
+    "gulp-sass": "^5.1.0",
+    "gulp-size": "^4.0.1",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-svg-sprite": "^1.5.0",
+    "node-sass": "^7.0.1",
+    "sass": "^1.53.0",
+    "vue-loader": "^17.0.0",
+    "vue-multiselect": "^3.0.0-alpha.2",
+    "vue-style-loader": "^4.1.3",
+    "webpack": "^5.73.0",
+    "webpack-stream": "^7.0.0"
+  },
+  "dependencies": {
+    "bootstrap": "^5.1.3",
+    "bootstrap-icons": "^1.8.3",
+    "vue": "^3.2.37"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "Firefox ESR"
+  ],
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "parserOptions": {
+      "requireConfigFile": false,
+      "sourceType": "module"
+    },
+    "env": {
+      "es6": true,
+      "node": true,
+      "browser": true
+    },
+    "rules": {
+      "quotes": [
+        2,
+        "single"
+      ]
+    }
+  }
+}
