@@ -68,7 +68,7 @@
       "type": "Equipment",
       "baseCost": 30,
       "description": "",
-      "allow": ["halfling-sheriff", "halfling-militia", "halfling-town-guard"],
+      "allow": [{"id": "halfling-sheriff"}, {"id": "halfling-militia"}, {"id": "halfling-town-guard"}],
       "modifications": {
         "hp": 5,
         "move": 4,
@@ -83,7 +83,7 @@
       "type": "Equipment",
       "baseCost": 30,
       "description": "",
-      "allow": ["halfling-battle-cook"]
+      "allow": [{"id": "halfling-battle-cook"}]
     },
     {
       "id": "ranger-cloak",
@@ -253,7 +253,7 @@
       "equipment": [],
       "items": [],
       "rules": [
-        "common:flamable",
+        "common:flammable",
         {
           "name": "Crew",
           "description": ""

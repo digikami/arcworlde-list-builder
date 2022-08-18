@@ -31,6 +31,18 @@ class Faction extends BaseModel {
       return characters;
     });
   }
+
+  getCharacterCost(character) {
+    let cost = character.get('baseCost');
+    if (this.get('cost_modifiers')) {
+      this.get('cost_modifiers').forEach((mod) => {
+        if (character.matches(mod.match)) {
+          cost *= mod.modifier;
+        }
+      })
+    }
+    return Math.round(cost);
+  }
 }
 
 BaseModel.initClass(Faction, 'factions');

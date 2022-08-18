@@ -1,0 +1,48 @@
+{
+  "id": "juvenile-forest-dragon",
+  "factionId": "bestiary",
+  "name": "Juvenile Forest Dragon",
+  "class": ["monster"],
+  "baseCost": 150,
+
+  "ap": 5,
+  "move": 6,
+  "bravery": 7,
+  "hp": 15,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Poison Bite",
+      "power": "*",
+      "special": "The target receives a number of Hits equal to the amount of HP they are below their starting HP."
+    },
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Tail Swipe",
+      "power": 4,
+      "special": "All Characters within 2\" are targeted by this Attack. If a Critical Hit is rolled, and they are on a smaller baes size, the target Character is Prone."
+    },
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Sharp Claws",
+      "power": 5,
+      "special": "Critical Hits ignore Armour"
+    }
+  ],
+  "equipment": [
+  ],
+  "items": [],
+  "rules": [
+    "bestiary:split-activation",
+    "bestiary:fearsome",
+    "bestiary:dwindling-strength",
+    "bestiary:death-throes",
+    {
+      "name": "Fungal Regeneration",
+      "description": "If this Character is not in base contact with an enemy Character at the end of the Round, it regains D6 HP."
+    }
+  ]
+}

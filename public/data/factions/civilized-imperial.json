@@ -68,7 +68,7 @@
       "type": "Equipment",
       "baseCost": 30,
       "description": "",
-      "allow": ["imperial-captain", "imperial-trooper", "imperial-dragoon"],
+      "allow": [{"id": "imperial-captain"}, {"id":"imperial-trooper"}, {"id":"imperial-dragoon"}],
       "modifications": {
         "hp": 5,
         "move": 4,
@@ -98,7 +98,7 @@
       "type": "Equipment",
       "baseCost": 15,
       "description": "",
-      "allow": ["imperial-captain", "imperial-tinkerer", "imperial-dragoon"],
+      "allow": [{"id": "imperial-captain"}, {"id": "imperial-tinkerer"}, {"id": "imperial-dragoon"}],
       "modifications": {
         "attacks": [{
           "type": "ranged",
@@ -114,7 +114,7 @@
       "type": "Equipment",
       "baseCost": 10,
       "description": "",
-      "allow": ["imperial-trooper"],
+      "allow": [{"id": "imperial-trooper"}],
       "modifications": {
         "bravery": 1,
         "rules": ["civilized-imperial:make-orders"]
@@ -297,6 +297,7 @@
         "type": "Equipment",
         "baseCost": 40,
         "description": "",
+        "allow": [{"id": "imperial-ogre"}],
         "modifications": {
           "attacks": [{
             "type": "ranged",

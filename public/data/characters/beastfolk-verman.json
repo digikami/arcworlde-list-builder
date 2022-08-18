@@ -1,0 +1,36 @@
+{
+  "id": "beastfolk-verman",
+  "name": "Beastfolk Verman",
+  "class": ["Unit"],
+  "baseCost": 30,
+
+  "ap": 2,
+  "move": 5,
+  "bravery": 7,
+  "hp": 5,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Eager Attack",
+      "power": 7,
+      "special": "If there are more Failures than Successes when rolling to Hit, the Verman loses D3 HP afterwards."
+    },
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Stab",
+      "power": 3
+    }
+  ],
+  "equipment": [],
+  "items": [],
+  "rules": [
+    "nomad-beastfolk:diminutive",
+    "nomad-beastfolk:animal-form",
+    {
+      "name": "Go Get'Em",
+      "description": ""
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "id": "arachnid-queen",
+  "factionId": "bestiary",
+  "name": "Arachnid Queen",
+  "class": ["Titan"],
+  "baseCost": 900,
+
+  "ap": 28,
+  "move": 5,
+  "bravery": 10,
+  "hp": 80,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Horrible Sting",
+      "power": 4,
+      "special": "If a Critical Hit is rolled, an extra Hit is taken by the target the next time they Activate. If they target fails to Defend it, another Hit is taken in their next Activation, and so on. These additional Hits ignore Armour and Shields."
+    },
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Grasp",
+      "power": 5,
+      "special": "If a Critical Hit is rolled, the Arachnid Queen may Gobble the target on an Easy Feat during this Activation."
+    },
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Mandibles",
+      "power": 5,
+      "special": "Critical Hits break 1 Armour."
+    }
+  ],
+  "equipment": [
+  ],
+  "items": [],
+  "rules": [
+    "bestiary:split-activation",
+    "bestiary:fearsome",
+    "bestiary:dwindling-strength",
+    "bestiary:death-throes",
+    "bestiary:gobble",
+    {
+      "name": "Arcanite Carapace",
+      "description": "+1 Armour. Every time the Arachnid Queen loses AP due to Dwindling Strength, place 1 Arcanite Token in base contact."
+    },
+    {
+      "name": "Web Spray",
+      "description": ""
+    },
+    {
+      "name": "Spiderwitch",
+      "description": ""
+    }
+  ]
+}

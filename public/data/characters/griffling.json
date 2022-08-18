@@ -1,0 +1,38 @@
+{
+  "id": "griffling",
+  "factionId": "bestiary",
+  "name": "Griffling",
+  "class": ["beast"],
+  "baseCost": 22,
+
+  "ap": 2,
+  "move": 6,
+  "bravery": 6,
+  "hp": 4,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Dive Bomb",
+      "power": 7,
+      "special": "May target characters within 2\". After this Attack, move this Character in base contact with the target. If more Failures are rolled than Successes to Hit, this Character is Knocked Out."
+    },
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Peck",
+      "power": 3
+    }
+  ],
+  "equipment": [
+  ],
+  "items": [],
+  "rules": [
+    "bestiary:fly",
+    "bestiary:pack-hunter",
+    {
+      "name": "Chocks Away!",
+      "description": ""
+    }
+  ]
+}

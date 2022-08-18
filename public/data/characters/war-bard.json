@@ -1,0 +1,35 @@
+{
+  "id": "war-bard",
+  "name": "War Bard",
+  "class": ["Irregular"],
+  "baseCost": 70,
+
+  "ap": 3,
+  "move": 5,
+  "bravery": 7,
+  "hp": 8,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Almighty Racket",
+      "power": 3,
+      "special": "Every non-Beastfolk Character within 6\" is affected by this Attack."
+    },
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Good Kickin'",
+      "power": 4
+    }
+  ],
+  "equipment": [],
+  "items": [],
+  "rules": [
+    "nomad-beastfolk:animal-form",
+    {
+      "name": "Ballads of the Beastfolk",
+      "description": ""
+    }
+  ]
+}

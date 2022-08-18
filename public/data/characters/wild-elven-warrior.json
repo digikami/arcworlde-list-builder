@@ -1,0 +1,33 @@
+{
+  "id": "wild-elven-warrior",
+  "name": "Wild Elven Warrior",
+  "class": ["Elite"],
+  "baseCost": 95,
+
+  "ap": 4,
+  "move": 5,
+  "bravery": 8,
+  "hp": 10,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Flurry of Baldes",
+      "power": 5,
+      "special": "Each Critical Hit allows 1 more D6 to be rolled."
+    },
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Wicked Slash",
+      "power": 5,
+      "special": "Each Critical Hit ignores 1 Armour."
+    }
+  ],
+  "equipment": [],
+  "items": [],
+  "rules": [
+    "bestiary:agile",
+    "fae-wild-elves:summoner"
+  ]
+}

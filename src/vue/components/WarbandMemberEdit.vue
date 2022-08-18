@@ -1,13 +1,13 @@
 <template>
-  <div class="warband-member p-3">
-    <div class="d-flex justify-content-between">
-      <h3 class="accordion-header" :id="`wbm_${member.get('id')}_header`">
-        {{ member.get('name') }} <small class="badge bg-secondary fs-5" v-if="member.get('name') != member.get('character').get('name')">{{ member.get('character').get('name') }}</small>
+  <div class="warband-member p-3" ref="root">
+    <div class="d-flex flex-column flex-md-row justify-content-between">
+      <h3 class="accordion-header d-flex align-items-center mb-3 mb-md-0" :id="`wbm_${member.get('id')}_header`">
+        {{ member.get('name') }} <small class="badge bg-secondary fs-6 mx-3" v-if="member.get('name') != member.get('character').get('name')">{{ member.get('character').get('name') }}</small>
       </h3>
-      <div class="btn-toolbar">
+      <div class="btn-toolbar d-flex justify-content-between">
         <div class="btn-group me-3">
-          <div class="input-group-text">
-            {{ member.totalCost() }} GP <small class="text-secondary ms-2">({{ member.characterCost() }} GP + {{ member.equipmentCost() }} GP)</small>
+          <div ref="memberCost" class="input-group-text" data-bs-toggle="tooltip" :data-bs-title="`${ member.characterCost(this.faction) } GP + ${ member.equipmentCost(this.faction) } GP`">
+            {{ member.totalCost(this.faction) }} GP
           </div>
         </div>
         <div class="btn-group">
@@ -17,7 +17,8 @@
           <button class="btn btn-outline-secondary" :aria-label="`Edit ${ member.get('name') }'s Equipment`" data-bs-toggle="collapse" :data-bs-target="`#wbm_${member.get('id')}_details`">
             <i class="bi-shield"></i>
           </button>
-          <button class="btn btn-danger" :aria-label="`Delete ${ member.get('name') }`" @click="$emit('requestMemberRemoval', member)">
+          <button class="btn btn-outline-secondary" :aria-label="`Delete ${ member.get('name') }`" @click="$emit('requestMemberRemoval', member)">
+            <i class="bi-trash"></i>
           </button>
         </div>
       </div>
@@ -46,13 +47,14 @@
     </div>
 
     <div class="collapse" :id="`wbm_${member.get('id')}_details`" :aria-labelledby="`wbm_${member.get('id')}_header`">
-      <div class="accordion-body">
-        <div class="border-secondary border-2 border-bottom d-flex justify-content-between align-items-center py-3">
-          <strong>Equipment</strong>
+      <div class="accordion-body px-0 px-md-4">
+        <div class="border-secondary border-2 border-bottom d-flex flex-column flex-md-row justify-content-md-between align-items-md-center py-3">
+          <strong class="mb-3 mb-md-0">Equipment</strong>
           <div class="btn-group">
             <multiselect
               @select="requestAddEquipment"
               :options="equipmentDropdownOptions"
+              openDirection="bottom"
               group-values="options"
               group-label="name"
               label="name"
@@ -71,7 +73,7 @@
                 </div>
               </div>
               <div class="btn-group" v-if="!equipment.get('fixed')">
-                <button class="btn btn-danger">
+                <button class="btn btn-outline-secondary" @click="requestRemoveEquipment(equipment)">
                   <i class="bi-x"></i>
                 </button>
               </div>
@@ -85,7 +87,7 @@
 <script>
   import Multiselect from "vue-multiselect";
   import WarbandEquipment from '../models/warband-equipment';
-  import { Modal } from 'bootstrap';
+  import { Modal, Tooltip } from 'bootstrap';
 
   export default {
     components: {
@@ -98,25 +100,14 @@
         }
       }
     },
-    props: ['member', 'faction', 'common'],
+    props: ['member', 'faction', 'common', 'list'],
     computed: {
       equipmentDropdownOptions() {
         return [
           {
-            id: 'character',
-            name: this.member.get('character').get('name'),
-            options: this.member.get('character').get('armoury').map((opt) => {
-              return {
-                id: opt.get('id'),
-                name: opt.get('name'),
-                equipment: opt
-              }
-            })
-          },
-          {
             id: this.faction.get('id'),
             name: this.faction.get('name'),
-            options: this.faction.get('armoury').filter((opt) => !opt.get('allow') || opt.get('allow').includes(this.member.get('character').id)).map((opt) => {
+            options: this.list.getArmoury().filter((opt) => this.member.isAllowedEquipment(opt)).map((opt) => {
               return {
                 id: opt.get('id'),
                 name: opt.get('name'),
@@ -138,9 +129,19 @@
         ]
       }
     },
+    mounted() {
+      this.$refs.root.querySelectorAll("[data-bs-toggle='tooltip']").forEach((tt) => {
+        Tooltip.getOrCreateInstance(tt);
+      })
+    },
     methods: {
       requestAddEquipment(request) {
         this.member.get('equipment').push(new WarbandEquipment({ armouryItem: request.equipment }));
+        setTimeout(this.updateCostTooltip, 10);
+      },
+      requestRemoveEquipment(equipment) {
+        this.member.get('equipment').splice(this.member.get('equipment').indexOf(equipment), 1);
+        setTimeout(this.updateCostTooltip, 1);
       },
       saveEdits() {
         if (this.editFormValues.name == "") {
@@ -148,6 +149,12 @@
         }
         this.member.set('name', this.editFormValues.name);
         Modal.getInstance(this.$refs.memberEditModal).hide();
+      },
+      updateCostTooltip() {
+        this.$refs.root.querySelectorAll("[data-bs-toggle='tooltip']").forEach((tt) => {
+          let tto = Tooltip.getOrCreateInstance(tt);
+          tto._config.title = tt.getAttribute('data-bs-title');
+        })
       }
     }
   }  

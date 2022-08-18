@@ -1,0 +1,38 @@
+{
+  "id": "wild-elven-blademaster",
+  "name": "Wild Elven Blademaster",
+  "class": ["Irregular"],
+  "baseCost": 115,
+
+  "ap": 4,
+  "move": 5,
+  "bravery": 8,
+  "hp": 10,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Bladestorm",
+      "power": 6,
+      "special": "Each Critical Hit allows 2 more D6 to be rolled."
+    },
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Scissor Strike",
+      "power": 5,
+      "special": "Each Critical Hit breaks 1 Armour."
+    }
+  ],
+  "equipment": [
+    "common:dual-weapons"
+  ],
+  "items": [],
+  "rules": [
+    "bestiary:agile",
+    {
+      "name": "Berserker",
+      "description": ""
+    }
+  ]
+}

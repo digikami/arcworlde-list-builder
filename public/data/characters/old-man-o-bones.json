@@ -1,0 +1,31 @@
+{
+  "id": "old-man-o-bones",
+  "factionId": "undead-raiders",
+  "name": "Old Man'o'Bones",
+  "class": ["Mage"],
+  "baseCost": 90,
+
+  "ap": 3,
+  "move": 4,
+  "bravery": 8,
+  "hp": 12,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Touch of Death",
+      "power": 6,
+      "special": "Ignores Armour."
+    }
+  ],
+  "equipment": [],
+  "items": [],
+  "rules": [
+    "undead-raiders:soul-eater",
+    "bestiary:fly",
+    {
+      "name": "Crumbling Remains",
+      "description": ""
+    }
+  ]
+}

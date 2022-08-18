@@ -1,0 +1,33 @@
+{
+  "id": "beastfolk-clanbeast",
+  "name": "Beastfolk Clanbeast",
+  "class": ["Elite"],
+  "baseCost": 85,
+
+  "ap": 4,
+  "move": 4,
+  "bravery": 7,
+  "hp": 10,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Savage",
+      "power": 7,
+      "special": "Each Critical Hit allows one more D6 to be rolled."
+    },
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Smash",
+      "power": 5,
+      "special": "Critical Hits break 1 Armour."
+    }
+  ],
+  "equipment": [],
+  "items": [],
+  "rules": [
+    "nomad-beastfolk:intimidating",
+    "nomad-beastfolk:animal-form"
+  ]
+}

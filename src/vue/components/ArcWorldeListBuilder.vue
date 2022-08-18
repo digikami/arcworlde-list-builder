@@ -1,7 +1,7 @@
 <template>
   <div class="awlb">
-    <ListList v-if="currentList == null" :lists="lists" :factions="factions" :kingdoms="kingdoms" @requestEdit="handleEditRequest" @requestDelete="handleDeleteRequest"></ListList>
-    <ListEditor v-if="currentList != null" :list="currentList" :kingdoms="kingdoms" :common="common" @close="handleEditorCloseRequest"></ListEditor>
+    <ListList v-if="editWarband == null" :lists="lists" :factions="factions" :kingdoms="kingdoms" @requestEdit="handleEditRequest" @requestDelete="handleDeleteRequest"></ListList>
+    <ListEditor v-if="editWarband != null" :list="editWarband" :kingdoms="kingdoms" :common="common" @close="handleEditorCloseRequest"></ListEditor>
   </div>
 </template>
 <script>
@@ -20,7 +20,7 @@
         lists: [],
         kingdoms: [],
         common: {},
-        currentList: null
+        editWarband: null
       }
     },
     computed: {
@@ -62,14 +62,14 @@
 
     methods: {
       handleEditRequest(list) {
-        this.currentList = list;
+        this.editWarband = list;
       },
       handleDeleteRequest(list) {
         this.lists.splice(this.lists.indexOf(list), 1);
         list.delete();
       },
       handleEditorCloseRequest() {
-        this.currentList = null;
+        this.editWarband = null;
       }
     }
 

@@ -1,0 +1,35 @@
+{
+  "id": "woodfiend",
+  "name": "Woodfiend",
+  "class": ["Unit"],
+  "baseCost": 45,
+
+  "ap": 2,
+  "move": 3,
+  "bravery": 5,
+  "hp": 6,
+  "attacks": [
+    {
+      "type": "ranged",
+      "name": "Splinter",
+      "power": 4,
+      "special": "8\" range."
+    },
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Razorbark",
+      "power": 3
+    }
+  ],
+  "equipment": [],
+  "items": [],
+  "rules": [
+    "fae-wild-elves:summoned",
+    "common:flammable",
+    {
+      "name": "Shifting Forms",
+      "description": ""
+    }
+  ]
+}

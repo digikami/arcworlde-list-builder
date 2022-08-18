@@ -1,0 +1,35 @@
+{
+  "id": "ourk-brute",
+  "factionId": "nomad-ourk",
+  "name": "Ourk Brute",
+  "class": ["Elite"],
+  "baseCost": 85,
+
+  "ap": 4,
+  "move": 4,
+  "bravery": 7,
+  "hp": 11,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Brawl",
+      "power": 7,
+      "special": "Each Critical Hit allows one more D6 to be rolled."
+    },
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Smack",
+      "power": 5,
+      "special": "Critical Hits cause the next Attack to have +1 Power. This does not stack."
+    }
+  ],
+  "equipment": [
+  ],
+  "items": [],
+  "rules": [
+    "nomad-ourk:intimidating",
+    "nomad-ourk:hurl"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "id": "underling",
+  "name": "Underling",
+  "class": ["Unit"],
+  "baseCost": 20,
+
+  "ap": 2,
+  "move": 5,
+  "bravery": 5,
+  "hp": 4,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Blazing Demise",
+      "power": 5,
+      "special": "Targets every Character within 2\". This Character is Knocked Out after the Attack has been executed, and only 1HP is returned to the Dark Lord who summoned them."
+    },
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Nip",
+      "power": 3
+    }
+  ],
+  "equipment": [],
+  "items": [],
+  "rules": [
+    "fae-dark-lords:diminutive",
+    {
+      "name": "Firey Essence",
+      "description": ""
+    }
+  ]
+}

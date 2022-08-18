@@ -1,0 +1,117 @@
+{
+  "id": "fae-wild-elves",
+  "listable": true,
+  "name": "Wild Elves",
+  "rules": [
+    {
+      "id": "summoner",
+      "name": "Summoner",
+      "description": ""
+    },
+    {
+      "id": "summoned",
+      "name": "Summoned",
+      "description": ""
+    },
+    {
+      "id": "sacrifice",
+      "name": "Sacrifice",
+      "description": ""
+    }
+  ],
+  "spell_lists": [
+    {
+      "id": "darkwood-lore",
+      "name": "The Lore of the Darkwood",
+      "spells": [
+        {
+          "name": "Tangleweed",
+          "draw": 14,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "armoury": [
+    {
+      "id": "blood-stone",
+      "name": "Blood Stone",
+      "type": "Item",
+      "baseCost": 10,
+      "description": ""
+    },
+    {
+      "id": "wild-elven-ranged-weapon",
+      "name": "Wild Elven Ranged Weapon",
+      "type": "Equipment",
+      "baseCost": 15,
+      "description": "",
+      "modifications": {
+        "attacks": [{
+          "type": "ranged",
+          "name": "Shot",
+          "power": 6,
+          "special": "16\" range."
+        }]
+      }
+    },
+    {
+      "id": "sacrificial-blade",
+      "name": "Sacrificial Blade",
+      "type": "Equipment",
+      "baseCost": 20,
+      "description": ""
+    },
+    {
+      "id": "wild-elven-mount",
+      "name": "Wild Elven Mount",
+      "type": "Equipment",
+      "baseCost": 30,
+      "allow": [{"rules": "fae-wild-elves:summoner"}],
+      "description": "",
+      "modifications": {
+        "hp": 5,
+        "move": 4
+      }
+    },
+    {
+      "id": "strongbow",
+      "name": "Strongbow",
+      "type": "Equipment",
+      "baseCost": 30,
+      "description": "",
+      "modifications": {
+        "attacks": [{
+          "type": "ranged",
+          "name": "Shot",
+          "power": 10,
+          "special": "20\" range. Requires a Medium Feat to shoot."
+        }]
+      }
+    },
+    {
+      "id": "faeblade",
+      "name": "Faeblade",
+      "type": "Equipment",
+      "baseCost": 30,
+      "description": "",
+      "modifications": {
+        "attacks": [{
+          "type": "ranged",
+          "name": "Faeblade",
+          "power": 8,
+          "special": "12\" range. If the Target is Knocked Out, any leftover Damage is dealt as Hits to another enemy Character within 6\"."
+        }]
+      }
+    }
+  ],
+  "characters": [
+    "wild-elven-warchief",
+    "wild-elven-druid",
+    "woodfiend",
+    "wild-elven-warrior",
+    "briar-elk",
+    "wild-elven-blademaster",
+    "lichenhawk"
+  ]
+}

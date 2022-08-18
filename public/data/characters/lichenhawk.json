@@ -1,0 +1,33 @@
+{
+  "id": "lichenhawk",
+  "name": "Lichenhawk",
+  "class": ["Beast"],
+  "baseCost": 35,
+
+  "ap": 2,
+  "move": 8,
+  "bravery": 6,
+  "hp": 4,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Skydive",
+      "power": 8,
+      "special": "May target Characters within 2\". After this Attack, move this Character into base contact with the target. If more Failures are rolled than Successes to Hit, this Character is Knocked Out."
+    },
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Peck",
+      "power": 4
+    }
+  ],
+  "equipment": [],
+  "items": [],
+  "rules": [
+    "bestiary:fly",
+    "fae-wild-elves:summoned",
+    "common:flammable"
+  ]
+}

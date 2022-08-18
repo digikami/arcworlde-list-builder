@@ -1,0 +1,33 @@
+{
+  "id": "carrion-rat",
+  "factionId": "undead-raiders",
+  "name": "Carrion Rat",
+  "class": ["Beast"],
+  "baseCost": 15,
+
+  "ap": 2,
+  "move": 6,
+  "bravery": 5,
+  "hp": 3,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Death Leap",
+      "power": 5,
+      "special": "May target Characters within 2\". After this Attack, move this Character in base contact with the target. If more Failures are rolled than Successes to Hit, this Character is Knocked Out."
+    },
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Bite",
+      "power": 3
+    }
+  ],
+  "equipment": [],
+  "items": [],
+  "rules": [
+    "undead-raiders:risen",
+    "common:flammable"
+  ]
+}

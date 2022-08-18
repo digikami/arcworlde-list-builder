@@ -1,0 +1,35 @@
+{
+  "id": "hobgoblin-honcho",
+  "name": "Hobgoblin Honcho",
+  "class": ["Elite"],
+  "baseCost": 50,
+
+  "ap": 3,
+  "move": 4,
+  "bravery": 7,
+  "hp": 7,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Whipcrack",
+      "power": 6,
+      "special": "May target any Character within 4\"."
+    },
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Brutish Slash",
+      "power": 4
+    }
+  ],
+  "equipment": [],
+  "items": [],
+  "rules": [
+    {
+      "name": "Slavedriver",
+      "description": ""
+    }
+  ],
+  "tags": ["hobgoblin"]
+}

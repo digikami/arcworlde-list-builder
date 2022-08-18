@@ -1,0 +1,51 @@
+{
+  "id": "kelpie",
+  "name": "Kelpie",
+  "class": ["Heavy", "Monster"],
+  "baseCost": 200,
+
+  "ap": 7,
+  "move": 6,
+  "bravery": 7,
+  "hp": 20,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Crunch",
+      "power": 8,
+      "special": "If a Critical Hit is made, the target Character may not move out of base contact with the Kelpie until the next Round."
+    },
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Tail Swipe",
+      "power": 5,
+      "special": "Each Character within 2\" is affected by this Attack."
+    },
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Wicked Slash",
+      "power": 5,
+      "special": "Critical Hits break 1 Armour."
+    }
+  ],
+  "equipment": [],
+  "items": [],
+  "rules": [
+    "bestiary:agile",
+    "bestiary:split-activation",
+    "bestiary:fearsome",
+    "bestiary:dwindling-strength",
+    "bestiary:death-throes",
+    {
+      "name": "Aquiatic",
+      "description": ""
+    },
+    {
+      "name": "Cloying Mist",
+      "description": ""
+    }
+  ]
+}

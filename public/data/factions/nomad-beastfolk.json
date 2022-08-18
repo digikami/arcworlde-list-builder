@@ -1,0 +1,132 @@
+{
+  "id": "nomad-beastfolk",
+  "listable": true,
+  "name": "Beastfolk",
+  "rules": [
+    {
+      "id": "beastkin",
+      "name": "Beastkin",
+      "description": ""
+    },
+    {
+      "id": "diminutive",
+      "name": "Diminutive",
+      "description": ""
+    },
+    {
+      "id": "intimidating",
+      "name": "Intimidating",
+      "description": ""
+    },
+    {
+      "id": "animal-forms",
+      "name": "Animal Forms",
+      "description": ""
+    }
+  ],
+  "cost_modifiers": [
+    {
+      "match": [{ "factionId": "bestiary" }],
+      "modifier": 0.8
+    }
+  ],
+  "spell_lists": [{
+    "id": "lore-of-tooth-and-fur",
+    "name": "The Lore of Tooth and Fur",
+    "spells": [
+      {
+        "name": "Forest Creatures",
+        "draw": 14,
+        "description": ""
+      }
+    ]
+  }],
+  "armoury": [
+    {
+      "id": "cured-meat",
+      "name": "Cured Meat",
+      "type": "Item",
+      "baseCost": 10,
+      "description": ""
+    },
+    {
+      "id": "beastfolk-ranged-weapon",
+      "name": "Beastfolk Ranged Weapon",
+      "type": "Equipment",
+      "baseCost": 15,
+      "description": "",
+      "modifications": {
+        "attacks": [{
+          "type": "ranged",
+          "name": "Shot",
+          "power": 5,
+          "special": "12\" range."
+        }]
+      }
+    },
+    {
+      "id": "protective-hide",
+      "name": "Protective Hide",
+      "type": "Animal Form",
+      "baseCost": 20,
+      "allow": [{"rules": "nomad-beastfolk:animal-form"}],
+      "description": "+1 to Armour, cannot be Broken by Attacks. May stack with other types of armoured Equipment."
+    },
+    {
+      "id": "camouflaged-pelt",
+      "name": "Camouflaged Pelt",
+      "type": "Animal Form",
+      "baseCost": 15,
+      "allow": [{"rules": "nomad-beastfolk:animal-form"}],
+      "description": "Characters using a Ranged Attack against this Character increase their Feat difficulty by 1."
+    },
+    {
+      "id": "ugly",
+      "name": "Ugly",
+      "type": "Animal Form",
+      "baseCost": 15,
+      "allow": [{"rules": "nomad-beastfolk:animal-form"}],
+      "description": "This Character is Fearsome"
+    },
+    {
+      "id": "bestial-moxie",
+      "name": "Bestial Moxie",
+      "type": "Animal Form",
+      "baseCost": 20,
+      "allow": [{"rules": "nomad-beastfolk:animal-form"}],
+      "description": "This Character automatically passes all Bravery Tests."
+    },
+    {
+      "id": "horns-and-tusks",
+      "name": "Horns and Tusks",
+      "type": "Animal Form",
+      "baseCost": 20,
+      "allow": [{"rules": "nomad-beastfolk:animal-form"}],
+      "description": "+1 Power on all Attacks"
+    },
+    {
+      "id": "long-legs",
+      "name": "Long Legs",
+      "type": "Animal Form",
+      "baseCost": 20,
+      "allow": [{"rules": "nomad-beastfolk:animal-form"}],
+      "description": "+2 Move and gains the Agile Trait"
+    },
+    {
+      "id": "monster-rider",
+      "name": "Monster Rider",
+      "type": "Animal Form",
+      "baseCost": 15,
+      "allow": [{"rules": "nomad-beastfolk:animal-form"}],
+      "description": "May use the Monstrous Mount Trait on any Beast, Monster, or Titan."
+    }
+  ],
+  "characters": [
+    "beastfolk-packmaster",
+    "beastfolk-hedgewitch",
+    "beastfolk-verman",
+    "beastfolk-clanbeast",
+    "kelpie",
+    "war-bard"
+  ]
+}

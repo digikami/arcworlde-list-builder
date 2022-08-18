@@ -1,0 +1,28 @@
+{
+  "id": "beastfolk-hedgewitch",
+  "name": "Beastfolk Hedgewitch",
+  "class": ["Mage"],
+  "baseCost": 90,
+
+  "ap": 3,
+  "move": 4,
+  "bravery": 8,
+  "hp": 8,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Staff Thump",
+      "power": 4
+    }
+  ],
+  "equipment": [],
+  "items": [],
+  "rules": [
+    "nomad-beastfolk:animal-form",
+    {
+      "name": "Mysterious Herbs",
+      "description": ""
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "id": "wizard",
+  "name": "Wizard",
+  "class": ["Commander", "Mage"],
+  "baseCost": 100,
+
+  "ap": 4,
+  "move": 4,
+  "bravery": 9,
+  "hp": 9,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Staff Thwack",
+      "power": 5,
+      "special": "Crits ignore Armour."
+    }
+  ],
+  "equipment": [],
+  "items": [],
+  "rules": [],
+  "tags": ["wizard"]
+}

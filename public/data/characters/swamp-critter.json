@@ -1,0 +1,31 @@
+{
+  "id": "swamp-critter",
+  "factionId": "nomad-ourk",
+  "name": "Swamp Critter",
+  "class": ["Beast"],
+  "baseCost": 30,
+
+  "ap": 3,
+  "move": 7,
+  "bravery": 7,
+  "hp": 5,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Chomp",
+      "power": 4
+    }
+  ],
+  "equipment": [
+  ],
+  "items": [],
+  "rules": [
+    "bestiary:agile",
+    "bestiary:pack-hunter",
+    {
+      "name": "Stinky Beast", 
+      "description": ""
+    }
+  ]
+}

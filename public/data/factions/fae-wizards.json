@@ -1,0 +1,179 @@
+{
+  "id": "fae-wizards",
+  "listable": true,
+  "name": "Wizards",
+  "rules": [
+    {
+      "id": "thing-of-magic",
+      "name": "Thing of Magic",
+      "description": ""
+    }
+  ],
+  "subfactions": [
+    {
+      "id": "crimson",
+      "name": "Crimson College",
+      "modifications": {
+        "spell_lists": [{
+          "id": "crimson-lore",
+          "name": "The Lore of the Crimson College",
+          "spells": [
+            {
+              "name": "Conjure Crimson Sprite",
+              "draw": 14,
+              "description": ""
+            }
+          ]
+        }]
+      }
+    },
+    {
+      "id": "sapphire",
+      "name": "Sapphire College",
+      "modifications": {
+        "spell_lists": [{
+          "id": "sapphire-lore",
+          "name": "The Lore of the Sapphire College",
+          "spells": [
+            {
+              "name": "Conjure Sapphire Sprite",
+              "draw": 14,
+              "description": ""
+            }
+          ]
+        }]
+      }
+    },
+    {
+      "id": "emerald",
+      "name": "Emerald College",
+      "modifications": {
+        "spell_lists": [{
+          "id": "emerald-lore",
+          "name": "The Lore of the Emerald College",
+          "spells": [
+            {
+              "name": "Conjure Emerald Sprite",
+              "draw": 14,
+              "description": ""
+            }
+          ]
+        }]
+      }
+    },
+    {
+      "id": "ochre",
+      "name": "Ochre College",
+      "modifications": {
+        "spell_lists": [{
+          "id": "ochre-lore",
+          "name": "The Lore of the Ochre College",
+          "spells": [
+            {
+              "name": "Conjure Ochre Sprite",
+              "draw": 14,
+              "description": ""
+            }
+          ]
+        }]
+      }
+    },
+    {
+      "id": "bronze",
+      "name": "Bronze College",
+      "modifications": {
+        "spell_lists": [{
+          "id": "bronze-lore",
+          "name": "The Lore of the Bronze College",
+          "spells": [
+            {
+              "name": "Conjure Bronze Sprite",
+              "draw": 14,
+              "description": ""
+            }
+          ]
+        }]
+      }
+    },
+    {
+      "id": "opal",
+      "name": "Opal College",
+      "modifications": {
+        "spell_lists": [{
+          "id": "opal-lore",
+          "name": "The Lore of the Opal College",
+          "spells": [
+            {
+              "name": "Conjure Opal Sprite",
+              "draw": 14,
+              "description": ""
+            }
+          ]
+        }]
+      }
+    }
+  ],
+  "spell_lists": [],
+  "armoury": [
+    {
+      "id": "vitality-gem",
+      "name": "Vitality Gem",
+      "type": "Item",
+      "baseCost": 10,
+      "description": ""
+    },
+    {
+      "id": "wizard-ranged-weapon",
+      "name": "Wizard Ranged Weapon",
+      "type": "Equipment",
+      "baseCost": 15,
+      "description": "",
+      "allow": [{"tags": "wizard"},{"tags": "apprentice"}],
+      "modifications": {
+        "attacks": [{
+          "type": "ranged",
+          "name": "Shot",
+          "power": 5,
+          "special": "14\" range."
+        }]
+      }
+    },
+    {
+      "id": "wizard-mount",
+      "name": "Wizard Mount",
+      "type": "Equipment",
+      "baseCost": 30,
+      "allow": [{"tags": "wizard"},{"tags": "apprentice"}],
+      "description": "",
+      "modifications": {
+        "hp": 5,
+        "move": 4,
+        "rules": ["bestiary:agile"]
+      }
+    },
+    {
+      "id": "pilfered-tome",
+      "name": "Pilfered Tome",
+      "type": "Item",
+      "baseCost": 10,
+      "allow": [{"tags": "wizard"},{"tags": "apprentice"}],
+      "description": "",
+      "variants": [
+        { "id": "crimson", "name": "Crimson Tome" },
+        { "id": "sapphire", "name": "Sapphire Tome" },
+        { "id": "emerald", "name": "Emerald Tome" },
+        { "id": "ochre", "name": "Ochre Tome" },
+        { "id": "bronze", "name": "Bronze Tome" },
+        { "id": "opal", "name": "Opal Tome" }
+      ]
+    }
+  ],
+  "characters": [
+    "wizard",
+    "apprentice",
+    "sprite",
+    "ensorcelled-beast",
+    "sentinel",
+    "charmed-bookcase"
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "id": "brewzerker",
+  "factionId": "nomad-ourk",
+  "name": "Brewzerker",
+  "class": ["Irregular"],
+  "baseCost": 95,
+
+  "ap": 4,
+  "move": 4,
+  "bravery": 8,
+  "hp": 11,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Booze Frenzy",
+      "power": 9,
+      "special": "After this Attack, this Character becomes Prone."
+    },
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Drunken Wallop",
+      "power": 4
+    }
+  ],
+  "equipment": [
+  ],
+  "items": [],
+  "rules": [
+    "nomad-ourk:intimidating",
+    {
+      "name": "Brewboy", 
+      "description": ""
+    }
+  ]
+}

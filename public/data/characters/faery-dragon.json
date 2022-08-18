@@ -1,0 +1,42 @@
+{
+  "id": "faery-dragon",
+  "factionId": "bestiary",
+  "name": "Faery Dragon",
+  "class": ["beast"],
+  "baseCost": 100,
+
+  "ap": 4,
+  "move": 8,
+  "bravery": 7,
+  "hp": 14,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Blinding Light",
+      "power": 1,
+      "special": "Affects all Characters within 6\" and ignores Armour and Shields. On a Critical Hit, the target's AP is reduced by 1 for their next Activation. This does stack."
+    },
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Bite",
+      "power": 5
+    }
+  ],
+  "equipment": [
+  ],
+  "items": [],
+  "rules": [
+    "bestiary:fly",
+    "bestiary:agile",
+    {
+      "name": "Glittering Scales",
+      "description": ""
+    },
+    {
+      "name": "Healing Song",
+      "description": ""
+    }
+  ]
+}

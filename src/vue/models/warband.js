@@ -2,6 +2,7 @@ import UserDataModel from './user-data-model';
 import Utils from 'utils/LoafUtils';
 import Faction from './faction';
 import Kingdom from './kingdom';
+import Common from './common';
 import WarbandMember from './warband-member';
 import WarbandEquipment from './warband-equipment';
 
@@ -14,8 +15,8 @@ class Warband extends UserDataModel {
   }
 
   totalCost() {
-    return this.get('commanders').reduce((prev, curr) => prev + curr.totalCost() , 0) +
-      this.get('members').reduce((prev, curr) => prev + curr.totalCost() , 0);
+    return this.get('commanders').reduce((prev, curr) => prev + curr.totalCost(this.get('faction')) , 0) +
+      this.get('members').reduce((prev, curr) => prev + curr.totalCost(this.get('faction')) , 0);
   }
 
   loadData() {
@@ -26,6 +27,9 @@ class Warband extends UserDataModel {
       }),
       Faction.find(this.get('faction')).then((f) => {
         this.set('faction', f);
+        if (this.get('subfaction')) {
+          this.set('subfaction', this.get('faction').get('subfactions').find((sf) => sf.id == this.get('subfaction')))
+        }
         return f;
       }),
       Promise.all(this.get('commanders').map((c) => {
@@ -50,7 +54,8 @@ class Warband extends UserDataModel {
   serializeData() {
     let d = Utils.clone(this._data);
     d.faction = typeof(this.get('faction')) == "string" ? this.get('faction') : this.get('faction').get('id');
-    d.kingdom = typeof(this.get('kingdom') == "string" ? this.get('kingdom') : this.get('kingdom').get('id'));
+    d.subfaction = this.get('subfaction') ? this.get('subfaction').id : null;
+    d.kingdom = typeof(this.get('kingdom')) == "string" ? this.get('kingdom') : this.get('kingdom').get('id');
     d.commanders = this.get('commanders').map((c) => c.serializeData());
     d.members = this.get('members').map((m) => m.serializeData());
     return JSON.stringify(d);
@@ -58,6 +63,16 @@ class Warband extends UserDataModel {
 
   storageGroup() {
     return `arcworlde_warband`;
+  }
+
+  getArmoury() {
+    let armoury = this.get('faction').get('armoury').slice();
+    ['commanders', 'members'].forEach((group) => {
+      this.get(group).forEach((character) => {
+        armoury = character.modifyArmoury(armoury);
+      })
+    })
+    return armoury;
   }
 }
 

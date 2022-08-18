@@ -1,0 +1,56 @@
+{
+  "id": "giantess",
+  "factionId": "swords-for-hire",
+  "name": "Giant / Giantess",
+  "class": ["Sword for Hire", "Titan"],
+  "baseCost": 600,
+
+  "ap": 20,
+  "move": 5,
+  "bravery": 9,
+  "hp": 60,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 4,
+      "name": "Club Swing",
+      "power": 7,
+      "special": "Targets every Character in Melee range. A Crit knocks a Character Prone if on a 50mm base or less."
+    },
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Big Foot",
+      "power": 6,
+      "special": "Re-roll all failed Hits against Prone targets"
+    },
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Pick Up",
+      "power": 2,
+      "special": "May only be used against a Character on a 40mm base or less. On a Crit, the Target Character is Picked Up. They may not move, and if the Giant moves, they are taken with them and reamin in base contact. To escape the target must pass a Medium Feat in their Activation."
+    }
+  ],
+  "equipment": [
+  ],
+  "items": [],
+  "rules": [
+    "bestiary:split-activation",
+    "bestiary:dwindling-strength",
+    "bestiary:death-throes",
+    "bestiary:fearsome",
+    {
+      "name": "Long Limbs", 
+      "description": "This Character may Attack Characters in Melee up to 3\" away."
+    },
+    {
+      "name": "Bellow",
+      "description": "Once per Round, on a Medium Feat all enemy Characters within 6\" must make a Bravery Test."
+    },
+    {
+      "name": "Pick Up And ...",
+      "description": ""
+    }
+  ]
+}

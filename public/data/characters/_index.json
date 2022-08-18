@@ -1,6 +1,45 @@
 [
+  // wild elves
+    "wild-elven-warchief",
+    "wild-elven-druid",
+    "woodfiend",
+    "wild-elven-warrior",
+    "briar-elk",
+    "wild-elven-blademaster",
+    "lichenhawk",
+
+  // dark lords
+    "dark-lord",
+    "hobgoblin",
+    "underling",
+    "hellbeast",
+    "hobgoblin-honcho",
+    "hobgoblin-firestarter",
+
+  // wizards
+    "wizard",
+    "apprentice",
+    "sprite",
+    "ensorcelled-beast",
+    "sentinel",
+    "charmed-bookcase",
+
+  // bestiary
+  "griffling",
+  "troggle",
+  "arachnid",
+  "peagryph",
+  "faery-dragon",
+  "juvenile-forest-dragon",
+  "forest-troll",
+  "forest-dragon",
+  "arachnid-queen",
+  "swamp-wyvern"
   
   // swords for hire
   "mercenary-goon",
-  "rabin-tood"
+  "rabin-tood",
+  "bruno-focaccia",
+  "explorer-and-journal",
+  "giantess"
 ]

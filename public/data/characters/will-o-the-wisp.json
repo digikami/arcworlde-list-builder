@@ -1,0 +1,37 @@
+{
+  "id": "will-o-the-wisp",
+  "factionId": "undead-raiders",
+  "name": "Will o'the Wisp",
+  "class": ["Irregular"],
+  "baseCost": 70,
+
+  "ap": 3,
+  "move": 4,
+  "bravery": 8,
+  "hp": 6,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Wychfire",
+      "power": 4,
+      "special": "Effects all Characters within 3\". Ignores Armour, +1 Power if the target is Flammable."
+    },
+    {
+      "type": "ranged",
+      "name": "Ethereal Caress",
+      "power": 5,
+      "special": "Ignores Armour."
+    }
+  ],
+  "equipment": [],
+  "items": [],
+  "rules": [
+    "undead-raiders:risen",
+    "bestiary:fly",
+    {
+      "name": "Lure of the Light",
+      "description": ""
+    }
+  ]
+}

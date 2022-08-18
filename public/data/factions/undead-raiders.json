@@ -1,0 +1,108 @@
+{
+  "id": "undead-raiders",
+  "listable": true,
+  "name": "Undead Raiders",
+  "rules": [
+    {
+      "id": "raiser-of-the-dead",
+      "name": "Raiser of the Dead",
+      "description": ""
+    },
+    {
+      "id": "risen",
+      "name": "Risen",
+      "description": ""
+    },
+    {
+      "id": "soul-eater",
+      "name": "Soul Eater",
+      "description": ""
+    }
+  ],
+  "spell_lists": [{
+    "id": "lore-of-the-damned",
+    "name": "The Lore of the Damned",
+    "spells": [
+      {
+        "name": "Deathly Chill",
+        "draw": 14,
+        "description": ""
+      }
+    ]
+  }],
+  "armoury": [
+    {
+      "id": "soul-jar",
+      "name": "Soul Jar",
+      "type": "Item",
+      "baseCost": 10,
+      "description": ""
+    },
+    {
+      "id": "undead-raiders-ranged-weapon",
+      "name": "Undead Raiders Ranged Weapon",
+      "type": "Equipment",
+      "baseCost": 15,
+      "description": "",
+      "modifications": {
+        "attacks": [{
+          "type": "ranged",
+          "name": "Shot",
+          "power": 5,
+          "range": 12,
+          "special": "12\" range."
+        }]
+      }
+    },
+    {
+      "id": "stolen-arcloque-pistol",
+      "name": "Stolen Arcloque Pistol",
+      "type": "Item",
+      "baseCost": 20,
+      "description": "",
+      "modifications": {
+        "attacks": [{
+          "type": "ranged",
+          "name": "Shot",
+          "power": 7,
+          "range": 8,
+          "special": "8\" range. This Attack may only be made once per Activation. If there are more Failures than Successes when rolling Hits, the wielder receives the same numnber of Hits as the target."
+        }]
+      }
+    },
+    {
+      "id": "cursed-pipes",
+      "name": "Cursed Pipes",
+      "type": "Equipment",
+      "baseCost": 30,
+      "description": ""
+    },
+    {
+      "id": "hangmans-noose",
+      "name": "Hangman's Noose",
+      "type": "Item",
+      "baseCost": 15,
+      "description": ""
+    },
+    {
+      "id": "undead-mount",
+      "name": "Undead Mount",
+      "type": "Equipment",
+      "baseCost": 30,
+      "description": "",
+      "modifications": {
+        "hp": 5,
+        "move": 4
+      }
+    }
+  ],
+  "characters": [
+    "undead-harbinger",
+    "old-man-o-bones",
+    "undead-bandit",
+    "undead-executioner",
+    "undead-ogre",
+    "will-o-the-wisp",
+    "carrion-rat"
+  ]
+}

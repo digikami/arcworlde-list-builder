@@ -61,8 +61,8 @@
   ],
   "rules": [
     {
-      "id": "flamable",
-      "name": "Flamable"
+      "id": "flammable",
+      "name": "Flammable"
     }
   ]
 }

@@ -1,0 +1,64 @@
+{
+  "id": "bestiary",
+  "listable": true,
+  "name": "Bestiary",
+  "rules": [
+    {
+      "id": "fly",
+      "name": "Fly",
+      "description": "The Character may ove over terrain features unhindered."
+    },
+    {
+      "id": "pack-hunter",
+      "name": "Pack Hunter",
+      "description": "Up to three of the same Character with this Trait may be Activated at the same time. In addition, they may re-roll a single failed Hit each if they attack the same target."
+    },
+    {
+      "id": "leader-of-the-pack",
+      "name": "Leader of the Pack",
+      "description": "A Character with this Traid may allow Beasts within 8\" to use their Bravery stat."
+    },
+    {
+      "id": "split-activation",
+      "name": "Split Activation",
+      "description": ""
+    },
+    {
+      "id": "dwindling-strength",
+      "name": "Dwindling Strength",
+      "description": ""
+    },
+    {
+      "id": "death-throes",
+      "name": "Death Throes",
+      "description": ""
+    },
+    {
+      "id": "fearsome",
+      "name": "Fearsome",
+      "description": "Any enemy character on a smaller base size within 3\" of this Character must take an automatic Bravery Test."
+    },
+    {
+      "id": "gobble",
+      "name": "Gobble",
+      "description": ""
+    },
+    {
+      "id": "agile",
+      "name": "Agile",
+      "description": "A Character with this Trait may re-roll a single failed Leg It roll per Round."
+    }
+  ],
+  "characters": [
+    "griffling",
+    "troggle",
+    "arachnid",
+    "peagryph",
+    "faery-dragon",
+    "juvenile-forest-dragon",
+    "forest-troll",
+    "forest-dragon",
+    "arachnid-queen",
+    "swamp-wyvern"
+  ]
+}

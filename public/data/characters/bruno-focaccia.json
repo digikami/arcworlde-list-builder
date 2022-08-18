@@ -1,0 +1,40 @@
+{
+  "id": "bruno-focaccia",
+  "factionId": "swords-for-hire",
+  "name": "Bruno Focaccia",
+  "class": ["Sword for Hire"],
+  "baseCost": 70,
+
+  "ap": 3,
+  "move": 4,
+  "bravery": 9,
+  "hp": 10,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Flourish",
+      "power": 6,
+      "special": "On a Crit, one more D6 may be rolled for this Attack."
+    },
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Feint",
+      "power": 4,
+      "special": "If this attack removes HP, the next Character who attempts to Attack Bruno must first pass an Easy Feat or lose 1HP instead."
+    }
+  ],
+  "equipment": [
+    "common:dual-weapons",
+    "common:light-armour"
+  ],
+  "items": [],
+  "rules": [
+    "swords-for-hire:personality",
+    {
+      "name": "Scarlet Blur", 
+      "description": "If there is only one enemy Character in base contact, Bruno may re-roll all failed Defence rolls."
+    }
+  ]
+}

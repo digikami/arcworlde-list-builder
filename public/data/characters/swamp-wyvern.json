@@ -1,0 +1,52 @@
+{
+  "id": "swamp-wyvern",
+  "factionId": "bestiary",
+  "name": "Swamp Wyvern",
+  "class": ["Titan"],
+  "baseCost": 900,
+
+  "ap": 30,
+  "move": 4,
+  "bravery": 9,
+  "hp": 100,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 5,
+      "name": "Thunderous Dive",
+      "power": 10,
+      "special": "May only be used if the Swamp Wyvern is Airborne. Pick an area on the board. All Characters within 3\" of this Attack are hit by this Attack. After the Attack has been made, place the Swmap Wyvern on the board in the area the Attack was made. It also takes a Power 10 Attack, and its activation immediately ends. Rearrange any Characters that have not been Knocked Out by this Attack in base contact with the Swamp Wyvern."
+    },
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Crushing Jaws",
+      "power": 6,
+      "special": "If this Attack causes the target to lose 5 or more HP, they may be Gobbled in this Activation on an Easy Feat."
+    },
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Stomp",
+      "power": 4
+    }
+  ],
+  "equipment": [
+  ],
+  "items": [],
+  "rules": [
+    "bestiary:split-activation",
+    "bestiary:fearsome",
+    "bestiary:dwindling-strength",
+    "bestiary:death-throes",
+    "bestiary:gobble",
+    {
+      "name": "Magical Spores",
+      "description": ""
+    },
+    {
+      "name": "Airborne",
+      "description": ""
+    }
+  ]
+}

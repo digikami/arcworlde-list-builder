@@ -1,0 +1,34 @@
+{
+  "id": "undead-harbinger",
+  "factionId": "undead-raiders",
+  "name": "Undead Harbinger",
+  "class": ["Commander"],
+  "baseCost": 90,
+
+  "ap": 4,
+  "move": 4,
+  "bravery": 9,
+  "hp": 11,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Swashbuckle",
+      "power": 8,
+      "special": "If a Critical Hit is rolled, the target loses 1AP in its next Activation."
+    },
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Vicious Slash",
+      "power": 6,
+      "special": "Critical Hits ignore Armour."
+    }
+  ],
+  "equipment": [],
+  "items": [],
+  "rules": [
+    "undead-raiders:raiser-of-the-dead",
+    "undead-raiders:soul-eater"
+  ]
+}

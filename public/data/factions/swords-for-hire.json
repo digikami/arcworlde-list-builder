@@ -4,6 +4,7 @@
   "name": "Swords for Hire",
   "rules": [
     {
+      "id": "fighting-for-coin",
       "name": "Fighting for Coin",
       "description": ""
     },
@@ -15,6 +16,9 @@
   ],
   "characters": [
     "mercenary-goon",
-    "rabbin-tood"
+    "rabbin-tood",
+    "bruno-focaccia",
+    "explorer-and-journal",
+    "giantess"
   ]
 }

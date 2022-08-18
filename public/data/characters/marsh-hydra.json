@@ -1,0 +1,46 @@
+{
+  "id": "marsh-hydra",
+  "factionId": "nomad-ourk",
+  "name": "Marsh Hydra",
+  "class": ["Heavy", "Monster"],
+  "baseCost": 200,
+
+  "ap": 7,
+  "move": 6,
+  "bravery": 7,
+  "hp": 25,
+  "attacks": [
+    {
+      "type": "ranged",
+      "name": "Venom Spit",
+      "power": 5,
+      "special": "8\" range."
+    },
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Constrict",
+      "power": 5,
+      "special": "On a Critical Hit, the target may not move or Attack until they have made a successful Medium Feat. If unsuccessful, they take D3 Hits."
+    },
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Bite",
+      "power": 4
+    }
+  ],
+  "equipment": [
+  ],
+  "items": [],
+  "rules": [
+    "bestiary:split-activation",
+    "bestiary:fearsome",
+    "bestiary:dwindling-strength",
+    "bestiary:death-throes",
+    {
+      "name": "Head Regeneration", 
+      "description": ""
+    }
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "id": "nomad-ourk",
+  "listable": true,
+  "name": "Ourk",
+  "commanderLimit": 2,
+  "rules": [
+    {
+      "id": "power-struggle",
+      "name": "Power Struggle",
+      "description": ""
+    },
+    {
+      "id": "diminutive",
+      "name": "Diminutive",
+      "description": ""
+    },
+    {
+      "id": "intimidating",
+      "name": "Intimidating",
+      "description": ""
+    },
+    {
+      "id": "hurl",
+      "name": "Hurl",
+      "description": ""
+    }
+  ],
+  "spell_lists": [{
+    "id": "lore-of-delusion",
+    "name": "The Lore of Delusion",
+    "spells": [
+      {
+        "name": "False Foe",
+        "draw": 14,
+        "description": ""
+      }
+    ]
+  }],
+  "armoury": [
+    {
+      "id": "healing-brew",
+      "name": "Healing Brew",
+      "type": "Item",
+      "baseCost": 10,
+      "description": ""
+    },
+    {
+      "id": "ourk-ranged-weapon",
+      "name": "Ourk/Boglin Ranged Weapon",
+      "type": "Equipment",
+      "baseCost": 15,
+      "description": "",
+      "modifications": {
+        "attacks": [{
+          "type": "ranged",
+          "name": "Shot",
+          "power": 5,
+          "special": "15\" range."
+        }]
+      }
+    },
+    {
+      "id": "swamp-scrumpy",
+      "name": "Swamp Scrumpy",
+      "type": "Item",
+      "baseCost": 10,
+      "description": ""
+    },
+    {
+      "id": "pet-droggo",
+      "name": "Pet Droggo",
+      "type": "Item",
+      "baseCost": 20,
+      "description": "",
+      "modifications": {
+        "attacks": [{
+          "type": "melee",
+          "ap": 2,
+          "name": "Living Flamethrower",
+          "power": 5,
+          "special": "Draw a 4\" line from the front base edge of the Character. All Characters within 2\" of the line are targeted by the Attack."
+        }]
+      }
+    },
+    {
+      "id": "musical-instrument",
+      "name": "Musical Instrument",
+      "type": "Item",
+      "baseCost": 10,
+      "allow": [{"tags": "boglin"}],
+      "description": ""
+    },
+    {
+      "id": "magical-mushroom",
+      "name": "Magical Mushroom",
+      "type": "Item",
+      "baseCost": 10,
+      "description": ""
+    },
+    {
+      "id": "goading-fork",
+      "name": "Goading Fork",
+      "type": "Equipment",
+      "baseCost": 15,
+      "description": ""
+    },
+    {
+      "id": "ourk-mount",
+      "name": "Ourk/Boglin Mount",
+      "type": "Equipment",
+      "baseCost": 30,
+      "description": "",
+      "modifications": {
+        "hp": 5,
+        "move": 4,
+        "rules": ["bestiary:agile"]
+      }
+    }
+  ],
+  "characters": [
+    "ourk-chieftain",
+    "ourk-dreameater",
+    "boglin",
+    "ourk-brute",
+    "marsh-hydra",
+    "brewzerker",
+    "swamp-critter"
+  ]
+}

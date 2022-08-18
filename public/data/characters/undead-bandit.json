@@ -1,0 +1,32 @@
+{
+  "id": "undead-bandit",
+  "factionId": "undead-raiders",
+  "name": "Undead Bandit",
+  "class": ["Unit"],
+  "baseCost": 45,
+
+  "ap": 2,
+  "move": 4,
+  "bravery": 7,
+  "hp": 7,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Gut'em",
+      "power": 6,
+      "special": "Critical Hit ignores 1 Armour."
+    },
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Slash",
+      "power": 4
+    }
+  ],
+  "equipment": [],
+  "items": [],
+  "rules": [
+    "undead-raiders:risen"
+  ]
+}

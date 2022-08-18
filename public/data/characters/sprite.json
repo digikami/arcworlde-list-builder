@@ -1,0 +1,31 @@
+{
+  "id": "sprite",
+  "name": "Sprite",
+  "class": ["Beast"],
+  "baseCost": 25,
+
+  "ap": 2,
+  "move": 5,
+  "bravery": 5,
+  "hp": 4,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Sparkle",
+      "power": 5,
+      "special": "Every time this Attack is used, the Sprite loses 1AP."
+    },
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Nibble",
+      "power": 3
+    }
+  ],
+  "equipment": [],
+  "items": [],
+  "rules": [
+    "fae-wizards:thing-of-magic"
+  ]
+}

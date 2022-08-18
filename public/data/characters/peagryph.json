@@ -1,0 +1,34 @@
+{
+  "id": "peagryph",
+  "factionId": "bestiary",
+  "name": "Peagryph",
+  "class": ["beast"],
+  "baseCost": 80,
+
+  "ap": 3,
+  "move": 8,
+  "bravery": 7,
+  "hp": 8,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Featherblade",
+      "power": 6,
+      "special": "This Attack may be made against targets up to 2\" away, even if they aren't in base contact. Attacks may still be amde if there is a friendly Character between this Character and the target."
+    },
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Piercing Screech",
+      "power": 1,
+      "special": "Affects all Characters within 6\" and ignores Armour and Shields. On a Critical Hit, the target's Move stat is halved for this Round. This does stack."
+    }
+  ],
+  "equipment": [
+  ],
+  "items": [],
+  "rules": [
+    "bestiary:agile"
+  ]
+}

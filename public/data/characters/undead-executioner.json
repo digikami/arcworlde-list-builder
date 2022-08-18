@@ -1,0 +1,32 @@
+{
+  "id": "undead-executioner",
+  "factionId": "undead-raiders",
+  "name": "Undead Excutioner",
+  "class": ["Elite"],
+  "baseCost": 70,
+
+  "ap": 3,
+  "move": 4,
+  "bravery": 8,
+  "hp": 8,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Decapitation",
+      "power": 6,
+      "special": "If the target is on a 30mm base, it is Knocked Out if it fails its first Defence Roll."
+    },
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Weighty Hack",
+      "power": 5
+    }
+  ],
+  "equipment": [],
+  "items": [],
+  "rules": [
+    "undead-raiders:risen"
+  ]
+}

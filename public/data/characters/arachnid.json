@@ -1,0 +1,47 @@
+{
+  "id": "arachnid",
+  "factionId": "bestiary",
+  "name": "Arachnid",
+  "class": ["beast"],
+  "baseCost": 60,
+
+  "ap": 3,
+  "move": 7,
+  "bravery": 7,
+  "hp": 7,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Sting",
+      "power": 7,
+      "special": "A Critical Hit ignores Armour."
+    },
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Bite",
+      "power": 4
+    }
+  ],
+  "equipment": [
+  ],
+  "items": [],
+  "rules": [
+    "bestiary:agile",
+    "bestiary:pack-hunter",
+    "common:flammable",
+    {
+      "name": "Web Spray",
+      "description": ""
+    },
+    {
+      "name": "Web Spinner",
+      "description": ""
+    },
+    {
+      "name": "Living Arcanite",
+      "description": ""
+    }
+  ]
+}

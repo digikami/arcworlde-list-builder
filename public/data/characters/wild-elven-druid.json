@@ -1,0 +1,32 @@
+{
+  "id": "wild-elven-druid",
+  "name": "Wild Elven Druid",
+  "class": ["Mage"],
+  "baseCost": 145,
+
+  "ap": 5,
+  "move": 5,
+  "bravery": 8,
+  "hp": 12,
+  "attacks": [
+    {
+      "type": "ranged",
+      "name": "Enchanted Vines",
+      "power": 4,
+      "special": "8\" range."
+    },
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Ritual Blade",
+      "power": 5
+    }
+  ],
+  "equipment": [],
+  "items": [],
+  "rules": [
+    "bestiary:agile",
+    "fae-wild-elves:summoner",
+    "fae-wild-elves:sacrifice"
+  ]
+}

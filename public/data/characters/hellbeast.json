@@ -1,0 +1,43 @@
+{
+  "id": "hellbeast",
+  "name": "Hellbeast",
+  "class": ["Heavy", "Monster"],
+  "baseCost": 160,
+
+  "ap": 5,
+  "move": 10,
+  "bravery": 6,
+  "hp": 15,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Swoop",
+      "power": 8,
+      "special": "If a Crit is rolled, the target is Prone."
+    },
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Lift and Drop",
+      "power": 5,
+      "special": "This Attack may only be made on a Charaacter on a 30mm base size, and if the Hellbeast is not currently using Grasping Talons. On a Crit, the target is moved D6 inches in the direction of the Dark Lord player's choosing."
+    },
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Fangs",
+      "power": 5
+    }
+  ],
+  "equipment": [],
+  "items": [],
+  "rules": [
+    "bestiary:fearsome",
+    "bestiary:fly",
+    "bestiary:split-activation",
+    {
+      "name": "Grasping Talons"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "id": "ourk-chieftain",
+  "factionId": "nomad-ourk",
+  "name": "Ourk Chieftain",
+  "class": ["Commander"],
+  "baseCost": 120,
+
+  "ap": 5,
+  "move": 4,
+  "bravery": 8,
+  "hp": 14,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Brawl",
+      "power": 8,
+      "special": "Each Critical Hit allows one more D6 to be rolled."
+    },
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Roundhouse Punch",
+      "power": 5,
+      "special": "If the Target is Prone, if there are more Successes than Failures, the Character is moved 3\" in a direction chosen by the Ourk player."
+    },
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Bludgeon",
+      "power": 5,
+      "special": "Critical Hits cause the next Attack to have +1 Power. This does not stack."
+    }
+  ],
+  "equipment": [
+  ],
+  "items": [],
+  "rules": [
+    "nomad-ourk:intimidating",
+    "nomad-ourk:hurl",
+    {
+      "name": "Power Struggle", 
+      "description": ""
+    }
+  ]
+}

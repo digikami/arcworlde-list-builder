@@ -1,0 +1,39 @@
+{
+  "id": "hobgoblin-firestarter",
+  "name": "Hobgoblin Firestarter",
+  "class": ["Irregular"],
+  "baseCost": 50,
+
+  "ap": 2,
+  "move": 4,
+  "bravery": 6,
+  "hp": 6,
+  "attacks": [
+    {
+      "type": "ranged",
+      "name": "Flame Toss",
+      "power": 6,
+      "special": "6\" range. Each Critical Hit causes one Hit against an enemy Character within 2\" of the target."
+    },
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Firebrand",
+      "power": 4
+    }
+  ],
+  "equipment": [],
+  "items": [],
+  "rules": [
+    "fae-dark-lords:diminutive",
+    {
+      "name": "Arson Around",
+      "description": ""
+    },
+    {
+      "name": "Can't Burn a Burn",
+      "description": ""
+    }
+  ],
+  "tags": ["hobgoblin"]
+}

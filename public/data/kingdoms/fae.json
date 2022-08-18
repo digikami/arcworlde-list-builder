@@ -2,5 +2,8 @@
   "id": "fae",
   "name": "The Fae Menace",
   "factions": [
+    "fae-wild-elves",
+    "fae-wizards",
+    "fae-dark-lords"
   ]
 }

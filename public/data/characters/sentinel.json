@@ -1,0 +1,35 @@
+{
+  "id": "sentinel",
+  "name": "Sentinel",
+  "class": ["Elite"],
+  "baseCost": 80,
+
+  "ap": 3,
+  "move": 4,
+  "bravery": 9,
+  "hp": 8,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Heavy Strike",
+      "power": 7,
+      "special": "A Critical Hit knocks the target Prone if they are on a 30mm base."
+    },
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Thrust",
+      "power": 4,
+      "special": "A Critical Hit knocks the target Prone if they are on a 30mm base."
+    }
+  ],
+  "equipment": [],
+  "items": [],
+  "rules": [
+    {
+      "name": "Enchanted Armour",
+      "description": ""
+    }
+  ]
+}

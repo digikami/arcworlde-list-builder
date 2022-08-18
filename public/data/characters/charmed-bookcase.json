@@ -1,0 +1,28 @@
+{
+  "id": "charmed-bookcase",
+  "name": "Charmed Bookcase",
+  "class": ["Irregular"],
+  "baseCost": 80,
+
+  "ap": 2,
+  "move": 4,
+  "bravery": 8,
+  "hp": 10,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Jostle",
+      "power": 3
+    }
+  ],
+  "equipment": [],
+  "items": [],
+  "rules": [
+    "common:flammable",
+    {
+      "name": "Collection of Tomes",
+      "description": ""
+    }
+  ]
+}

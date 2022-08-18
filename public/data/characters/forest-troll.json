@@ -1,0 +1,52 @@
+{
+  "id": "forest-troll",
+  "factionId": "bestiary",
+  "name": "Forest Troll",
+  "class": ["monster"],
+  "baseCost": 220,
+
+  "ap": 8,
+  "move": 5,
+  "bravery": 8,
+  "hp": 20,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Hurl",
+      "power": 4,
+      "special": "If a Critical Hit is made, the target Character may be thrown D6 inches in a direction of the Troll player's choosing. This Character is Prone."
+    },
+    {
+      "type": "ranged",
+      "name": "Boulder Lob",
+      "power": 9,
+      "special": "12\" range. Requires a Medium Feat."
+    },
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Smash",
+      "power": 6,
+      "special": "If a Critical Hit is rolled, if the target Character is on a smaller base size they become Prone after the Attack has been made."
+    }
+  ],
+  "equipment": [
+  ],
+  "items": [],
+  "rules": [
+    "bestiary:split-activation",
+    "bestiary:fearsome",
+    "bestiary:dwindling-strength",
+    "bestiary:death-throes",
+    "bestiary:gobble",
+    {
+      "name": "Fungal Regeneration",
+      "description": "If this Character is not in base contact with an enemy Character at the end of the Round, it regains D6 HP."
+    },
+    {
+      "name": "Ambush",
+      "description": ""
+    }
+  ]
+}

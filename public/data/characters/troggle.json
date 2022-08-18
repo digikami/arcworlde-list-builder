@@ -1,0 +1,37 @@
+{
+  "id": "troggle",
+  "factionId": "bestiary",
+  "name": "Troggle",
+  "class": ["beast"],
+  "baseCost": 20,
+
+  "ap": 2,
+  "move": 6,
+  "bravery": 5,
+  "hp": 5,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Dig Attack",
+      "power": 6,
+      "special": "Must be performed whilst Burrowed. The Troggle comes out of its burrow after this Attack has taken place."
+    },
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Scrabble",
+      "power": 3
+    }
+  ],
+  "equipment": [
+  ],
+  "items": [],
+  "rules": [
+    "bestiary:pack-hunter",
+    {
+      "name": "Burrower",
+      "description": ""
+    }
+  ]
+}

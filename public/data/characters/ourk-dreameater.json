@@ -1,0 +1,51 @@
+{
+  "id": "ourk-dreameater",
+  "factionId": "nomad-ourk",
+  "name": "Ourk Dreameater",
+  "class": ["Commander", "Mage"],
+  "baseCost": 120,
+
+  "ap": 5,
+  "move": 4,
+  "bravery": 8,
+  "hp": 13,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Devious Slash",
+      "power": 6,
+      "special": "Ignores Armour and Shields."
+    },
+    {
+      "type": "ranged",
+      "name": "Choking Mists",
+      "power": 3,
+      "special": "8\" range. Ignores Armour and Shields."
+    }
+  ],
+  "equipment": [
+  ],
+  "items": [],
+  "rules": [
+    "nomad-ourk:intimidating",
+    {
+      "name": "Power Struggle", 
+      "description": ""
+    },
+    {
+      "name": "Familiars",
+      "description": ""
+    }
+  ],
+  "armoury": [
+    {
+      "id": "dreameater-familiar",
+      "name": "Familiar",
+      "type": "Special",
+      "baseCost": 10,
+      "allow": [{"tags": "boglin"}],
+      "description": ""
+    }
+  ]
+}

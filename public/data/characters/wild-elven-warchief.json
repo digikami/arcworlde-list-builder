@@ -1,0 +1,41 @@
+{
+  "id": "wild-elven-warchief",
+  "name": "Wild Elven Warchief",
+  "class": ["Commander"],
+  "baseCost": 130,
+
+  "ap": 5,
+  "move": 5,
+  "bravery": 9,
+  "hp": 14,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Whirlwind",
+      "power": 8,
+      "special": "Each Critical Hit allows 1 more D6 to be rolled."
+    },
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Deadly Strike",
+      "power": 5,
+      "special": "Critical Hits ignore Armour."
+    },
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Bloodlust",
+      "power": 10,
+      "special": "This Attack may only be made if the Warchief Knocked Out an enemy Character in the same Activation."
+    }
+  ],
+  "equipment": [],
+  "items": [],
+  "rules": [
+    "bestiary:agile",
+    "fae-wild-elves:summoner",
+    "fae-wild-elves:sacrifice"
+  ]
+}

@@ -5,7 +5,6 @@ import Utils from 'utils/LoafUtils';
 class WarbandEquipment extends BaseModel {
   constructor(data) {
     data.id = data.id ?? Utils.guid4();
-    console.log(data);
     super(data);
   }
 

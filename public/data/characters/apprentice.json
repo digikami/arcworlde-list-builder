@@ -1,0 +1,32 @@
+{
+  "id": "apprentice",
+  "name": "Apprentice",
+  "class": ["Unit", "Mage"],
+  "baseCost": 60,
+
+  "ap": 2,
+  "move": 4,
+  "bravery": 7,
+  "hp": 5,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Whack",
+      "power": 3
+    }
+  ],
+  "equipment": [],
+  "items": [],
+  "rules": [
+    {
+      "name": "Conduit",
+      "description": ""
+    },
+    {
+      "name": "Student of Magic",
+      "description": ""
+    }
+  ],
+  "tags": ["apprentice"]
+}

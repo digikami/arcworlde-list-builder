@@ -1,0 +1,52 @@
+{
+  "id": "forest-dragon",
+  "factionId": "bestiary",
+  "name": "Forest Dragon",
+  "class": ["Titan"],
+  "baseCost": 900,
+
+  "ap": 30,
+  "move": 4,
+  "bravery": 10,
+  "hp": 100,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Tail Swipe",
+      "power": 4,
+      "special": "All Characters within 4\" are targets of this attack. If a Critical Hit is made, the target Character is thrown D6 inches in a direction of the Dragon player's choosing. This Character is Prone."
+    },
+    {
+      "type": "ranged",
+      "name": "Noxious Breath",
+      "power": "*",
+      "special": "6\" range. Requires a Medium Feat. Draw a line from this Character to the target. Any Character touched by this line is also affected by this Attack. In addition, the targets suffer a number of Hits equal to the amount of HP that they are below their starting HP."
+    },
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Talons",
+      "power": 6,
+      "special": "If a Critical Hit is rolled, if the target Character is on a smaller base size they become Prone after the Attack has been made."
+    }
+  ],
+  "equipment": [
+  ],
+  "items": [],
+  "rules": [
+    "bestiary:split-activation",
+    "bestiary:fearsome",
+    "bestiary:dwindling-strength",
+    "bestiary:death-throes",
+    "bestiary:gobble",
+    {
+      "name": "Advanced Fungal Regeneration",
+      "description": "If this Character is not in base contact with an enemy Character at the end of an Activation, it regains D3 HP."
+    },
+    {
+      "name": "Ambush",
+      "description": ""
+    }
+  ]
+}

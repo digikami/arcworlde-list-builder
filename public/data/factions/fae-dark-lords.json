@@ -1,0 +1,84 @@
+{
+  "id": "fae-dark-lords",
+  "listable": true,
+  "name": "Dark Lords",
+  "rules": [
+    {
+      "id": "dark-ones-will",
+      "name": "The Dark One's Will",
+      "description": ""
+    },
+    {
+      "id": "diminutive",
+      "name": "Diminutive",
+      "description": ""
+    }
+  ],
+  "spell_lists": [
+    {
+      "id": "villainy-lore",
+      "name": "The Lore of Villainy",
+      "spells": [
+        {
+          "name": "Sickly Screech",
+          "draw": 14,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "armoury": [
+    {
+      "id": "black-potion",
+      "name": "Black Potion",
+      "type": "Item",
+      "baseCost": 10,
+      "description": ""
+    },
+    {
+      "id": "hobgoblin-ranged-weapon",
+      "name": "Hobgoblin Ranged Weapon",
+      "type": "Equipment",
+      "baseCost": 15,
+      "description": "",
+      "allow": [{"tags": "hobgoblin"}],
+      "modifications": {
+        "attacks": [{
+          "type": "ranged",
+          "name": "Shot",
+          "power": 5,
+          "special": "12\" range."
+        }]
+      }
+    },
+    {
+      "id": "hobgoblin-mount",
+      "name": "Hobgoblin Mount",
+      "type": "Equipment",
+      "baseCost": 30,
+      "allow": [{"tags": "hobgoblin"}],
+      "description": "",
+      "modifications": {
+        "hp": 5,
+        "move": 4,
+        "rules": ["bestiary:agile"]
+      }
+    },
+    {
+      "id": "slaver-whip",
+      "name": "Slaver Whip",
+      "type": "Equipment",
+      "baseCost": 10,
+      "allow": [{"tags": "hobgoblin"}],
+      "description": ""
+    }
+  ],
+  "characters": [
+    "dark-lord",
+    "hobgoblin",
+    "underling",
+    "hellbeast",
+    "hobgoblin-honcho",
+    "hobgoblin-firestarter"
+  ]
+}

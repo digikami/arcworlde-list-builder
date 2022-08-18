@@ -1,0 +1,44 @@
+{
+  "id": "dark-lord",
+  "name": "Dark Lord",
+  "class": ["Commander"],
+  "baseCost": 210,
+
+  "ap": 6,
+  "move": 4,
+  "bravery": 9,
+  "hp": 20,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Malicious Strike",
+      "power": 7,
+      "special": "If more Successes are rolled than Failures, the target is knocked Prone if on a 50mm base or less."
+    },
+    {
+      "type": "ranged",
+      "name": "Malevolent Gaze",
+      "power": 4,
+      "special": "6\" range."
+    },
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Choke",
+      "power": 5,
+      "special": "This Attack's Power is not boosted by any equipped weapons. If HP is removed by this Attack, enemy models must take a Bravery Test as if the target had been Knocked Out."
+    }
+  ],
+  "equipment": [
+    "common:heavy-armour"
+  ],
+  "items": [],
+  "rules": [
+    "bestiary:split-activation",
+    {
+      "name": "Monologue",
+      "description": ""
+    }
+  ]
+}

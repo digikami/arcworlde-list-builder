@@ -1,0 +1,45 @@
+{
+  "id": "undead-ogre",
+  "factionId": "undead-raiders",
+  "name": "Undead Ogre",
+  "class": ["Heavy"],
+  "baseCost": 180,
+
+  "ap": 5,
+  "move": 4,
+  "bravery": 8,
+  "hp": 16,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Bludgeon",
+      "power": 8,
+      "special": "If a Critical Hit is made against a target on a 30mm or 40mm base, the target Character becomes Prone."
+    },
+    {
+      "type": "ranged",
+      "range": 6,
+      "name": "Vomit",
+      "power": 4,
+      "special": "6\" range. If a Critical Hit is rolled, the target must taken an immediate Bravery Test."
+    },
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Stomp",
+      "power": 5,
+      "special": "+2 Power if the target is Prone."
+    }
+  ],
+  "equipment": [],
+  "items": [],
+  "rules": [
+    "undead-raiders:risen",
+    "bestiary:fearsome",
+    {
+      "name": "Very Flammable",
+      "description": ""
+    }
+  ]
+}

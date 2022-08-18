@@ -1,0 +1,39 @@
+{
+  "id": "boglin",
+  "factionId": "nomad-ourk",
+  "name": "Boglin",
+  "class": ["Unit"],
+  "baseCost": 20,
+
+  "ap": 2,
+  "move": 5,
+  "bravery": 5,
+  "hp": 4,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Scrap",
+      "power": 4,
+      "special": "Each Critical Hit allows one more D6 to be rolled."
+    },
+
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Shank",
+      "power": 3
+    }
+  ],
+  "equipment": [
+  ],
+  "items": [],
+  "rules": [
+    "nomad-ourk:diminutive",
+    {
+      "name": "Sticky Fingers", 
+      "description": ""
+    }
+  ],
+  "tags": ["boglin"]
+}

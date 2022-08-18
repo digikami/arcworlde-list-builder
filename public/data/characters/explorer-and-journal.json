@@ -1,0 +1,34 @@
+{
+  "id": "explorer-and-journal",
+  "factionId": "swords-for-hire",
+  "name": "The Explorer and The Enchanted Journal",
+  "class": ["Sword for Hire"],
+  "baseCost": 90,
+
+  "ap": 3,
+  "move": 4,
+  "bravery": 8,
+  "hp": 8,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Clumsy Slashing",
+      "power": 4
+    }
+  ],
+  "equipment": [
+  ],
+  "items": [],
+  "rules": [
+    "swords-for-hire:personality",
+    {
+      "name": "Plot Armour", 
+      "description": "The Explorer counts as having Light Armour that may not be Broken"
+    },
+    {
+      "name": "The Enchanted Journal",
+      "description": ""
+    }
+  ]
+}

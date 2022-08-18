@@ -12,15 +12,15 @@ class WarbandMember extends BaseModel {
     super(data)
   }
 
-  totalCost() {
-    return this.characterCost() + this.equipmentCost();
+  totalCost(faction) {
+    return this.characterCost(faction) + this.equipmentCost(faction);
   }
 
-  characterCost() {
-    return this.get('character').get('baseCost');
+  characterCost(faction) {
+    return faction.getCharacterCost(this.get('character'));
   }
 
-  equipmentCost() {
+  equipmentCost(faction) {
     return this.get('equipment').reduce((prev, curr) => prev + curr.totalCost(), 0);
   }
 
@@ -45,6 +45,14 @@ class WarbandMember extends BaseModel {
     d.character = this.get('character').get('id'); 
     d.equipment = this.get('equipment').map((e) => e.serializeData())
     return d;
+  }
+
+  modifyArmoury(armoury) {
+    return armoury.concat(this.get('character').get('armoury'));
+  }
+
+  isAllowedEquipment(equip) {
+    return this.get('character').matches(equip.get('allow'));
   }
 }
 

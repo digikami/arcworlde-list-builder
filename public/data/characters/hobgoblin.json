@@ -1,0 +1,32 @@
+{
+  "id": "hobgoblin",
+  "name": "Hobgoblin",
+  "class": ["Unit"],
+  "baseCost": 35,
+
+  "ap": 2,
+  "move": 4,
+  "bravery": 6,
+  "hp": 5,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Hack'n'Slash",
+      "power": 4,
+      "special": "Each Critical Hit allows one more D6 to be rolled."
+    },
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Gut Stab",
+      "power": 3
+    }
+  ],
+  "equipment": [],
+  "items": [],
+  "rules": [
+    "fae-dark-lords:diminutive"
+  ],
+  "tags": ["hobgoblin"]
+}
