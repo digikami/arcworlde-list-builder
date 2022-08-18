@@ -133,10 +133,12 @@
         let wbdata = Utils.clone(this.newListForm);
         wbdata.kingdom = wbdata.faction.kingdomId;
         wbdata.faction = wbdata.faction.id;
-        wbdata.subfaction = wbdata.subfaction.id;
+        wbdata.subfaction = wbdata.subfaction ? wbdata.subfaction.id : null;
         Warband.new(wbdata).then((wb) => {
           wb.save();
           this.lists.push(wb);
+          this.closeTooltips();
+          this.$emit('requestEdit', wb);
         })
         this.newListForm = {
           name: null,
