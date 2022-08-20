@@ -4,10 +4,10 @@
       <a @click="$emit('close')" class="btn btn-dark"><i class="bi-arrow-left-short"></i> Back</a>
     </div>
     <div class="container  p-3 border-bottom border-dark border-2 sticky-top bg-white">
-      <div class="d-flex justify-content-between align-items-center">
-        <div class="d-flex align-items-center">
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
+        <div class="d-flex flex-column flex-md-row align-items-md-center gap-1">
           <h1>{{ list.get('name') }}</h1>
-          <small class="badge bg-dark mx-3">{{ list.get('faction').get('name')}}<span v-if="list.get('subfaction')"> - {{ list.get('subfaction').name }}</span></small>
+          <small class="badge bg-dark">{{ list.get('faction').get('name')}}<span v-if="list.get('subfaction')"> - {{ list.get('subfaction').name }}</span></small>
         </div>
 
         <div class="btn-toolbar">
