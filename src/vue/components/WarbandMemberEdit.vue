@@ -77,8 +77,8 @@
         <ul class="list-unstyled">
           <li v-for="equipment in member.get('equipment')" class="p-2 border-1 border-bottom d-flex justify-content-between align-items-center">
             <div>{{ equipment.get('armouryItem').get('name') }}</div>
-            <div class="btn-toolbar">
-              <div class="btn-group me-3">
+            <div class="btn-toolbar gap-2 flex-shrink-0">
+              <div class="btn-group">
                 <div class="input-group-text">
                   {{ equipment.totalCost() }} GP
                 </div>
