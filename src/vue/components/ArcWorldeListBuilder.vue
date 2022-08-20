@@ -69,7 +69,9 @@
         list.delete();
       },
       handleEditorCloseRequest() {
+        let lastEdit = this.editWarband;
         this.editWarband = null;
+        lastEdit.reset();
       }
     }
 

@@ -17,16 +17,12 @@
             </div>
           </div>
           <div class="btn-group">
-            <button class="btn btn-outline-secondary" aria-label="Edit Warband Data" data-bs-toggle="modal" :data-bs-target="`#wbm_${ list.get('id') }_modal`">
-              <div data-bs-toggle="tooltip" data-bs-title="Edit">
-                <i class="bi-pencil"></i>
-              </div>
+            <button class="btn btn-outline-secondary" aria-label="Edit Warband Data" data-bs-toggle="modal" :data-bs-target="`#wbm_${ list.get('id') }_modal`" data-bs-title="Edit">
+              <i class="bi-pencil"></i>
             </button>
 
-            <button class="btn btn-outline-secondary" aria-label="Save Changes" @click="handleSaveRequest">
-              <div data-bs-toggle="tooltip" data-bs-title="Save">
-                <i class="bi-save"></i>
-              </div>
+            <button class="btn btn-outline-secondary" aria-label="Save Changes" @click="handleSaveRequest" data-bs-title="Save">
+              <i class="bi-save"></i>
             </button>
           </div>
         </div>
@@ -71,7 +67,7 @@
       </div>
       <div class="container py-3 px-0">
         <div class="d-flex flex-column gap-3">
-          <WBMEditor v-for="character in list.get('members')" :member="character" :faction="list.get('faction')" :common="common" :list="list" @requestMemberRemoval="handleMemberRemoval"></WBMEditor>
+          <WBMEditor v-for="character in list.get('members')" :member="character" :faction="list.get('faction')" :common="common" :list="list" @requestMemberRemoval="handleMemberRemoval" :duplicable="true" @requestDuplicate="handleDuplicateRequest"></WBMEditor>
         </div>
       </div>
     </div>
@@ -102,6 +98,7 @@
 <script>
   import Multiselect from "vue-multiselect";
   import WarbandMember from '../models/warband-member';
+  import WarbandEquipment from '../models/warband-equipment';
   import WBMEditor from './WarbandMemberEdit.vue';
   import { Modal, Tooltip } from 'bootstrap';
 
@@ -175,7 +172,7 @@
     },
     props: ["list", "kingdoms", "common"],
     mounted() {
-      this.$refs.root.querySelectorAll("[data-bs-toggle='tooltip']").forEach((tt) => {
+      this.$refs.root.querySelectorAll("[data-bs-title]").forEach((tt) => {
         Tooltip.getOrCreateInstance(tt, {
           fallbackPlacements: ["top", "bottom"]
         });
@@ -194,8 +191,8 @@
           this.list.get('commanders').push(m);
         })
       },
-      requestNewMember(selection) {
-        let wbm = new WarbandMember({ character: selection.character, equipment: [] });
+      requestNewMember(selection, equipment = []) {
+        let wbm = new WarbandMember({ character: selection.character, equipment: equipment });
         wbm.loadData().then((m) => {
           this.list.get('members').push(m);
         })
@@ -209,6 +206,11 @@
       saveEdits() {
         this.list.set('name', this.editFormValues.name);
         Modal.getInstance(this.$refs.listEditModal).hide();
+      },
+      handleDuplicateRequest(member) {
+        member.clone().then((clone) => {
+          this.list.get('members').push(clone);
+        })
       }
     }
   }

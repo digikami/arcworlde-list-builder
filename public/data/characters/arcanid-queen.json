@@ -1,7 +1,7 @@
 {
-  "id": "arachnid-queen",
+  "id": "arcanid-queen",
   "factionId": "bestiary",
-  "name": "Arachnid Queen",
+  "name": "Arcanid Queen",
   "class": ["Titan"],
   "baseCost": 900,
 

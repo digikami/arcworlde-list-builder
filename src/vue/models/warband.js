@@ -62,7 +62,7 @@ class Warband extends UserDataModel {
   }
 
   storageGroup() {
-    return `arcworlde_warband`;
+    return Warband.storageGroup;
   }
 
   getArmoury() {
@@ -76,28 +76,7 @@ class Warband extends UserDataModel {
   }
 }
 
-Warband._cache = [];
-Warband.find = (id) => {
-  if (typeof(id) !== "string") {
-    return Warband.find(id.id);
-  }
-  if (Warband._cache[id]) {
-    return Promise.resolve(Warband._cache[id]);
-  }
-  let wbData = JSON.parse(window.localStorage.getItem(`arcworlde_warband_${id}`));
-  return Warband.new(wbData).then((wb) => {
-    Warband._cache[id] = wb;
-    return wb;
-  })
-}
-Warband.all = () => {
-  return Promise.all(JSON.parse(window.localStorage.getItem('arcworlde_warband_index') ?? '[]').map(list => {
-    return Warband.find(list);
-  }));
-}
-Warband.new = (data) => {
-  let wb = new Warband(data);
-  return wb.loadData();
-}
+Warband.storageGroup = `arcworlde_warband`;
+UserDataModel.initClass(Warband);
 
 export default Warband;

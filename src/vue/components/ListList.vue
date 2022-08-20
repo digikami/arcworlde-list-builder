@@ -1,35 +1,38 @@
 <template>
   <div :class="class" ref="root">
     <div class="mb-3">
-      <div class="d-inline-block" data-bs-toggle="tooltip" data-bs-title="New Warband" aria-label="create new warband">
-        <button data-bs-toggle="modal" data-bs-target="#new-list-modal" class="btn btn-outline-secondary">
+      <div class="d-inline-block" aria-label="create new warband">
+        <button data-bs-toggle="modal" data-bs-target="#new-list-modal" class="btn btn-outline-secondary" data-bs-title="New Warband">
           <i class="bi-plus"></i>
         </button>
       </div>
     </div>
     <div v-for="list in lists" class="list-list-item p-3">
-      <div class="row">
-        <div class="col-12 col-md-8 d-flex flex-column flex-md-row align-items-md-center">
-          <strong class="fs-4">{{ list.get('name') }}</strong>
-          <span class="mt-1 mb-3 my-md-0">
-            <small class="badge bg-dark mx-md-3">{{ list.get('faction').get('name')}}<span v-if="list.get('subfaction')"> - {{ list.get('subfaction').name }}</span></small>
-          </span>
-        </div>
-        <div class="col-12 col-md-4 text-md-end">
-          <div class="btn-group" role="group">
-            <button @click="closeTooltips(); $emit('requestEdit', list);" class="btn btn-outline-secondary">
-              <div data-bs-toggle="tooltip" data-bs-title="Edit">
+      <template v-if="!list.isLoading">
+        <div class="row">
+          <div class="col-12 col-md-8 d-flex flex-column flex-md-row align-items-md-center">
+            <strong class="fs-4">{{ list.get('name') }}</strong>
+            <span class="mt-1 mb-3 my-md-0">
+              <small class="badge bg-dark mx-md-3">{{ list.get('faction').get('name')}}<span v-if="list.get('subfaction')"> - {{ list.get('subfaction').name }}</span></small>
+            </span>
+          </div>
+          <div class="col-12 col-md-4 text-md-end">
+            <div class="btn-group me-3">
+              <div class="input-group-text">
+                {{ list.totalCost() }} GP
+              </div>
+            </div>
+            <div class="btn-group" role="group">
+              <button @click="closeTooltips(); $emit('requestEdit', list);" class="btn btn-outline-secondary" data-bs-title="Edit">
                 <i class="bi-pencil" role="img" aria-label="Edit"></i>
-              </div>
-            </button>
-            <button @click="$emit('requestDelete', list)" class="btn btn-outline-secondary">
-              <div data-bs-toggle="tooltip" data-bs-title="Delete">
+              </button>
+              <button @click="closeTooltips(); $emit('requestDelete', list)" class="btn btn-outline-secondary" data-bs-title="Delete">
                 <i class="bi-trash" role="img" aria-label="Delete"></i>
-              </div>
-            </button>
+              </button>
+            </div>
           </div>
         </div>
-      </div>
+      </template>
     </div>
     <div class="modal fade" id="new-list-modal" tabindex="-1" aria-labelledby="" aria-hidden="true" ref="newListModal">
       <div class="modal-dialog">
@@ -147,14 +150,14 @@
         Modal.getInstance(this.$refs.newListModal).hide();
       },
       assertTooltips() {
-        this.$refs.root.querySelectorAll("[data-bs-toggle='tooltip']").forEach((tt) => {
+        this.$refs.root.querySelectorAll("[data-bs-title").forEach((tt) => {
           Tooltip.getOrCreateInstance(tt, {
             fallbackPlacements: ["top", "bottom"]
           });
         })
       },
       closeTooltips() {
-        this.$refs.root.querySelectorAll("[data-bs-toggle='tooltip']").forEach((tt) => {
+        this.$refs.root.querySelectorAll("[data-bs-title").forEach((tt) => {
           Tooltip.getOrCreateInstance(tt).dispose();
         })
       }

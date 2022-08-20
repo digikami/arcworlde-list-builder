@@ -1,7 +1,7 @@
 {
-  "id": "arachnid",
+  "id": "arcanid",
   "factionId": "bestiary",
-  "name": "Arachnid",
+  "name": "Arcanid",
   "class": ["beast"],
   "baseCost": 60,
 

@@ -5,6 +5,11 @@ class UserDataModel extends BaseModel {
     super(data);
   }
 
+  // override in subclass
+  loadData() {
+    return Promise.resolve(this)
+  }
+
   serializeData() {
     return JSON.stringify(this._data);
   }
@@ -43,6 +48,48 @@ class UserDataModel extends BaseModel {
   }
   delete() {
     this.destroy();
+  }
+
+  reset() {
+    this.isLoading = true;
+    delete this.constructor._cache[this.id];
+    let d = JSON.parse(window.localStorage.getItem(`${this.constructor.storageGroup}_${this.id}`));
+    this._data = d;
+    return this.loadData().then(() => {
+      this.isLoading = false;
+      this.constructor._cache[this.id] = this;
+      return this;
+    })
+  }
+}
+
+UserDataModel.initClass = (cls) => {
+  cls._cache = {};
+  cls.find = (id) => {
+    if (typeof(id) !== "string") {
+      return cls.find(id.id);
+    }
+    if (cls._cache[id]) {
+      return Promise.resolve(cls._cache[id]);
+    }
+    let wbData = JSON.parse(window.localStorage.getItem(`${cls.storageGroup}_${id}`));
+    return cls.new(wbData).then((wb) => {
+      cls._cache[id] = wb;
+      return wb;
+    })
+  }
+  cls.all = () => {
+    return Promise.all(JSON.parse(window.localStorage.getItem(`${cls.storageGroup}_index`) ?? '[]').map(list => {
+      return cls.find(list);
+    }));
+  }
+  cls.new = (data) => {
+    let wb = new cls(data);
+    wb.isLoading = true;
+    return wb.loadData().then(() => {
+      wb.isLoading = false;
+      return wb;
+    });
   }
 }
 

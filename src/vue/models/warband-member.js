@@ -28,6 +28,10 @@ class WarbandMember extends BaseModel {
     return Promise.all([
       Character.find(this.get('character')).then((c) => {
         this.set('character', c);
+      }, (error) => {
+        let charId = this.get('character');
+        this.set('character', new Character({}));
+        this.set('name', `Could not find character with ID ${ charId }`);
       }),
       Promise.all(this.get('equipment').map((e) => {
         let wbe = new WarbandEquipment(e);
@@ -53,6 +57,13 @@ class WarbandMember extends BaseModel {
 
   isAllowedEquipment(equip) {
     return this.get('character').matches(equip.get('allow'));
+  }
+
+  clone() {
+    let d = this.serializeData();
+    d.id = null;
+    let clone = new WarbandMember(d);
+    return clone.loadData();
   }
 }
 

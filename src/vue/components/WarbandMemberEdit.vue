@@ -1,23 +1,30 @@
 <template>
   <div class="warband-member p-3" ref="root">
     <div class="d-flex flex-column flex-md-row justify-content-between">
-      <h3 class="accordion-header d-flex align-items-center mb-3 mb-md-0" :id="`wbm_${member.get('id')}_header`">
+      <h3 :class="`accordion-header d-flex align-items-center mb-3 mb-md-0 ${ member.get('character').get('name') == null ? 'text-danger' : ''}`" :id="`wbm_${member.get('id')}_header`">
         {{ member.get('name') }} <small class="badge bg-secondary fs-6 mx-3" v-if="member.get('name') != member.get('character').get('name')">{{ member.get('character').get('name') }}</small>
       </h3>
       <div class="btn-toolbar d-flex justify-content-between">
-        <div class="btn-group me-3">
+        <div class="btn-group mx-3">
           <div ref="memberCost" class="input-group-text" data-bs-toggle="tooltip" :data-bs-title="`${ member.characterCost(this.faction) } GP + ${ member.equipmentCost(this.faction) } GP`">
             {{ member.totalCost(this.faction) }} GP
           </div>
         </div>
-        <div class="btn-group">
-          <button class="btn btn-outline-secondary" :aria-label="`Edit ${ member.get('name') }`" data-bs-toggle="modal" :data-bs-target="`#wbm_${ member.get('id') }_modal`">
+        <div class="btn-group mx-3">
+          <button class="btn btn-outline-secondary" :aria-label="`Edit ${ member.get('name') }`" data-bs-toggle="modal" :data-bs-target="`#wbm_${ member.get('id') }_modal`" data-bs-title="Edit Name">
             <i class="bi-pencil"></i>
           </button>
-          <button class="btn btn-outline-secondary" :aria-label="`Edit ${ member.get('name') }'s Equipment`" data-bs-toggle="collapse" :data-bs-target="`#wbm_${member.get('id')}_details`">
+          <button class="btn btn-outline-secondary" :aria-label="`Edit ${ member.get('name') }'s Equipment`" data-bs-toggle="collapse" :data-bs-target="`#wbm_${member.get('id')}_details`" data-bs-title="Equipment" @click="closeTooltips()">
             <i class="bi-shield"></i>
           </button>
-          <button class="btn btn-outline-secondary" :aria-label="`Delete ${ member.get('name') }`" @click="$emit('requestMemberRemoval', member)">
+        </div>
+        <div class="btn-group mx-3" v-if="duplicable">
+          <button class="btn btn-outline-secondary" :aria-label="`Duplicate entry`" data-bs-title="Duplicate" @click="$emit('requestDuplicate', member)">
+            <i class="bi-files"></i>
+          </button>
+        </div>
+        <div class="btn-group mx-3">
+          <button class="btn btn-outline-secondary" :aria-label="`Delete ${ member.get('name') }`" @click="destroyTooltips(); $emit('requestMemberRemoval', member)" data-bs-title="Remove">
             <i class="bi-trash"></i>
           </button>
         </div>
@@ -73,8 +80,8 @@
                 </div>
               </div>
               <div class="btn-group" v-if="!equipment.get('fixed')">
-                <button class="btn btn-outline-secondary" @click="requestRemoveEquipment(equipment)">
-                  <i class="bi-x"></i>
+                <button class="btn btn-outline-secondary" @click="requestRemoveEquipment(equipment)" data-bs-title="Remove">
+                  <i class="bi-trash"></i>
                 </button>
               </div>
             </div>
@@ -100,7 +107,7 @@
         }
       }
     },
-    props: ['member', 'faction', 'common', 'list'],
+    props: ['member', 'faction', 'common', 'list', 'duplicable'],
     computed: {
       equipmentDropdownOptions() {
         return [
@@ -130,18 +137,18 @@
       }
     },
     mounted() {
-      this.$refs.root.querySelectorAll("[data-bs-toggle='tooltip']").forEach((tt) => {
-        Tooltip.getOrCreateInstance(tt);
-      })
+      this.assertTooltips();
     },
     methods: {
       requestAddEquipment(request) {
         this.member.get('equipment').push(new WarbandEquipment({ armouryItem: request.equipment }));
+        setTimeout(this.assertTooltips, 10);
         setTimeout(this.updateCostTooltip, 10);
       },
       requestRemoveEquipment(equipment) {
         this.member.get('equipment').splice(this.member.get('equipment').indexOf(equipment), 1);
-        setTimeout(this.updateCostTooltip, 1);
+        this.closeTooltips();
+        setTimeout(this.updateCostTooltip, 10);
       },
       saveEdits() {
         if (this.editFormValues.name == "") {
@@ -154,6 +161,21 @@
         this.$refs.root.querySelectorAll("[data-bs-toggle='tooltip']").forEach((tt) => {
           let tto = Tooltip.getOrCreateInstance(tt);
           tto._config.title = tt.getAttribute('data-bs-title');
+        })
+      },
+      assertTooltips() {
+        this.$refs.root.querySelectorAll("[data-bs-title]").forEach((tt) => {
+          Tooltip.getOrCreateInstance(tt);
+        })
+      },
+      destroyTooltips() {
+        this.$refs.root.querySelectorAll("[data-bs-title]").forEach((tt) => {
+          Tooltip.getOrCreateInstance(tt).dispose();
+        })
+      },
+      closeTooltips() {
+        this.$refs.root.querySelectorAll("[data-bs-title]").forEach((tt) => {
+          Tooltip.getOrCreateInstance(tt).hide();
         })
       }
     }
