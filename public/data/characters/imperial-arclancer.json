@@ -1,0 +1,30 @@
+{
+  "id": "imperial-arclancer",
+  "name": "Imperial Arclancer",
+  "class": ["Irregular"],
+  "baseCost": 60,
+
+  "ap": 3,
+  "move": 4,
+  "bravery": 8,
+  "hp": 6,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Arclance",
+      "power": 6,
+      "special": "Any yfailed Hits against the target are dealt as Hits to an enemy Character within 3\" of the target."
+    }
+  ],
+  "equipment": [
+  ],
+  "items": [],
+  "rules": [
+    "civilized-imperial:take-orders",
+    {
+      "name": "Arclance", 
+      "description": ""
+    }
+  ]
+}

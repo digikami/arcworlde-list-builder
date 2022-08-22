@@ -7,16 +7,27 @@
   <link href="./dist/styles/main.css?v=1" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-  <nav class="navbar bg-light">
-    <div class="container">
-      <span class="navbar-brand">ArcWorlde List Builder</span>
-    </div>
-  </nav>
-  <div class="container">
-    <div id="list-builder" class="my-5">
-      <arcworlde-list-builder></arcworlde-list-builder>
-    </div>
+  <div class="skip-links">
+    <a href="#main" class="visually-hidden-focusable">Skip to main</a>
+    <a href="#footer" class="visually-hidden-focusable">Skip to footer</a>
   </div>
+  <header id="header" class="header">
+    <nav class="navbar bg-light">
+      <div class="container">
+        <h1 class="navbar-brand">ArcWorlde List Builder</h1>
+      </div>
+    </nav>
+  </header>
+  <main id="main" class="main">
+    <div class="container">
+      <div id="list-builder" class="my-5">
+        <arcworlde-list-builder></arcworlde-list-builder>
+      </div>
+    </div>
+  </main>
+  <footer id="footer" class="footer">
+  </footer>
+
   <script src="./dist/scripts/vendors.js?v=1"></script>
   <script src="./dist/scripts/main.js?v=1"></script>
 </body>

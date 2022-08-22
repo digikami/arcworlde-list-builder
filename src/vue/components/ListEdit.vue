@@ -67,7 +67,7 @@
       </div>
       <div class="container py-3 px-0">
         <div class="d-flex flex-column gap-3">
-          <WBMEditor v-for="character in list.get('members')" :member="character" :faction="list.get('faction')" :common="common" :list="list" @requestMemberRemoval="handleMemberRemoval" :duplicable="true" @requestDuplicate="handleDuplicateRequest"></WBMEditor>
+          <WBMEditor v-for="member in list.get('members')" :member="member" :faction="list.get('faction')" :common="common" :list="list" @requestMemberRemoval="handleMemberRemoval" :duplicable="!member.get('character').matches([{ rules: 'swords-for-hire:personality' }])" @requestDuplicate="handleDuplicateRequest"></WBMEditor>
         </div>
       </div>
     </div>
@@ -157,6 +157,8 @@
               name: faction.get('name'),
               members: faction.get('characters').filter((a) => {
                 return !(a.get("class").map((a) => a.toLowerCase()).includes("commander") && a.get('class').length == 1);
+              }).filter((character) => {
+                return !(character.matches([{ rules: 'swords-for-hire:personality'}]) && this.list.get('members').find((member) => member.get('character').get('id') == character.get('id')));
               }).map((character) => {
                 return {
                   id: character.id,
@@ -185,9 +187,8 @@
       requestNewCommander(character) {
         if (this.list.get('commanders').length >= this.list.get('faction').get('commanderLimit'))
           return;
-        let wbm = new WarbandMember({ character: character, equipment: [] });
+        let wbm = new WarbandMember({ character: character, equipment: character.get('equipment') });
         wbm.loadData().then((m) => {
-          console.log(m);
           this.list.get('commanders').push(m);
         })
       },

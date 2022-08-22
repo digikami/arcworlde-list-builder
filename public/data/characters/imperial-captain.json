@@ -1,0 +1,38 @@
+{
+  "id": "imperial-captain",
+  "name": "Imperial Captain",
+  "class": ["Commander"],
+  "baseCost": 80,
+
+  "ap": 4,
+  "move": 4,
+  "bravery": 9,
+  "hp": 10,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Riposte",
+      "power": 8,
+      "special": "If this Attack removes HP, the next Character who attempts to Attack the Captain must pass an Easy Feat or lose 1HP."
+    },
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Slash",
+      "power": 5,
+      "special": "Critical Hits ignore Armour"
+    }
+  ],
+  "equipment": [
+    { "armouryItem": "common:light-armour", "fixed": true }
+  ],
+  "items": [],
+  "rules": [
+    "civilized-imperial:make-orders",
+    {
+      "name": "Leaders of Men",
+      "description": ""
+    }
+  ]
+}

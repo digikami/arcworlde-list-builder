@@ -1,0 +1,25 @@
+{
+  "id": "halfling-battle-cook",
+  "name": "Halfling Battle Cook",
+  "class": ["Mage"],
+  "baseCost": 80,
+
+  "ap": 3,
+  "move": 4,
+  "bravery": 8,
+  "hp": 9,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Spoon Whack",
+      "power": 5,
+      "special": "If a Critical Hit is rolled, reduce the target Character's AP by 1 or their next Activation. This does not stack."
+    }
+  ],
+  "equipment": [],
+  "items": [],
+  "rules": [
+    "civilized-halfling:make-orders"
+  ]
+}

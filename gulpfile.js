@@ -89,7 +89,7 @@ function images() {
 
 // Deploy font files
 function fonts() {
-  return src(['src/fonts/**/*.{eot,svg,ttf,woff,woff2}', 'node_modules/bootstrap-icons/font/**/*.{woff,woff2}'])
+  return src(['src/fonts/**/*.{eot,svg,ttf,woff,woff2,otf}', 'node_modules/bootstrap-icons/font/**/*.{woff,woff2}'])
     .pipe(dest('public/dist/fonts'));
 }
 

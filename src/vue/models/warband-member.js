@@ -32,12 +32,20 @@ class WarbandMember extends BaseModel {
         let charId = this.get('character');
         this.set('character', new Character({}));
         this.set('name', `Could not find character with ID ${ charId }`);
-      }),
-      Promise.all(this.get('equipment').map((e) => {
-        let wbe = new WarbandEquipment(e);
-        return wbe.loadData();
-      })).then((eqpData) => {
-        this.set('equipment', eqpData);
+      }).then(() => {
+        this.get('character').get('equipment').forEach((fixedEquip) => {
+          if (this.get('equipment').filter((eqpJson) => {
+            return eqpJson.fixed && eqpJson.armouryItem == fixedEquip.armouryItem
+          }).length == 0) {
+            this.get('equipment').unshift(fixedEquip);
+          }
+        })
+        return Promise.all(this.get('equipment').map((e) => {
+          let wbe = new WarbandEquipment(e);
+          return wbe.loadData();
+        })).then((eqpData) => {
+          this.set('equipment', eqpData);
+        })
       })
     ]).then(() => {
       return this;

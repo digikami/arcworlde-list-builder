@@ -1,0 +1,31 @@
+{
+  "id": "imperial-trooper",
+  "name": "Imperial Trooper",
+  "class": ["Unit"],
+  "baseCost": 40,
+
+  "ap": 2,
+  "move": 4,
+  "bravery": 7,
+  "hp": 6,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Heavy Strike",
+      "power": 6,
+      "special": "A Critical Hit allows the player to re-roll 1 failed Hit."
+    },
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Thrust",
+      "power": 4
+    }
+  ],
+  "equipment": [],
+  "items": [],
+  "rules": [
+    "civilized-imperial:take-orders"
+  ]
+}

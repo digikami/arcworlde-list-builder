@@ -25,6 +25,7 @@
     }
   ],
   "equipment": [
+    { "armouryItem": "common:dual-weapons", "fixed": true }
   ],
   "items": [],
   "rules": [

@@ -1,0 +1,38 @@
+{
+  "id": "halfling-sheriff",
+  "name": "Halfling Sheriff",
+  "class": ["Commander"],
+  "baseCost": 80,
+
+  "ap": 4,
+  "move": 4,
+  "bravery": 9,
+  "hp": 10,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Furious Wallop",
+      "power": 8,
+      "special": "If a Critical Hit is rolled, reduce the target Character's AP by 1 or their next Activation. This does not stack."
+    },
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Hearty Stab",
+      "power": 5,
+      "special": "Critical Hits ignore Armour"
+    }
+  ],
+  "equipment": [
+    { "armouryItem": "common:light-armour", "fixed": true }
+  ],
+  "items": [],
+  "rules": [
+    "civilized-halfling:make-orders",
+    {
+      "name": "Rousing Cheer",
+      "description": ""
+    }
+  ]
+}

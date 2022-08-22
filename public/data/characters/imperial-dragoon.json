@@ -1,0 +1,38 @@
+{
+  "id": "imperial-dragoon",
+  "name": "Imperial Dragoon",
+  "class": ["Elite"],
+  "baseCost": 65,
+
+  "ap": 3,
+  "move": 4,
+  "bravery": 8,
+  "hp": 7,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Keen Slice",
+      "power": 7,
+      "special": "A Critical Hit allows the player to re-roll 1 failed Hit."
+    },
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Downswing",
+      "power": 4,
+      "special": "If this Character is mounted, re-roll all failed Hits against Targets on 30mm bases."
+    }
+  ],
+  "equipment": [
+    { "armouryItem": "common:light-armour", "fixed": true }
+  ],
+  "items": [],
+  "rules": [
+    "civilized-imperial:take-orders",
+    {
+      "name": "Mounted Specialist", 
+      "description": ""
+    }
+  ]
+}

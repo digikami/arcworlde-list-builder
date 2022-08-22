@@ -1,0 +1,37 @@
+{
+  "id": "halfling-town-guard",
+  "name": "Halfling Town Guard",
+  "class": ["Elite"],
+  "baseCost": 70,
+
+  "ap": 3,
+  "move": 4,
+  "bravery": 8,
+  "hp": 7,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Determined Hack",
+      "power": 7,
+      "special": "A Critical Hit breaks 1 Armour."
+    },
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Chop",
+      "power": 4
+    }
+  ],
+  "equipment": [
+    { "armouryItem": "common:heavy-armour", "fixed": true }
+  ],
+  "items": [],
+  "rules": [
+    "civilized-halfling:take-orders",
+    {
+      "name": "Bodyguard",
+      "description": ""
+    }
+  ]
+}

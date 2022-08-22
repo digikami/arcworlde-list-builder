@@ -1,0 +1,35 @@
+{
+  "id": "trollhound",
+  "name": "Trollhound",
+  "class": ["Beast"],
+  "baseCost": 35,
+
+  "ap": 2,
+  "move": 6,
+  "bravery": 7,
+  "hp": 6,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Bite",
+      "power": 5
+    }
+  ],
+  "equipment": [],
+  "items": [],
+  "rules": [
+    {
+      "name": "Agile",
+      "description": ""
+    },
+    {
+      "name": "Pack Hunter",
+      "description": ""
+    },
+    {
+      "name": "Cling On",
+      "description": ""
+    }
+  ]
+}

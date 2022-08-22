@@ -1,0 +1,27 @@
+{
+  "id": "imperial-tinkerer",
+  "name": "Imperial Tinkerer",
+  "class": ["Mage"],
+  "baseCost": 80,
+
+  "ap": 3,
+  "move": 4,
+  "bravery": 8,
+  "hp": 9,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Spanner Whack",
+      "power": 5
+    }
+  ],
+  "equipment": [],
+  "items": [],
+  "rules": [
+    {
+      "name": "Contraption Trunk",
+      "description": ""
+    }
+  ]
+}

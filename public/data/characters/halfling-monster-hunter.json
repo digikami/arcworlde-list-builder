@@ -1,0 +1,38 @@
+{
+  "id": "halfling-monster-hunter",
+  "name": "Halfling Monster Hunter",
+  "class": ["Irregular"],
+  "baseCost": 60,
+
+  "ap": 3,
+  "move": 4,
+  "bravery": 8,
+  "hp": 6,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Cunning Thrust",
+      "power": 6,
+      "special": "Re-roll all failed Hits against Monsters or Titans. These cannot be re-rolled again."
+    },
+    {
+      "type": "ranged",
+      "name": "Lasso",
+      "power": 3,
+      "special": "6\" range. If a Critical Hit is rolled, the target may not move until the end of the round, and must achieve an Easy Feat to escape. A Character can be Lassoed by multiple Characters at the same time."
+    }
+  ],
+  "equipment": [],
+  "items": [],
+  "rules": [
+    {
+      "name": "Traps",
+      "description": ""
+    },
+    {
+      "name": "Dauntless",
+      "description": ""
+    }
+  ]
+}

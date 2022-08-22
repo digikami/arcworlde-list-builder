@@ -1,0 +1,52 @@
+{
+  "id": "imperial-ogre",
+  "name": "Imperial Ogre",
+  "class": ["Heavy"],
+  "baseCost": 160,
+
+  "ap": 5,
+  "move": 4,
+  "bravery": 8,
+  "hp": 16,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Clobber",
+      "power": 8,
+      "special": "If a Critical Hit is made, and the target is on a 30 or 40mm base, the target Character becomes Prone."
+    },
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Big Boot",
+      "power": 5,
+      "special": "+2 Power if the target is Prone."
+    }
+  ],
+  "equipment": [],
+  "items": [],
+  "rules": [
+    "civilized-imperial:take-orders",
+    {
+      "name": "Volley Gun",
+      "description": ""
+    }
+  ],
+  "armoury": [{
+    "id": "volley-gun",
+    "name": "Volley Gun",
+    "type": "Equipment",
+    "baseCost": 40,
+    "description": "",
+    "allow": [{"id": "imperial-ogre"}],
+    "modifications": {
+      "attacks": [{
+        "type": "ranged",
+        "name": "Volley Gun Shot",
+        "power": 6,
+        "special": "16\" range. This attack may only be used once per Activation and requires a Medium Feat. Draw a line from the base of the Attacker to the Target. All Characters within 2\" of this line are also targeted by this Attack. If there are more Failures than Successes when rolling to Hit, the wielder takes D3 Hits that ignores Armour.<br/><br/>After being fired, the Volley Gun must be reloaded for a Medium Feat before being fired again."
+      }]
+    }
+  }]
+}

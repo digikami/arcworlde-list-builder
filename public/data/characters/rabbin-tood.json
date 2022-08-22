@@ -25,6 +25,7 @@
     }
   ],
   "equipment": [
+    { "armouryItem": "civilized-halfling:halfling-ranged-weapon", "fixed": true }
   ],
   "items": [],
   "rules": [

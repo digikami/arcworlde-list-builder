@@ -1,0 +1,39 @@
+{
+  "id": "halfling-thing-flinger",
+  "name": "Halfling Thing-Flinger",
+  "class": ["Heavy"],
+  "baseCost": 200,
+
+  "ap": 3,
+  "move": 4,
+  "bravery": 7,
+  "hp": 20,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Trample",
+      "power": 4,
+      "special": "If a Critical Hit is rolled, the target Character is Prone and the Thing-Flinger may move out of combat without penalties."
+    },
+    {
+      "type": "ranged",
+      "name": "And...FIRE!",
+      "power": 10,
+      "special": "20\" range. Requires a Hard Feat to Shoot."
+    }
+  ],
+  "equipment": [],
+  "items": [],
+  "rules": [
+    "common:flammable",
+    {
+      "name": "Crew",
+      "description": ""
+    },
+    {
+      "name": "Random Payload",
+      "description": ""
+    }
+  ]
+}
