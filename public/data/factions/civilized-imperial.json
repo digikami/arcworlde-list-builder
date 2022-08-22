@@ -149,7 +149,7 @@
         }
       ],
       "equipment": [
-        "common:light-armor"
+        // "common:light-armor"
       ],
       "items": [],
       "rules": [
@@ -245,7 +245,7 @@
         }
       ],
       "equipment": [
-        "common:light-armour"
+        // "common:light-armour"
       ],
       "items": [],
       "rules": [

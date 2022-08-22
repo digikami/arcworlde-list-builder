@@ -26,8 +26,8 @@
     }
   ],
   "equipment": [
-    "common:dual-weapons",
-    "common:light-armour"
+    // "common:dual-weapons",
+    // "common:light-armour"
   ],
   "items": [],
   "rules": [

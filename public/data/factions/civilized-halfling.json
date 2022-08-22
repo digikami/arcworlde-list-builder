@@ -1,6 +1,6 @@
 {
   "id": "civilized-halfling",
-  "name": "Halflings of Hobbleshire",
+  "name": "Halflings",
   "listable": true,
   "tags": ["halfling", "civilized"],
   "rules": [
@@ -121,7 +121,7 @@
         }
       ],
       "equipment": [
-        "common:light-armour"
+        // "common:light-armour"
       ],
       "items": [],
       "rules": [
@@ -214,7 +214,7 @@
         }
       ],
       "equipment": [
-        "common:heavy-armour"
+        // "common:heavy-armour"
       ],
       "items": [],
       "rules": [
