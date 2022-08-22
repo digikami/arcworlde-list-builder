@@ -11,7 +11,7 @@
       <template v-if="!list.isLoading">
         <div class="row">
           <div class="col-12 col-md-8 d-flex flex-column flex-md-row align-items-md-center">
-            <strong class="fs-4">{{ list.get('name') }}</strong>
+            <h2 class="fs-4 my-0">{{ list.get('name') }}</h2>
             <span class="mt-1 mb-3 my-md-0">
               <small class="badge bg-dark mx-md-3">{{ list.get('faction').get('name')}}<span v-if="list.get('subfaction')"> - {{ list.get('subfaction').name }}</span></small>
             </span>
@@ -34,11 +34,11 @@
         </div>
       </template>
     </div>
-    <div class="modal fade" id="new-list-modal" tabindex="-1" aria-labelledby="" aria-hidden="true" ref="newListModal">
+    <div class="modal fade" id="new-list-modal" tabindex="-1" aria-labelledby="new-list-modal_header" aria-hidden="true" ref="newListModal">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="">New List</h5>
+            <h5 class="modal-title" id="new-list-modal_header">New List</h5>
           </div>
           <div class="modal-body">
             <form class="form" @submit.prevent="requestNewList">
