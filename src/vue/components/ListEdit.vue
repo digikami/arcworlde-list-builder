@@ -1,7 +1,7 @@
 <template>
   <div class="list-editor" ref="root">
     <div class="container">
-      <a @click="$emit('close')" class="btn btn-dark"><i class="bi-arrow-left-short"></i> Back</a>
+      <a @click="isDirty ? null : $emit('close')" class="btn btn-dark" :data-bs-toggle="isDirty ? 'modal': null" data-bs-target="#wbm_dirty_modal"><i class="bi-arrow-left-short"></i> Back</a>
     </div>
     <div class="container  p-3 border-bottom border-dark border-2 sticky-top bg-white">
       <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
@@ -21,8 +21,8 @@
               <i class="bi-pencil"></i>
             </button>
 
-            <button class="btn btn-outline-secondary" aria-label="Save Changes" @click="handleSaveRequest" data-bs-title="Save">
-              <i class="bi-save"></i>
+            <button :class="`btn ${ isDirty ? 'btn-dark' : 'btn-outline-secondary' }`" aria-label="Save Changes" @click="handleSaveRequest" data-bs-title="Save">
+              <i :class="isDirty ? 'bi-save' : 'bi-check-circle'"></i>
             </button>
           </div>
         </div>
@@ -46,7 +46,14 @@
       </div>
       <div class="container py-3 px-0">
         <div class="d-flex flex-column gap-3">
-          <WBMEditor v-for="character in list.get('commanders')" :member="character" :faction="list.get('faction')" :common="common" :list="list" @requestMemberRemoval="handleCommanderRemoval"></WBMEditor>
+          <WBMEditor v-for="character in list.get('commanders')"
+            :member="character"
+            :faction="list.get('faction')"
+            :common="common"
+            :list="list"
+            @requestMemberRemoval="handleCommanderRemoval"
+            @dirty="handleDirty"
+          ></WBMEditor>
         </div>
       </div>
 
@@ -67,7 +74,16 @@
       </div>
       <div class="container py-3 px-0">
         <div class="d-flex flex-column gap-3">
-          <WBMEditor v-for="member in list.get('members')" :member="member" :faction="list.get('faction')" :common="common" :list="list" @requestMemberRemoval="handleMemberRemoval" :duplicable="!member.get('character').matches([{ rules: 'swords-for-hire:personality' }])" @requestDuplicate="handleDuplicateRequest"></WBMEditor>
+          <WBMEditor v-for="member in list.get('members')"
+            :member="member"
+            :faction="list.get('faction')"
+            :common="common"
+            :list="list"
+            :duplicable="!member.get('character').matches([{ rules: 'swords-for-hire:personality' }])"
+            @requestMemberRemoval="handleMemberRemoval"
+            @requestDuplicate="handleDuplicateRequest"
+            @dirty="handleDirty"
+          ></WBMEditor>
         </div>
       </div>
     </div>
@@ -93,6 +109,20 @@
         </div>
       </div>
     </div>
+
+    <div class="modal fade" :id="`wbm_dirty_modal`" tabindex="-1" aria-labelledby="" aria-hidden="true" ref="listDirtyModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="">There are unsaved changes.</h5>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" @click="$emit('close')">Close Without Saving</button>
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal" @click="handleSaveRequest(); $emit('close');">Save and Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 <script>
@@ -107,7 +137,8 @@
       return {
         editFormValues: {
           name: this.list.get('name')
-        }
+        },
+        isDirty: false
       }
     },
     components: {
@@ -183,6 +214,7 @@
     methods: {
       handleSaveRequest() {
         this.list.save();
+        this.isDirty = false;
       },
       requestNewCommander(character) {
         if (this.list.get('commanders').length >= this.list.get('faction').get('commanderLimit'))
@@ -190,28 +222,37 @@
         let wbm = new WarbandMember({ character: character, equipment: character.get('equipment') });
         wbm.loadData().then((m) => {
           this.list.get('commanders').push(m);
+          this.handleDirty();
         })
       },
       requestNewMember(selection, equipment = []) {
         let wbm = new WarbandMember({ character: selection.character, equipment: equipment });
         wbm.loadData().then((m) => {
           this.list.get('members').push(m);
+          this.handleDirty();
         })
       },
       handleCommanderRemoval(member) {
         this.list.get('commanders').splice(this.list.get('commanders').indexOf(member), 1);
+        this.handleDirty();
       },
       handleMemberRemoval(member) {
         this.list.get('members').splice(this.list.get('members').indexOf(member), 1);
+        this.handleDirty();
       },
       saveEdits() {
         this.list.set('name', this.editFormValues.name);
         Modal.getInstance(this.$refs.listEditModal).hide();
+        this.handleDirty();
       },
       handleDuplicateRequest(member) {
         member.clone().then((clone) => {
           this.list.get('members').push(clone);
+          this.handleDirty();
         })
+      },
+      handleDirty() {
+        this.isDirty = true;
       }
     }
   }

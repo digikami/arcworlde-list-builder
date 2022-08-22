@@ -153,11 +153,13 @@
         this.member.get('equipment').push(new WarbandEquipment({ armouryItem: request.equipment }));
         setTimeout(this.assertTooltips, 10);
         setTimeout(this.updateCostTooltip, 10);
+        this.$emit('dirty');
       },
       requestRemoveEquipment(equipment) {
         this.member.get('equipment').splice(this.member.get('equipment').indexOf(equipment), 1);
         this.closeTooltips();
         setTimeout(this.updateCostTooltip, 10);
+        this.$emit('dirty');
       },
       saveEdits() {
         if (this.editFormValues.name == "") {
@@ -165,6 +167,7 @@
         }
         this.member.set('name', this.editFormValues.name);
         Modal.getInstance(this.$refs.memberEditModal).hide();
+        this.$emit('dirty');
       },
       updateCostTooltip() {
         this.$refs.root.querySelectorAll("[data-bs-toggle='tooltip']").forEach((tt) => {
