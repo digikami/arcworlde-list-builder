@@ -33,7 +33,7 @@
   ],
   "equipment": [],
   "items": [],
-  "rules": [
+  "traits": [
     "bestiary:agile",
     "bestiary:split-activation",
     "bestiary:fearsome",

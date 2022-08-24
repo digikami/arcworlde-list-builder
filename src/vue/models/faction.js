@@ -1,12 +1,22 @@
 import BaseModel from './base-model';
 import Character from './character';
 import Equipment from './equipment';
+import Trait from './trait';
 
 class Faction extends BaseModel {
   constructor(data) {
     data.armoury = data.armoury ?? [];
     data.commanderLimit = data.commanderLimit ?? 1;
     super(data);
+  }
+
+  loadData() {
+    return this.loadTraits()
+      .then(() => this.loadArmoury())
+      .then(() => this.loadCharacters())
+      .then(() => {
+        return this;
+      });
   }
 
   loadArmoury() {
@@ -22,7 +32,7 @@ class Faction extends BaseModel {
     this.characters = this.characters ?? [];
     return Promise.all(this.get('characters').map((character) => {
       return Character.find(character).then((char) => {
-        return char.loadArmoury().then(() => {
+        return char.loadData().then(() => {
           return char;
         })
       })
@@ -30,6 +40,15 @@ class Faction extends BaseModel {
       this.set('characters', characters);
       return characters;
     });
+  }
+
+  loadTraits() {
+    return Promise.all(this.get('traits').map((trait) => {
+      return Trait.find(trait, this);
+    })).then((traits) => {
+      this.set('traits', traits);
+      return traits;
+    })
   }
 
   getCharacterCost(character) {

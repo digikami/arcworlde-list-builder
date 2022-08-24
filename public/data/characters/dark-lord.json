@@ -34,7 +34,7 @@
     { "armouryItem": "common:heavy-armour", "fixed": true }
   ],
   "items": [],
-  "rules": [
+  "traits": [
     "bestiary:split-activation",
     {
       "name": "Monologue",

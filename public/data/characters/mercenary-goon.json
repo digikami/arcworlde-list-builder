@@ -27,7 +27,7 @@
   "equipment": [
   ],
   "items": [],
-  "rules": [
+  "traits": [
     {
       "name": "Expendable", 
       "description": ""

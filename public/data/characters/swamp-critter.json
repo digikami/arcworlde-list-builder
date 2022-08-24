@@ -20,7 +20,7 @@
   "equipment": [
   ],
   "items": [],
-  "rules": [
+  "traits": [
     "bestiary:agile",
     "bestiary:pack-hunter",
     {

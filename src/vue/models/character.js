@@ -1,5 +1,6 @@
 import BaseModel from './base-model';
 import Equipment from './equipment';
+import Trait from './trait';
 
 class Character extends BaseModel {
   constructor(data) {
@@ -9,12 +10,24 @@ class Character extends BaseModel {
     data.species = data.species ?? "unknown";
     super(data);
   }
+  loadData() {
+    return Promise.all([this.loadArmoury(), this.loadTraits()]).then(() => this);
+  }
+
   loadArmoury() {
     return Promise.all(this.get('armoury').map((armouryItem) => {
       return Equipment.find(armouryItem, this);
     })).then((armoury) => {
       this.set('armoury', armoury);
       return armoury;
+    });
+  }
+  loadTraits() {
+    return Promise.all(this.get('traits').map((trait) => {
+      return Trait.find(trait, this);
+    })).then((traits) => {
+      this.set('traits', traits);
+      return traits;
     });
   }
 
@@ -24,7 +37,12 @@ class Character extends BaseModel {
     termSet.forEach((terms) => {
       let match = true;
       for (const key in terms) {
-        match = match && (this.get(key) == terms[key] || (Array.isArray(this.get(key)) && this.get(key).includes(terms[key])))
+        let comp = this.get(key);
+        match = match && comp && ( 
+          comp == terms[key] ||
+          (Array.isArray(comp) && (comp.includes(terms[key]) || comp.map((item) => item.id).includes(terms[key]))) ||
+          (comp.id && comp.id == terms[key])
+        )
       }
       allowed = allowed || match;
     })

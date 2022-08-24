@@ -28,7 +28,7 @@
     { "armouryItem": "common:dual-weapons", "fixed": true }
   ],
   "items": [],
-  "rules": [
+  "traits": [
     "bestiary:agile",
     {
       "name": "Berserker",

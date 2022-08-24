@@ -24,7 +24,7 @@
   ],
   "equipment": [],
   "items": [],
-  "rules": [
+  "traits": [
     "fae-dark-lords:diminutive",
     {
       "name": "Arson Around",

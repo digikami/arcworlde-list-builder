@@ -2,7 +2,7 @@
   "id": "fae-dark-lords",
   "listable": true,
   "name": "Dark Lords",
-  "rules": [
+  "traits": [
     {
       "id": "dark-ones-will",
       "name": "The Dark One's Will",
@@ -61,7 +61,7 @@
       "modifications": {
         "hp": 5,
         "move": 4,
-        "rules": ["bestiary:agile"]
+        "traits": ["bestiary:agile"]
       }
     },
     {

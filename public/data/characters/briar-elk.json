@@ -32,7 +32,7 @@
   ],
   "equipment": [],
   "items": [],
-  "rules": [
+  "traits": [
     "common:flammable",
     "bestiary:agile",
     "bestiary:split-activation",

@@ -28,7 +28,7 @@
     { "armouryItem": "common:light-armour", "fixed": true }
   ],
   "items": [],
-  "rules": [
+  "traits": [
     "civilized-imperial:take-orders",
     {
       "name": "Mounted Specialist", 

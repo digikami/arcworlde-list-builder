@@ -3,11 +3,7 @@
   "name": "Halflings",
   "listable": true,
   "tags": ["halfling", "civilized"],
-  "rules": [
-    {
-      "name": "Civilized Lands",
-      "description": ""
-    },
+  "traits": [
     {
       "id": "make-orders",
       "name": "Make Orders",
@@ -72,7 +68,7 @@
       "modifications": {
         "hp": 5,
         "move": 4,
-        "rules": [
+        "traits": [
           "bestiary:agile"
         ]
       }

@@ -28,7 +28,7 @@
   "equipment": [
   ],
   "items": [],
-  "rules": [
+  "traits": [
     "nomad-ourk:intimidating",
     "nomad-ourk:hurl"
   ]

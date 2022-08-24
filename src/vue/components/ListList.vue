@@ -23,6 +23,9 @@
               </div>
             </div>
             <div class="btn-group" role="group">
+              <button @click="closeTooltips(); $emit('requestView', list);" class="btn btn-outline-secondary" data-bs-title="View">
+                <i class="bi-eye" role="img" aria-label="View"></i>
+              </button>
               <button @click="closeTooltips(); $emit('requestEdit', list);" class="btn btn-outline-secondary" data-bs-title="Edit">
                 <i class="bi-pencil" role="img" aria-label="Edit"></i>
               </button>
@@ -99,7 +102,7 @@
     computed: {
       dropdownMap() {
         let map = [];
-        this.kingdoms.forEach((kingdom) => {
+        this.kingdoms.sort((a,b) => a.get('name') == b.get('name') ? 0 : (a.get('name') < b.get('name') ? -1 : 1)).forEach((kingdom) => {
           map.push({
             id: kingdom.get('id'),
             name: kingdom.get('name'),

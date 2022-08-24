@@ -1,0 +1,85 @@
+.warband_member_view {
+  break-inside: avoid;
+  font-size: 1.25rem;
+
+  .character_grid {
+    border: 2px solid $dark;
+    display: grid;
+    grid-template-areas:
+      "header header"
+      "class-label class-value"
+      "ap-label ap-value"
+      "move-label move-value"
+      "bravery-label bravery-value"
+      "hp-label hp-value";
+
+    @include media-breakpoint-up(md) {
+      grid-template-areas:
+        "header header header header header"
+        "class-label ap-label move-label bravery-label hp-label"
+        "class-value ap-value move-value bravery-value hp-value";
+    }
+
+    &-header {
+      grid-area: header;
+    }
+    &-class {
+      &-label {
+        grid-area: class-label;
+      }
+      &-value {
+        grid-area: class-value;
+      }
+    }
+    &-ap {
+      &-label {
+        grid-area: ap-label;
+      }
+      &-value {
+        grid-area: ap-value;
+      }
+    }
+    &-move {
+      &-label {
+        grid-area: move-label;
+      }
+      &-value {
+        grid-area: move-value;
+      }
+    }
+    &-bravery {
+      &-label {
+        grid-area: bravery-label;
+      }
+      &-value {
+        grid-area: bravery-value;
+      }
+    }
+    &-hp {
+      &-label {
+        grid-area: hp-label;
+      }
+      &-value {
+        grid-area: hp-value;
+      }
+    }
+
+    &-stat {
+      &-label {
+        border: 2px solid $dark;
+      }
+      &-value {
+        border: 2px solid $dark;
+      }
+    }
+  }
+
+  .list-inline-item::after {
+    content:', ';
+  }
+  .list-inline-item:last-child::after {
+    content: none;
+  }
+
+}
+

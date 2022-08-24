@@ -32,7 +32,7 @@
   ],
   "equipment": [],
   "items": [],
-  "rules": [
+  "traits": [
     "bestiary:gobble",
     "bestiary:split-activation",
     "bestiary:fearsome",

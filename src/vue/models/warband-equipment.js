@@ -1,4 +1,5 @@
 import Equipment from "./equipment";
+import Trait from './trait';
 import BaseModel from "./base-model";
 import Utils from 'utils/LoafUtils';
 
@@ -8,8 +9,42 @@ class WarbandEquipment extends BaseModel {
     super(data);
   }
 
+  name() {
+    return this.get('armouryItem').get('name')
+  }
+  description() {
+    return this.get('armouryItem').get('description')
+  }
+
   totalCost() {
     return this.get('fixed') ? 0 : this.get('armouryItem').get('baseCost');
+  }
+
+  modifyStats(stats) {
+    let mods = this.get('armouryItem').get('modifications');
+    if (mods) {
+      stats.hp += mods.hp ? mods.hp : 0;
+      stats.move += mods.move ? mods.move : 0;
+      stats.bravery += mods.bravery ? mods.bravery : 0;
+      stats.ap += mods.ap ? mods.ap : 0;
+    }
+    return stats;
+  }
+
+  modifyAttacks(attacks) {
+    let mods = this.get('armouryItem').get('modifications');
+    if (mods && mods.attacks) {
+      attacks = attacks.concat(mods.attacks)
+    }
+    return attacks;
+  }
+
+  modifyTraits(traits) {
+    let mods = this.get('armouryItem').get('modifications');
+    if (mods && mods.traits) {
+      traits = traits.concat(mods.traits);
+    }
+    return traits;
   }
 
   loadData() {

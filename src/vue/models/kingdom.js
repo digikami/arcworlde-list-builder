@@ -6,11 +6,15 @@ class Kingdom extends BaseModel {
     super(data);
   }
 
+  loadData() {
+    return this.loadFactions().then(() => this);
+  }
+
   loadFactions() {
     this.factions = this.factions ?? [];
     return Promise.all(this.get('factions').map((faction) => {
       return Faction.fetch(faction).then((f) => {
-        return Promise.all([f.loadCharacters(), f.loadArmoury()]).then(() => {
+        return f.loadData().then(() => {
           this.factions.push(f);
           return f;
         })

@@ -19,8 +19,9 @@
   "equipment": [
   ],
   "items": [],
-  "rules": [
+  "traits": [
     {
+      "id": "reloader",
       "name": "Reloader", 
       "description": ""
     }

@@ -35,21 +35,24 @@
   "equipment": [
   ],
   "items": [],
-  "rules": [
+  "traits": [
     "bestiary:split-activation",
     "bestiary:fearsome",
     "bestiary:dwindling-strength",
     "bestiary:death-throes",
     "bestiary:gobble",
     {
+      "id": "arcanite-carapace",
       "name": "Arcanite Carapace",
       "description": "+1 Armour. Every time the Arachnid Queen loses AP due to Dwindling Strength, place 1 Arcanite Token in base contact."
     },
     {
+      "id": "web-spray",
       "name": "Web Spray",
       "description": ""
     },
     {
+      "id": "spiderwitch",
       "name": "Spiderwitch",
       "description": ""
     }

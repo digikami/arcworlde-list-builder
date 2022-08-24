@@ -18,7 +18,7 @@
   ],
   "equipment": [],
   "items": [],
-  "rules": [
+  "traits": [
     "common:flammable",
     {
       "name": "Collection of Tomes",

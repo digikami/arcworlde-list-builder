@@ -34,17 +34,19 @@
   "equipment": [
   ],
   "items": [],
-  "rules": [
+  "traits": [
     "bestiary:split-activation",
     "bestiary:fearsome",
     "bestiary:dwindling-strength",
     "bestiary:death-throes",
     "bestiary:gobble",
     {
+      "id": "magical-spores",
       "name": "Magical Spores",
       "description": ""
     },
     {
+      "id": "airborne",
       "name": "Airborne",
       "description": ""
     }

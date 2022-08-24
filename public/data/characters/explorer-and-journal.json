@@ -20,7 +20,7 @@
   "equipment": [
   ],
   "items": [],
-  "rules": [
+  "traits": [
     "swords-for-hire:personality",
     {
       "name": "Plot Armour", 

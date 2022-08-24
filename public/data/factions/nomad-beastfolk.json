@@ -2,7 +2,7 @@
   "id": "nomad-beastfolk",
   "listable": true,
   "name": "Beastfolk",
-  "rules": [
+  "traits": [
     {
       "id": "beastkin",
       "name": "Beastkin",
@@ -19,7 +19,7 @@
       "description": ""
     },
     {
-      "id": "animal-forms",
+      "id": "animal-form",
       "name": "Animal Forms",
       "description": ""
     }
@@ -69,7 +69,7 @@
       "name": "Protective Hide",
       "type": "Animal Form",
       "baseCost": 20,
-      "allow": [{"rules": "nomad-beastfolk:animal-form"}],
+      "allow": [{"traits": "nomad-beastfolk:animal-form"}],
       "description": "+1 to Armour, cannot be Broken by Attacks. May stack with other types of armoured Equipment."
     },
     {
@@ -77,7 +77,7 @@
       "name": "Camouflaged Pelt",
       "type": "Animal Form",
       "baseCost": 15,
-      "allow": [{"rules": "nomad-beastfolk:animal-form"}],
+      "allow": [{"traits": "nomad-beastfolk:animal-form"}],
       "description": "Characters using a Ranged Attack against this Character increase their Feat difficulty by 1."
     },
     {
@@ -85,15 +85,18 @@
       "name": "Ugly",
       "type": "Animal Form",
       "baseCost": 15,
-      "allow": [{"rules": "nomad-beastfolk:animal-form"}],
-      "description": "This Character is Fearsome"
+      "allow": [{"traits": "nomad-beastfolk:animal-form"}],
+      "description": "This Character is Fearsome",
+      "modifications": {
+        "traits": ["bestiary:fearsome"]
+      }
     },
     {
       "id": "bestial-moxie",
       "name": "Bestial Moxie",
       "type": "Animal Form",
       "baseCost": 20,
-      "allow": [{"rules": "nomad-beastfolk:animal-form"}],
+      "allow": [{"traits": "nomad-beastfolk:animal-form"}],
       "description": "This Character automatically passes all Bravery Tests."
     },
     {
@@ -101,23 +104,30 @@
       "name": "Horns and Tusks",
       "type": "Animal Form",
       "baseCost": 20,
-      "allow": [{"rules": "nomad-beastfolk:animal-form"}],
-      "description": "+1 Power on all Attacks"
+      "allow": [{"traits": "nomad-beastfolk:animal-form"}],
+      "description": "+1 Power on all Attacks",
+      "modifications": {
+        "power": 1
+      }
     },
     {
       "id": "long-legs",
       "name": "Long Legs",
       "type": "Animal Form",
       "baseCost": 20,
-      "allow": [{"rules": "nomad-beastfolk:animal-form"}],
-      "description": "+2 Move and gains the Agile Trait"
+      "allow": [{"traits": "nomad-beastfolk:animal-form"}],
+      "description": "+2 Move and gains the Agile Trait",
+      "modifications": {
+        "move": 2,
+        "traits": ["bestiary:agile"]
+      }
     },
     {
       "id": "monster-rider",
       "name": "Monster Rider",
       "type": "Animal Form",
       "baseCost": 15,
-      "allow": [{"rules": "nomad-beastfolk:animal-form"}],
+      "allow": [{"traits": "nomad-beastfolk:animal-form"}],
       "description": "May use the Monstrous Mount Trait on any Beast, Monster, or Titan."
     }
   ],

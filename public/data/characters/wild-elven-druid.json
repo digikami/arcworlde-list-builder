@@ -24,7 +24,7 @@
   ],
   "equipment": [],
   "items": [],
-  "rules": [
+  "traits": [
     "bestiary:agile",
     "fae-wild-elves:summoner",
     "fae-wild-elves:sacrifice"

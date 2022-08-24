@@ -3,7 +3,7 @@
   "listable": true,
   "name": "Ourk",
   "commanderLimit": 2,
-  "rules": [
+  "traits": [
     {
       "id": "power-struggle",
       "name": "Power Struggle",
@@ -113,7 +113,7 @@
       "modifications": {
         "hp": 5,
         "move": 4,
-        "rules": ["bestiary:agile"]
+        "traits": ["bestiary:agile"]
       }
     }
   ],

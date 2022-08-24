@@ -17,6 +17,10 @@
             </div>
           </div>
           <div class="btn-group">
+            <button class="btn btn-outline-secondary" aria-label="Warband Print View" @click="$emit('requestView', list)" data-bs-title="Print">
+              <i class="bi-eye"></i>
+            </button>
+
             <button class="btn btn-outline-secondary" aria-label="Edit Warband Data" data-bs-toggle="modal" :data-bs-target="`#wbm_${ list.get('id') }_modal`" data-bs-title="Edit">
               <i class="bi-pencil"></i>
             </button>
@@ -79,7 +83,7 @@
             :faction="list.get('faction')"
             :common="common"
             :list="list"
-            :duplicable="!member.get('character').matches([{ rules: 'swords-for-hire:personality' }])"
+            :duplicable="!member.get('character').matches([{ traits: 'swords-for-hire:personality' }])"
             @requestMemberRemoval="handleMemberRemoval"
             @requestDuplicate="handleDuplicateRequest"
             @dirty="handleDirty"
@@ -189,7 +193,7 @@
               members: faction.get('characters').filter((a) => {
                 return !(a.get("class").map((a) => a.toLowerCase()).includes("commander") && a.get('class').length == 1);
               }).filter((character) => {
-                return !(character.matches([{ rules: 'swords-for-hire:personality'}]) && this.list.get('members').find((member) => member.get('character').get('id') == character.get('id')));
+                return !(character.matches([{ traits: 'swords-for-hire:personality'}]) && this.list.get('members').find((member) => member.get('character').get('id') == character.get('id')));
               }).map((character) => {
                 return {
                   id: character.id,

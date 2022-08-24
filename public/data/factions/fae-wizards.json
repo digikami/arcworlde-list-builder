@@ -2,7 +2,7 @@
   "id": "fae-wizards",
   "listable": true,
   "name": "Wizards",
-  "rules": [
+  "traits": [
     {
       "id": "thing-of-magic",
       "name": "Thing of Magic",
@@ -148,7 +148,7 @@
       "modifications": {
         "hp": 5,
         "move": 4,
-        "rules": ["bestiary:agile"]
+        "traits": ["bestiary:agile"]
       }
     },
     {

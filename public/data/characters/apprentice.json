@@ -18,12 +18,14 @@
   ],
   "equipment": [],
   "items": [],
-  "rules": [
+  "traits": [
     {
+      "id": "conduit",
       "name": "Conduit",
       "description": ""
     },
     {
+      "id": "student-of-magic",
       "name": "Student of Magic",
       "description": ""
     }

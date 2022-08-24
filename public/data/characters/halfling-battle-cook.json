@@ -19,7 +19,7 @@
   ],
   "equipment": [],
   "items": [],
-  "rules": [
+  "traits": [
     "civilized-halfling:make-orders"
   ]
 }

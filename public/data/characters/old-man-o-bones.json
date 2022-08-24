@@ -20,7 +20,7 @@
   ],
   "equipment": [],
   "items": [],
-  "rules": [
+  "traits": [
     "undead-raiders:soul-eater",
     "bestiary:fly",
     {

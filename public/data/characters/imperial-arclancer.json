@@ -20,7 +20,7 @@
   "equipment": [
   ],
   "items": [],
-  "rules": [
+  "traits": [
     "civilized-imperial:take-orders",
     {
       "name": "Arclance", 

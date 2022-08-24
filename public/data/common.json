@@ -7,62 +7,66 @@
       "name": "Arcanite Token",
       "type": "Item",
       "baseCost": 10,
-      "description": ""
+      "description": "<p>One use only. When used, choose one effect:</p><ul><li>Grant +1AP to the Character for their Activation.</li><li>Add an extra D6 to any roll.</li><li>Allow another Spell to be cast.</li><li>Allow a D6 to be re-rolled.</li></ul>"
     },
     {
       "id": "shield",
       "name": "Shield",
       "type": "Equipment",
       "baseCost": 15,
-      "description": ""
+      "description": "<p>If equipped, a Charaacter may re-roll one failed Defence roll per Round.</p>"
     },
     {
       "id": "spear",
       "name": "Spear",
       "type": "Equipment",
       "baseCost": 10,
-      "description": ""
+      "description": "<p>If equipped, a Character may make Melee Attacks against targets up to 2\" away, even if they aren't in base contact. Attacks may still be made if there is a friendly Character between the Character and the target.</p>"
     },
     {
       "id": "torch",
       "name": "Torch",
       "type": "Item",
       "baseCost": 10,
-      "description": ""
+      "description": "<p>If equipped, a Character counts as Fearsome to Beasts and Monsters. In addition, the Character counts as Fearsome and has +1 Power on all Melee Attacks against Characters who are Flammable.</p><p>However, enemy Characters may re-roll Failures when attempting Feat rolls for Ranged Attacks against a Torch-carrying Character, as they are much easier to spot from afar.</p>"
     },
     {
       "id": "two-handed-weapon",
       "name": "Two Handed Weapon",
       "type": "Equipment",
       "baseCost": 10,
-      "description": ""
+      "description": "<p>If equipped, a Character gets +2 Power for all Melee Attacks. However, any of their own Critical Defends are discarded as if they were Failures.</p>",
+      "modifications": {
+        "power": 2
+      }
     },
     {
       "id": "dual-weapons",
       "name": "Dual Weapons",
       "type": "Equipment",
       "baseCost": 10,
-      "description": ""
+      "description": "<p>If equipped, a Character may re-roll every 1 when making a Melee Attack.</p>"
     },
     {
       "id": "light-armour",
       "name": "Light Armour",
       "type": "Equipment",
       "baseCost": 20,
-      "description": ""
+      "description": "<p>If equipped, a Character gains +1 Armour. This does not stack.</p>"
     },
     {
       "id": "heavy-armour",
       "name": "Heavy Armour",
       "type": "Equipment",
       "baseCost": 35,
-      "description": ""
+      "description": "<p>If equipped, a Character gains +2 Armour. This does not stack. In addition, any Leg It rolls are at +1 difficulty.</p>"
     }
   ],
-  "rules": [
+  "traits": [
     {
       "id": "flammable",
-      "name": "Flammable"
+      "name": "Flammable",
+      "description": ""
     }
   ]
 }

@@ -27,7 +27,7 @@
   "equipment": [
   ],
   "items": [],
-  "rules": [
+  "traits": [
     "nomad-ourk:intimidating",
     {
       "name": "Power Struggle", 

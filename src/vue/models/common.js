@@ -1,10 +1,15 @@
 import BaseModel from './base-model';
 import Equipment from './equipment';
+import Trait from './trait';
 
 class Common extends BaseModel {
   constructor(data) {
     data.armoury = data.armoury ?? [];
     super(data)
+  }
+
+  loadData() {
+    return Promise.all([this.loadArmoury(), this.loadTraits()]);
   }
 
   loadArmoury() {
@@ -14,6 +19,15 @@ class Common extends BaseModel {
       this.set('armoury', armoury);
       return armoury;
     });
+  }
+
+  loadTraits() {
+    return Promise.all(this.get('traits').map((trait) => {
+      return Trait.find(trait, this);
+    })).then((traits) => {
+      this.set('traits', traits);
+      return traits;
+    })
   }
 }
 

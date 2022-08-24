@@ -30,7 +30,7 @@
     { "armouryItem": "common:dual-weapons", "fixed": true }
   ],
   "items": [],
-  "rules": [
+  "traits": [
     "swords-for-hire:personality",
     {
       "name": "Scarlet Blur", 

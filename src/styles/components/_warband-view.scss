@@ -1,0 +1,39 @@
+.warband_view.print {
+  .warband_member_view {
+    font-size: 1rem;
+  }
+  .my-3 {
+    margin-top: 0.5rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+  p {
+    margin-bottom: 0.5rem !important;
+  }
+}
+
+.warband_view {
+  &-short {
+    .leader-row {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+
+      &::before {
+        content: '';
+        position: absolute;
+        bottom: 0.25rem;
+        width: 100%;
+        z-index: 1;
+        border-bottom: 1px dotted $dark;
+      }
+
+      & > * {
+        position: relative;
+        background: $white;
+        display: inline-block;
+        padding: 0 0.25rem;
+        z-index: 2;
+      }
+    }
+  }
+}

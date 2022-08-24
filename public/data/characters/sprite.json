@@ -25,7 +25,7 @@
   ],
   "equipment": [],
   "items": [],
-  "rules": [
+  "traits": [
     "fae-wizards:thing-of-magic"
   ]
 }

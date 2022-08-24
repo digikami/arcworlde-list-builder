@@ -28,7 +28,7 @@
   "equipment": [
   ],
   "items": [],
-  "rules": [
+  "traits": [
     "bestiary:agile"
   ]
 }

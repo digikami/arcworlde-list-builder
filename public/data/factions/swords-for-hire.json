@@ -2,7 +2,7 @@
   "id": "swords-for-hire",
   "listable": false,
   "name": "Swords for Hire",
-  "rules": [
+  "traits": [
     {
       "id": "fighting-for-coin",
       "name": "Fighting for Coin",

@@ -28,7 +28,7 @@
     { "armouryItem": "civilized-halfling:halfling-ranged-weapon", "fixed": true }
   ],
   "items": [],
-  "rules": [
+  "traits": [
     "swords-for-hire:personality",
     {
       "name": "Expert Poacher", 

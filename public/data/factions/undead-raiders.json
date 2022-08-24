@@ -2,7 +2,7 @@
   "id": "undead-raiders",
   "listable": true,
   "name": "Undead Raiders",
-  "rules": [
+  "traits": [
     {
       "id": "raiser-of-the-dead",
       "name": "Raiser of the Dead",
@@ -75,7 +75,10 @@
       "name": "Cursed Pipes",
       "type": "Equipment",
       "baseCost": 30,
-      "description": ""
+      "description": "",
+      "modifications": {
+        "traits": ["undead-raiders:raiser-of-the-dead"]
+      }
     },
     {
       "id": "hangmans-noose",

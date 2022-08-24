@@ -3,11 +3,7 @@
   "name": "Imperials",
   "listable": true,
   "tags": ["imperial", "civilized"],
-  "rules": [
-    {
-      "name": "Civilized Lands",
-      "description": ""
-    },
+  "traits": [
     {
       "id": "make-orders",
       "name": "Make Orders",
@@ -72,7 +68,7 @@
       "modifications": {
         "hp": 5,
         "move": 4,
-        "rules": [
+        "traits": [
           "bestiary:agile"
         ]
       }
@@ -117,7 +113,7 @@
       "allow": [{"id": "imperial-trooper"}],
       "modifications": {
         "bravery": 1,
-        "rules": ["civilized-imperial:make-orders"]
+        "traits": ["civilized-imperial:make-orders"]
       }
     }
   ],

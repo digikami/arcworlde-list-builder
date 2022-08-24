@@ -27,19 +27,22 @@
   "equipment": [
   ],
   "items": [],
-  "rules": [
+  "traits": [
     "bestiary:agile",
     "bestiary:pack-hunter",
     "common:flammable",
     {
+      "id": "web-spray",
       "name": "Web Spray",
       "description": ""
     },
     {
+      "id": "web-spinner",
       "name": "Web Spinner",
       "description": ""
     },
     {
+      "id": "living-arcanite",
       "name": "Living Arcanite",
       "description": ""
     }

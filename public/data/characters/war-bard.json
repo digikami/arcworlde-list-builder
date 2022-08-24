@@ -25,7 +25,7 @@
   ],
   "equipment": [],
   "items": [],
-  "rules": [
+  "traits": [
     "nomad-beastfolk:animal-form",
     {
       "name": "Ballads of the Beastfolk",

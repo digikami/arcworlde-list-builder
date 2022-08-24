@@ -4,6 +4,10 @@ class BaseModel {
     this._data = data;
   }
 
+  loadData() {
+    return Promise.resolve(this);
+  }
+
   get(key) {
     return this._data[key];
   }
@@ -16,6 +20,7 @@ class BaseModel {
 
 BaseModel.initClass = (cls, slug) => {
   cls._cache = {};
+  cls._slug = slug;
 
   cls.find = (id) => {
     let refId = typeof(id) == "string" ? id : id.id;
@@ -25,19 +30,19 @@ BaseModel.initClass = (cls, slug) => {
     if (typeof(id) !== "string") {
       let inst = new cls(id);
       cls._cache[inst.id] = inst;
-      return Promise.resolve(inst);
+      return inst.loadData().then(() => inst);
     }
-    return fetch(`./data/${ slug }/${ id }.json`).then(resp => resp.json()).then(d => {
+    return fetch(`./data/${ cls._slug }/${ id }.json`).then(resp => resp.json()).then(d => {
       let inst = new cls(d);
       cls._cache[id] = inst;
-      return inst;
+      return inst.loadData().then(() => inst);
     })
   }
 
   cls.fetch = cls.find;
 
   cls.all = () => {
-    return fetch(`./data/${ slug }/_index.json`).then(resp => resp.json()).then(kids => {
+    return fetch(`./data/${ cls._slug }/_index.json`).then(resp => resp.json()).then(kids => {
       return Promise.all(kids.map((kid) => cls.find(kid)))
     })
   }

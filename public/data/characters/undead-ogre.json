@@ -34,7 +34,7 @@
   ],
   "equipment": [],
   "items": [],
-  "rules": [
+  "traits": [
     "undead-raiders:risen",
     "bestiary:fearsome",
     {

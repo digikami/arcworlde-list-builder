@@ -28,7 +28,7 @@
   "equipment": [
   ],
   "items": [],
-  "rules": [
+  "traits": [
     "nomad-ourk:diminutive",
     {
       "name": "Sticky Fingers", 

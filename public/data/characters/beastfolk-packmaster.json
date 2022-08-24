@@ -33,7 +33,7 @@
   ],
   "equipment": [],
   "items": [],
-  "rules": [
+  "traits": [
     "nomad-beastfolk:intimidating",
     "nomad-beastfolk:animal-form"
   ]

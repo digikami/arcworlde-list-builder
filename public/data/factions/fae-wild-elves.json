@@ -2,7 +2,7 @@
   "id": "fae-wild-elves",
   "listable": true,
   "name": "Wild Elves",
-  "rules": [
+  "traits": [
     {
       "id": "summoner",
       "name": "Summoner",
@@ -60,14 +60,17 @@
       "name": "Sacrificial Blade",
       "type": "Equipment",
       "baseCost": 20,
-      "description": ""
+      "description": "",
+      "modifications": {
+        "traits": ["fae-wild-elves:sacrifice"]
+      }
     },
     {
       "id": "wild-elven-mount",
       "name": "Wild Elven Mount",
       "type": "Equipment",
       "baseCost": 30,
-      "allow": [{"rules": "fae-wild-elves:summoner"}],
+      "allow": [{"traits": "fae-wild-elves:summoner"}],
       "description": "",
       "modifications": {
         "hp": 5,
@@ -96,6 +99,7 @@
       "baseCost": 30,
       "description": "",
       "modifications": {
+        "power": 2,
         "attacks": [{
           "type": "ranged",
           "name": "Faeblade",

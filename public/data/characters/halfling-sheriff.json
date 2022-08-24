@@ -28,9 +28,10 @@
     { "armouryItem": "common:light-armour", "fixed": true }
   ],
   "items": [],
-  "rules": [
+  "traits": [
     "civilized-halfling:make-orders",
     {
+      "id": "rousing-cheer",
       "name": "Rousing Cheer",
       "description": ""
     }

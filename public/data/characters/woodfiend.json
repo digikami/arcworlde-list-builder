@@ -24,7 +24,7 @@
   ],
   "equipment": [],
   "items": [],
-  "rules": [
+  "traits": [
     "fae-wild-elves:summoned",
     "common:flammable",
     {

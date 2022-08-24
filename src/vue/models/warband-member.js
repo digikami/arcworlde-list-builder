@@ -52,6 +52,35 @@ class WarbandMember extends BaseModel {
     })
   }
 
+  getStats() {
+    let stats = {
+      ap: this.get('character').get('ap'),
+      move: this.get('character').get('move'),
+      bravery: this.get('character').get('bravery'),
+      hp: this.get('character').get('hp')
+    };
+    this.get('equipment').forEach((equipment) => {
+      stats = equipment.modifyStats(stats);
+    })
+    return stats;
+  }
+
+  getAttacks() {
+    let attacks = this.get('character').get('attacks');
+    this.get('equipment').forEach((equipment) => {
+      attacks = equipment.modifyAttacks(attacks);
+    })
+    return attacks;
+  }
+
+  getTraits() {
+    let traits = this.get('character').get('traits');
+    this.get('equipment').forEach((equipment) => {
+      traits = equipment.modifyTraits(traits);
+    })
+    return traits;
+  }
+
   serializeData() {
     let d = Utils.clone(this._data);
     d.character = this.get('character').get('id'); 
