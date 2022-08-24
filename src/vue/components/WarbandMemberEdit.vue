@@ -1,7 +1,8 @@
 <template>
-  <div class="warband-member p-3" ref="root">
+  <div class="warband-member px-3 py-4" ref="root">
     <div class="d-flex flex-column flex-md-row justify-content-md-between gap-3">
       <strong :class="`accordion-header d-lg-flex flex-lg-row align-items-lg-center gap-2 fs-3 ${ member.get('character').get('name') == null ? 'text-danger' : ''}`" :id="`wbm_${member.get('id')}_header`">
+        <i :class="`bi-grip-vertical handle ${ draggable ? '': 'opacity-0' }`"></i>
         {{ member.get('name') }} <small class="badge bg-secondary fs-6" v-if="member.get('name') != member.get('character').get('name')">{{ member.get('character').get('name') }}</small>
       </strong>
       <div class="d-flex gap-2 flex-shrink-0 align-items-center">
@@ -116,7 +117,7 @@
         }
       }
     },
-    props: ['member', 'faction', 'common', 'list', 'duplicable'],
+    props: ['member', 'faction', 'common', 'list', 'duplicable', 'draggable'],
     computed: {
       equipmentDropdownOptions() {
         return [

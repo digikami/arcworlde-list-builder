@@ -49,16 +49,19 @@
         </div>
       </div>
       <div class="container py-3 px-0">
-        <div class="d-flex flex-column gap-3">
-          <WBMEditor v-for="character in list.get('commanders')"
-            :member="character"
-            :faction="list.get('faction')"
-            :common="common"
-            :list="list"
-            @requestMemberRemoval="handleCommanderRemoval"
-            @dirty="handleDirty"
-          ></WBMEditor>
-        </div>
+        <draggable v-model="listCommanders" :disabled="listCommanders.length <= 1" @start="drag.commanders=true" @end="drag.commanders=false; handleDirty()" item-key="id" handle=".handle">
+          <template #item="{element}">
+            <WBMEditor
+              :member="element"
+              :faction="list.get('faction')"
+              :common="common"
+              :list="list"
+              :draggable="listCommanders.length > 1"
+              @requestMemberRemoval="handleCommanderRemoval"
+              @dirty="handleDirty"
+            ></WBMEditor>
+          </template>
+        </draggable>
       </div>
 
       <div class="d-flex flex-column flex-md-row justify-content-md-between align-items-md-center p-3 bg-tertiary text-white">
@@ -77,18 +80,21 @@
         </div>
       </div>
       <div class="container py-3 px-0">
-        <div class="d-flex flex-column gap-3">
-          <WBMEditor v-for="member in list.get('members')"
-            :member="member"
-            :faction="list.get('faction')"
-            :common="common"
-            :list="list"
-            :duplicable="!member.get('character').matches([{ traits: 'swords-for-hire:personality' }])"
-            @requestMemberRemoval="handleMemberRemoval"
-            @requestDuplicate="handleDuplicateRequest"
-            @dirty="handleDirty"
-          ></WBMEditor>
-        </div>
+        <draggable v-model="listMembers" :disabled="listMembers.length <= 1" @start="drag.members=true" @end="drag.members=false; handleDirty()" item-key="id" handle=".handle">
+          <template #item="{element}">
+            <WBMEditor
+              :member="element"
+              :faction="listFaction"
+              :common="common"
+              :list="list"
+              :duplicable="true"
+              :draggable="listMembers.length > 1"
+              @requestMemberRemoval="handleMemberRemoval"
+              @requestDuplicate="handleDuplicateRequest"
+              @dirty="handleDirty"
+            ></WBMEditor>
+          </template>
+        </draggable>
       </div>
     </div>
 
@@ -135,10 +141,15 @@
   import WarbandEquipment from '../models/warband-equipment';
   import WBMEditor from './WarbandMemberEdit.vue';
   import { Modal, Tooltip } from 'bootstrap';
+  import draggable from 'vuedraggable';
 
   export default {
     data() {
       return {
+        drag: {
+          commanders: false,
+          members: false
+        },
         editFormValues: {
           name: this.list.get('name')
         },
@@ -147,9 +158,34 @@
     },
     components: {
       'WBMEditor': WBMEditor,
-      Multiselect
+      Multiselect,
+      draggable
     },
     computed: {
+      listMembers: {
+        get() {
+          return this.list.get('members');
+        },
+        set(val) {
+          this.list.set('members', val);
+        }
+      },
+      listCommanders: {
+        get() {
+          return this.list.get('commanders');
+        },
+        set(val) {
+          this.list.set('commanders', val);
+        }
+      },
+      listFaction: {
+        get() {
+          return this.list.get('faction');
+        },
+        set(val) {
+          return this.list.set('faction', val);
+        }
+      },
       factionCommanders() {
         return this.list.get('faction').get('characters').filter((a) => a.get("class").map((a) => a.toLowerCase()).includes("commander"))
       },

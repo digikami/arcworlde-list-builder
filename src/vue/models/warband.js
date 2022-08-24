@@ -61,10 +61,6 @@ class Warband extends UserDataModel {
     return JSON.stringify(d);
   }
 
-  storageGroup() {
-    return Warband.storageGroup;
-  }
-
   getArmoury() {
     let armoury = this.get('faction').get('armoury').slice();
     ['commanders', 'members'].forEach((group) => {
@@ -76,7 +72,6 @@ class Warband extends UserDataModel {
   }
 }
 
-Warband.storageGroup = `arcworlde_warband`;
-UserDataModel.initClass(Warband);
+UserDataModel.initClass(Warband, 'arcworlde_warband');
 
 export default Warband;

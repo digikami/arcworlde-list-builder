@@ -2,3 +2,26 @@
   width: 20rem;
   max-width: 100%;
 }
+.warband-member {
+  background-color: $white;
+  transition: 0.2s linear opacity;
+
+  &[data-draggable="true"] {
+    .handle {
+      opacity: 1;
+      cursor: grab;
+    }
+  }
+  .handle {
+    opacity: 0;
+  }
+
+  &.sortable-ghost {
+    & > * {
+      opacity: 0.1;
+    }
+  }
+}
+.warband-member:nth-child(2n) {
+  background-color: $light;
+}

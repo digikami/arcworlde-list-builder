@@ -7,36 +7,49 @@
         </button>
       </div>
     </div>
-    <div v-for="list in lists" class="list-list-item p-3">
-      <template v-if="!list.isLoading">
-        <div class="row">
-          <div class="col-12 col-md-8 d-flex flex-column flex-md-row align-items-md-center">
-            <h2 class="fs-4 my-0">{{ list.get('name') }}</h2>
-            <span class="mt-1 mb-3 my-md-0">
-              <small class="badge bg-dark mx-md-3">{{ list.get('faction').get('name')}}<span v-if="list.get('subfaction')"> - {{ list.get('subfaction').name }}</span></small>
-            </span>
-          </div>
-          <div class="col-12 col-md-4 text-md-end">
-            <div class="btn-group me-3">
-              <div class="input-group-text">
-                {{ list.totalCost() }} GP
+    <draggable
+      v-model="lists"
+      handle=".handle"
+      item-key="id"
+      @start="drag=true"
+      @end="drag-false; saveOrder();"
+    >
+      <template #item="{element:list}">
+        <div class="list-list-item p-3">
+          <template v-if="!list.isLoading">
+            <div class="row">
+              <div class="col-12 col-md-8 d-flex flex-column flex-md-row align-items-md-center">
+                <h2 class="fs-4 my-0">
+                  <i class="handle bi-grip-vertical"></i>
+                  {{ list.get('name') }}
+                </h2>
+                <span class="mt-1 mb-3 my-md-0">
+                  <small class="badge bg-dark mx-md-3">{{ list.get('faction').get('name')}}<span v-if="list.get('subfaction')"> - {{ list.get('subfaction').name }}</span></small>
+                </span>
+              </div>
+              <div class="col-12 col-md-4 text-md-end">
+                <div class="btn-group me-3">
+                  <div class="input-group-text">
+                    {{ list.totalCost() }} GP
+                  </div>
+                </div>
+                <div class="btn-group" role="group">
+                  <button @click="closeTooltips(); $emit('requestView', list);" class="btn btn-outline-secondary" data-bs-title="View">
+                    <i class="bi-eye" role="img" aria-label="View"></i>
+                  </button>
+                  <button @click="closeTooltips(); $emit('requestEdit', list);" class="btn btn-outline-secondary" data-bs-title="Edit">
+                    <i class="bi-pencil" role="img" aria-label="Edit"></i>
+                  </button>
+                  <button @click="closeTooltips(); $emit('requestDelete', list)" class="btn btn-outline-secondary" data-bs-title="Delete">
+                    <i class="bi-trash" role="img" aria-label="Delete"></i>
+                  </button>
+                </div>
               </div>
             </div>
-            <div class="btn-group" role="group">
-              <button @click="closeTooltips(); $emit('requestView', list);" class="btn btn-outline-secondary" data-bs-title="View">
-                <i class="bi-eye" role="img" aria-label="View"></i>
-              </button>
-              <button @click="closeTooltips(); $emit('requestEdit', list);" class="btn btn-outline-secondary" data-bs-title="Edit">
-                <i class="bi-pencil" role="img" aria-label="Edit"></i>
-              </button>
-              <button @click="closeTooltips(); $emit('requestDelete', list)" class="btn btn-outline-secondary" data-bs-title="Delete">
-                <i class="bi-trash" role="img" aria-label="Delete"></i>
-              </button>
-            </div>
-          </div>
+          </template>
         </div>
       </template>
-    </div>
+    </draggable>
     <div class="modal fade" id="new-list-modal" tabindex="-1" aria-labelledby="new-list-modal_header" aria-hidden="true" ref="newListModal">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -85,10 +98,12 @@
   import { Modal, Tooltip } from 'bootstrap';
   import Warband from '../models/warband';
   import Utils from 'utils/LoafUtils';
+  import draggable from 'vuedraggable';
 
   export default {
     components: {
-      Multiselect
+      Multiselect,
+      draggable
     },
     data() {
       return {
@@ -163,6 +178,10 @@
         this.$refs.root.querySelectorAll("[data-bs-title").forEach((tt) => {
           Tooltip.getOrCreateInstance(tt).dispose();
         })
+      },
+
+      saveOrder() {
+        Warband.saveIndex(this.lists.map((list) => list.id));
       }
     }
   }

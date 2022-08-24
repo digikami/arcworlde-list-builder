@@ -106,7 +106,6 @@
         lastEdit.reset();
       },
       handleViewRequest(list) {
-        console.log(this.$refs);
         this.viewWarband = list;
         Modal.getOrCreateInstance(this.$refs.listViewModal).show();
       },

@@ -15,18 +15,14 @@ class UserDataModel extends BaseModel {
   }
 
   storageSlug() {
-    return `${this.storageGroup()}_${ this.id }`;
-  }
-
-  storageIndex() {
-    return `${ this.storageGroup() }_index`;
+    return `${this.constructor._storageGroup}_${ this.id }`;
   }
 
   getIndex() {
-    if (!window.localStorage.getItem(this.storageIndex())) {
-      window.localStorage.setItem(this.storageIndex(), JSON.stringify([]));
+    if (!window.localStorage.getItem(this.constructor.storageIndex())) {
+      window.localStorage.setItem(this.constructor.storageIndex(), JSON.stringify([]));
     }
-    let index = JSON.parse(window.localStorage.getItem(this.storageIndex()));
+    let index = JSON.parse(window.localStorage.getItem(this.constructor.storageIndex()));
     return index;
   }
 
@@ -35,7 +31,7 @@ class UserDataModel extends BaseModel {
     let index = this.getIndex();
     if (!index.includes(this.id)) {
       index.push(this.id);
-      window.localStorage.setItem(this.storageIndex(), JSON.stringify(index));
+      this.constructor.saveIndex(index);
     }
   }
 
@@ -43,7 +39,7 @@ class UserDataModel extends BaseModel {
     window.localStorage.removeItem(this.storageSlug());
     let index = this.getIndex();
     index.splice(index.indexOf(this.id), 1);
-    window.localStorage.setItem(this.storageIndex(), JSON.stringify(index));
+    window.localStorage.setItem(this.constructor.storageIndex(), JSON.stringify(index));
 
   }
   delete() {
@@ -53,7 +49,7 @@ class UserDataModel extends BaseModel {
   reset() {
     this.isLoading = true;
     delete this.constructor._cache[this.id];
-    let d = JSON.parse(window.localStorage.getItem(`${this.constructor.storageGroup}_${this.id}`));
+    let d = JSON.parse(window.localStorage.getItem(this.storageSlug()));
     this._data = d;
     return this.loadData().then(() => {
       this.isLoading = false;
@@ -63,8 +59,9 @@ class UserDataModel extends BaseModel {
   }
 }
 
-UserDataModel.initClass = (cls) => {
+UserDataModel.initClass = (cls, storageGroup) => {
   cls._cache = {};
+  cls._storageGroup = storageGroup;
   cls.find = (id) => {
     if (typeof(id) !== "string") {
       return cls.find(id.id);
@@ -72,14 +69,14 @@ UserDataModel.initClass = (cls) => {
     if (cls._cache[id]) {
       return Promise.resolve(cls._cache[id]);
     }
-    let wbData = JSON.parse(window.localStorage.getItem(`${cls.storageGroup}_${id}`));
+    let wbData = JSON.parse(window.localStorage.getItem(`${cls._storageGroup}_${id}`));
     return cls.new(wbData).then((wb) => {
       cls._cache[id] = wb;
       return wb;
     })
   }
   cls.all = () => {
-    return Promise.all(JSON.parse(window.localStorage.getItem(`${cls.storageGroup}_index`) ?? '[]').map(list => {
+    return Promise.all(JSON.parse(window.localStorage.getItem(cls.storageIndex()) ?? '[]').map(list => {
       return cls.find(list);
     }));
   }
@@ -90,6 +87,13 @@ UserDataModel.initClass = (cls) => {
       wb.isLoading = false;
       return wb;
     });
+  }
+  cls.storageIndex = () => {
+    return `${ cls._storageGroup }_index`;
+  }
+  cls.saveIndex = (index) => {
+    window.localStorage.setItem(cls.storageIndex(), JSON.stringify(index));
+    return index;
   }
 }
 

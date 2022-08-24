@@ -1,3 +1,17 @@
-.list-list-item:nth-child(2n) {
-  background-color: $light;
+.list-list-item {
+  background-color: $white;
+  &:nth-child(2n) {
+    background-color: $light;
+  }
+  &.sortable-ghost {
+    & > * {
+      opacity: 0.1;
+    }
+  }
+  &[data-draggable="true"] {
+    .handle {
+      opacity: 1;
+      cursor: grab;
+    }
+  }
 }
