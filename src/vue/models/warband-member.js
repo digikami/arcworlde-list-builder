@@ -66,9 +66,12 @@ class WarbandMember extends BaseModel {
   }
 
   getAttacks() {
-    let attacks = this.get('character').get('attacks');
+    let attacks = Utils.clone(this.get('character').get('attacks'));
     this.get('equipment').forEach((equipment) => {
       attacks = equipment.modifyAttacks(attacks);
+    })
+    this.get('equipment').forEach((equipment) => {
+      attacks = equipment.modifyAttackPower(attacks);
     })
     return attacks;
   }

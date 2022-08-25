@@ -37,7 +37,9 @@
       "baseCost": 10,
       "description": "<p>If equipped, a Character gets +2 Power for all Melee Attacks. However, any of their own Critical Defends are discarded as if they were Failures.</p>",
       "modifications": {
-        "power": 2
+        "power": {
+          "melee": 2
+        }
       }
     },
     {

@@ -107,7 +107,10 @@
       "allow": [{"traits": "nomad-beastfolk:animal-form"}],
       "description": "+1 Power on all Attacks",
       "modifications": {
-        "power": 1
+        "power": {
+          "melee": 1,
+          "ranged": 1
+        }
       }
     },
     {

@@ -75,28 +75,35 @@
             ></multiselect>
           </div>
         </div>
-        <ul class="list-unstyled">
-          <li v-for="equipment in member.get('equipment')" class="p-2 border-1 border-bottom d-flex justify-content-between align-items-center">
-            <div>{{ equipment.get('armouryItem').get('name') }}</div>
-            <div class="btn-toolbar gap-2 flex-shrink-0">
-              <div class="btn-group">
-                <div class="input-group-text">
-                  <span v-if="equipment.get('fixed')">
-                    Free
-                  </span>
-                  <span v-if="!equipment.get('fixed')">
-                    {{ equipment.totalCost() }} GP
-                  </span>
+        <draggable
+          v-model="equipmentList"
+          handle=".equipment-handle"
+          @start="drag=true"
+          @end="drag=false; $emit('dirty')"
+        >
+          <template #item="{ element:equipment }">
+            <div class="p-2 border-1 border-bottom d-flex justify-content-between align-items-center">
+              <div><i class="bi-grip-vertical equipment-handle"></i>{{ equipment.get('armouryItem').get('name') }}</div>
+              <div class="btn-toolbar gap-2 flex-shrink-0">
+                <div class="btn-group">
+                  <div class="input-group-text">
+                    <span v-if="equipment.get('fixed')">
+                      Free
+                    </span>
+                    <span v-if="!equipment.get('fixed')">
+                      {{ equipment.totalCost() }} GP
+                    </span>
+                  </div>
+                </div>
+                <div class="btn-group" v-if="!equipment.get('fixed')">
+                  <button class="btn btn-outline-secondary" @click="requestRemoveEquipment(equipment)" data-bs-title="Remove">
+                    <i class="bi-trash"></i>
+                  </button>
                 </div>
               </div>
-              <div class="btn-group" v-if="!equipment.get('fixed')">
-                <button class="btn btn-outline-secondary" @click="requestRemoveEquipment(equipment)" data-bs-title="Remove">
-                  <i class="bi-trash"></i>
-                </button>
-              </div>
             </div>
-          </li>
-        </ul>
+          </template>
+        </draggable>
       </div>
     </div>
   </div>
@@ -105,10 +112,12 @@
   import Multiselect from "vue-multiselect";
   import WarbandEquipment from '../models/warband-equipment';
   import { Modal, Tooltip } from 'bootstrap';
+  import draggable from 'vuedraggable';
 
   export default {
     components: {
-      Multiselect
+      Multiselect,
+      draggable
     },
     data() {
       return {
@@ -119,6 +128,14 @@
     },
     props: ['member', 'faction', 'common', 'list', 'duplicable', 'draggable'],
     computed: {
+      equipmentList: {
+        get() {
+          return this.member.get('equipment');
+        },
+        set(val) {
+          this.member.set('equipment', val);
+        }
+      },
       equipmentDropdownOptions() {
         return [
           {

@@ -39,6 +39,18 @@ class WarbandEquipment extends BaseModel {
     return attacks;
   }
 
+  modifyAttackPower(attacks) {
+    let mods = this.get('armouryItem').get('modifications');
+    if (mods && mods.power) {
+      attacks.forEach((attack) => {
+        if (attack.type && mods.power[attack.type]) {
+          attack.power += mods.power[attack.type];
+        }
+      })
+    }
+    return attacks;
+  }
+
   modifyTraits(traits) {
     let mods = this.get('armouryItem').get('modifications');
     if (mods && mods.traits) {
