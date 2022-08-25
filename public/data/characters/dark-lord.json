@@ -40,5 +40,41 @@
       "name": "Monologue",
       "description": ""
     }
+  ],
+  "variants": [
+    {
+      "id": "fell-warrior",
+      "name": "Fell Warrior",
+      "description": ""
+    },
+    {
+      "id": "dark-warlock",
+      "name": "Dark Warlock",
+      "modifications": {
+        "class": ["Mage"]
+      }
+    },
+    {
+      "id": "horde-master",
+      "name": "Master of the Horde",
+      "description": "",
+      "factionModifications": {
+        "cost_modifiers": {
+          "match": [{ "tag": "hobgoblin"}],
+          "modifier": 0.8
+        }
+      }
+    },
+    {
+      "id": "beast-master",
+      "name": "Beast Master",
+      "description": "",
+      "factionModifications": {
+        "cost_modifiers": {
+          "match": [{ "factionId": "bestiary"}],
+          "modifier": 0.8
+        }
+      }
+    }
   ]
 }

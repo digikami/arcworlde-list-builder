@@ -108,8 +108,7 @@
       "description": "+1 Power on all Attacks",
       "modifications": {
         "power": {
-          "melee": 1,
-          "ranged": 1
+          "melee": 1
         }
       }
     },
