@@ -82,7 +82,7 @@
           @end="drag=false; $emit('dirty')"
         >
           <template #item="{ element:equipment }">
-            <div class="p-2 border-1 border-bottom d-flex justify-content-between align-items-center">
+            <div class="p-2 border-1 border-bottom d-flex justify-content-between align-items-center bg-white">
               <div><i class="bi-grip-vertical equipment-handle"></i>{{ equipment.get('armouryItem').get('name') }}</div>
               <div class="btn-toolbar gap-2 flex-shrink-0">
                 <div class="btn-group">
