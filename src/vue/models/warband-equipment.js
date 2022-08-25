@@ -32,7 +32,7 @@ class WarbandEquipment extends BaseModel {
   }
 
   modifyAttacks(attacks) {
-    let mods = this.get('armouryItem').get('modifications');
+    let mods = Utils.clone(this.get('armouryItem').get('modifications'));
     if (mods && mods.attacks) {
       attacks = attacks.concat(mods.attacks)
     }
@@ -40,10 +40,10 @@ class WarbandEquipment extends BaseModel {
   }
 
   modifyAttackPower(attacks) {
-    let mods = this.get('armouryItem').get('modifications');
+    let mods = Utils.clone(this.get('armouryItem').get('modifications'));
     if (mods && mods.power) {
       attacks.forEach((attack) => {
-        if (attack.type && mods.power[attack.type]) {
+        if (attack.type && attack.type in mods.power) {
           attack.power += mods.power[attack.type];
         }
       })
