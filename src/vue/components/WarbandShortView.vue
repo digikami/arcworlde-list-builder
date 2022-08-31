@@ -9,7 +9,7 @@
     <div v-for="member in list.get('commanders')" class="my-3">
       <div class="leader-row">
         <h3 class="h5 mb-0">{{ member.get('name') }} <small v-if="member.get('name') != member.get('character').get('name')">({{ member.get('character').get('name')}})</small></h3>
-        <strong class="member-cost">{{ member.totalCost(list.get('faction')) }} GP</strong>
+        <strong class="member-cost">{{ list.getMemberTotalCost(member) }} GP</strong>
       </div>
       <ul v-if="member.get('equipment').length > 0">
         <li v-for="equipment in member.get('equipment')" class="leader-row">
@@ -23,7 +23,7 @@
     <div v-for="member in list.get('members')" class="my-3">
       <div class="leader-row">
         <h3 class="h5 mb-0">{{ member.get('name') }} <small v-if="member.get('name') != member.get('character').get('name')">({{ member.get('character').get('name')}})</small></h3>
-        <strong class="member-cost">{{ member.totalCost(list.get('faction')) }} GP</strong>
+        <strong class="member-cost">{{ list.getMemberTotalCost(member) }} GP</strong>
       </div>
       <ul v-if="member.get('equipment').length > 0">
         <li v-for="equipment in member.get('equipment')" class="leader-row">
