@@ -159,12 +159,12 @@
       "allow": [{"tags": "wizard"},{"tags": "apprentice"}],
       "description": "",
       "variants": [
-        { "id": "crimson", "name": "Crimson Tome" },
-        { "id": "sapphire", "name": "Sapphire Tome" },
-        { "id": "emerald", "name": "Emerald Tome" },
-        { "id": "ochre", "name": "Ochre Tome" },
-        { "id": "bronze", "name": "Bronze Tome" },
-        { "id": "opal", "name": "Opal Tome" }
+        { "id": "crimson", "name": "Crimson Tome", "modifications": { } },
+        { "id": "sapphire", "name": "Sapphire Tome", "modifications": { } },
+        { "id": "emerald", "name": "Emerald Tome", "modifications": { } },
+        { "id": "ochre", "name": "Ochre Tome", "modifications": { } },
+        { "id": "bronze", "name": "Bronze Tome", "modifications": { } },
+        { "id": "opal", "name": "Opal Tome", "modifications": { } }
       ]
     }
   ],

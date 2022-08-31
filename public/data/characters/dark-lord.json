@@ -45,35 +45,50 @@
     {
       "id": "fell-warrior",
       "name": "Fell Warrior",
-      "description": ""
+      "modifications": {
+        "traits": [{
+          "name": "Fell Warrior",
+          "description": "<p>The Dark Lord gains +1AP for each enemy Character they Knock Out. This resets at the start of each Round.</p>"
+        }]
+      }
     },
     {
       "id": "dark-warlock",
       "name": "Dark Warlock",
       "modifications": {
-        "class": ["Mage"]
+        "class": ["Mage"],
+        "traits": [{
+          "name": "Dark Warlock",
+          "description": "<p>The Dark Lord gains the Mage trait and may cast Spells from the Lore of Villainy</p>"
+        }]
       }
     },
     {
       "id": "horde-master",
       "name": "Master of the Horde",
-      "description": "",
-      "factionModifications": {
-        "cost_modifiers": {
-          "match": [{ "tag": "hobgoblin"}],
+      "modifications": {
+        "cost_modifiers": [{
+          "match": [{ "tags": "hobgoblin"}],
           "modifier": 0.8
-        }
+        }],
+        "traits": [{
+          "name": "Master of the Horde",
+          "description": "<p>All Hobgoblin Characters cost -20% GP, rounded up to the nearest whole number.</p>"
+        }]
       }
     },
     {
       "id": "beast-master",
       "name": "Beast Master",
-      "description": "",
-      "factionModifications": {
-        "cost_modifiers": {
+      "modifications": {
+        "cost_modifiers": [{
           "match": [{ "factionId": "bestiary"}],
           "modifier": 0.8
-        }
+        }],
+        "traits": [{
+          "name": "Beast Master",
+          "description": "<p>All Beasts, Monsters, and Titans taken from the Bestiary cost -20% GP, rounded up to the nearest whole number.</p>"
+        }]
       }
     }
   ]

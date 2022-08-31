@@ -1,15 +1,23 @@
 <template>
   <div class="warband-member px-3 py-4" ref="root">
     <div class="d-flex flex-column flex-md-row justify-content-md-between gap-3">
+
       <strong :class="`accordion-header d-lg-flex flex-lg-row align-items-lg-center gap-2 fs-3 ${ member.get('character').get('name') == null ? 'text-danger' : ''}`" :id="`wbm_${member.get('id')}_header`">
         <i :class="`bi-grip-vertical handle ${ draggable ? '': 'opacity-0' }`"></i>
         {{ member.get('name') }} <small class="badge bg-secondary fs-6" v-if="member.get('name') != member.get('character').get('name')">{{ member.get('character').get('name') }}</small>
       </strong>
+
+      <div v-if="member.get('character').hasVariants()">
+        <select v-model="memberVariant" class="form-select fw-bold" @change="$emit('dirty')">
+          <option v-for="variant in member.get('character').get('variants')" :value="variant.id" :selected="memberVariant == variant.id">{{ variant.name }}</option>
+        </select>
+      </div>
+
       <div class="d-flex gap-2 flex-shrink-0 align-items-center">
         <div class="btn-toolbar">
           <div class="btn-group">
-            <div ref="memberCost" class="input-group-text" data-bs-toggle="tooltip" :data-bs-title="`${ member.characterCost(this.faction) } GP + ${ member.equipmentCost(this.faction) } GP`">
-              {{ member.totalCost(this.faction) }} GP
+            <div ref="memberCost" class="input-group-text" data-bs-toggle="tooltip" :data-bs-title="`${ list.getCharacterCost(member) } GP + ${ list.getMemberEquipmentCost(member) } GP`">
+              {{ list.getMemberTotalCost(member) }} GP
             </div>
           </div>
         </div>
@@ -134,6 +142,14 @@
         },
         set(val) {
           this.member.set('equipment', val);
+        }
+      },
+      memberVariant: {
+        get() {
+          return this.member.get('variant')
+        },
+        set(val) {
+          this.member.set('variant', val);
         }
       },
       equipmentDropdownOptions() {

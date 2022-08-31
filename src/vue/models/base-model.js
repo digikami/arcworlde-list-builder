@@ -1,3 +1,5 @@
+import Utils from 'utils/LoafUtils';
+
 class BaseModel {
   constructor(data) {
     this.id = data.id;
@@ -15,6 +17,23 @@ class BaseModel {
   set(key, val) {
     this._data[key] = val;
     return this;
+  }
+
+  hasVariants() {
+    return !!this.get('variants');
+  }
+
+  hasVariant(varId) {
+    return this.hasVariants() && !!this.get('variants').filter((v) => v.id == varId).length;
+  }
+
+  getVariant(key, variantId) {
+    if (this.hasVariant(variantId)) {
+      let merged = Utils.addativeMerge(this._data, this.get('variants').find((v) => v.id == variantId).modifications ?? [])
+      return merged[key];
+    } else {
+      return this.get(key);
+    }
   }
 }
 

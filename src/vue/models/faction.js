@@ -51,6 +51,17 @@ class Faction extends BaseModel {
     })
   }
 
+  modifyCharacterCost(character, cost) {
+    if (this.get('cost_modifiers')) {
+      this.get('cost_modifiers').forEach((mod) => {
+        if (character.matches(mod.match)) {
+          cost *= mod.modifier;
+        }
+      })
+    }
+    return cost;
+  }
+
   getCharacterCost(character) {
     let cost = character.get('baseCost');
     if (this.get('cost_modifiers')) {
@@ -60,7 +71,7 @@ class Faction extends BaseModel {
         }
       })
     }
-    return Math.round(cost);
+    return Math.ceil(cost);
   }
 }
 

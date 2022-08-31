@@ -14,9 +14,53 @@ class Warband extends UserDataModel {
     super(data);
   }
 
+  get(key) {
+    let variant = this.getVariant();
+    if (variant && variant[key]) {
+      return key;
+    }
+    return super.get(key);
+  }
+
+  getVariant() {
+    if (this._data.variant) {
+      return this._data.faction.get('variants')[this._data.variant];
+    }
+    return null;
+  }
+
+  getFaction() {
+    let faction = this.get('faction');
+    this.get('commanders').forEach((member) => {
+      member.modifyFaction(faction)
+    })
+    this.get('members').forEach((member) => {
+      member.modifyFaction(faction)
+    })
+    return faction;
+  }
+
   totalCost() {
-    return this.get('commanders').reduce((prev, curr) => prev + curr.totalCost(this.get('faction')) , 0) +
-      this.get('members').reduce((prev, curr) => prev + curr.totalCost(this.get('faction')) , 0);
+    return this.get('commanders').reduce((prev, curr) => prev + this.getMemberTotalCost(curr) , 0) +
+      this.get('members').reduce((prev, curr) => prev + this.getMemberTotalCost(curr) , 0);
+  }
+
+  getCharacterCost(member) {
+    let cost = member.get('character').get('baseCost');
+    cost = this.get('faction').modifyCharacterCost(member.get('character'), cost);
+    ['commanders', 'members'].forEach((group) => {
+      this.get(group).forEach((otherMember) => {
+        cost = otherMember.modifyCharacterCost(member.get('character'), cost);
+      })
+    })
+    return cost;
+  }
+
+  getMemberEquipmentCost(member) {
+    return member.equipmentCost();
+  }
+  getMemberTotalCost(member) {
+    return this.getCharacterCost(member) + this.getMemberEquipmentCost(member);
   }
 
   loadData() {

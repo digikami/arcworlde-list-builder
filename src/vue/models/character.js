@@ -10,6 +10,7 @@ class Character extends BaseModel {
     data.species = data.species ?? "unknown";
     super(data);
   }
+
   loadData() {
     return Promise.all([this.loadArmoury(), this.loadTraits()]).then(() => this);
   }
@@ -23,12 +24,21 @@ class Character extends BaseModel {
     });
   }
   loadTraits() {
-    return Promise.all(this.get('traits').map((trait) => {
-      return Trait.find(trait, this);
-    })).then((traits) => {
-      this.set('traits', traits);
-      return traits;
-    });
+    return Promise.all([
+      Promise.all(this.get('traits').map((trait) => {
+        return Trait.find(trait, this);
+      })).then((traits) => {
+        this.set('traits', traits);
+        return traits;
+      }),
+      this.get('variants') ? Promise.all(this.get('variants').map((variant) => {
+        return Promise.all(variant.modifications.traits.map((modTrait) => {
+          return Trait.find(modTrait, this)
+        })).then((modTraits) => {
+          variant.modifications.traits = modTraits
+        })
+      })) : Promise.resolve(true)
+    ]);
   }
 
   matches(termSet) {

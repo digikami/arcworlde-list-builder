@@ -1,5 +1,6 @@
 import Equipment from './equipment';
 import Character from './character';
+import Trait from './trait';
 import BaseModel from './base-model';
 import Utils from 'utils/LoafUtils';
 import WarbandEquipment from './warband-equipment';
@@ -12,12 +13,8 @@ class WarbandMember extends BaseModel {
     super(data)
   }
 
-  totalCost(faction) {
-    return this.characterCost(faction) + this.equipmentCost(faction);
-  }
+  getCharacterVaraintData(key) {
 
-  characterCost(faction) {
-    return faction.getCharacterCost(this.get('character'));
   }
 
   equipmentCost(faction) {
@@ -66,7 +63,7 @@ class WarbandMember extends BaseModel {
   }
 
   getAttacks() {
-    let attacks = Utils.clone(this.get('character').get('attacks'));
+    let attacks = Utils.clone(this.get('character').getVariant('attacks', this.get('variant')));
     this.get('equipment').forEach((equipment) => {
       attacks = equipment.modifyAttacks(attacks);
     })
@@ -77,7 +74,7 @@ class WarbandMember extends BaseModel {
   }
 
   getTraits() {
-    let traits = this.get('character').get('traits');
+    let traits = this.get('character').getVariant('traits', this.get('variant'));
     this.get('equipment').forEach((equipment) => {
       traits = equipment.modifyTraits(traits);
     })
@@ -86,13 +83,25 @@ class WarbandMember extends BaseModel {
 
   serializeData() {
     let d = Utils.clone(this._data);
-    d.character = this.get('character').get('id'); 
+    d.character = this.get('character').get('id');
     d.equipment = this.get('equipment').map((e) => e.serializeData())
     return d;
   }
 
   modifyArmoury(armoury) {
     return armoury.concat(this.get('character').get('armoury'));
+  }
+
+  modifyCharacterCost(character, cost) {
+    if (this.get('character').getVariant('cost_modifiers', this.get('variant'))) {
+      this.get('character').getVariant('cost_modifiers', this.get('variant')).forEach((mod) => {
+        if (character.matches(mod.match)) {
+          cost *= mod.modifier;
+        }
+      })
+    }
+
+    return Math.ceil(cost);
   }
 
   isAllowedEquipment(equip) {
