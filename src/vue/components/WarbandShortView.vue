@@ -8,7 +8,9 @@
 
     <div v-for="member in list.get('commanders')" class="my-3">
       <div class="leader-row">
-        <h3 class="h5 mb-0">{{ member.get('name') }} <small v-if="member.get('name') != member.get('character').get('name')">({{ member.get('character').get('name')}})</small></h3>
+        <h3 class="h5 mb-0">
+          {{ member.get('name') }} <span v-if="member.get('variant') && member.get('name') == member.get('character').get('name')">- {{ member.getVariantData().name }}</span>
+          <small v-if="member.get('name') != member.get('character').get('name')">({{ member.get('character').get('name') + (member.get('variant') ? ` - ${member.getVariantData().name}` : "")}})</small></h3>
         <strong class="member-cost">{{ list.getMemberTotalCost(member) }} GP</strong>
       </div>
       <ul v-if="member.get('equipment').length > 0">

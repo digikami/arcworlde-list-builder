@@ -13,8 +13,12 @@ class WarbandMember extends BaseModel {
     super(data)
   }
 
-  getCharacterVaraintData(key) {
-
+  getVariantData() {
+    if (this.get('variant')) {
+      return this.get('character').get('variants').find((variant) => variant.id == this.get('variant'));
+    } else {
+      return null;
+    }
   }
 
   equipmentCost(faction) {
@@ -25,6 +29,9 @@ class WarbandMember extends BaseModel {
     return Promise.all([
       Character.find(this.get('character')).then((c) => {
         this.set('character', c);
+        if (c.hasVariants() && !this.get('variant')) {
+          this.set('variant', c.get('variants')[0].id);
+        }
       }, (error) => {
         let charId = this.get('character');
         this.set('character', new Character({}));

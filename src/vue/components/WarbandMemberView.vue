@@ -2,7 +2,11 @@
   <div class="warband_member_view mb-5">
     <div class="character_grid text-center my-3">
       <div class="character_grid-header bg-dark text-white p-3">
-        <h2 class="h4 m-0">{{ member.get('name') }} <span v-if="member.get('name') != member.get('character').get('name')">({{ member.get('character').get('name')}})</span> &mdash; <span class="text-nowrap">{{ list.getMemberTotalCost(member) }} GP</span></h2>
+        <h2 class="h4 m-0">
+          {{ member.get('name') }} <span v-if="member.get('variant') && member.get('name') == member.get('character').get('name')">({{ member.getVariantData().name }})</span>
+          <span v-if="member.get('name') != member.get('character').get('name')">({{ member.get('character').get('name') + (member.get('variant') ? ` - ${member.getVariantData().name}` : "")}})</span>
+          &mdash; <span class="text-nowrap">{{ list.getMemberTotalCost(member) }} GP</span>
+        </h2>
       </div>
 
       <div class="h5 m-0 p-2 character_grid-stat-label character_grid-class-label">
