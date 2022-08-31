@@ -9,7 +9,7 @@
         Class
       </div>
       <div class="h5 m-0 p-2 character_grid-stat-value character_grid-class-value">
-        {{ member.get('character').get('class').join(' / ') }}
+        {{ member.get('character').getVariant('class', member.get('variant')).join(' / ') }}
       </div>
 
       <div class="h5 m-0 p-2 character_grid-stat-label character_grid-ap-label">
