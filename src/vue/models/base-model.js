@@ -29,7 +29,7 @@ class BaseModel {
 
   getVariant(key, variantId) {
     if (this.hasVariant(variantId)) {
-      let merged = Utils.addativeMerge(this._data, this.get('variants').find((v) => v.id == variantId).modifications ?? [])
+      let merged = Utils.addativeMerge(this._data, this.get('variants').find((v) => v.id == variantId).modifications ?? {})
       return merged[key];
     } else {
       return this.get(key);
