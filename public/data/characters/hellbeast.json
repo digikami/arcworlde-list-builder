@@ -21,7 +21,7 @@
       "ap": 2,
       "name": "Lift and Drop",
       "power": 5,
-      "special": "This Attack may only be made on a Charaacter on a 30mm base size, and if the Hellbeast is not currently using Grasping Talons. On a Crit, the target is moved D6 inches in the direction of the Dark Lord player's choosing."
+      "special": "This Attack may only be made on a Character on a 30mm base size, and if the Hellbeast is not currently using Grasping Talons. On a Crit, the target is moved D6 inches in the direction of the Dark Lord player's choosing."
     },
     {
       "type": "melee",
