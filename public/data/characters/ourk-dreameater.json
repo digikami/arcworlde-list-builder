@@ -3,7 +3,7 @@
   "factionId": "nomad-ourk",
   "name": "Ourk Dreameater",
   "class": ["Commander", "Mage"],
-  "baseCost": 120,
+  "baseCost": 90,
 
   "ap": 5,
   "move": 4,

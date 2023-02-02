@@ -9,6 +9,14 @@ class WarbandEquipment extends BaseModel {
     super(data);
   }
 
+  getVariantData() {
+    if (this.get('variant')) {
+      return this.get('character').get('variants').find((variant) => variant.id == this.get('variant'));
+    } else {
+      return null;
+    }
+  }
+
   name() {
     return this.get('armouryItem').get('name')
   }
