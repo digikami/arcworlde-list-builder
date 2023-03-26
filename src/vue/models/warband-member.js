@@ -9,7 +9,7 @@ class WarbandMember extends BaseModel {
   constructor(data) {
     data.id = data.id ?? Utils.guid4();
     data.name = data.name ?? data.character.get('name');
-    data.equipment = data.equipment ?? data.character.get('equipment');
+    data.equipment = data.equipment ?? Utils.clone(data.character.get('equipment'));
     super(data)
   }
 
@@ -120,6 +120,7 @@ class WarbandMember extends BaseModel {
 
   clone() {
     let d = this.serializeData(true);
+    console.log(this.serializeData(true));
     let clone = new WarbandMember(d);
     return clone.loadData();
   }

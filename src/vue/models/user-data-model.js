@@ -15,7 +15,7 @@ class UserDataModel extends BaseModel {
     if (stripIds) {
       d.id = null;
     }
-    return d
+    return d;
   }
 
   storageSlug() {
