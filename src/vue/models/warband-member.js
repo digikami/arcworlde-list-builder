@@ -7,7 +7,7 @@ import WarbandEquipment from './warband-equipment';
 
 class WarbandMember extends BaseModel {
   constructor(data) {
-  　data.id = data.id ?? Utils.guid4();
+    data.id = data.id ?? Utils.guid4();
     data.name = data.name ?? data.character.get('name');
     data.equipment = data.equipment ?? data.character.get('equipment');
     super(data)
@@ -88,10 +88,13 @@ class WarbandMember extends BaseModel {
     return traits;
   }
 
-  serializeData() {
+  serializeData(stripIds = false) {
     let d = Utils.clone(this._data);
     d.character = this.get('character').get('id');
-    d.equipment = this.get('equipment').map((e) => e.serializeData())
+    d.equipment = this.get('equipment').map((e) => e.serializeData(stripIds))
+    if (stripIds) {
+      d.id = null;
+    }
     return d;
   }
 
@@ -116,8 +119,7 @@ class WarbandMember extends BaseModel {
   }
 
   clone() {
-    let d = this.serializeData();
-    d.id = null;
+    let d = this.serializeData(true);
     let clone = new WarbandMember(d);
     return clone.loadData();
   }

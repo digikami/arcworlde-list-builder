@@ -95,13 +95,16 @@ class Warband extends UserDataModel {
     });
   }
 
-  serializeData() {
+  serializeData(stripIds = false) {
     let d = Utils.clone(this._data);
     d.faction = typeof(this.get('faction')) == "string" ? this.get('faction') : this.get('faction').get('id');
     d.subfaction = this.get('subfaction') ? this.get('subfaction').id : null;
     d.kingdom = typeof(this.get('kingdom')) == "string" ? this.get('kingdom') : this.get('kingdom').get('id');
-    d.commanders = this.get('commanders').map((c) => c.serializeData());
-    d.members = this.get('members').map((m) => m.serializeData());
+    d.commanders = this.get('commanders').map((c) => c.serializeData(stripIds));
+    d.members = this.get('members').map((m) => m.serializeData(stripIds));
+    if (stripIds) {
+      d.id = null;
+    }
     return JSON.stringify(d);
   }
 

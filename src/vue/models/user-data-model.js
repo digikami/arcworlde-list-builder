@@ -10,8 +10,12 @@ class UserDataModel extends BaseModel {
     return Promise.resolve(this)
   }
 
-  serializeData() {
-    return JSON.stringify(this._data);
+  serializeData(stripIds = false) {
+    let d = JSON.stringify(this._data);
+    if (stripIds) {
+      d.id = null;
+    }
+    return d
   }
 
   storageSlug() {

@@ -37,6 +37,9 @@ class BaseModel {
   }
 }
 
+BaseModel.getAppVersion = () => {
+  return window.alb?.version ?? Math.round(Math.random() * 1000000);
+}
 BaseModel.initClass = (cls, slug) => {
   cls._cache = {};
   cls._slug = slug;
@@ -51,7 +54,7 @@ BaseModel.initClass = (cls, slug) => {
       cls._cache[inst.id] = inst;
       return inst.loadData().then(() => inst);
     }
-    return fetch(`./data/${ cls._slug }/${ id }.json`).then(resp => resp.json()).then(d => {
+    return fetch(`./data/${ cls._slug }/${ id }.json?v=${BaseModel.getAppVersion()}`).then(resp => resp.json()).then(d => {
       let inst = new cls(d);
       cls._cache[id] = inst;
       return inst.loadData().then(() => inst);
@@ -61,7 +64,7 @@ BaseModel.initClass = (cls, slug) => {
   cls.fetch = cls.find;
 
   cls.all = () => {
-    return fetch(`./data/${ cls._slug }/_index.json`).then(resp => resp.json()).then(kids => {
+    return fetch(`./data/${ cls._slug }/_index.json?v=${BaseModel.getAppVersion()}`).then(resp => resp.json()).then(kids => {
       return Promise.all(kids.map((kid) => cls.find(kid)))
     })
   }

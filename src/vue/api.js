@@ -1,5 +1,6 @@
 class API {
   loadStaticData() {
+    console.log(this.getVersion());
     return Promise.all([this._loadKingdoms(), this._loadCommon()]).then((d) => {
       return {
         kingdoms: d[0],
@@ -8,12 +9,16 @@ class API {
     });
   }
 
+  getVersion() {
+    return window.alb?.version ?? Math.round(Math.random() * 100000);
+  }
+
   _loadCommon() {
-    return fetch('./data/common.json').then(resp => resp.json());
+    return fetch('./data/common.json?v=' + this.getVersion()).then(resp => resp.json());
   }
 
   _loadKingdoms() {
-    return fetch('./data/kingdoms.json').then(resp => resp.json()).then(kingdoms => {
+    return fetch('./data/kingdoms.json?v=' + this.getVersion()).then(resp => resp.json()).then(kingdoms => {
       return new Promise((res, rej) => {
         Promise.all(kingdoms.map(kingdom => this._loadFactions(kingdom))).then(() => res(kingdoms));
       });
@@ -25,7 +30,7 @@ class API {
       return Promise.all(kingdom.factions.map((facId) => {
         if (typeof(facId) === 'string') {
           // load the extra file
-          return fetch(`./data/factions/${facId}.json`).then(resp => resp.json())
+          return fetch(`./data/factions/${facId}.json?v=`${this.getVersion()}).then(resp => resp.json())
         } else {
           // assume we have an inline object
           return Promise.resolve(facId);
@@ -49,7 +54,7 @@ class API {
       return Promise.all(faction.characters.map((charId) => {
         if (typeof(charId) === 'string') {
           //load the extra file
-          return fetch(`./data/characters/${charId}.json`).then(resp => resp.json())
+          return fetch(`./data/characters/${charId}.json?v=${this.getVersion()}`).then(resp => resp.json())
         } else {
           // assume we have an inline object
           return Promise.resolve(charId);

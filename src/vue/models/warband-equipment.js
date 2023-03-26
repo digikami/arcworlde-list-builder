@@ -76,9 +76,12 @@ class WarbandEquipment extends BaseModel {
     })
   }
 
-  serializeData() {
+  serializeData(stripIds = false) {
     let d = Utils.clone(this._data);
     d.armouryItem = this.get('armouryItem').get('id');
+    if (stripIds) {
+      d.id = null;
+    }
     return d;
   }
 }
