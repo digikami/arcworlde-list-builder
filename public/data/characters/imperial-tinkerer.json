@@ -1,5 +1,6 @@
 {
   "id": "imperial-tinkerer",
+  "factionId": "civilized-imperial",
   "name": "Imperial Tinkerer",
   "class": ["Mage"],
   "baseCost": 80,

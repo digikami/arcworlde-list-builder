@@ -1,5 +1,6 @@
 {
   "id": "imperial-arclancer",
+  "factionId": "civilized-imperial",
   "name": "Imperial Arclancer",
   "class": ["Irregular"],
   "baseCost": 60,

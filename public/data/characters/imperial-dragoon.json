@@ -1,5 +1,6 @@
 {
   "id": "imperial-dragoon",
+  "factionId": "civilized-imperial",
   "name": "Imperial Dragoon",
   "class": ["Elite"],
   "baseCost": 65,

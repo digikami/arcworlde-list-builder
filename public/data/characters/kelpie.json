@@ -1,5 +1,6 @@
 {
   "id": "kelpie",
+  "factionId": "nomad-beastfolk",
   "name": "Kelpie",
   "class": ["Heavy", "Monster"],
   "baseCost": 200,

@@ -35,8 +35,8 @@
     <div class="container py-3">
       <div class="d-flex justify-content-between align-items-center p-3 bg-tertiary text-white">
         <h2 class="m-0">Commander</h2>
-        <div class="dropstart" v-if="list.get('commanders').length < list.get('faction').get('commanderLimit')">
-          <button :class="`btn btn-light`" aria-label="Add Commander" data-bs-toggle="dropdown">
+        <div class="dropstart" ref="commanderDropdown" v-if="list.get('commanders').length < list.get('faction').get('commanderLimit')">
+          <button class="btn btn-light" ref="commanderDropdownToggle" aria-label="Add Commander" data-bs-toggle="dropdown">
             <i class="bi-plus"></i>
           </button>
           <ul class="dropdown-menu">
@@ -140,7 +140,7 @@
   import WarbandMember from '../models/warband-member';
   import WarbandEquipment from '../models/warband-equipment';
   import WBMEditor from './WarbandMemberEdit.vue';
-  import { Modal, Tooltip } from 'bootstrap';
+  import { Modal, Tooltip, Dropdown } from 'bootstrap';
   import draggable from 'vuedraggable';
 
   export default {
@@ -257,10 +257,12 @@
         this.isDirty = false;
       },
       requestNewCommander(character) {
-        if (this.list.get('commanders').length >= this.list.get('faction').get('commanderLimit'))
+        if (this.list.get('commanders').length >= this.list.get('faction').get('commanderLimit')) {
           return;
-        let wbm = new WarbandMember({ character: character, equipment: character.get('equipment') });
+        }
+        let wbm = new WarbandMember({ character: character, equipment: [] });
         wbm.loadData().then((m) => {
+          Dropdown.getInstance(this.$refs.commanderDropdownToggle).hide();
           this.list.get('commanders').push(m);
           this.handleDirty();
         })

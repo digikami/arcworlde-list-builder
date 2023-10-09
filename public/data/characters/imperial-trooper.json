@@ -1,5 +1,6 @@
 {
   "id": "imperial-trooper",
+  "factionId": "civilized-imperial",
   "name": "Imperial Trooper",
   "class": ["Unit"],
   "baseCost": 40,

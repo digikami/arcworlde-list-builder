@@ -1,5 +1,6 @@
 {
   "id": "beastfolk-clanbeast",
+  "factionId": "nomad-beastfolk",
   "name": "Beastfolk Clanbeast",
   "class": ["Elite"],
   "baseCost": 85,

@@ -1,5 +1,6 @@
 {
   "id": "imperial-ogre",
+  "factionId": "civilized-imperial",
   "name": "Imperial Ogre",
   "class": ["Heavy"],
   "baseCost": 160,

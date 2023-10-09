@@ -1,0 +1,54 @@
+{
+  "id": "old-grogg",
+  "factionId": "bestiary",
+  "name": "Old Grogg",
+  "class": ["monster"],
+  "baseCost": 400,
+
+  "ap": 10,
+  "move": 5,
+  "bravery": 9,
+  "hp": 30,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Ravenous Chomp",
+      "power": 6,
+      "special": "If a Critical Hit is rolled, Old Grogg may make a single attempt to Gobble the target for only an Easy Feat."
+    },
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Launch",
+      "power": 5,
+      "special": "If a Critical Hit is rolled and the target is on a smaller base size than Old Grogg, the target is thrown D6 inches in a direction of the Troll player's choosing. Afterwards, this Character is Prone."
+    },
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Weighty Smash",
+      "power": 5,
+      "special": "If a Critical Hit is rolled and the target is on a smaller base size than Old Grogg, the target becomes Prone after the Attack has been made."
+    }
+  ],
+  "equipment": [
+  ],
+  "items": [],
+  "traits": [
+    "bestiary:leader-of-the-pack",
+    "bestiary:split-activation",
+    "bestiary:dwindling-strength",
+    "bestiary:death-throes",
+    "bestiary:fearsome",
+    "bestiary:gobble",
+    {
+      "name": "Aquatic",
+      "description": "This character may move through water-based terrain as if it were Open Terrain. In addition, whilst in water-based terrain it gains +1\" on all Movement (including Leg It rolls), and may re-roll a single dice for any Feat attempt."
+    },
+    {
+      "name": "Grizzled Hide",
+      "description": "This character has +1 Armour that cannot be broken."
+    }
+  ]
+}

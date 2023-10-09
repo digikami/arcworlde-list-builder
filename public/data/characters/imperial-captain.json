@@ -1,5 +1,6 @@
 {
   "id": "imperial-captain",
+  "factionId": "civilized-imperial",
   "name": "Imperial Captain",
   "class": ["Commander"],
   "baseCost": 80,

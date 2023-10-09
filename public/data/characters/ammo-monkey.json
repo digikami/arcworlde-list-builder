@@ -1,5 +1,6 @@
 {
   "id": "ammo-monkey",
+  "factionId": "civilized-imperial",
   "name": "Ammo Monkey",
   "class": ["Beast"],
   "baseCost": 35,

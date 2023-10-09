@@ -1,5 +1,6 @@
 {
   "id": "beastfolk-hedgewitch",
+  "factionId": "nomad-beastfolk",
   "name": "Beastfolk Hedgewitch",
   "class": ["Mage"],
   "baseCost": 90,

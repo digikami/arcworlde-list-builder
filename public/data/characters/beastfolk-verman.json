@@ -1,5 +1,6 @@
 {
   "id": "beastfolk-verman",
+  "factionId": "nomad-beastfolk",
   "name": "Beastfolk Verman",
   "class": ["Unit"],
   "baseCost": 30,

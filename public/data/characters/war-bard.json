@@ -1,5 +1,6 @@
 {
   "id": "war-bard",
+  "factionId": "nomad-beastfolk",
   "name": "War Bard",
   "class": ["Irregular"],
   "baseCost": 70,
