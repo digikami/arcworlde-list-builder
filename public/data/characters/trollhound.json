@@ -1,5 +1,6 @@
 {
   "id": "trollhound",
+  "factionId": "civilized-halfling",
   "name": "Trollhound",
   "class": ["Beast"],
   "baseCost": 35,
@@ -31,5 +32,6 @@
       "name": "Cling On",
       "description": ""
     }
-  ]
+  ],
+  "baseSize": 30
 }

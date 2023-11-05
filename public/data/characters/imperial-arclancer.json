@@ -27,5 +27,6 @@
       "name": "Arclance", 
       "description": ""
     }
-  ]
+  ],
+  "baseSize": 30
 }

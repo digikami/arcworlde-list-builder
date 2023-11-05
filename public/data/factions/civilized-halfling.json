@@ -39,7 +39,7 @@
     {
       "id": "halfling-ranged-weapon",
       "name": "Halfling Ranged Weapon",
-      "type": "Equipment",
+      "type": "Gear",
       "baseCost": 15,
       "description": "",
       "modifications": {
@@ -61,7 +61,7 @@
     {
       "id": "halfling-mount",
       "name": "Halfling Mount",
-      "type": "Equipment",
+      "type": "Gear",
       "baseCost": 30,
       "description": "",
       "allow": [{"id": "halfling-sheriff"}, {"id": "halfling-militia"}, {"id": "halfling-town-guard"}],
@@ -70,21 +70,25 @@
         "move": 4,
         "traits": [
           "bestiary:agile"
-        ]
+        ],
+        "baseSize": 40
       }
     },
     {
       "id": "potbelly-cauldron",
       "name": "Potbelly Cauldron",
-      "type": "Equipment",
+      "type": "Gear",
       "baseCost": 30,
       "description": "",
-      "allow": [{"id": "halfling-battle-cook"}]
+      "allow": [{"id": "halfling-battle-cook"}],
+      "modifications": {
+        "baseSize": 40
+      }
     },
     {
       "id": "ranger-cloak",
       "name": "Ranger Cloak",
-      "type": "Equipment",
+      "type": "Gear",
       "baseCost": 10,
       "description": ""
     }

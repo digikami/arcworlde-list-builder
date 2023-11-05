@@ -1,5 +1,6 @@
 {
   "id": "halfling-monster-hunter",
+  "factionId": "civilized-halfling",
   "name": "Halfling Monster Hunter",
   "class": ["Irregular"],
   "baseCost": 60,
@@ -34,5 +35,6 @@
       "name": "Dauntless",
       "description": ""
     }
-  ]
+  ],
+  "baseSize": 30
 }

@@ -1,0 +1,45 @@
+{
+  "id": "tomb-guardian",
+  "factionId": "undead-ancient-dead",
+  "name": "Tomb Guardian",
+  "class": ["Elite"],
+  "baseCost": 55,
+
+  "ap": 3,
+  "move": 4,
+  "bravery": "*",
+  "hp": 6,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Accomplished Swing",
+      "power": 7,
+      "special": "May spend 1 more AP to add 3 Power to this Attack."
+    },
+
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Bash",
+      "power": 3,
+      "special": "+2 Power if this Character is armed with a Shield."
+    }
+  ],
+  "equipment": [
+  ],
+  "items": [],
+  "traits": [
+    "undead-ancient-dead:bones",
+    "undead-ancient-dead:afterlife",
+    {
+      "name": "Buried Hoard",
+      "description": "All Gear from the Common Armoury equipped to a Tomb Guardian is at -25%GP, rounded up to the nearest whole number."
+    }
+  ],
+  "equipment_cost_modifiers": [{
+    "match": [{ "source": "common" }],
+    "modifier": 0.75
+  }],
+  "tags": ["bones"]
+}

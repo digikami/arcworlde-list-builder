@@ -1,5 +1,6 @@
 {
   "id": "wizard",
+  "factionId": "fae-wizards",
   "name": "Wizard",
   "class": ["Commander", "Mage"],
   "baseCost": 100,
@@ -20,5 +21,6 @@
   "equipment": [],
   "items": [],
   "traits": [],
-  "tags": ["wizard"]
+  "tags": ["wizard"],
+  "baseSize": 30
 }

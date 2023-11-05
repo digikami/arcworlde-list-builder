@@ -1,0 +1,39 @@
+{
+  "id": "relic-spirit",
+  "factionId": "undead-ancient-dead",
+  "name": "Relic Spirit",
+  "class": ["Irregular"],
+  "baseCost": 50,
+
+  "ap": 3,
+  "move": "*",
+  "bravery": "*",
+  "hp": 8,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Howling Slashes",
+      "power": 6,
+      "special": "Affects all enemy Characters within 4\""
+    },
+
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Vengeful Screech",
+      "power": 3,
+      "special": "Affects all enemy Characters within 4\""
+    }
+  ],
+  "equipment": [
+  ],
+  "items": [],
+  "traits": [
+    "undead-ancient-dead:afterlife",
+    {
+      "name": "Spirit of the Relic",
+      "description": "<p>Choose a piece of Equipment (Item or Gear) from the Common or Ancient Dead Armoury. The Relic Spirit is bound to this Equipment. This Equipment can be picked up and willingly put down by a friendly Character as normal.</p><p>When placed on the game board the Relic Spirit may be Activated like a regular Character, though may not make any movement Actions. When equipped to a Character it is Activated immediately after the bearer and may be targeted by Attacks. If the Relic Spirit is Knocked Out the Equipment is destroyed and may not be used again.</p>"
+    }
+  ]
+}

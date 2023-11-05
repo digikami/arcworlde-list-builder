@@ -1,0 +1,48 @@
+{
+  "id": "vampire-supreme",
+  "factionId": "undead-vampires",
+  "name": "Vampire Supreme",
+  "class": ["Commander"],
+  "baseCost": 150,
+
+  "ap": 3,
+  "move": 4,
+  "bravery": 9,
+  "hp": 12,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Effortless Slash",
+      "power": 7,
+      "special": "Each Crit allows one more D6 to be rolled."
+    },
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Bloody Strike",
+      "power": 5,
+      "special": "Crit ignores Armour."
+    },
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Go for the Throat",
+      "power": 2,
+      "modifiable": false,
+      "special": "This Attack’s Power is not boosted by any Equipment. If HP is removed by this Attack, may re-roll any failed Enthral attempts against the target this Round."
+    }
+  ],
+  "equipment": [
+    { "armouryItem": "undead-vampires:vampyr-supreme", "fixed": true }
+  ],
+  "items": [],
+  "traits": [
+    {
+      "id": "feed",
+      "name": "Feed",
+      "description": "<p>Vampires feast upon the life essence of their prey, be it blood or the substance of their souls. Sometimes their hunger can overwhelm them, particularly when they feel weakened. A Vampire may feed upon a friendly Thrall in base contact for an Easy Feat and regain D6 HP. The Thrall loses the same amount of HP.</p><p>If a Vampire is at 25% or less of their starting HP, they must attempt to Feed if there is a Thrall within 6”. If not in base contact with an enemy, they must use their full movement towards the nearest Thrall.</p>"
+    }
+  ],
+  "baseSize": 30
+}

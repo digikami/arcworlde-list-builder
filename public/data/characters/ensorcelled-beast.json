@@ -1,5 +1,6 @@
 {
   "id": "ensorcelled-beast",
+  "factionId": "fae-wizards",
   "name": "Ensorcelled Beast",
   "class": ["Heavy", "Monster"],
   "baseCost": 200,
@@ -42,5 +43,6 @@
       "name": "Feast of Magic",
       "description": ""
     }
-  ]
+  ],
+  "baseSize": 60
 }

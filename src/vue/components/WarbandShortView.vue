@@ -16,7 +16,7 @@
       <ul v-if="member.get('equipment').length > 0">
         <li v-for="equipment in member.get('equipment')" class="leader-row">
           <span class="equipment-name">{{ equipment.name() }}</span>
-          <span class="equipment-cost">{{ equipment.totalCost() == 0 ? "Free" : `${equipment.totalCost()} GP`}}</span>
+          <span class="equipment-cost">{{ equipment.totalCost(list.get('faction'), member) == 0 ? "Free" : `${equipment.totalCost(list.get('faction'), member)} GP`}}</span>
         </li>
       </ul>
     </div>
@@ -30,7 +30,7 @@
       <ul v-if="member.get('equipment').length > 0">
         <li v-for="equipment in member.get('equipment')" class="leader-row">
           <span class="equipment-name">{{ equipment.name() }}</span>
-          <span class="equipment-cost">{{ equipment.totalCost() == 0 ? "Free" : `${equipment.totalCost()} GP`}}</span>
+          <span class="equipment-cost">{{ equipment.totalCost(list.get('faction'), member) == 0 ? "Free" : `${equipment.totalCost(list.get('faction'), member)} GP`}}</span>
         </li>
       </ul>
     </div>

@@ -1,5 +1,6 @@
 {
   "id": "wild-elven-warchief",
+  "factionId": "fae-wild-elves",
   "name": "Wild Elven Warchief",
   "class": ["Commander"],
   "baseCost": 130,
@@ -37,5 +38,6 @@
     "bestiary:agile",
     "fae-wild-elves:summoner",
     "fae-wild-elves:sacrifice"
-  ]
+  ],
+  "baseSize": 40
 }

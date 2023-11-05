@@ -1,0 +1,39 @@
+{
+  "id": "grave-lord",
+  "factionId": "undead-ancient-dead",
+  "name": "Grave Lord",
+  "class": ["Commander"],
+  "baseCost": 100,
+
+  "ap": 4,
+  "move": 4,
+  "bravery": "*",
+  "hp": 10,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Spooky Aura",
+      "power": 5,
+      "special": "Targets every enemy Character within 4”. May not be modified by Spells or Equipment."
+    },
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Regal Slash",
+      "power": 5
+    }
+  ],
+  "equipment": [],
+  "items": [],
+  "traits": [
+    "undead-ancient-dead:bones",
+    "undead-ancient-dead:afterlife",
+    {
+      "name": "Rise from Your Graves!",
+      "description": "<p>If a Character with the Bones Trait is Knocked Out within 6” of the Grave Lord, roll a D6. On a Crit, they return at 1HP.</p>"
+    }
+  ],
+  "tags": ["bones"],
+  "baseSize": 30
+}

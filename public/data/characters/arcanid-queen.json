@@ -56,5 +56,6 @@
       "name": "Spiderwitch",
       "description": ""
     }
-  ]
+  ],
+  "baseSize": 120
 }

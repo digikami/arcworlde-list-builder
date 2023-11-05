@@ -42,5 +42,6 @@
       "name": "Head Regeneration", 
       "description": ""
     }
-  ]
+  ],
+  "baseSize": 60
 }

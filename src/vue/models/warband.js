@@ -29,17 +29,6 @@ class Warband extends UserDataModel {
     return null;
   }
 
-  getFaction() {
-    let faction = this.get('faction');
-    this.get('commanders').forEach((member) => {
-      member.modifyFaction(faction)
-    })
-    this.get('members').forEach((member) => {
-      member.modifyFaction(faction)
-    })
-    return faction;
-  }
-
   totalCost() {
     return this.get('commanders').reduce((prev, curr) => prev + this.getMemberTotalCost(curr) , 0) +
       this.get('members').reduce((prev, curr) => prev + this.getMemberTotalCost(curr) , 0);
@@ -56,8 +45,19 @@ class Warband extends UserDataModel {
     return cost;
   }
 
+  getEquipmentCost(equipment, member) {
+    let cost = equipment.get('baseCost');
+    cost = this.get('faction').modifyEquipmentCost(equipment, member, cost);
+    ['commanders', 'members'].forEach((group) => {
+      this.get(group).forEach((otherMember) => {
+        cost = otherMember.modifyCharacterCost(equipment, member, cost);
+      })
+    })
+    return cost;
+  }
+
   getMemberEquipmentCost(member) {
-    return member.equipmentCost();
+    return member.equipmentCost(this.get('faction'));
   }
   getMemberTotalCost(member) {
     return this.getCharacterCost(member) + this.getMemberEquipmentCost(member);
@@ -109,7 +109,7 @@ class Warband extends UserDataModel {
   }
 
   getArmoury() {
-    let armoury = this.get('faction').get('armoury').slice();
+    let armoury = [];
     ['commanders', 'members'].forEach((group) => {
       this.get(group).forEach((character) => {
         armoury = character.modifyArmoury(armoury);

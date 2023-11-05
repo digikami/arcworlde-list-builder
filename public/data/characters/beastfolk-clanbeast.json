@@ -30,5 +30,6 @@
   "traits": [
     "nomad-beastfolk:intimidating",
     "nomad-beastfolk:animal-form"
-  ]
+  ],
+  "baseSize": 40
 }

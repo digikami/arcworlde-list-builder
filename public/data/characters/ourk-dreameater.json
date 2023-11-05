@@ -47,5 +47,7 @@
       "allow": [{"tags": "boglin"}],
       "description": ""
     }
-  ]
+  ],
+  "tags": ["ourk"],
+  "baseSize": 40
 }

@@ -12,14 +12,14 @@
     {
       "id": "shield",
       "name": "Shield",
-      "type": "Equipment",
+      "type": "Gear",
       "baseCost": 15,
       "description": "<p>If equipped, a Character may re-roll one failed Defence roll per Round.</p>"
     },
     {
       "id": "spear",
       "name": "Spear",
-      "type": "Equipment",
+      "type": "Gear",
       "baseCost": 10,
       "description": "<p>If equipped, a Character may make Melee Attacks against targets up to 2\" away, even if they aren't in base contact. Attacks may still be made if there is a friendly Character between the Character and the target.</p>"
     },
@@ -33,7 +33,7 @@
     {
       "id": "two-handed-weapon",
       "name": "Two Handed Weapon",
-      "type": "Equipment",
+      "type": "Gear",
       "baseCost": 10,
       "description": "<p>If equipped, a Character gets +2 Power for all Melee Attacks. However, any of their own Critical Defends are discarded as if they were Failures.</p>",
       "modifications": {
@@ -45,21 +45,21 @@
     {
       "id": "dual-weapons",
       "name": "Dual Weapons",
-      "type": "Equipment",
+      "type": "Gear",
       "baseCost": 10,
       "description": "<p>If equipped, a Character may re-roll every 1 when making a Melee Attack.</p>"
     },
     {
       "id": "light-armour",
       "name": "Light Armour",
-      "type": "Equipment",
+      "type": "Gear",
       "baseCost": 20,
       "description": "<p>If equipped, a Character gains +1 Armour. This does not stack.</p>"
     },
     {
       "id": "heavy-armour",
       "name": "Heavy Armour",
-      "type": "Equipment",
+      "type": "Gear",
       "baseCost": 35,
       "description": "<p>If equipped, a Character gains +2 Armour. This does not stack. In addition, any Leg It rolls are at +1 difficulty.</p>"
     }

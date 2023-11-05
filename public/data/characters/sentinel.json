@@ -1,5 +1,6 @@
 {
   "id": "sentinel",
+  "factionId": "fae-wizards",
   "name": "Sentinel",
   "class": ["Elite"],
   "baseCost": 80,
@@ -31,5 +32,6 @@
       "name": "Enchanted Armour",
       "description": ""
     }
-  ]
+  ],
+  "baseSize": 40
 }

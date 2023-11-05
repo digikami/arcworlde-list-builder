@@ -1,5 +1,6 @@
 {
   "id": "hobgoblin-firestarter",
+  "factionId": "fae-dark-lords",
   "name": "Hobgoblin Firestarter",
   "class": ["Irregular"],
   "baseCost": 50,
@@ -35,5 +36,6 @@
       "description": ""
     }
   ],
-  "tags": ["hobgoblin"]
+  "tags": ["hobgoblin"],
+  "baseSize": 30
 }

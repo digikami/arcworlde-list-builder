@@ -35,6 +35,10 @@ class BaseModel {
       return this.get(key);
     }
   }
+
+  toJSON() {
+    return JSON.stringify(this._data);
+  }
 }
 
 BaseModel.getAppVersion = () => {

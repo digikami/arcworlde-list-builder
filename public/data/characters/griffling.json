@@ -34,5 +34,6 @@
       "name": "Chocks Away!",
       "description": ""
     }
-  ]
+  ],
+  "baseSize": 30
 }

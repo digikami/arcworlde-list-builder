@@ -44,5 +44,6 @@
       "name": "Fungal Regeneration",
       "description": "If this Character is not in base contact with an enemy Character at the end of the Round, it regains D6 HP."
     }
-  ]
+  ],
+  "baseSize": 60
 }

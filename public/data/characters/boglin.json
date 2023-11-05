@@ -35,5 +35,6 @@
       "description": ""
     }
   ],
-  "tags": ["boglin"]
+  "tags": ["boglin"],
+  "baseSize": 30
 }

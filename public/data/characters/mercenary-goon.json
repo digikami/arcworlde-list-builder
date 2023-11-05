@@ -32,5 +32,6 @@
       "name": "Expendable", 
       "description": ""
     }
-  ]
+  ],
+  "baseSize": 30
 }

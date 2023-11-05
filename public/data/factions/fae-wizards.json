@@ -125,7 +125,7 @@
     {
       "id": "wizard-ranged-weapon",
       "name": "Wizard Ranged Weapon",
-      "type": "Equipment",
+      "type": "Gear",
       "baseCost": 15,
       "description": "",
       "allow": [{"tags": "wizard"},{"tags": "apprentice"}],
@@ -141,14 +141,15 @@
     {
       "id": "wizard-mount",
       "name": "Wizard Mount",
-      "type": "Equipment",
+      "type": "Gear",
       "baseCost": 30,
       "allow": [{"tags": "wizard"},{"tags": "apprentice"}],
       "description": "",
       "modifications": {
         "hp": 5,
         "move": 4,
-        "traits": ["bestiary:agile"]
+        "traits": ["bestiary:agile"],
+        "baseSize": 40
       }
     },
     {

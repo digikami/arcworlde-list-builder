@@ -33,5 +33,7 @@
       "name": "Brewboy", 
       "description": ""
     }
-  ]
+  ],
+  "tags": ["ourk"],
+  "baseSize": 30
 }

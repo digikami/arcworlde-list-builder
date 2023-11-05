@@ -48,5 +48,6 @@
       "name": "Ambush",
       "description": ""
     }
-  ]
+  ],
+  "baseSize": 120
 }

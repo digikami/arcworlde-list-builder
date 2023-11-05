@@ -1,0 +1,49 @@
+{
+  "id": "werewolf",
+  "factionId": "undead-vampires",
+  "name": "Werewolf",
+  "class": ["Heavy"],
+  "baseCost": 200,
+
+  "ap": 7,
+  "move": 6,
+  "bravery": 8,
+  "hp": 20,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Raking Claws",
+      "power": 7,
+      "special": "A Crit ignores and breaks 1 Armour."
+    },
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Savage",
+      "power": 5,
+      "special": "Each successful Hit allows one more D6 to be rolled."
+    },
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Howl",
+      "power": 2,
+      "special": "Every enemy Character within 6” is affected by this Attack. Ignores Armour. If a Character loses HP to this Attack they must make a Bravery Test."
+    }
+  ],
+  "equipment": [],
+  "items": [],
+  "traits": [
+    "bestiary:agile",
+    "bestiary:split-activation",
+    "bestiary:fearsome",
+    "bestiary:dwindling-strength",
+    "bestiary:death-throes",
+    {
+      "id": "curse-of-the-wolf",
+      "name": "Curse of the Wolf",
+      "description": "<p>The player may choose to deploy another non-Creature miniature to represent the Werewolf and may opt to not reveal its true identity. If the Character makes an Attack or is attacked in Melee they transform into their true form and the miniature must be replaced with a Werewolf model.</p>"
+    }
+  ]
+}

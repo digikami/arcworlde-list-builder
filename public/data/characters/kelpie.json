@@ -48,5 +48,6 @@
       "name": "Cloying Mist",
       "description": ""
     }
-  ]
+  ],
+  "baseSize": 60
 }

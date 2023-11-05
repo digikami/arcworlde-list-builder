@@ -1,0 +1,126 @@
+{
+  "id": "undead-vampires",
+  "listable": true,
+  "name": "Vampires",
+  "traits": [
+    {
+      "id": "enthrall",
+      "name": "Enthrall",
+      "description": "<p></p>"
+    },
+    {
+      "id": "insignificant",
+      "name": "Insignificant",
+      "description": "<p></p>"
+    },
+    {
+      "id": "undead-legion",
+      "name": "Undead Legion",
+      "description": "<p></p>"
+    }
+  ],
+  "spell_lists": [{
+    "id": "lore-of-the-night",
+    "name": "The Lore of the Night",
+    "spells": [
+      {
+        "name": "Darkness",
+        "draw": 14,
+        "description": "<p>Choose a target Character within 8”. Until the end of this Round, they and any Character within 4” of them are at a Disadvantage when rolling to Shoot.</p>"
+      },
+      {
+        "name": "Dramatic Thunderclap",
+        "draw": 17,
+        "description": "<p>A single friendly Character this Round may re-roll a Narrative Feat.</p>"
+      },
+      {
+        "name": "Vampiric Glare",
+        "draw": 20,
+        "description": "<p>Choose one enemy Character within 6”. They must make an immediate Bravery Test, if failed they may not move for the rest of the Round.</p>"
+      },
+      {
+        "name": "Cloud of Bats",
+        "draw": 21,
+        "description": "<p>Deploy D3 Knocked Out Crypt Bats in base contact with the caster. They may Activate next Round.</p>"
+      }
+    ]
+  }],
+  "armoury": [
+    {
+      "id": "blood-vial",
+      "name": "Blood Vial",
+      "type": "Item",
+      "baseCost": 10,
+      "description": "<p></p>"
+    },
+    {
+      "id": "beguiling-temperment",
+      "name": "Beguiling Temperament",
+      "type": "Bloodline",
+      "baseCost": 25,
+      "allow": [{ "id": "vampire" }],
+      "description": "<p>Add 1D6 to every Enthrall attempt.</p>"
+    },
+    {
+      "id": "shapeshifter",
+      "name": "Shapeshifter",
+      "type": "Bloodline",
+      "baseCost": 30,
+      "allow": [{ "id": "vampire" }],
+      "description": "<p>On an Easy Feat the Vampire may turn into a Crypt Bat at full HP. They may voluntarily return to their original shape and HP in their Activation at any time. If the Crypt Bat is Knocked Out they are forced to turn back and may not Activate for the rest of the Round.</p>"
+    },
+    {
+      "id": "everlasting",
+      "name": "Everlasting",
+      "type": "Bloodline",
+      "baseCost": 30,
+      "allow": [{ "id": "vampire" }],
+      "description": "<p>If Knocked Out, place a token on the board. They may be ‘healed’ by Blood Vials used by a friendly Character and returned to the game.</p>"
+    },
+    {
+      "id": "fell-scholar",
+      "name": "Fell Scholar",
+      "type": "Bloodline",
+      "baseCost": 30,
+      "allow": [{ "id": "vampire" }],
+      "description": "<p>This Vampire acquires the Mage Class and may cast Spells from the Lore of the Night.</p>",
+      "modifications": {
+        "class": ["Mage"]
+      }
+    },
+    {
+      "id": "crimson-knight",
+      "name": "Crimson Knight",
+      "type": "Bloodline",
+      "baseCost": 30,
+      "allow": [{ "id": "vampire" }],
+      "description": "<p>+1 Damage to each Attack this Vampire makes in Melee Combat.</p>",
+      "modifications": {
+        "power": {
+          "melee": 1
+        }
+      }
+    },
+    {
+      "id": "vampyr-supreme",
+      "name": "Vampyr Supreme",
+      "type": "Bloodline",
+      "baseCost": 30,
+      "allow": [{ "id": "vampire-supreme" }],
+      "description": "<p>One Vampire in the Warband must have this Bloodline, and only one may take it. This Vampire gains the Commander Class, +1AP and +6 HP.</p>",
+      "modifications": {
+        "class": ["Commander"],
+        "ap": 1,
+        "hp": 6
+      }
+    }
+  ],
+  "characters": [
+    "vampire-supreme",
+    "vampire",
+    "manservant",
+    "thrall",
+    "werewolf",
+    "crypt-bat"
+  ]
+}

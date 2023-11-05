@@ -39,7 +39,7 @@
     {
       "id": "imperial-crossbow",
       "name": "Imperial Crossbow",
-      "type": "Equipment",
+      "type": "Gear",
       "baseCost": 15,
       "description": "",
       "modifications": {
@@ -61,7 +61,7 @@
     {
       "id": "imperial-mount",
       "name": "Imperial Mount",
-      "type": "Equipment",
+      "type": "Gear",
       "baseCost": 30,
       "description": "",
       "allow": [{"id": "imperial-captain"}, {"id":"imperial-trooper"}, {"id":"imperial-dragoon"}],
@@ -70,13 +70,14 @@
         "move": 4,
         "traits": [
           "bestiary:agile"
-        ]
+        ],
+        "baseSize": 50
       }
     },
     {
       "id": "arcloque-rifle",
       "name": "Arcloque Rifle",
-      "type": "Equipment",
+      "type": "Gear",
       "baseCost": 20,
       "description": "",
       "modifications": {
@@ -91,7 +92,7 @@
     {
       "id": "arcloque-pistol",
       "name": "Arcloque Pistol",
-      "type": "Equipment",
+      "type": "Gear",
       "baseCost": 15,
       "description": "",
       "allow": [{"id": "imperial-captain"}, {"id": "imperial-tinkerer"}, {"id": "imperial-dragoon"}],
@@ -107,7 +108,7 @@
     {
       "id": "sergeants-chevrons",
       "name": "Sergeant's Chevrons",
-      "type": "Equipment",
+      "type": "Gear",
       "baseCost": 10,
       "description": "",
       "allow": [{"id": "imperial-trooper"}],

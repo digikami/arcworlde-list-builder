@@ -41,7 +41,7 @@
     {
       "id": "undead-raiders-ranged-weapon",
       "name": "Undead Raiders Ranged Weapon",
-      "type": "Equipment",
+      "type": "Gear",
       "baseCost": 15,
       "description": "",
       "modifications": {
@@ -73,7 +73,7 @@
     {
       "id": "cursed-pipes",
       "name": "Cursed Pipes",
-      "type": "Equipment",
+      "type": "Gear",
       "baseCost": 30,
       "description": "",
       "modifications": {
@@ -90,12 +90,13 @@
     {
       "id": "undead-mount",
       "name": "Undead Mount",
-      "type": "Equipment",
+      "type": "Gear",
       "baseCost": 30,
       "description": "",
       "modifications": {
         "hp": 5,
-        "move": 4
+        "move": 4,
+        "baseSize": 50
       }
     }
   ],

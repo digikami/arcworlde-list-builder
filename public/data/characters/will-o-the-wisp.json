@@ -33,5 +33,6 @@
       "name": "Lure of the Light",
       "description": ""
     }
-  ]
+  ],
+  "baseSize": 30
 }

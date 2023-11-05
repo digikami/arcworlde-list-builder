@@ -42,5 +42,7 @@
       "name": "Power Struggle", 
       "description": ""
     }
-  ]
+  ],
+  "tags": ["ourk"],
+  "baseSize": 40
 }

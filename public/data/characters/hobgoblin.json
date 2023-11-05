@@ -1,5 +1,6 @@
 {
   "id": "hobgoblin",
+  "factionId": "fae-dark-lords",
   "name": "Hobgoblin",
   "class": ["Unit"],
   "baseCost": 35,
@@ -28,5 +29,6 @@
   "traits": [
     "fae-dark-lords:diminutive"
   ],
-  "tags": ["hobgoblin"]
+  "tags": ["hobgoblin"],
+  "baseSize": 30
 }

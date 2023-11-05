@@ -1,5 +1,6 @@
 {
   "id": "halfling-thing-flinger",
+  "factionId": "civilized-halfling",
   "name": "Halfling Thing-Flinger",
   "class": ["Heavy"],
   "baseCost": 200,
@@ -35,5 +36,6 @@
       "name": "Random Payload",
       "description": ""
     }
-  ]
+  ],
+  "baseSize": 60
 }

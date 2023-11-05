@@ -31,5 +31,7 @@
   "traits": [
     "nomad-ourk:intimidating",
     "nomad-ourk:hurl"
-  ]
+  ],
+  "tags": ["ourk"],
+  "baseSize": 40
 }

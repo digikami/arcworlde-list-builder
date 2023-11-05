@@ -1,5 +1,6 @@
 {
   "id": "apprentice",
+  "factionId": "fae-wizards",
   "name": "Apprentice",
   "class": ["Unit", "Mage"],
   "baseCost": 60,
@@ -30,5 +31,6 @@
       "description": ""
     }
   ],
-  "tags": ["apprentice"]
+  "tags": ["apprentice"],
+  "baseSize": 30
 }

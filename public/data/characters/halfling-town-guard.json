@@ -1,5 +1,6 @@
 {
   "id": "halfling-town-guard",
+  "factionId": "civilized-halfling",
   "name": "Halfling Town Guard",
   "class": ["Elite"],
   "baseCost": 70,
@@ -33,5 +34,6 @@
       "name": "Bodyguard",
       "description": ""
     }
-  ]
+  ],
+  "baseSize": 30
 }

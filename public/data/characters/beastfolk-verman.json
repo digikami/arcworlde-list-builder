@@ -33,5 +33,6 @@
       "name": "Go Get'Em",
       "description": ""
     }
-  ]
+  ],
+  "baseSize": 30
 }

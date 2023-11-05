@@ -47,7 +47,7 @@
     {
       "id": "ourk-ranged-weapon",
       "name": "Ourk/Boglin Ranged Weapon",
-      "type": "Equipment",
+      "type": "Gear",
       "baseCost": 15,
       "description": "",
       "modifications": {
@@ -100,20 +100,36 @@
     {
       "id": "goading-fork",
       "name": "Goading Fork",
-      "type": "Equipment",
+      "type": "Gear",
       "baseCost": 15,
       "description": ""
     },
     {
       "id": "ourk-mount",
       "name": "Ourk/Boglin Mount",
-      "type": "Equipment",
+      "type": "Gear",
       "baseCost": 30,
       "description": "",
+      "allow": [{"tags": "ourk"}],
       "modifications": {
         "hp": 5,
         "move": 4,
-        "traits": ["bestiary:agile"]
+        "traits": ["bestiary:agile"],
+        "baseSize": 50
+      }
+    },
+    {
+      "id": "ourk-mount",
+      "name": "Ourk/Boglin Mount",
+      "type": "Gear",
+      "baseCost": 30,
+      "description": "",
+      "allow": [{"tags": "boglin"}],
+      "modifications": {
+        "hp": 5,
+        "move": 4,
+        "traits": ["bestiary:agile"],
+        "baseSize": 30
       }
     }
   ],

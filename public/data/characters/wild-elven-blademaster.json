@@ -1,5 +1,6 @@
 {
   "id": "wild-elven-blademaster",
+  "factionId": "fae-wild-elves",
   "name": "Wild Elven Blademaster",
   "class": ["Irregular"],
   "baseCost": 115,
@@ -34,5 +35,6 @@
       "name": "Berserker",
       "description": ""
     }
-  ]
+  ],
+  "baseSize": 40
 }

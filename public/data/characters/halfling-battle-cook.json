@@ -1,5 +1,6 @@
 {
   "id": "halfling-battle-cook",
+  "factionId": "civilized-halfling",
   "name": "Halfling Battle Cook",
   "class": ["Mage"],
   "baseCost": 80,
@@ -21,5 +22,6 @@
   "items": [],
   "traits": [
     "civilized-halfling:make-orders"
-  ]
+  ],
+  "baseSize": 30
 }

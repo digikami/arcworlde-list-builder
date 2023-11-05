@@ -1,0 +1,31 @@
+{
+  "id": "barrow-hound",
+  "factionId": "undead-ancient-dead",
+  "name": "Barrow Hound",
+  "class": ["Beast"],
+  "baseCost": 30,
+
+  "ap": 2,
+  "move": 7,
+  "bravery": "*",
+  "hp": 4,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Chomp",
+      "power": 5
+    }
+  ],
+  "equipment": [
+  ],
+  "items": [],
+  "traits": [
+    "undead-ancient-dead:bones",
+    "undead-ancient-dead:afterlife",
+    "bestiary:agile",
+    "bestiary:pack-hunter"
+  ],
+  "tags": ["bones"],
+  "baseSize": 30
+}

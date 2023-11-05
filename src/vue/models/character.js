@@ -1,6 +1,7 @@
 import BaseModel from './base-model';
 import Equipment from './equipment';
 import Trait from './trait';
+import Faction from './faction';
 
 class Character extends BaseModel {
   constructor(data) {
@@ -12,7 +13,7 @@ class Character extends BaseModel {
   }
 
   loadData() {
-    return Promise.all([this.loadArmoury(), this.loadTraits()]).then(() => this);
+    return Promise.all([this.loadArmoury(), this.loadTraits(), this.loadFaction()]).then(() => this);
   }
 
   loadArmoury() {
@@ -40,6 +41,11 @@ class Character extends BaseModel {
       })) : Promise.resolve(true)
     ]);
   }
+  loadFaction() {
+    return Faction.find(this.get('factionId').toString()).then((characterFaction) => {
+      this.faction = characterFaction;
+    })
+  }
 
   matches(termSet) {
     if (!termSet) return true;
@@ -57,6 +63,18 @@ class Character extends BaseModel {
       allowed = allowed || match;
     })
     return allowed;
+  }
+
+  getEquipmentCostModifier(equipment) {
+    let costModifier = 1;
+    if (this.get('equipment_cost_modifiers')) {
+      this.get('equipment_cost_modifiers').forEach((mod) => {
+        if (equipment.matches(mod.match)) {
+          costModifier *= mod.modifier;
+        }
+      })
+    }
+    return costModifier;
   }
 }
 

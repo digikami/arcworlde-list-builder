@@ -1,5 +1,6 @@
 {
   "id": "lichenhawk",
+  "factionId": "fae-wild-elves",
   "name": "Lichenhawk",
   "class": ["Beast"],
   "baseCost": 35,
@@ -29,5 +30,6 @@
     "bestiary:fly",
     "fae-wild-elves:summoned",
     "common:flammable"
-  ]
+  ],
+  "baseSize": 30
 }

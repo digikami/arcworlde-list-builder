@@ -45,6 +45,13 @@
       </div>
     </div>
 
+    <div v-if="member.getBaseSize()" class="rec-base-size h4 text-md-center">
+      Rec. Base Size:
+      <div class="base">
+        {{ member.getBaseSize() }}mm
+      </div>
+    </div>
+
     <h3 class="h4">Attacks:</h3>
     <ul>
       <li v-for="attack in member.getAttacks()" class="my-3">
@@ -57,7 +64,7 @@
       <h3 class="h4">Equipment:</h3>
       <ul class="list-inline">
         <li v-for="equipment in member.get('equipment')" class="list-inline-item">
-          <strong>{{ equipment.name() }} ({{ equipment.totalCost() == 0 ? "Free" : equipment.totalCost() + " GP" }})</strong>
+          <strong>{{ equipment.name() }} ({{ equipment.totalCost(faction, member) == 0 ? "Free" : equipment.totalCost() + " GP" }})</strong>
           <!-- <div v-html="equipment.description()"></div> -->
         </li>
       </ul>

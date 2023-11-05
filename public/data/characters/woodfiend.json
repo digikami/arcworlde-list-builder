@@ -1,5 +1,6 @@
 {
   "id": "woodfiend",
+  "factionId": "fae-wild-elves",
   "name": "Woodfiend",
   "class": ["Unit"],
   "baseCost": 45,
@@ -31,5 +32,6 @@
       "name": "Shifting Forms",
       "description": ""
     }
-  ]
+  ],
+  "baseSize": 30
 }

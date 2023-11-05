@@ -1,5 +1,6 @@
 {
   "id": "halfling-militia",
+  "factionId": "civilized-halfling",
   "name": "Halfling Militia",
   "class": ["Unit"],
   "baseCost": 40,
@@ -27,5 +28,6 @@
   "items": [],
   "traits": [
     "civilized-halfling:take-orders"
-  ]
+  ],
+  "baseSize": 30
 }

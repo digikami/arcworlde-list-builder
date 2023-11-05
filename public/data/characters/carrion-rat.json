@@ -29,5 +29,6 @@
   "traits": [
     "undead-raiders:risen",
     "common:flammable"
-  ]
+  ],
+  "baseSize": 30
 }

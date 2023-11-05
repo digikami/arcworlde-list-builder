@@ -41,5 +41,6 @@
       "name": "Very Flammable",
       "description": ""
     }
-  ]
+  ],
+  "baseSize": 60
 }

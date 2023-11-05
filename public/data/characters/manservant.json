@@ -1,0 +1,39 @@
+{
+  "id": "manservant",
+  "factionId": "undead-vampires",
+  "name": "Manservant",
+  "class": ["Unit"],
+  "baseCost": 40,
+
+  "ap": 2,
+  "move": 4,
+  "bravery": 8,
+  "hp": 6,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Manhandle",
+      "power": 5,
+      "special": "If the target is on a 30mm base, a Crit knocks them Prone."
+    },
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Club Foot",
+      "power": 4,
+      "special": "+1 Power if the target is Prone."
+    }
+  ],
+  "equipment": [],
+  "items": [],
+  "traits": [
+    "undead-vampires:insignificant",
+    {
+      "id": "drag",
+      "name": "Drag",
+      "description": "<p>If in base contact with an enemy Character on a 30mm base, for a Medium Feat the Manservant may move themselves and the target D6”. This is reduced to an Easy Feat if the target is Prone.</p>"
+    }
+  ],
+  "baseSize": 30
+}

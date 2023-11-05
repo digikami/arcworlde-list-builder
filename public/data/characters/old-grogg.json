@@ -50,5 +50,6 @@
       "name": "Grizzled Hide",
       "description": "This character has +1 Armour that cannot be broken."
     }
-  ]
+  ],
+  "baseSize": 60
 }

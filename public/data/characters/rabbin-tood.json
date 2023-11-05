@@ -34,5 +34,6 @@
       "name": "Expert Poacher", 
       "description": ""
     }
-  ]
+  ],
+  "baseSize": 30
 }

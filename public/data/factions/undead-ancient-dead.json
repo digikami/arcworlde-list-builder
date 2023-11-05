@@ -1,0 +1,130 @@
+{
+  "id": "undead-ancient-dead",
+  "listable": true,
+  "name": "Ancient Dead",
+  "traits": [
+    {
+      "id": "afterlife",
+      "name": "Afterlife",
+      "description": "<p></p>"
+    },
+    {
+      "id": "bones",
+      "name": "Bones",
+      "description": "<p></p>"
+    },
+    {
+      "id": "undead-legion",
+      "name": "Undead Legion",
+      "description": "<p></p>"
+    }
+  ],
+  "spell_lists": [{
+    "id": "lore-of-the-thereafter",
+    "name": "The Lore of the Thereafter",
+    "spells": [
+      {
+        "name": "Tar Pit",
+        "draw": 14,
+        "description": "<p>Place a marker on the game board. All Characters within 3” of it have their Move reduced to 1. This effect lasts until the Bog Magus is Prone or Knocked Out.</p>"
+      },
+      {
+        "name": "Spirit Glaive",
+        "draw": 17,
+        "description": "<p>Can be cast upon themselves or a friendly Character within 3” and lasts until the end of the Round. Instead of losing HP a target loses 1AP from their next Activation for each 3 Damage it takes from Melee Attacks from those wielding the Spirit Glaive.</p>"
+      },
+      {
+        "name": "Forgotten Ritual",
+        "draw": 20,
+        "description": "<p>All friendly Characters with the Bones Trait within 3” regain D3 AP.</p>"
+      },
+      {
+        "name": "Justice of the Dead",
+        "draw": 21,
+        "description": "<p>Any enemy Character that has Knocked Out a friendly Character suffers D6 Hits that ignore Armour and Shields.</p>"
+      }
+    ]
+  }],
+  "armoury": [
+    {
+      "id": "animal-totem",
+      "name": "Animal Totem",
+      "type": "Item",
+      "baseCost": 10,
+      "description": "<p></p>",
+      "allow": [{"tags": "bones"}]
+    },
+    {
+      "id": "ancient-dead-ranged-weapon",
+      "name": "Ancient Dead Ranged Weapon",
+      "type": "Gear",
+      "baseCost": 15,
+      "description": "<p>The Ancient Dead use all manner of ranged weapons, from bows of wood to slings and javelins.</p>",
+      "modifications": {
+        "attacks": [{
+          "type": "ranged",
+          "name": "Shot",
+          "power": 5,
+          "range": 12,
+          "special": "12\" range."
+        }]
+      }
+    },
+    {
+      "id": "sacred-blade",
+      "name": "Sacred Blade",
+      "type": "Gear",
+      "baseCost": 20,
+      "description": "<p>A weapon blessed by the priests of their time and interred to arm a warrior against the perils of the afterlife.</p>",
+      "modifications": {
+        "power": {
+          "melee": 2
+        }
+      }
+    },
+    {
+      "id": "familiar-jar",
+      "name": "Familiar Jar",
+      "type": "Item",
+      "baseCost": 35,
+      "description": "<p>One use only. Place a Barrow Hound in base contact with the user that can be Activated immediately</p>."
+    },
+    {
+      "id": "circlet-of-bronze",
+      "name": "Circlet of Bronze",
+      "type": "Gear",
+      "baseCost": 30,
+      "description": "<p>+1 Armour that cannot be ignored or removed by any Attack</p>."
+    },
+    {
+      "id": "barrow-marker",
+      "name": "Barrow Marker",
+      "type": "Item",
+      "baseCost": 50,
+      "description": "<p>When placed on the ground, at the start of each Round roll a D6. If a Success, place a Knocked Out Skelt in base contact.</p>"
+    },
+    {
+      "id": "skeleton-trumpet",
+      "name": "Skeleton Trumpet",
+      "type": "Gear",
+      "baseCost": 10,
+      "description": "<p>A Character equipped with the Skeleton Trumpet may toot upon it for an Easy Feat. If successful, all friendly Characters with the Bones Trait within 6” get +1 Move for this Round.</p>"
+    },
+    {
+      "id": "vengeance-coin",
+      "name": "Vengeance Coin",
+      "type": "Gear",
+      "baseCost": 10,
+      "description": "<p>Choose one enemy Character at the start of the game. The Character with this Item has +2 Power on all Attacks against them.</p>"
+    }
+  ],
+  "characters": [
+    "grave-lord",
+    "bog-magus",
+    "skelt",
+    "tomb-guardian",
+    "bone-goliath",
+    "relic-spirit",
+    "barrow-hound"
+  ]
+}

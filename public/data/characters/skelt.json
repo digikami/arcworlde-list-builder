@@ -1,0 +1,37 @@
+{
+  "id": "skelt",
+  "factionId": "undead-ancient-dead",
+  "name": "Skelt",
+  "class": ["Unit"],
+  "baseCost": 35,
+
+  "ap": 2,
+  "move": 4,
+  "bravery": "*",
+  "hp": 5,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Rattling Strike",
+      "power": 5,
+      "special": "Crit allows 1 more Hit to be rolled."
+    },
+
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Stab",
+      "power": 3
+    }
+  ],
+  "equipment": [
+  ],
+  "items": [],
+  "traits": [
+    "undead-ancient-dead:bones",
+    "undead-ancient-dead:afterlife"
+  ],
+  "tags": ["bones"],
+  "baseSize": 30
+}

@@ -27,5 +27,6 @@
       "name": "Stinky Beast", 
       "description": ""
     }
-  ]
+  ],
+  "baseSize": 30
 }

@@ -1,0 +1,31 @@
+{
+  "id": "crypt-bat",
+  "factionId": "undead-vampires",
+  "name": "Crypt Bat",
+  "class": ["Beast"],
+  "baseCost": 20,
+
+  "ap": 2,
+  "move": 8,
+  "bravery": 6,
+  "hp": 3,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Nip",
+      "power": 4
+    }
+  ],
+  "equipment": [],
+  "items": [],
+  "traits": [
+    "bestiary:agile",
+    {
+      "id": "flittering",
+      "name": "Flittering",
+      "description": "<p>A Crypt Bat may move over terrain unhindered. In addition, any successful Hits against them must be re-rolled.</p>"
+    }
+  ],
+  "baseSize": 30
+}

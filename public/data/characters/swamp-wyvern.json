@@ -50,5 +50,6 @@
       "name": "Airborne",
       "description": ""
     }
-  ]
+  ],
+  "baseSize": 120
 }

@@ -35,5 +35,6 @@
       "name": "Mounted Specialist", 
       "description": ""
     }
-  ]
+  ],
+  "baseSize": 30
 }

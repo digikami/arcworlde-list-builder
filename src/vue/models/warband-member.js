@@ -22,7 +22,7 @@ class WarbandMember extends BaseModel {
   }
 
   equipmentCost(faction) {
-    return this.get('equipment').reduce((prev, curr) => prev + curr.totalCost(), 0);
+    return this.get('equipment').reduce((prev, curr) => prev + curr.totalCost(faction, this), 0);
   }
 
   loadData() {
@@ -88,6 +88,14 @@ class WarbandMember extends BaseModel {
     return traits;
   }
 
+  getBaseSize() {
+    let baseSize = this.get('character').get('baseSize');
+    this.get('equipment').forEach((equipment) => {
+      baseSize = equipment.modifyBaseSize(baseSize);
+    })
+    return baseSize;
+  }
+
   serializeData(stripIds = false) {
     let d = Utils.clone(this._data);
     d.character = this.get('character').get('id');
@@ -112,6 +120,11 @@ class WarbandMember extends BaseModel {
     }
 
     return Math.ceil(cost);
+  }
+
+  modifyEquipmentCost(equipment, member, cost) {
+
+    return cost;
   }
 
   isAllowedEquipment(equip) {

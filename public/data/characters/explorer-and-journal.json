@@ -30,5 +30,6 @@
       "name": "The Enchanted Journal",
       "description": ""
     }
-  ]
+  ],
+  "baseSize": 30
 }

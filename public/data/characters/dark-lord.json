@@ -1,5 +1,6 @@
 {
   "id": "dark-lord",
+  "factionId": "fae-dark-lords",
   "name": "Dark Lord",
   "class": ["Commander"],
   "baseCost": 210,
@@ -91,5 +92,6 @@
         }]
       }
     }
-  ]
+  ],
+  "baseSize": 40
 }

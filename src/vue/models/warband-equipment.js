@@ -11,7 +11,7 @@ class WarbandEquipment extends BaseModel {
 
   getVariantData() {
     if (this.get('variant')) {
-      return this.get('character').get('variants').find((variant) => variant.id == this.get('variant'));
+      return this.get('armouryItem').get('variants').find((variant) => variant.id == this.get('variant'));
     } else {
       return null;
     }
@@ -24,8 +24,13 @@ class WarbandEquipment extends BaseModel {
     return this.get('armouryItem').get('description')
   }
 
-  totalCost() {
-    return this.get('fixed') ? 0 : this.get('armouryItem').get('baseCost');
+  totalCost(faction, member) {
+    let baseCost = this.get('fixed') ? 0 : this.get('armouryItem').get('baseCost');
+    
+    let modifier = faction && member ? faction.getEquipmentCostModifier(member, this.get('armouryItem')) * member.get('character').getEquipmentCostModifier(this.get('armouryItem'))
+      : 1;
+
+    return Math.ceil(baseCost * modifier);
   }
 
   modifyStats(stats) {
@@ -52,7 +57,7 @@ class WarbandEquipment extends BaseModel {
     if (mods && mods.power) {
       let powerMod = Utils.clone(mods.power);
       attacks.forEach((attack) => {
-        if (attack.type && attack.type in powerMod) {
+        if (attack.modifiable !== false && attack.type && attack.type in powerMod) {
           attack.power += powerMod[attack.type];
         }
       })
@@ -66,6 +71,15 @@ class WarbandEquipment extends BaseModel {
       traits = traits.concat(mods.traits);
     }
     return traits;
+  }
+
+  modifyBaseSize(baseSize) {
+    let size = baseSize;
+    let mods = this.get('armouryItem').get('modifications');
+    if (mods && mods.baseSize) {
+      return mods.baseSize;
+    }
+    return size;
   }
 
   loadData() {

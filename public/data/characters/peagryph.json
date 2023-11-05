@@ -30,5 +30,6 @@
   "items": [],
   "traits": [
     "bestiary:agile"
-  ]
+  ],
+  "baseSize": 40
 }

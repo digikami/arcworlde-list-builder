@@ -5,6 +5,7 @@ class Equipment extends BaseModel {
   constructor(data, source) {
     data.rawId = data.id;
     data.id = `${source.id}:${data.id}`;
+    data.source = source.id;
     super(data);
   }
 
@@ -21,6 +22,24 @@ class Equipment extends BaseModel {
     } else {
       return Promise.resolve(this);
     }
+  }
+
+  matches(termSet) {
+    if (!termSet) return true;
+    let allowed = false;
+    termSet.forEach((terms) => {
+      let match = true;
+      for (const key in terms) {
+        let comp = this.get(key);
+        match = match && comp && ( 
+          comp == terms[key] ||
+          (Array.isArray(comp) && (comp.includes(terms[key]) || comp.map((item) => item.id).includes(terms[key]))) ||
+          (comp.id && comp.id == terms[key])
+        )
+      }
+      allowed = allowed || match;
+    })
+    return allowed;
   }
 }
 

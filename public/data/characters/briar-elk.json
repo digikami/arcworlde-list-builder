@@ -1,5 +1,6 @@
 {
   "id": "briar-elk",
+  "factionId": "fae-wild-elves",
   "name": "Briar Elk",
   "class": ["Heavy", "Monster"],
   "baseCost": 200,
@@ -43,5 +44,6 @@
       "name": "Monstrous Mount",
       "description": ""
     }
-  ]
+  ],
+  "baseSize": 60
 }

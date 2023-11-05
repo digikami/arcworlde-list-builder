@@ -99,7 +99,7 @@
                       Free
                     </span>
                     <span v-if="!equipment.get('fixed')">
-                      {{ equipment.totalCost() }} GP
+                      {{ equipment.totalCost(faction, member) }} GP
                     </span>
                   </div>
                 </div>
@@ -119,6 +119,7 @@
 <script>
   import Multiselect from "vue-multiselect";
   import WarbandEquipment from '../models/warband-equipment';
+  import Faction from '../models/faction';
   import { Modal, Tooltip } from 'bootstrap';
   import draggable from 'vuedraggable';
 
@@ -153,30 +154,65 @@
         }
       },
       equipmentDropdownOptions() {
-        return [
-          {
-            id: this.faction.get('id'),
-            name: this.faction.get('name'),
-            options: this.list.getArmoury().filter((opt) => this.member.isAllowedEquipment(opt)).map((opt) => {
+        let options = [];
+        // warband member equipment
+        let memberEquipment = this.list.getArmoury().filter((opt) => this.member.isAllowedEquipment(opt));
+        if (memberEquipment.length) {
+          options.push({
+            id: 'warband',
+            name: 'Warband Equipment',
+            options: memberEquipment.map((opt) => {
               return {
                 id: opt.get('id'),
                 name: opt.get('name'),
                 equipment: opt
               }
             })
-          },
-          {
-            id: 'common',
-            name: 'Common',
-            options: this.common.get('armoury').map((opt) => {
+          })
+        }
+
+        // warband faction equipment
+        options.push({
+          id: this.faction.get('id'),
+          name: this.faction.get('name'),
+          options: this.faction.get('armoury').filter((opt) => this.member.isAllowedEquipment(opt)).map((opt) => {
+            return {
+              id: opt.get('id'),
+              name: opt.get('name'),
+              equipment: opt
+            }
+          })
+        });
+
+        // character faction equipment
+        if (this.faction.get('id') != this.member.get('character').get('factionId')) {
+          let memberFaction = this.member.get('character').faction;
+          options.push({
+            id: memberFaction.get('id'),
+            name: memberFaction.get('name'),
+            options: memberFaction.get('armoury').filter((opt) => this.member.isAllowedEquipment(opt)).map((opt) => {
               return {
                 id: opt.get('id'),
                 name: opt.get('name'),
                 equipment: opt
               }
             })
-          }
-        ]
+          })
+        }
+
+        // common equipment
+        options.push({
+          id: 'common',
+          name: 'Common',
+          options: this.common.get('armoury').map((opt) => {
+            return {
+              id: opt.get('id'),
+              name: opt.get('name'),
+              equipment: opt
+            }
+          })
+        })
+        return options
       }
     },
     mounted() {

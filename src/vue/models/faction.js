@@ -29,7 +29,6 @@ class Faction extends BaseModel {
   }
 
   loadCharacters() {
-    this.characters = this.characters ?? [];
     return Promise.all(this.get('characters').map((character) => {
       return Character.find(character).then((char) => {
         return char.loadData().then(() => {
@@ -60,6 +59,12 @@ class Faction extends BaseModel {
       })
     }
     return cost;
+  }
+
+  getEquipmentCostModifier(equipment, member) {
+    let mod = 1;
+    // no use case yet
+    return mod;
   }
 
   getCharacterCost(character) {

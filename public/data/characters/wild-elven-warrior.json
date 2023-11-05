@@ -1,5 +1,6 @@
 {
   "id": "wild-elven-warrior",
+  "factionId": "fae-wild-elves",
   "name": "Wild Elven Warrior",
   "class": ["Elite"],
   "baseCost": 95,
@@ -29,5 +30,6 @@
   "traits": [
     "bestiary:agile",
     "fae-wild-elves:summoner"
-  ]
+  ],
+  "baseSize": 40
 }

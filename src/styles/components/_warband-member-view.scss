@@ -10,14 +10,14 @@
       "class-label class-value"
       "ap-label ap-value"
       "move-label move-value"
-      "bravery-label bravery-value"
+      "brave-label brave-value"
       "hp-label hp-value";
 
     @include media-breakpoint-up(md) {
       grid-template-areas:
         "header header header header header"
-        "class-label ap-label move-label bravery-label hp-label"
-        "class-value ap-value move-value bravery-value hp-value";
+        "class-label ap-label move-label brave-label hp-label"
+        "class-value ap-value move-value brave-value hp-value";
     }
 
     &-header {
@@ -47,12 +47,12 @@
         grid-area: move-value;
       }
     }
-    &-bravery {
+    &-brave {
       &-label {
-        grid-area: bravery-label;
+        grid-area: brave-label;
       }
       &-value {
-        grid-area: bravery-value;
+        grid-area: brave-value;
       }
     }
     &-hp {
@@ -70,6 +70,30 @@
       }
       &-value {
         border: 2px solid $dark;
+      }
+    }
+  }
+
+  .rec-base-size {
+
+    .base {
+      display: inline;
+    }
+
+    @include media-breakpoint-up(md) {
+      float:right;
+      margin-left: 2rem;
+      margin-bottom: 2rem;
+
+      .base {
+        margin: 1rem auto 0 auto;
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        border: 4px solid black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
     }
   }

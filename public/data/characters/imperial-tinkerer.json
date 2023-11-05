@@ -24,5 +24,6 @@
       "name": "Contraption Trunk",
       "description": ""
     }
-  ]
+  ],
+  "baseSize": 30
 }

@@ -1,5 +1,6 @@
 {
   "id": "sprite",
+  "factionId": "fae-wizards",
   "name": "Sprite",
   "class": ["Beast"],
   "baseCost": 25,
@@ -27,5 +28,6 @@
   "items": [],
   "traits": [
     "fae-wizards:thing-of-magic"
-  ]
+  ],
+  "baseSize": 30
 }

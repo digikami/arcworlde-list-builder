@@ -1,0 +1,30 @@
+{
+  "id": "thrall",
+  "factionId": "undead-vampires",
+  "name": "Thrall",
+  "class": ["Irregular"],
+  "baseCost": 30,
+
+  "ap": 2,
+  "move": 4,
+  "bravery": "*",
+  "hp": 5,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Vacant Strike",
+      "power": 4
+    }
+  ],
+  "equipment": [],
+  "items": [],
+  "traits": [
+    "undead-vampires:insignificant",
+    {
+      "id": "mindless",
+      "name": "Mindless",
+      "description": "<p>Thralls are completely under the control of the Vampire who turned them and have no thoughts of their own. Thralls automatically pass all Bravery Tests.</p>"
+    }
+  ]
+}

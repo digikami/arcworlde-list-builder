@@ -36,5 +36,6 @@
       "name": "Scarlet Blur", 
       "description": "If there is only one enemy Character in base contact, Bruno may re-roll all failed Defence rolls."
     }
-  ]
+  ],
+  "baseSize": 30
 }

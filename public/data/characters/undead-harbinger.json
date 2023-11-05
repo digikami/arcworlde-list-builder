@@ -30,5 +30,6 @@
   "traits": [
     "undead-raiders:raiser-of-the-dead",
     "undead-raiders:soul-eater"
-  ]
+  ],
+  "baseSize": 30
 }

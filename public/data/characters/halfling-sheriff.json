@@ -1,5 +1,6 @@
 {
   "id": "halfling-sheriff",
+  "factionId": "civilized-halfling",
   "name": "Halfling Sheriff",
   "class": ["Commander"],
   "baseCost": 80,
@@ -35,5 +36,6 @@
       "name": "Rousing Cheer",
       "description": ""
     }
-  ]
+  ],
+  "baseSize": 30
 }

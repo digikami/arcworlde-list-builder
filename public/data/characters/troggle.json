@@ -33,5 +33,6 @@
       "name": "Burrower",
       "description": ""
     }
-  ]
+  ],
+  "baseSize": 30
 }

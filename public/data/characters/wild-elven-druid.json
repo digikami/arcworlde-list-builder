@@ -1,5 +1,6 @@
 {
   "id": "wild-elven-druid",
+  "factionId": "fae-wild-elves",
   "name": "Wild Elven Druid",
   "class": ["Mage"],
   "baseCost": 145,
@@ -28,5 +29,6 @@
     "bestiary:agile",
     "fae-wild-elves:summoner",
     "fae-wild-elves:sacrifice"
-  ]
+  ],
+  "baseSize": 40
 }

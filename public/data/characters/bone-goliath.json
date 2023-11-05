@@ -1,0 +1,43 @@
+{
+  "id": "bone-goliath",
+  "factionId": "undead-ancient-dead",
+  "name": "Bone Goliath",
+  "class": ["Heavy"],
+  "baseCost": 180,
+
+  "ap": 5,
+  "move": 4,
+  "bravery": "*",
+  "hp": 18,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Weighty Smash",
+      "power": 8,
+      "special": "If the target is on a 30 or 40mm base, on a Crit they are knocked Prone."
+    },
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Champion's Strike",
+      "power": 7,
+      "special": "If this Attack Knocks Out a Character, the Bone Goliath regains +1AP."
+    },
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Backswing",
+      "power": 5
+    }
+  ],
+  "equipment": [
+  ],
+  "items": [],
+  "traits": [
+    "undead-ancient-dead:bones",
+    "undead-ancient-dead:afterlife",
+    "bestiary:fearsome"
+  ],
+  "tags": ["bones"]
+}

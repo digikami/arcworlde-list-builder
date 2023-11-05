@@ -1,5 +1,6 @@
 {
   "id": "hobgoblin-honcho",
+  "factionId": "fae-dark-lords",
   "name": "Hobgoblin Honcho",
   "class": ["Elite"],
   "baseCost": 50,
@@ -31,5 +32,6 @@
       "description": ""
     }
   ],
-  "tags": ["hobgoblin"]
+  "tags": ["hobgoblin"],
+  "baseSize": 30
 }

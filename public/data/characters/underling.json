@@ -1,5 +1,6 @@
 {
   "id": "underling",
+  "factionId": "fae-dark-lords",
   "name": "Underling",
   "class": ["Unit"],
   "baseCost": 20,
@@ -31,5 +32,6 @@
       "name": "Firey Essence",
       "description": ""
     }
-  ]
+  ],
+  "baseSize": 30
 }

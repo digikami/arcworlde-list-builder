@@ -28,5 +28,6 @@
   "items": [],
   "traits": [
     "civilized-imperial:take-orders"
-  ]
+  ],
+  "baseSize": 30
 }

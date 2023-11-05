@@ -52,7 +52,7 @@
     {
       "id": "beastfolk-ranged-weapon",
       "name": "Beastfolk Ranged Weapon",
-      "type": "Equipment",
+      "type": "Gear",
       "baseCost": 15,
       "description": "",
       "modifications": {

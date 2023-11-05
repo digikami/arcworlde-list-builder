@@ -28,5 +28,6 @@
   "items": [],
   "traits": [
     "undead-raiders:risen"
-  ]
+  ],
+  "baseSize": 30
 }
