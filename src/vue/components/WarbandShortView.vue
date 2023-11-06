@@ -2,7 +2,11 @@
   <div class="warband_view-short">
     <header class="text-center">
       <h1>{{ list.get('name') }}</h1>
-      <strong class="h5">{{ list.get('faction').get('name')}}<span v-if="list.get('subfaction')"> - {{ list.get('subfaction').name }}</span> &mdash; {{ list.totalCost() }} GP</strong>
+      <strong class="h5">
+        {{ list.get('faction').get('name')}}
+        <span v-if="list.get('subfaction')"> - {{ list.get('subfaction').name }}</span>
+        <span v-if="list.get('faction').get('version')">({{ list.get('faction').get('version') }})</span>
+        &mdash; {{ list.totalCost() }} GP</strong>
     </header>
     <h2 v-if="list.get('commanders').length > 0" class="h3 border-bottom border-2 border-dark">Commander<span v-if="list.get('commanders').length > 1">s</span></h2>
 
