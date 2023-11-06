@@ -2,6 +2,8 @@
   "id": "undead",
   "name": "The Heinous Undead",
   "factions": [
-    "undead-raiders"
+    "undead-raiders",
+    "undead-ancient-dead",
+    "undead-vampires"
   ]
 }

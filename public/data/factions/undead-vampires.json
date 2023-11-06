@@ -2,6 +2,7 @@
   "id": "undead-vampires",
   "listable": true,
   "name": "Vampires",
+  "version": "Alpha",
   "traits": [
     {
       "id": "enthrall",

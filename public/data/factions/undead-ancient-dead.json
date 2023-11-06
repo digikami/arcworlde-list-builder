@@ -2,6 +2,7 @@
   "id": "undead-ancient-dead",
   "listable": true,
   "name": "Ancient Dead",
+  "version": "Alpha",
   "traits": [
     {
       "id": "afterlife",

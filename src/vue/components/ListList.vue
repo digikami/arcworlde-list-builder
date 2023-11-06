@@ -24,7 +24,11 @@
                   {{ list.get('name') }}
                 </h2>
                 <span class="mt-1 mb-3 my-md-0">
-                  <small class="badge bg-dark mx-md-3">{{ list.get('faction').get('name')}}<span v-if="list.get('subfaction')"> - {{ list.get('subfaction').name }}</span></small>
+                  <small class="badge bg-dark mx-md-3">
+                    {{ list.get('faction').get('name')}}
+                    <span v-if="list.get('subfaction')"> - {{ list.get('subfaction').name }}</span>
+                    <span v-if="list.get('faction').get('version')">({{ list.get('faction').get('version') }})</span>
+                  </small>
                 </span>
               </div>
               <div class="col-12 col-md-4 text-md-end">
@@ -125,7 +129,7 @@
               return {
                 id: faction.get('id'),
                 kingdomId: kingdom.get('id'),
-                name: faction.get('name'),
+                name: `${faction.get('name')} ${faction.get('version') ? `(${ faction.get('version') })` : ''}`,
                 obj: faction
               }
             })

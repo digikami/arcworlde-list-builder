@@ -7,7 +7,11 @@
       <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
         <div class="d-flex flex-column flex-md-row align-items-md-center gap-1">
           <h1>{{ list.get('name') }}</h1>
-          <small class="badge bg-dark">{{ list.get('faction').get('name')}}<span v-if="list.get('subfaction')"> - {{ list.get('subfaction').name }}</span></small>
+          <small class="badge bg-dark">
+            {{ list.get('faction').get('name')}}
+            <span v-if="list.get('subfaction')"> - {{ list.get('subfaction').name }}</span>
+            <span v-if="list.get('faction').get('version')">({{ list.get('faction').get('version') }})</span>
+          </small>
         </div>
 
         <div class="btn-toolbar">
