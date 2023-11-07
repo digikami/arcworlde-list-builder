@@ -44,5 +44,6 @@
       "description": "<p>Vampires feast upon the life essence of their prey, be it blood or the substance of their souls. Sometimes their hunger can overwhelm them, particularly when they feel weakened. A Vampire may feed upon a friendly Thrall in base contact for an Easy Feat and regain D6 HP. The Thrall loses the same amount of HP.</p><p>If a Vampire is at 25% or less of their starting HP, they must attempt to Feed if there is a Thrall within 6”. If not in base contact with an enemy, they must use their full movement towards the nearest Thrall.</p>"
     }
   ],
-  "baseSize": 30
+  "baseSize": 30,
+  "tags": ["vampire"]
 }

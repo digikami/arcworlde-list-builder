@@ -59,7 +59,7 @@
       "name": "Beguiling Temperament",
       "type": "Bloodline",
       "baseCost": 25,
-      "allow": [{ "id": "vampire" }],
+      "allow": [{ "tags": "vampire" }],
       "description": "<p>Add 1D6 to every Enthrall attempt.</p>"
     },
     {
@@ -67,7 +67,7 @@
       "name": "Shapeshifter",
       "type": "Bloodline",
       "baseCost": 30,
-      "allow": [{ "id": "vampire" }],
+      "allow": [{ "tags": "vampire" }],
       "description": "<p>On an Easy Feat the Vampire may turn into a Crypt Bat at full HP. They may voluntarily return to their original shape and HP in their Activation at any time. If the Crypt Bat is Knocked Out they are forced to turn back and may not Activate for the rest of the Round.</p>"
     },
     {
@@ -75,7 +75,7 @@
       "name": "Everlasting",
       "type": "Bloodline",
       "baseCost": 30,
-      "allow": [{ "id": "vampire" }],
+      "allow": [{ "tags": "vampire" }],
       "description": "<p>If Knocked Out, place a token on the board. They may be ‘healed’ by Blood Vials used by a friendly Character and returned to the game.</p>"
     },
     {
@@ -83,7 +83,7 @@
       "name": "Fell Scholar",
       "type": "Bloodline",
       "baseCost": 30,
-      "allow": [{ "id": "vampire" }],
+      "allow": [{ "tags": "vampire" }],
       "description": "<p>This Vampire acquires the Mage Class and may cast Spells from the Lore of the Night.</p>",
       "modifications": {
         "class": ["Mage"]
@@ -94,7 +94,7 @@
       "name": "Crimson Knight",
       "type": "Bloodline",
       "baseCost": 30,
-      "allow": [{ "id": "vampire" }],
+      "allow": [{ "tags": "vampire" }],
       "description": "<p>+1 Damage to each Attack this Vampire makes in Melee Combat.</p>",
       "modifications": {
         "power": {
