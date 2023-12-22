@@ -100,7 +100,9 @@
       "baseCost": 30,
       "description": "",
       "modifications": {
-        "power": 2,
+        "power": {
+          "melee": 2
+        },
         "attacks": [{
           "type": "ranged",
           "name": "Faeblade",
