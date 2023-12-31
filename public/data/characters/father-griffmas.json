@@ -1,0 +1,42 @@
+{
+  "id": "father-griffmas",
+  "factionId": "swords-for-hire",
+  "name": "Father Griffmas",
+  "class": ["Sword for Hire"],
+  "baseCost": 120,
+
+  "ap": 4,
+  "move": 4,
+  "bravery": 10,
+  "hp": 12,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Festive Slash",
+      "power": 7,
+      "special": "Each crit allows one more D6 to be rolled"
+    },
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Sack Whack",
+      "power": 5
+    }
+  ],
+  "equipment": [
+    { "armouryItem": "common:two-handed-weapon", "fixed": true }
+  ],
+  "items": [],
+  "traits": [
+    {
+      "name": "Coodolf the Griffling", 
+      "description": "<p>Coodolf is Griffmas’ trusty companion on his nights abroad, his lantern shining in the darkness to light the way and reveal any dangers.</p><p>Any Shots against enemy Characters within 6” of Father Griffmas are rolled at an Advantage.</p>"
+    },
+    {
+      "name": "Griffmas Sack",
+      "description": ""
+    }
+  ],
+  "baseSize": 30
+}
