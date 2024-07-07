@@ -41,5 +41,6 @@
     "match": [{ "source": "common" }],
     "modifier": 0.75
   }],
-  "tags": ["bones"]
+  "tags": ["bones"],
+  "baseSize": 30
 }

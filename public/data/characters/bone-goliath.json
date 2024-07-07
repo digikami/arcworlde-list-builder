@@ -39,5 +39,6 @@
     "undead-ancient-dead:afterlife",
     "bestiary:fearsome"
   ],
-  "tags": ["bones"]
+  "tags": ["bones"],
+  "baseSize": 60
 }

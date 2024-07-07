@@ -45,5 +45,6 @@
       "name": "Curse of the Wolf",
       "description": "<p>The player may choose to deploy another non-Creature miniature to represent the Werewolf and may opt to not reveal its true identity. If the Character makes an Attack or is attacked in Melee they transform into their true form and the miniature must be replaced with a Werewolf model.</p>"
     }
-  ]
+  ],
+  "baseSize": 60
 }

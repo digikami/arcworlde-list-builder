@@ -25,5 +25,6 @@
       "name": "Tar Footed",
       "description": "<p>Any enemy Characters within 3” of the Bog Magus have their Movement reduced to 1. In addition, all Leg It rolls are at a Disadvantage.</p>"
     }
-  ]
+  ],
+  "baseSize": 30
 }
