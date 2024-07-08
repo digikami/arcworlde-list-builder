@@ -26,5 +26,6 @@
       "name": "Mindless",
       "description": "<p>Thralls are completely under the control of the Vampire who turned them and have no thoughts of their own. Thralls automatically pass all Bravery Tests.</p>"
     }
-  ]
+  ],
+  "baseSize": 30
 }
