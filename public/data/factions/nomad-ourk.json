@@ -106,7 +106,7 @@
     },
     {
       "id": "ourk-mount",
-      "name": "Ourk/Boglin Mount",
+      "name": "Ourk Mount",
       "type": "Gear",
       "baseCost": 30,
       "description": "",
@@ -119,8 +119,8 @@
       }
     },
     {
-      "id": "ourk-mount",
-      "name": "Ourk/Boglin Mount",
+      "id": "boglin-mount",
+      "name": "Boglin Mount",
       "type": "Gear",
       "baseCost": 30,
       "description": "",
