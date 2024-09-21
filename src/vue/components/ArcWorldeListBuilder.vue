@@ -22,9 +22,7 @@
     <div class="modal fade" id="list_view_modal" tabindex="-1" aria-labelledby="" aria-hidden="true" ref="listViewModal">
       <div class="modal-dialog modal-fullscreen">
         <div class="modal-content">
-          <div class="modal-body p-0">
-            <ListView :list="viewWarband" @close="handleViewCloseRequest" @requestViewClose="handleViewCloseRequest"></ListView>
-          </div>
+          <ListView :list="viewWarband" @close="handleViewCloseRequest" @requestViewClose="handleViewCloseRequest"></ListView>
         </div>
       </div>
     </div>

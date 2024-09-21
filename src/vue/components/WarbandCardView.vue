@@ -1,5 +1,5 @@
 <template>
-  <div class="lh-0 text-center">
+  <div class="lh-0 text-center a4 d-flex flex-wrap">
     <h2 class="visually-hidden">Cords</h2>
     <CharacterCard v-for="member in list.get('commanders')" :member="member" :list="list"/>
     <CharacterCard v-for="member in list.get('members')" :member="member" :list="list"/>
@@ -10,6 +10,3 @@
 
   defineProps(['list']);
 </script>
-<style scoped>
-  
-</style>

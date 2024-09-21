@@ -18,10 +18,12 @@
       <i class="bi-x"></i>
     </button>
   </div>
-  <div class="container warband_view" v-if="list" ref="listView">
-    <WarbandFullView v-if="format == 'full'" :list="list"></WarbandFullView>
-    <WarbandShortView v-if="format == 'short'" :list="list"></WarbandShortView>
-    <WarbandCardView v-if="format == 'card'" :list="list"></WarbandCardView>
+  <div class="modal-body p-0">
+    <div class="container warband_view p-0" v-if="list" ref="listView">
+      <WarbandFullView v-if="format == 'full'" :list="list"></WarbandFullView>
+      <WarbandShortView v-if="format == 'short'" :list="list"></WarbandShortView>
+      <WarbandCardView v-if="format == 'card'" :list="list"></WarbandCardView>
+    </div>
   </div>
 </template>
 <script>
@@ -50,9 +52,16 @@
     methods: {
       handlePrintRequest() {
         document.querySelector('html').style.fontSize = "12px";
-        const settings = {
-          margin: [5, 10, 5, 10]
-        };
+        const settings = this.format === 'card'
+          ? {
+            html2canvas: { windowWidth: 1980 },
+            jsPDF: { format: 'a4', orientation: 'l'},
+            image: { type: 'jpeg', quality: 1 }
+          }
+          : {
+            html2canvas: { windowWidth: 1980 },
+            margin: [5, 10, 5, 10]
+          };
         settings.filename = "warband.pdf";
         html2pdf().from(this.$refs.listView).set(settings).save().then(() => {
           document.querySelector('html').style.fontSize = "16px";

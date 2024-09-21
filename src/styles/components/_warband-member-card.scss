@@ -1,7 +1,23 @@
+.a4 {
+  width: 29.6cm;
+  // height: 21cm;
+  overflow: hidden;
+  margin: auto;
+}
+.a6 {
+  width: 14.8cm;
+  height: 10.5cm;
+  &.portrait {
+    width: 10.5cm;
+    height: 14.8cm;
+  }
+  overflow: hidden;
+  margin: auto;
+}
 .character-card {
   font-size: 10px;
 
-  display: inline-block;
+  display: block;
   text-align: start;
   break-inside: avoid;
   background: url('../images/character-card/card-background.png') center center no-repeat; 
@@ -12,6 +28,7 @@
   height: 10.5cm;
   padding: 0.775cm 1cm;
   overflow: hidden;
+  margin: auto;
 
   &_contents {
     columns: 2;
@@ -61,6 +78,7 @@
         background-size: contain;
         width: 1cm;
         height: 1cm;
+        overflow: hidden;
         display: flex;
         justify-content: center;
         align-items: center;

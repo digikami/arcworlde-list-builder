@@ -22,6 +22,11 @@
           </div>
         </div>
         <div class="btn-toolbar d-flex justify-content-md-between gap-1">
+          <div v-if="secrets.includes('cards')" class="btn-group">
+            <button class="btn btn-outline-secondary" :aria-label="`View card for ${ member.get('name') }`" data-bs-toggle="modal" :data-bs-target="`#wbm_${ member.get('id') }_card`" data-bs-title="Card View">
+              <i class="bi-postcard"></i>
+            </button>
+          </div>
           <div class="btn-group">
             <button class="btn btn-outline-secondary" :aria-label="`Edit ${ member.get('name') }`" data-bs-toggle="modal" :data-bs-target="`#wbm_${ member.get('id') }_modal`" data-bs-title="Edit Name">
               <i class="bi-pencil"></i>
@@ -61,6 +66,25 @@
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
             <button type="button" class="btn btn-primary" @click="saveEdits">Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" :id="`wbm_${ member.get('id') }_card`" tabindex="-1" aria-labelledby="" aria-hidden="true" ref="memberCardModal">
+      <div class="modal-dialog modal-lg modal-fullscreen-lg-down">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="">Warband Member Card</h5>
+            <button class="btn btn-outline-secondary" @click="printCard"><i class="bi-cloud-download"></i></button>
+          </div>
+          <div class="modal-body text-center">
+            <div ref="memberCard" class="lh-0 a6">
+              <CharacterCard :member="member" :list="list" />
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
           </div>
         </div>
       </div>
@@ -122,14 +146,18 @@
   import Faction from '../models/faction';
   import { Modal, Tooltip } from 'bootstrap';
   import draggable from 'vuedraggable';
+  import CharacterCard from './CharacterCard.vue';
+  import html2pdf from "html2pdf.js";
 
   export default {
     components: {
       Multiselect,
-      draggable
+      draggable,
+      CharacterCard,
     },
     data() {
       return {
+        secrets: [],
         editFormValues: {
           name: this.member.get('name')
         }
@@ -219,6 +247,8 @@
     },
     mounted() {
       this.assertTooltips();
+      const params = new URLSearchParams(window.location.search);
+      this.secrets = (params.get('secrets') ?? '').split(',');
     },
     methods: {
       requestAddEquipment(request) {
@@ -261,6 +291,16 @@
         this.$refs.root.querySelectorAll("[data-bs-title]").forEach((tt) => {
           Tooltip.getOrCreateInstance(tt).hide();
         })
+      },
+      printCard() {
+        const settings = {
+          jsPDF: { format: 'a6', orientation: 'l' },
+          filename: 'character-card.pdf',
+          image: { type: 'jpeg', quality: 1 }
+        };
+        html2pdf().from(this.$refs.memberCard).set(settings).save().then(() => {
+          console.log('save complete');
+        });
       }
     }
   }  
