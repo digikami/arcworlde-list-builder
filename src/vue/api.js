@@ -1,6 +1,5 @@
 class API {
   loadStaticData() {
-    console.log(this.getVersion());
     return Promise.all([this._loadKingdoms(), this._loadCommon()]).then((d) => {
       return {
         kingdoms: d[0],

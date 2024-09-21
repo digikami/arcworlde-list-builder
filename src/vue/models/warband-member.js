@@ -133,7 +133,6 @@ class WarbandMember extends BaseModel {
 
   clone() {
     let d = this.serializeData(true);
-    console.log(this.serializeData(true));
     let clone = new WarbandMember(d);
     return clone.loadData();
   }

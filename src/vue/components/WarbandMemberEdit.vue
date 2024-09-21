@@ -156,7 +156,9 @@
       equipmentDropdownOptions() {
         let options = [];
         // warband member equipment
-        let memberEquipment = this.list.getArmoury().filter((opt) => this.member.isAllowedEquipment(opt));
+        let memberEquipment = this.list.getArmoury().filter((opt) => {
+          return this.member.isAllowedEquipment(opt);
+        });
         if (memberEquipment.length) {
           options.push({
             id: 'warband',

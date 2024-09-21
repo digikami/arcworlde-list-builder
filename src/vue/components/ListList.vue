@@ -155,7 +155,6 @@
     },
     methods: {
       requestNewList(evt) {
-        console.log(this.newListForm);
         let wbdata = Utils.clone(this.newListForm);
         wbdata.kingdom = wbdata.faction.kingdomId;
         wbdata.faction = wbdata.faction.id;

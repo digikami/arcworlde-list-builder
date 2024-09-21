@@ -10,6 +10,9 @@
       <button :class="`btn btn-${ format == 'full' ? '' : 'outline-' }secondary`" @click="format = 'full'" data-bs-title="Full View">
         <i class="bi-view-list"></i>
       </button>
+      <button v-if="secrets.includes('cards')" :class="`btn btn-${ format == 'card' ? '' : 'outline-' }secondary`" @click="format = 'card'" data-bs-title="Card View">
+        <i class="bi-postcard"></i>
+      </button>
     </div>
     <button class="btn btn-outline-secondary" @click="$emit('requestViewClose')" data-bs-title="Close">
       <i class="bi-x"></i>
@@ -18,31 +21,40 @@
   <div class="container warband_view" v-if="list" ref="listView">
     <WarbandFullView v-if="format == 'full'" :list="list"></WarbandFullView>
     <WarbandShortView v-if="format == 'short'" :list="list"></WarbandShortView>
+    <WarbandCardView v-if="format == 'card'" :list="list"></WarbandCardView>
   </div>
 </template>
 <script>
   import WarbandFullView from './WarbandFullView.vue';
   import WarbandShortView from './WarbandShortView.vue';
+  import WarbandCardView from './WarbandCardView.vue';
   import html2pdf from "html2pdf.js";
 
   export default {
     data() {
       return {
+        secrets: [],
         format: 'full'
       }
     },
     props: ['list'],
     components: {
       "WarbandFullView": WarbandFullView,
-      "WarbandShortView": WarbandShortView
+      "WarbandShortView": WarbandShortView,
+      "WarbandCardView": WarbandCardView,
+    },
+    mounted() {
+      const params = new URLSearchParams(window.location.search);
+      this.secrets = (params.get('secrets') ?? '').split(',');
     },
     methods: {
       handlePrintRequest() {
         document.querySelector('html').style.fontSize = "12px";
-        html2pdf().from(this.$refs.listView).set({
-          margin: [5, 10, 5, 10],
-          filename: "warband.pdf"
-        }).save().then(() => {
+        const settings = {
+          margin: [5, 10, 5, 10]
+        };
+        settings.filename = "warband.pdf";
+        html2pdf().from(this.$refs.listView).set(settings).save().then(() => {
           document.querySelector('html').style.fontSize = "16px";
         });
       }

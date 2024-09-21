@@ -4,6 +4,7 @@
   "name": "Halfling Sheriff",
   "class": ["Commander"],
   "baseCost": 80,
+  "artwork": "/assets/artwork/halfling-sheriff.png",
 
   "ap": 4,
   "move": 4,
