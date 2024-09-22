@@ -4,6 +4,7 @@
   "name": "Grave Lord",
   "class": ["Commander"],
   "baseCost": 100,
+  "artwork": "/assets/artwork/grave-lord.jpg",
 
   "ap": 4,
   "move": 4,

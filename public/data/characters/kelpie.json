@@ -4,6 +4,7 @@
   "name": "Kelpie",
   "class": ["Heavy", "Monster"],
   "baseCost": 200,
+  "artwork": "/assets/artwork/kelpie.jpg",
 
   "ap": 7,
   "move": 6,

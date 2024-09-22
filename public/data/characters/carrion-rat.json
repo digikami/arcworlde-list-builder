@@ -4,6 +4,7 @@
   "name": "Carrion Rat",
   "class": ["Beast"],
   "baseCost": 15,
+  "artwork": "/assets/artwork/carrion-rat.jpg",
 
   "ap": 2,
   "move": 6,

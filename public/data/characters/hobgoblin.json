@@ -4,6 +4,7 @@
   "name": "Hobgoblin",
   "class": ["Unit"],
   "baseCost": 35,
+  "artwork": "/assets/artwork/hobgoblin.jpg",
 
   "ap": 2,
   "move": 4,

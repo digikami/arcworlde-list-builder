@@ -4,6 +4,7 @@
   "name": "Charmed Bookcase",
   "class": ["Irregular"],
   "baseCost": 80,
+  "artwork": "/assets/artwork/charmed-bookcase.jpg",
 
   "ap": 2,
   "move": 4,

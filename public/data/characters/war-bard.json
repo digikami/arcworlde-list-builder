@@ -4,6 +4,7 @@
   "name": "War Bard",
   "class": ["Irregular"],
   "baseCost": 70,
+  "artwork": "/assets/artwork/war-bard.jpg",
 
   "ap": 3,
   "move": 5,

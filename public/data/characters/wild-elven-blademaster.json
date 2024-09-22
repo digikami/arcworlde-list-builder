@@ -4,6 +4,7 @@
   "name": "Wild Elven Blademaster",
   "class": ["Irregular"],
   "baseCost": 115,
+  "artwork": "/assets/artwork/wild-elven-blademaster.jpg",
 
   "ap": 4,
   "move": 5,

@@ -4,6 +4,7 @@
   "name": "Old Grogg",
   "class": ["monster"],
   "baseCost": 400,
+  "artwork": "/assets/artwork/river-troll.jpg",
 
   "ap": 10,
   "move": 5,

@@ -4,6 +4,7 @@
   "name": "Hellbeast",
   "class": ["Heavy", "Monster"],
   "baseCost": 160,
+  "artwork": "/assets/artwork/hellbeast.jpg",
 
   "ap": 5,
   "move": 10,

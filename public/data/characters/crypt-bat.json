@@ -4,6 +4,7 @@
   "name": "Crypt Bat",
   "class": ["Beast"],
   "baseCost": 20,
+  "artwork": "/assets/artwork/crypt-bat.jpg",
 
   "ap": 2,
   "move": 8,

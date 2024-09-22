@@ -4,6 +4,7 @@
   "name": "Woodfiend",
   "class": ["Unit"],
   "baseCost": 45,
+  "artwork": "/assets/artwork/woodfiend.jpg",
 
   "ap": 2,
   "move": 3,

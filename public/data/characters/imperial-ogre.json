@@ -4,6 +4,7 @@
   "name": "Imperial Ogre",
   "class": ["Heavy"],
   "baseCost": 160,
+  "artwork": "/assets/artwork/imperial-ogre.jpg",
 
   "ap": 5,
   "move": 4,

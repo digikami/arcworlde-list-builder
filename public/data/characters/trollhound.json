@@ -4,6 +4,7 @@
   "name": "Trollhound",
   "class": ["Beast"],
   "baseCost": 35,
+  "artwork": "/assets/artwork/trollhound.jpg",
 
   "ap": 2,
   "move": 6,

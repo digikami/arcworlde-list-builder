@@ -4,6 +4,7 @@
   "name": "Will o'the Wisp",
   "class": ["Irregular"],
   "baseCost": 70,
+  "artwork": "/assets/artwork/will-o-the-wisp.jpg",
 
   "ap": 3,
   "move": 4,

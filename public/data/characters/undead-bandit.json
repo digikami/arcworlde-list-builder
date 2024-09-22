@@ -4,6 +4,7 @@
   "name": "Undead Bandit",
   "class": ["Unit"],
   "baseCost": 45,
+  "artwork": "/assets/artwork/undead-bandit.jpg",
 
   "ap": 2,
   "move": 4,

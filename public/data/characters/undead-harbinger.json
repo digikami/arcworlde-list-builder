@@ -4,6 +4,7 @@
   "name": "Undead Harbinger",
   "class": ["Commander"],
   "baseCost": 90,
+  "artwork": "/assets/artwork/undead-harbinger.jpg",
 
   "ap": 4,
   "move": 4,

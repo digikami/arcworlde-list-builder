@@ -4,6 +4,7 @@
   "name": "Halfling Monster Hunter",
   "class": ["Irregular"],
   "baseCost": 60,
+  "artwork": "/assets/artwork/halfling-monster-hunter.jpg",
 
   "ap": 3,
   "move": 4,

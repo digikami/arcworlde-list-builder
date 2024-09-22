@@ -4,6 +4,7 @@
   "name": "Peagryph",
   "class": ["beast"],
   "baseCost": 80,
+  "artwork": "/assets/artwork/peagryph.jpg",
 
   "ap": 3,
   "move": 8,

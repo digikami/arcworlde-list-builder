@@ -4,6 +4,7 @@
   "name": "Dark Lord",
   "class": ["Commander"],
   "baseCost": 210,
+  "artwork": "/assets/artwork/dark-lord.jpg",
 
   "ap": 6,
   "move": 4,

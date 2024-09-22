@@ -4,6 +4,7 @@
   "name": "Vampire",
   "class": ["Elite"],
   "baseCost": 120,
+  "artwork": "/assets/artwork/vampire.jpg",
 
   "ap": 3,
   "move": 4,

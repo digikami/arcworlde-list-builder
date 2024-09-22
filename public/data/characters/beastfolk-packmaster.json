@@ -4,6 +4,7 @@
   "name": "Beastfolk Packmaster",
   "class": ["Commander"],
   "baseCost": 120,
+  "artwork": "/assets/artwork/beastfolk-packmaster.jpg",
 
   "ap": 5,
   "move": 4,

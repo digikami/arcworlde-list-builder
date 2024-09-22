@@ -4,6 +4,7 @@
   "name": "Vampire Supreme",
   "class": ["Commander"],
   "baseCost": 150,
+  "artwork": "/assets/artwork/vampire.jpg",
 
   "ap": 3,
   "move": 4,

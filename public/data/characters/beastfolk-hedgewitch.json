@@ -4,6 +4,7 @@
   "name": "Beastfolk Hedgewitch",
   "class": ["Mage"],
   "baseCost": 90,
+  "artwork": "/assets/artwork/beastfolk-hedgewitch.jpg",
 
   "ap": 3,
   "move": 4,

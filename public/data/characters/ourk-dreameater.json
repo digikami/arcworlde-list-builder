@@ -4,6 +4,7 @@
   "name": "Ourk Dreameater",
   "class": ["Commander", "Mage"],
   "baseCost": 90,
+  "artwork": "/assets/artwork/ourk-dreameater.jpg",
 
   "ap": 5,
   "move": 4,

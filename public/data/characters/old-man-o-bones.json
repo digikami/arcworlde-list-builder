@@ -4,6 +4,7 @@
   "name": "Old Man'o'Bones",
   "class": ["Mage"],
   "baseCost": 90,
+  "artwork": "/assets/artwork/old-man-o-bones.jpg",
 
   "ap": 3,
   "move": 4,

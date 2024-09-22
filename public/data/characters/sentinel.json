@@ -4,6 +4,7 @@
   "name": "Sentinel",
   "class": ["Elite"],
   "baseCost": 80,
+  "artwork": "/assets/artwork/sentinel.jpg",
 
   "ap": 3,
   "move": 4,

@@ -4,6 +4,7 @@
   "name": "Imperial Dragoon",
   "class": ["Elite"],
   "baseCost": 65,
+  "artwork": "/assets/artwork/imperial-dragoon.jpg",
 
   "ap": 3,
   "move": 4,

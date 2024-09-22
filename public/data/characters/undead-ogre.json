@@ -4,6 +4,7 @@
   "name": "Undead Ogre",
   "class": ["Heavy"],
   "baseCost": 180,
+  "artwork": "/assets/artwork/undead-ogre.jpg",
 
   "ap": 5,
   "move": 4,

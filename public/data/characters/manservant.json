@@ -4,6 +4,7 @@
   "name": "Manservant",
   "class": ["Unit"],
   "baseCost": 40,
+  "artwork": "/assets/artwork/manservant.jpg",
 
   "ap": 2,
   "move": 4,

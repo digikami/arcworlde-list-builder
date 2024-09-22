@@ -4,6 +4,7 @@
   "name": "Thrall",
   "class": ["Irregular"],
   "baseCost": 30,
+  "artwork": "/assets/artwork/thrall.jpg",
 
   "ap": 2,
   "move": 4,

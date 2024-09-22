@@ -4,6 +4,7 @@
   "name": "Swamp Critter",
   "class": ["Beast"],
   "baseCost": 30,
+  "artwork": "/assets/artwork/swamp-critter.jpg",
 
   "ap": 3,
   "move": 7,

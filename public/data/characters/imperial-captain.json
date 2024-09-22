@@ -4,6 +4,7 @@
   "name": "Imperial Captain",
   "class": ["Commander"],
   "baseCost": 80,
+  "artwork": "/assets/artwork/imperial-captain.jpg",
 
   "ap": 4,
   "move": 4,

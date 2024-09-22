@@ -4,6 +4,7 @@
   "name": "Imperial Trooper",
   "class": ["Unit"],
   "baseCost": 40,
+  "artwork": "/assets/artwork/imperial-trooper.jpg",
 
   "ap": 2,
   "move": 4,

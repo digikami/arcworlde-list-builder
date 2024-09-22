@@ -4,6 +4,7 @@
   "name": "Wizard",
   "class": ["Commander", "Mage"],
   "baseCost": 100,
+  "artwork": "/assets/artwork/wizard.jpg",
 
   "ap": 4,
   "move": 4,

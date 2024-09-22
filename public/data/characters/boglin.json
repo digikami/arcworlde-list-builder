@@ -4,6 +4,7 @@
   "name": "Boglin",
   "class": ["Unit"],
   "baseCost": 20,
+  "artwork": "/assets/artwork/boglin.jpg",
 
   "ap": 2,
   "move": 5,

@@ -4,6 +4,7 @@
   "name": "Brewzerker",
   "class": ["Irregular"],
   "baseCost": 95,
+  "artwork": "/assets/artwork/brewzerker.jpg",
 
   "ap": 4,
   "move": 4,

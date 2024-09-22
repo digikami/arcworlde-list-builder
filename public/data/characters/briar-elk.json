@@ -4,6 +4,7 @@
   "name": "Briar Elk",
   "class": ["Heavy", "Monster"],
   "baseCost": 200,
+  "artwork": "/assets/artwork/briar-elk.jpg",
 
   "ap": 7,
   "move": 8,

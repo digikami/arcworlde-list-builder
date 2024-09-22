@@ -4,6 +4,7 @@
   "name": "Undead Excutioner",
   "class": ["Elite"],
   "baseCost": 70,
+  "artwork": "/assets/artwork/undead-executioner.jpg",
 
   "ap": 3,
   "move": 4,

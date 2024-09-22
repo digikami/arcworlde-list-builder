@@ -4,6 +4,7 @@
   "name": "Halfling Thing-Flinger",
   "class": ["Heavy"],
   "baseCost": 200,
+  "artwork": "/assets/artwork/halfling-thing-flinger.jpg",
 
   "ap": 3,
   "move": 4,

@@ -4,6 +4,7 @@
   "name": "Hobgoblin Firestarter",
   "class": ["Irregular"],
   "baseCost": 50,
+  "artwork": "/assets/artwork/hobgoblin-firestarter.jpg",
 
   "ap": 2,
   "move": 4,

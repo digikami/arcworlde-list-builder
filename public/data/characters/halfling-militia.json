@@ -4,6 +4,7 @@
   "name": "Halfling Militia",
   "class": ["Unit"],
   "baseCost": 40,
+  "artwork": "/assets/artwork/halfling-militia.jpg",
 
   "ap": 2,
   "move": 4,

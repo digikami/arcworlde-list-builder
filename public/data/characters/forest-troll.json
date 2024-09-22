@@ -4,6 +4,7 @@
   "name": "Forest Troll",
   "class": ["monster"],
   "baseCost": 220,
+  "artwork": "/assets/artwork/forest-troll.jpg",
 
   "ap": 8,
   "move": 5,

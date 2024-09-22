@@ -4,6 +4,7 @@
   "name": "Forest Dragon",
   "class": ["Titan"],
   "baseCost": 900,
+  "artwork": "/assets/artwork/forest-dragon.jpg",
 
   "ap": 30,
   "move": 4,

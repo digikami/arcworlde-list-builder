@@ -4,6 +4,7 @@
   "name": "Tomb Guardian",
   "class": ["Elite"],
   "baseCost": 55,
+  "artwork": "/assets/artwork/tomb-guardian.jpg",
 
   "ap": 3,
   "move": 4,

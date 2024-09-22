@@ -4,6 +4,7 @@
   "name": "Wild Elven Warrior",
   "class": ["Elite"],
   "baseCost": 95,
+  "artwork": "/assets/artwork/wild-elven-warrior.jpg",
 
   "ap": 4,
   "move": 5,

@@ -4,6 +4,7 @@
   "name": "Arcanid Queen",
   "class": ["Titan"],
   "baseCost": 900,
+  "artwork": "/assets/artwork/arcanid-queen.jpg",
 
   "ap": 28,
   "move": 5,

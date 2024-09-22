@@ -4,6 +4,7 @@
   "name": "Ensorcelled Beast",
   "class": ["Heavy", "Monster"],
   "baseCost": 200,
+  "artwork": "/assets/artwork/ensorcelled-beast.jpg",
 
   "ap": 7,
   "move": 7,

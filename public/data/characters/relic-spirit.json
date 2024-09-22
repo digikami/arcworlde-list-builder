@@ -4,6 +4,7 @@
   "name": "Relic Spirit",
   "class": ["Irregular"],
   "baseCost": 50,
+  "artwork": "/assets/artwork/relic-spirit.jpg",
 
   "ap": 3,
   "move": "*",

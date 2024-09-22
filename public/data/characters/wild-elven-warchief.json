@@ -4,6 +4,7 @@
   "name": "Wild Elven Warchief",
   "class": ["Commander"],
   "baseCost": 130,
+  "artwork": "/assets/artwork/wild-elven-warchief.jpg",
 
   "ap": 5,
   "move": 5,

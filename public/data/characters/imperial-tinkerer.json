@@ -4,6 +4,7 @@
   "name": "Imperial Tinkerer",
   "class": ["Mage"],
   "baseCost": 80,
+  "artwork": "/assets/artwork/imperial-tinkerer.jpg",
 
   "ap": 3,
   "move": 4,

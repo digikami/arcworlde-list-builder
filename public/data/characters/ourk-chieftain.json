@@ -4,6 +4,7 @@
   "name": "Ourk Chieftain",
   "class": ["Commander"],
   "baseCost": 120,
+  "artwork": "/assets/artwork/ourk-chieftain.jpg",
 
   "ap": 5,
   "move": 4,

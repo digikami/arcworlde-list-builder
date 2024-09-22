@@ -4,6 +4,7 @@
   "name": "Beastfolk Verman",
   "class": ["Unit"],
   "baseCost": 30,
+  "artwork": "/assets/artwork/beastfolk-verman.jpg",
 
   "ap": 2,
   "move": 5,

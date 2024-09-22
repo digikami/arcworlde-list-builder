@@ -4,6 +4,7 @@
   "name": "Marsh Hydra",
   "class": ["Heavy", "Monster"],
   "baseCost": 200,
+  "artwork": "/assets/artwork/marsh-hydra.jpg",
 
   "ap": 7,
   "move": 6,

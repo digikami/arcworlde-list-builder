@@ -4,6 +4,7 @@
   "name": "Faery Dragon",
   "class": ["beast"],
   "baseCost": 100,
+  "artwork": "/assets/artwork/faery-dragon.jpg",
 
   "ap": 4,
   "move": 8,

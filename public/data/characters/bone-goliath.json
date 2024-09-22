@@ -4,6 +4,7 @@
   "name": "Bone Goliath",
   "class": ["Heavy"],
   "baseCost": 180,
+  "artwork": "/assets/artwork/bone-goliath.jpg",
 
   "ap": 5,
   "move": 4,

@@ -4,6 +4,7 @@
   "name": "Imperial Arclancer",
   "class": ["Irregular"],
   "baseCost": 60,
+  "artwork": "/assets/artwork/imperial-arclancer.jpg",
 
   "ap": 3,
   "move": 4,

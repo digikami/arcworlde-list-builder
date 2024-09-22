@@ -4,6 +4,7 @@
   "name": "Skelt",
   "class": ["Unit"],
   "baseCost": 35,
+  "artwork": "/assets/artwork/skelt.jpg",
 
   "ap": 2,
   "move": 4,

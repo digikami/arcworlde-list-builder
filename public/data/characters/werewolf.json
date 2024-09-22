@@ -4,6 +4,7 @@
   "name": "Werewolf",
   "class": ["Heavy"],
   "baseCost": 200,
+  "artwork": "/assets/artwork/werewolf.jpg",
 
   "ap": 7,
   "move": 6,

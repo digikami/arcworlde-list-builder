@@ -4,6 +4,7 @@
   "name": "Beastfolk Clanbeast",
   "class": ["Elite"],
   "baseCost": 85,
+  "artwork": "/assets/artwork/beastfolk-clanbeast.jpg",
 
   "ap": 4,
   "move": 4,

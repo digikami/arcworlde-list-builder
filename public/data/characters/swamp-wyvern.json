@@ -4,6 +4,7 @@
   "name": "Swamp Wyvern",
   "class": ["Titan"],
   "baseCost": 900,
+  "artwork": "/assets/artwork/swamp-wyvern.jpg",
 
   "ap": 30,
   "move": 4,

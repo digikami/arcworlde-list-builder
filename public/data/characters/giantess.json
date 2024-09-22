@@ -4,6 +4,7 @@
   "name": "Giant / Giantess",
   "class": ["Sword for Hire", "Titan"],
   "baseCost": 600,
+  "artwork": "/assets/artwork/giantess.jpg",
 
   "ap": 20,
   "move": 5,

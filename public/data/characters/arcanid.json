@@ -4,6 +4,7 @@
   "name": "Arcanid",
   "class": ["beast"],
   "baseCost": 60,
+  "artwork": "/assets/artwork/arcanid.jpg",
 
   "ap": 3,
   "move": 7,

@@ -4,6 +4,7 @@
   "name": "Halfling Town Guard",
   "class": ["Elite"],
   "baseCost": 70,
+  "artwork": "/assets/artwork/halfling-town-guard.jpg",
 
   "ap": 3,
   "move": 4,

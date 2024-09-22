@@ -4,6 +4,7 @@
   "name": "Griffling",
   "class": ["beast"],
   "baseCost": 22,
+  "artwork": "/assets/artwork/griffling.jpg",
 
   "ap": 2,
   "move": 6,

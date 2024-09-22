@@ -4,6 +4,7 @@
   "name": "Hobgoblin Honcho",
   "class": ["Elite"],
   "baseCost": 50,
+  "artwork": "/assets/artwork/hobgoblin-honcho.jpg",
 
   "ap": 3,
   "move": 4,

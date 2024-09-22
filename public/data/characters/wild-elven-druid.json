@@ -4,6 +4,7 @@
   "name": "Wild Elven Druid",
   "class": ["Mage"],
   "baseCost": 145,
+  "artwork": "/assets/artwork/wild-elven-druid.jpg",
 
   "ap": 5,
   "move": 5,

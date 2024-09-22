@@ -1,5 +1,5 @@
 <template>
-  <div class="warband_member_view mb-5">
+  <div class="warband_member_view mb-5 clearfix">
     <div class="character_grid text-center my-3">
       <div class="character_grid-header bg-dark text-white p-3">
         <h2 class="h4 m-0">
