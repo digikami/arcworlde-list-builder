@@ -4,6 +4,7 @@
   "name": "Halfling Battle Cook",
   "class": ["Mage"],
   "baseCost": 80,
+  "artwork": "/assets/artwork/halfling-battle-cook.jpg",
 
   "ap": 3,
   "move": 4,
