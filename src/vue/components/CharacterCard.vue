@@ -7,10 +7,22 @@
           <img v-else src="/dist/images/character-card/default-artwork.png" :alt="member.get('name')" class="default-portrait"/>
         </div>
         <div class="character-card_meta_stats">
-          <div class="character-card_meta_stats_stat ap">{{ member.getStats().ap }}</div>
-          <div class="character-card_meta_stats_stat hp">{{ member.getStats().hp }}</div>
-          <div class="character-card_meta_stats_stat move">{{ member.getStats().move }}</div>
-          <div class="character-card_meta_stats_stat bravery">{{ member.getStats().bravery }}</div>
+          <div class="character-card_meta_stats_stat ap">
+            <img src="/dist/images/character-card/icon-ap.png" alt="" class="character-card_meta_stats_stat_background"/>
+            <span>{{ member.getStats().ap }}</span>
+          </div>
+          <div class="character-card_meta_stats_stat hp">
+            <img src="/dist/images/character-card/icon-hp.png" alt="" class="character-card_meta_stats_stat_background"/>
+            <span>{{ member.getStats().hp }}</span>
+          </div>
+          <div class="character-card_meta_stats_stat move">
+            <img src="/dist/images/character-card/icon-move.png" alt="" class="character-card_meta_stats_stat_background"/>
+            <span>{{ member.getStats().move }}</span>
+          </div>
+          <div class="character-card_meta_stats_stat bravery">
+            <img src="/dist/images/character-card/icon-bravery.png" alt="" class="character-card_meta_stats_stat_background"/>
+            <span>{{ member.getStats().bravery }}</span>
+          </div>
         </div>
       </div>
       <div class="character-card_rules">
@@ -46,6 +58,7 @@
         </div>
       </div>
     </div>
+    <img src="/dist/images/character-card/card-background.png" class="character-card_background" alt=""/>
   </div>
 </template>
 <script setup>

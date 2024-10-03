@@ -29,15 +29,13 @@
   margin: auto;
   position: relative;
 
-  &::after {
-    content: '';
+  &_background {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('../images/character-card/card-background.png') center center no-repeat; 
-    background-size: contain;
+    object-fit: contain;
   }
 
   &_contents {
@@ -83,9 +81,7 @@
       position: relative;
 
       &_stat {
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: contain;
+        position: relative;
         width: 1cm;
         height: 1cm;
         overflow: hidden;
@@ -96,30 +92,45 @@
         font-family: $headings-font-family;
         font-size: 20px;
         text-shadow: 1px 1px 0 black, 1px -1px 0 black, -1px -1px 0 black, -1px 1px 0 black;
+
+        &_background {
+          object-fit: contain;
+          object-position: center center;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 0;
+        }
+        span {
+          position: relative;
+          z-index: 10;
+        }
       }
       .ap {
         // grid-area :ap;
         position: absolute;
-        top: 0;
+        top: 0.1667cm;
         left: 0;
         width: 1.5cm;
         height: 1.5cm;
-        background-image: url('../images/character-card/icon-ap.png');
+        // background-image: url('../images/character-card/icon-ap.png');
         color: black;
         font-size: 24px;
         text-shadow: none;
       }
       .hp {
         // grid-area: hp;
-        background-image: url('../images/character-card/icon-hp.png');
+        // background-image: url('../images/character-card/icon-hp.png');
       }
       .move {
         // grid-area: move;
-        background-image: url('../images/character-card/icon-move.png');
+        // background-image: url('../images/character-card/icon-move.png');
       }
       .bravery {
         // grid-area: bravery;
-        background-image: url('../images/character-card/icon-bravery.png');
+        // background-image: url('../images/character-card/icon-bravery.png');
       }
     }
   }

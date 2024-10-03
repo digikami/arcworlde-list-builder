@@ -55,8 +55,8 @@
         const settings = this.format === 'card'
           ? {
             html2canvas: { windowWidth: 1980 },
-            jsPDF: { format: 'a4', orientation: 'l'},
-            image: { type: 'jpeg', quality: 1 }
+            jsPDF: { format: 'a4', orientation: 'l' },
+            image: { type: 'jpg', quality: 1 }
           }
           : {
             html2canvas: { windowWidth: 1980 },
