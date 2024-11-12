@@ -22,7 +22,7 @@
           </div>
         </div>
         <div class="btn-toolbar d-flex justify-content-md-between gap-1">
-          <div v-if="secrets.includes('cards')" class="btn-group">
+          <div class="btn-group">
             <button class="btn btn-outline-secondary" :aria-label="`View card for ${ member.get('name') }`" data-bs-toggle="modal" :data-bs-target="`#wbm_${ member.get('id') }_card`" data-bs-title="Card View">
               <i class="bi-postcard"></i>
             </button>

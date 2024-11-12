@@ -10,7 +10,7 @@
       <button :class="`btn btn-${ format == 'full' ? '' : 'outline-' }secondary`" @click="format = 'full'" data-bs-title="Full View">
         <i class="bi-view-list"></i>
       </button>
-      <button v-if="secrets.includes('cards')" :class="`btn btn-${ format == 'card' ? '' : 'outline-' }secondary`" @click="format = 'card'" data-bs-title="Card View">
+      <button :class="`btn btn-${ format == 'card' ? '' : 'outline-' }secondary`" @click="format = 'card'" data-bs-title="Card View">
         <i class="bi-postcard"></i>
       </button>
     </div>
