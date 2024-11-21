@@ -3,11 +3,11 @@
   "factionId": "bestiary",
   "name": "Troggle",
   "class": ["beast"],
-  "baseCost": 20,
+  "baseCost": 30,
   "artwork": "/assets/artwork/troggle.jpg",
 
   "ap": 2,
-  "move": 6,
+  "move": 5,
   "bravery": 5,
   "hp": 5,
   "attacks": [
