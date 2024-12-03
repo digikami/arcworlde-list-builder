@@ -2,7 +2,7 @@
   "id": "peagryph",
   "factionId": "bestiary",
   "name": "Peagryph",
-  "class": ["beast"],
+  "class": ["Beast"],
   "baseCost": 80,
   "artwork": "/assets/artwork/peagryph.jpg",
 

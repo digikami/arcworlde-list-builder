@@ -2,7 +2,7 @@
   "id": "old-grogg",
   "factionId": "bestiary",
   "name": "Old Grogg",
-  "class": ["monster"],
+  "class": ["Monster"],
   "baseCost": 400,
   "artwork": "/assets/artwork/river-troll.jpg",
 

@@ -2,7 +2,7 @@
   "id": "juvenile-forest-dragon",
   "factionId": "bestiary",
   "name": "Juvenile Forest Dragon",
-  "class": ["monster"],
+  "class": ["Monster"],
   "baseCost": 150,
 
   "ap": 5,

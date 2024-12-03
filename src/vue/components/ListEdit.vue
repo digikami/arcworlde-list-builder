@@ -199,7 +199,7 @@
           id: this.list.get('faction').id,
           name: this.list.get('faction').get('name'),
           members: this.list.get('faction').get('characters').filter((a) => {
-            return !(a.get("class").map((a) => a.toLowerCase()).includes("commander") && a.get('class').length == 1);
+            return !a.get("class").map((a) => a.toLowerCase()).includes("commander");
           }).map((character) => {
             return {
               id: character.id,
