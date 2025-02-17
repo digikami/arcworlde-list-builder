@@ -151,6 +151,10 @@
         font-size: 14px;
         margin-top: 0.5em;
       }
+      &_header:is(.h5) {
+        font-size: 12px;
+        margin-top: 0.5em;
+      }
 
       p:last-child,
       .list-inline:last-child {

@@ -27,9 +27,10 @@
       </div>
       <div class="character-card_rules">
         <div class="character-card_rules_section character-card_rules_attacks">
-          <h3 class="h4 character-card_rules_section_header">
+          <h3 class="h4 mb-0 character-card_rules_section_header">
             {{ member.get('name') }}
           </h3>
+          <h4 class="h5 mt-0 character-card_rules_section_header">{{ member.get('character').getVariant('class', member.get('variant')).join(' / ') }}</h4>
           <ul class="list-unstyled">
             <li v-for="attack in member.getAttacks()">
               <strong class="d-block">(<span v-html="attack.type == 'melee' ? `${ attack.ap } AP` : 'Ranged'"></span>) {{ attack.name }}: <span class="text-nowrap">Power &ndash; {{ attack.power }}</span></strong>
