@@ -22,6 +22,7 @@
   "items": [],
   "traits": [
     "bestiary:agile",
+    "undead-vampires:insignificant",
     {
       "id": "flittering",
       "name": "Flittering",
