@@ -12,11 +12,6 @@
       "id": "risen",
       "name": "Risen",
       "description": ""
-    },
-    {
-      "id": "soul-eater",
-      "name": "Soul Eater",
-      "description": ""
     }
   ],
   "spell_lists": [{
@@ -26,7 +21,22 @@
       {
         "name": "Deathly Chill",
         "draw": 14,
-        "description": ""
+        "description": "<p>Choose one enemy Character within 12” of the caster. Their AP is reduced by D3 in their next Activation.</p>"
+      },
+      {
+        "name": "Bonegnawer",
+        "draw": 17,
+        "description": "<p>Place a free Carrion Rat within 6\" of the caster. It can be Activated this Round, however, if it is Knocked Out it may not be Raised.</p>"
+      },
+      {
+        "name": "Soul Drain",
+        "draw": 19,
+        "description": "<p>The target Character takes 3 Hits that ignore Armour. For every HP lost by the target, the caster regains 1HP. This Spell may be cast on a friendly Character.</p>"
+      },
+      {
+        "name": "Mass Resurrection",
+        "draw": 21,
+        "description": "<p>Raise up to three Units or Beasts anywhere on the game board. </p>"
       }
     ]
   }],

@@ -30,7 +30,7 @@
   "traits": [
     {
       "name": "Expendable", 
-      "description": ""
+      "description": "<p>When Goons are Knocked Out, other Characters without this Trait in the Warband do not take Bravery Tests. In addition, the Impostor rule does not apply to them (see Swords for Hire in the ArcWorlde Core Rules).</p>"
     }
   ],
   "baseSize": 30

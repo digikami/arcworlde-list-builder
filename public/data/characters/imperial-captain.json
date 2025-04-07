@@ -34,7 +34,7 @@
     "civilized-imperial:make-orders",
     {
       "name": "Leaders of Men",
-      "description": ""
+      "description": "All Characters with the Take Orders Trait within 10\" of the Captain use the Captain's Bravery stat"
     }
   ],
   "baseSize": 30

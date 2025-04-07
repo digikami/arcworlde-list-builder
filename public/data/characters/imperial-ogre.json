@@ -47,7 +47,7 @@
         "type": "ranged",
         "name": "Volley Gun Shot",
         "power": 6,
-        "special": "16\" range. This attack may only be used once per Activation and requires a Medium Feat. Draw a line from the base of the Attacker to the Target. All Characters within 2\" of this line are also targeted by this Attack. If there are more Failures than Successes when rolling to Hit, the wielder takes D3 Hits that ignores Armour.<br/><br/>After being fired, the Volley Gun must be reloaded for a Medium Feat before being fired again."
+        "special": "16\" range. This Attack requires a Hard Feat. Draw a line from the base of the Attacker to the Target. All Characters within 2\" of this line are also targeted by this Attack. If there are more Failures than Successes when rolling to Hit, the wielder takes D3 Hits that ignores Armour."
       }]
     }
   }],

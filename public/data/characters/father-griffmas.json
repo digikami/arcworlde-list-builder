@@ -38,5 +38,6 @@
       "description": ""
     }
   ],
+  "tags": ["unique"],
   "baseSize": 30
 }

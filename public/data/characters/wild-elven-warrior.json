@@ -15,7 +15,7 @@
       "type": "melee",
       "ap": 2,
       "name": "Flurry of Baldes",
-      "power": 5,
+      "power": 7,
       "special": "Each Critical Hit allows 1 more D6 to be rolled."
     },
     {

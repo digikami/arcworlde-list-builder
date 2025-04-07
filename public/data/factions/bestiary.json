@@ -16,7 +16,7 @@
     {
       "id": "leader-of-the-pack",
       "name": "Leader of the Pack",
-      "description": "<p>A Character with this Traid may allow Beasts within 8\" to use their Bravery stat.</p>"
+      "description": "<p>A Character with this Trait may allow Creatures on the same or smaller base size within 8\" to use their Bravery stat.</p>"
     },
     {
       "id": "split-activation",
@@ -47,6 +47,11 @@
       "id": "agile",
       "name": "Agile",
       "description": "<p>A Character with this Trait may re-roll a single failed Leg It roll per Round.</p>"
+    },
+    {
+      "id": "monstrous-mount",
+      "name": "Monstrous Mount",
+      "description": "<p>Some Creatures can be ridden into battle by non-Creature Characters. Whilst mounted, riders count as being in Cover. Both riders and mounts are Activated at the same time and share the mount's base and movement Actions. Riders and mounts should be targeted separately by Attacks.</p><p>If mounts are Knocked Out, riders take D6 Hits and count as Prone. If riders are Knocked Out, the mount must take a Bravery Test.</p>"
     }
   ],
   "characters": [
@@ -60,6 +65,9 @@
     "forest-dragon",
     "arcanid-queen",
     "swamp-wyvern",
-    "old-grogg"
+    "old-grogg",
+    "fire-dragon",
+    "tarrasque",
+    "wild-unicorn"
   ]
 }

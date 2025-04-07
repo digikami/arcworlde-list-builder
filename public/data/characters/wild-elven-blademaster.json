@@ -3,7 +3,7 @@
   "factionId": "fae-wild-elves",
   "name": "Wild Elven Blademaster",
   "class": ["Irregular"],
-  "baseCost": 115,
+  "baseCost": 110,
   "artwork": "/assets/artwork/wild-elven-blademaster.jpg",
 
   "ap": 4,
@@ -15,7 +15,7 @@
       "type": "melee",
       "ap": 2,
       "name": "Bladestorm",
-      "power": 6,
+      "power": 8,
       "special": "Each Critical Hit allows 2 more D6 to be rolled."
     },
     {
@@ -26,15 +26,18 @@
       "special": "Each Critical Hit breaks 1 Armour."
     }
   ],
-  "equipment": [
-    { "armouryItem": "common:dual-weapons", "fixed": true }
-  ],
+  "equipment": [],
   "items": [],
   "traits": [
     "bestiary:agile",
+    "fae-wild-elves:summoner",
     {
       "name": "Berserker",
-      "description": ""
+      "description": "<p>This Character must always attempt to engage in Melee combat if possible. If they are already in base contact with an enemy Character, a Melee Attack must be made if there is AP to do so. If there is not an enemy Character in base contact, this Character must use their free movement, and attempt as many Leg It rolls as possible until they reach an enemy, or they fail a Leg It roll. </p>"
+    },
+    {
+      "name": "Graceful Slayer",
+      "description": "<p>The Blademaster may Disengage from Combat without attempting a Feat, but only if it is to move into Combat with another enemy Character.</p>"
     }
   ],
   "baseSize": 40

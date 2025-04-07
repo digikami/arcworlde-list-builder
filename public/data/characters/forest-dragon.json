@@ -21,8 +21,8 @@
     {
       "type": "ranged",
       "name": "Noxious Breath",
-      "power": "*",
-      "special": "6\" range. Requires a Medium Feat. Draw a line from this Character to the target. Any Character touched by this line is also affected by this Attack. In addition, the targets suffer a number of Hits equal to the amount of HP that they are below their starting HP."
+      "power": "2",
+      "special": "6\" range. Requires a Hard Feat. Draw a line from this Character to the target. Any Character touched by this line is also affected by this Attack. In addition, the targets suffer a number of Hits equal to the amount of HP that they are below their starting HP."
     },
     {
       "type": "melee",
@@ -30,6 +30,13 @@
       "name": "Talons",
       "power": 6,
       "special": "If a Critical Hit is rolled, if the target Character is on a smaller base size they become Prone after the Attack has been made."
+    },
+    {
+      "type": "melee",
+      "ap": 5,
+      "name": "Arboreal Gore",
+      "power": 15,
+      "special": "Hits may be split between up to five target Characters. If a Critical Hit is rolled, the target Character suffers an extra Hit if they are the target of this Attack again this Activation."
     }
   ],
   "equipment": [

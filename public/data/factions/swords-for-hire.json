@@ -7,11 +7,6 @@
       "id": "fighting-for-coin",
       "name": "Fighting for Coin",
       "description": ""
-    },
-    {
-      "id": "personality",
-      "name": "Personality",
-      "description": ""
     }
   ],
   "characters": [
@@ -20,6 +15,8 @@
     "bruno-focaccia",
     "explorer-and-journal",
     "giantess",
-    "father-griffmas"
+    "father-griffmas",
+    "jean-le-porc",
+    "van-halfsing"
   ]
 }

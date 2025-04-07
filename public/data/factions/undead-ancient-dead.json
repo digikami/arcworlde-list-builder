@@ -102,7 +102,7 @@
       "name": "Barrow Marker",
       "type": "Item",
       "baseCost": 50,
-      "description": "<p>When placed on the ground, at the start of each Round roll a D6. If a Success, place a Knocked Out Skelt in base contact.</p>"
+      "description": "<p>This Item is not equipped to a Character. Instead, during deployment place a token on any Open Terrain on the game board. At the start of each Round roll a D6. If a Success, replace a Knocked Out Skelt in base contact with the marker.</p>"
     },
     {
       "id": "skeleton-trumpet",

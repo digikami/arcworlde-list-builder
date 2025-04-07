@@ -1,0 +1,55 @@
+{
+  "id": "van-halfsing",
+  "factionId": "swords-for-hire",
+  "name": "Van Halfsing",
+  "class": ["Sword for Hire"],
+  "baseCost": 70,
+
+  "ap": 3,
+  "move": 4,
+  "bravery": 9,
+  "hp": 10,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Stake Through the Heart",
+      "power": 6,
+      "special": "If the target is Prone, and from an undead Faction (Undead Raiders, Ancient Dead or Vampires), any Damage caused is doubled."
+    },
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Crossbow Butt",
+      "power": 4
+    }
+  ],
+  "armoury": [{
+    "id": "van-halfsing-crossbow",
+    "name": "Van Halfsing's Crossbow",
+    "type": "Gear",
+    "baseCost": 0,
+    "description": "",
+    "allow": [{"id": "van-halfsing"}],
+    "modifications": {
+      "attacks": [{
+        "type": "ranged",
+        "name": "Rapid Shot",
+        "power": 4,
+        "special": "12” range. Two Shots can be made for every successful Feat."
+      }]
+    }
+  }],
+  "equipment": [
+    { "armouryItem": "van-halfsing:van-halfsing-crossbow", "fixed": true }
+  ],
+  "items": [],
+  "traits": [
+    {
+      "name": "Hater of the Dead", 
+      "description": "Van Halfsing gets +1 Power on all Attacks against Characters from the Undead Raiders, Ancient Dead or Vampire Factions."
+    }
+  ],
+  "tags": ["unique"],
+  "baseSize": 30
+}

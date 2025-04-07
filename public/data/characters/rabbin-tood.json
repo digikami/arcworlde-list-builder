@@ -29,11 +29,11 @@
   ],
   "items": [],
   "traits": [
-    "swords-for-hire:personality",
     {
       "name": "Expert Poacher", 
       "description": ""
     }
   ],
+  "tags": ["unique"],
   "baseSize": 30
 }

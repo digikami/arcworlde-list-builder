@@ -233,7 +233,7 @@
               members: faction.get('characters').filter((a) => {
                 return !(a.get("class").map((a) => a.toLowerCase()).includes("commander") && a.get('class').length == 1);
               }).filter((character) => {
-                return !(character.matches([{ traits: 'swords-for-hire:personality'}]) && this.list.get('members').find((member) => member.get('character').get('id') == character.get('id')));
+                return !(character.matches([{ tags: 'unique'}]) && this.list.get('members').find((member) => member.get('character').get('id') == character.get('id')));
               }).map((character) => {
                 return {
                   id: character.id,

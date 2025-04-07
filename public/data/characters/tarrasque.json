@@ -1,0 +1,56 @@
+{
+  "id": "tarrasque",
+  "factionId": "bestiary",
+  "name": "Tarrasque",
+  "class": ["Titan"],
+  "baseCost": 1200,
+  "artwork": "/assets/artwork/tarrasque.jpg",
+
+  "ap": 30,
+  "move": 3,
+  "bravery": 10,
+  "hp": 200,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Tail Lash",
+      "power": 4,
+      "special": "All Characters within 4\" are targets of this attack. If Critical Hit is made, the target Character is thrown D6 inches in a direction of the Tarrasque player's choosing. This Character is Prone."
+    },
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Languid Chomp",
+      "power": 4
+    },
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Earthquake Stomp",
+      "power": 5,
+      "special": "Hits are doubled if the Target is Prone."
+    },
+    {
+      "type": "melee",
+      "ap": 5,
+      "name": "Carapace Crush",
+      "power": 20,
+      "special": "Hits may be split between up to five target Characters. +1 Power if the target is Prone. The Tarrasque may only Move again on a successful Easy Feat to get up."
+    }
+  ],
+  "equipment": [
+  ],
+  "items": [],
+  "traits": [
+    "bestiary:split-activation",
+    "bestiary:dwindling-strength",
+    "bestiary:death-throes",
+    {
+      "id": "walking-tower",
+      "name": "The Walking Tower",
+      "description": ""
+    }
+  ],
+  "baseSize": 120
+}

@@ -15,8 +15,8 @@
       "type": "melee",
       "ap": 2,
       "name": "Blazing Demise",
-      "power": 5,
-      "special": "Targets every Character within 2\". This Character is Knocked Out after the Attack has been executed, and only 1HP is returned to the Dark Lord who summoned them."
+      "power": 6,
+      "special": "Targets every Character within 2\". This Character is Knocked Out after the Attack has been executed. Only 1HP is returned to the Dark Lord who summoned them (see Firey Essence Trait) and the Dark Lord's max HP is permanently reduced by 1 for the rest of the game (see Firey Essence Trait). +1 Damage against Flammable targets."
     },
     {
       "type": "melee",

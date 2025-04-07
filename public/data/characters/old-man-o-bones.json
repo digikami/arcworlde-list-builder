@@ -13,20 +13,19 @@
   "attacks": [
     {
       "type": "melee",
-      "ap": 2,
+      "ap": 1,
       "name": "Touch of Death",
-      "power": 6,
+      "power": 3,
       "special": "Ignores Armour."
     }
   ],
   "equipment": [],
   "items": [],
   "traits": [
-    "undead-raiders:soul-eater",
     "bestiary:fly",
     {
       "name": "Crumbling Remains",
-      "description": ""
+      "description": "<p>This Character loses 1HP each time it is Activated.</p>"
     }
   ],
   "baseSize": 40

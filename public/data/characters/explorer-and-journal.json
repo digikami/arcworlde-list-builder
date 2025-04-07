@@ -21,7 +21,6 @@
   ],
   "items": [],
   "traits": [
-    "swords-for-hire:personality",
     {
       "name": "Plot Armour", 
       "description": "The Explorer counts as having Light Armour that may not be Broken"
@@ -31,5 +30,6 @@
       "description": ""
     }
   ],
+  "tags": ["unique"],
   "baseSize": 30
 }

@@ -31,6 +31,13 @@
       "name": "Mandibles",
       "power": 5,
       "special": "Critical Hits break 1 Armour."
+    },
+    {
+      "type": "melee",
+      "ap": 5,
+      "name": "Arcane Burst",
+      "power": 6,
+      "special": "Affects all Characters within 2\". All Mages must pass a Bravery Test or automatically Overpower their Spells for the rest of the Round."
     }
   ],
   "equipment": [

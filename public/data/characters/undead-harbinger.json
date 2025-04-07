@@ -30,7 +30,10 @@
   "items": [],
   "traits": [
     "undead-raiders:raiser-of-the-dead",
-    "undead-raiders:soul-eater"
+    {
+      "name": "Soul Eater",
+      "description": "<p>Although the Harbinger often uses their fell powers to raise the dead, sometimes they decide to consume the wicked soul's essence instead and keep its power for themselves. Instead of successfully resurrecting a Character, they are permanently removed from the game board. The Harbinger regains as many HP as the total HP stat of the victim. The Harbinger may not increase their HP above its original value.</p>"
+    }
   ],
   "baseSize": 30
 }

@@ -27,6 +27,13 @@
     },
     {
       "type": "melee",
+      "ap": 2,
+      "name": "Thunderous Belch",
+      "power": 5,
+      "special": "If a Critical Hit is rolled, the target Character is thrown backwards D6\"."
+    },
+    {
+      "type": "melee",
       "ap": 1,
       "name": "Stomp",
       "power": 4

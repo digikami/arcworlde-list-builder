@@ -1,0 +1,63 @@
+{
+  "id": "fire-dragon",
+  "factionId": "bestiary",
+  "name": "Fire Dragon",
+  "class": ["Titan"],
+  "baseCost": 1000,
+  "artwork": "/assets/artwork/fire-dragon.jpg",
+
+  "ap": 30,
+  "move": 4,
+  "bravery": 10,
+  "hp": 100,
+  "attacks": [
+    {
+      "type": "ranged",
+      "name": "Flaming Breath",
+      "power": 6,
+      "special": "8\" range. Requires a Hard Feat. Draw a line from this Character to the target. Any Character touched by this line is also affected by this Attack. +2 Power against Flammable targets."
+    },
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Crunch",
+      "power": 6,
+      "special": "If a Crit is rolled, a Gobble attempt may be made as an Easy Feat."
+    },
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Spiked Tail",
+      "power": 5,
+      "special": "If a Critical Hit is rolled, break 1 Armour."
+    },
+    {
+      "type": "melee",
+      "ap": 5,
+      "name": "Eruption",
+      "power": 20,
+      "special": "Place a token up to 8\" away. Divide the Hits from this Attack between all Characters within 3” of the token. Add an additional +2 Hits against Flammable targets."
+    }
+  ],
+  "equipment": [
+  ],
+  "items": [],
+  "traits": [
+    "bestiary:split-activation",
+    "bestiary:fearsome",
+    "bestiary:dwindling-strength",
+    "bestiary:death-throes",
+    "bestiary:gobble",
+    {
+      "id": "dragon-hide",
+      "name": "Dragon Hide",
+      "description": ""
+    },
+    {
+      "id": "treasurelust",
+      "name": "Treasurelust",
+      "description": ""
+    }
+  ],
+  "baseSize": 120
+}

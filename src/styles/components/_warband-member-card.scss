@@ -109,28 +109,14 @@
         }
       }
       .ap {
-        // grid-area :ap;
         position: absolute;
         top: 0.1667cm;
         left: 0;
         width: 1.5cm;
         height: 1.5cm;
-        // background-image: url('../images/character-card/icon-ap.png');
         color: black;
         font-size: 24px;
         text-shadow: none;
-      }
-      .hp {
-        // grid-area: hp;
-        // background-image: url('../images/character-card/icon-hp.png');
-      }
-      .move {
-        // grid-area: move;
-        // background-image: url('../images/character-card/icon-move.png');
-      }
-      .bravery {
-        // grid-area: bravery;
-        // background-image: url('../images/character-card/icon-bravery.png');
       }
     }
   }

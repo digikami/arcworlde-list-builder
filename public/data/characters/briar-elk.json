@@ -1,7 +1,7 @@
 {
   "id": "briar-elk",
   "factionId": "fae-wild-elves",
-  "name": "Briar Elk",
+  "name": "Briarbeast",
   "class": ["Heavy", "Monster"],
   "baseCost": 200,
   "artwork": "/assets/artwork/briar-elk.jpg",
@@ -41,9 +41,14 @@
     "bestiary:fearsome",
     "bestiary:dwindling-strength",
     "bestiary:death-throes",
+    "bestiary:monstrous-mount",
     {
-      "name": "Monstrous Mount",
-      "description": ""
+      "name": "Thorned",
+      "description": "<p>At the end of each Round, any non-Elven Character in base contact with the Briarbeast takes a Hit.</p>"
+    },
+    {
+      "name": "Thirst of the Forest",
+      "description": "<p>If a Briarbeast Knocks Out a Character, they regain D3 HP.</p>"
     }
   ],
   "baseSize": 60

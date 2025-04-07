@@ -9,7 +9,7 @@
   "ap": 3,
   "move": 4,
   "bravery": 8,
-  "hp": 8,
+  "hp": 10,
   "attacks": [
     {
       "type": "melee",
@@ -28,7 +28,11 @@
   "equipment": [],
   "items": [],
   "traits": [
-    "undead-raiders:risen"
+    "undead-raiders:risen",
+    {
+      "name": "Present Thy Neck",
+      "description": "<p>If the target of a Decapitation Attack is Prone, they are also Knocked Out if they fail their second or third Defence Roll.</p>"
+    }
   ],
   "baseSize": 30
 }

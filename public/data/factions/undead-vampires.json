@@ -58,7 +58,7 @@
       "id": "beguiling-temperment",
       "name": "Beguiling Temperament",
       "type": "Bloodline",
-      "baseCost": 25,
+      "baseCost": 20,
       "allow": [{ "tags": "vampire" }],
       "description": "<p>Add 1D6 to every Enthrall attempt.</p>"
     },
@@ -66,15 +66,15 @@
       "id": "shapeshifter",
       "name": "Shapeshifter",
       "type": "Bloodline",
-      "baseCost": 30,
+      "baseCost": 15,
       "allow": [{ "tags": "vampire" }],
-      "description": "<p>On an Easy Feat the Vampire may turn into a Crypt Bat at full HP. They may voluntarily return to their original shape and HP in their Activation at any time. If the Crypt Bat is Knocked Out they are forced to turn back and may not Activate for the rest of the Round.</p>"
+      "description": "<p>For an Easy Feat the Vampire may turn into a Crypt Bat at full HP. They may voluntarily return to their original shape and HP in their Activation at any time. If the Crypt Bat is Knocked Out they are forced to turn back and may not Activate for the rest of the Round.</p>"
     },
     {
       "id": "everlasting",
       "name": "Everlasting",
       "type": "Bloodline",
-      "baseCost": 30,
+      "baseCost": 20,
       "allow": [{ "tags": "vampire" }],
       "description": "<p>If Knocked Out, place a token on the board. They may be ‘healed’ by Blood Vials used by a friendly Character and returned to the game.</p>"
     },
@@ -93,7 +93,7 @@
       "id": "crimson-knight",
       "name": "Crimson Knight",
       "type": "Bloodline",
-      "baseCost": 30,
+      "baseCost": 20,
       "allow": [{ "tags": "vampire" }],
       "description": "<p>+1 Damage to each Attack this Vampire makes in Melee Combat.</p>",
       "modifications": {

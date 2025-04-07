@@ -22,7 +22,7 @@
       "type": "ranged",
       "name": "Ethereal Caress",
       "power": 5,
-      "special": "Ignores Armour."
+      "special": "6\" range. Ignores Armour."
     }
   ],
   "equipment": [],
@@ -32,7 +32,11 @@
     "bestiary:fly",
     {
       "name": "Lure of the Light",
-      "description": ""
+      "description": "<p>Each enemy Character that is Activated within 8\" of the Will o'the Wisp must take a Bravery Test. If this is failed, they must spend their free movement directly towards the Will o'the Wisp. Any Leg It attempts must also be made towards her. If they are in base contact with an enemy, they must attempt to Disengage.</p>"
+    },
+    {
+      "name": "Incorporeal",
+      "description": "<p>Any Ranged Attacks against the Will o'the Wisp are at a Disadvantage.</p>"
     }
   ],
   "baseSize": 30

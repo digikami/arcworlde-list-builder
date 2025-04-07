@@ -1,0 +1,35 @@
+{
+  "id": "wild-unicorn",
+  "factionId": "bestiary",
+  "name": "Wild Unicorn",
+  "class": ["Monster"],
+  "baseCost": 60,
+  "artwork": "/assets/artwork/unicorn.jpg",
+
+  "ap": 3,
+  "move": 10,
+  "bravery": 10,
+  "hp": 8,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Piercing Horn",
+      "power": 7,
+      "special": "+2 Power if this Attack is made after a Charge."
+    },
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Hoof",
+      "power": 4
+    }
+  ],
+  "equipment": [
+  ],
+  "items": [],
+  "traits": [
+    "bestiary:agile"
+  ],
+  "baseSize": 50
+}

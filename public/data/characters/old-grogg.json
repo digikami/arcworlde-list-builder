@@ -13,36 +13,36 @@
   "attacks": [
     {
       "type": "melee",
-      "ap": 2,
-      "name": "Ravenous Chomp",
-      "power": 6,
-      "special": "If a Critical Hit is rolled, Old Grogg may make a single attempt to Gobble the target for only an Easy Feat."
+      "ap": 1,
+      "name": "Weighty Smash",
+      "power": 5,
+      "special": "If a Crit is rolled and the target Character is on a smaller base size they become Prone after the Attack has been made."
     },
     {
       "type": "melee",
       "ap": 2,
       "name": "Launch",
       "power": 5,
-      "special": "If a Critical Hit is rolled and the target is on a smaller base size than Old Grogg, the target is thrown D6 inches in a direction of the Troll player's choosing. Afterwards, this Character is Prone."
+      "special": "If a Critical Hit is made, the target Character may be thrown D6 inches in a direction of the Troll player's choosing. This Character is Prone."
     },
     {
       "type": "melee",
-      "ap": 1,
-      "name": "Weighty Smash",
-      "power": 5,
-      "special": "If a Critical Hit is rolled and the target is on a smaller base size than Old Grogg, the target becomes Prone after the Attack has been made."
+      "ap": 2,
+      "name": "Ravenous Chomp",
+      "power": 6,
+      "special": "If a Crit is rolled, Old Grogg may make a single attempt to Gobble the target for only an Easy Feat."
     }
   ],
   "equipment": [
   ],
   "items": [],
   "traits": [
-    "bestiary:leader-of-the-pack",
     "bestiary:split-activation",
+    "bestiary:fearsome",
     "bestiary:dwindling-strength",
     "bestiary:death-throes",
-    "bestiary:fearsome",
     "bestiary:gobble",
+    "bestiary:leader-of-the-pack",
     {
       "name": "Aquatic",
       "description": "This character may move through water-based terrain as if it were Open Terrain. In addition, whilst in water-based terrain it gains +1\" on all Movement (including Leg It rolls), and may re-roll a single dice for any Feat attempt."

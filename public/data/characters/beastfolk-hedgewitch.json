@@ -13,9 +13,9 @@
   "attacks": [
     {
       "type": "melee",
-      "ap": 2,
+      "ap": 1,
       "name": "Staff Thump",
-      "power": 4
+      "power": 3
     }
   ],
   "equipment": [],

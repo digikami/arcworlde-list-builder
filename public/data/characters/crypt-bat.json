@@ -22,11 +22,12 @@
   "items": [],
   "traits": [
     "bestiary:agile",
+    "bestiary:fly",
     "undead-vampires:insignificant",
     {
       "id": "flittering",
       "name": "Flittering",
-      "description": "<p>A Crypt Bat may move over terrain unhindered. In addition, any successful Hits against them must be re-rolled.</p>"
+      "description": "<p>Crypt Bats are annoyingly agile flyers and difficult to swat from the air. Any successful Hits against them must be re-rolled.</p>"
     }
   ],
   "baseSize": 30

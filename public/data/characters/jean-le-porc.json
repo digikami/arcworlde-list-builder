@@ -1,0 +1,41 @@
+{
+  "id": "jean-le-porc",
+  "factionId": "swords-for-hire",
+  "name": "Jean le Porc",
+  "class": ["Sword for Hire"],
+  "baseCost": 70,
+
+  "ap": 3,
+  "move": 4,
+  "bravery": 10,
+  "hp": 10,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Glinting Thrust",
+      "power": 6,
+      "special": "+3 Power if in base contact with more than one enemy Character."
+    },
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Shield Bonk",
+      "power": 4,
+      "special": "If a Crit is rolled, the player may choose to move the target 1\" in a direction of their choosing. This effect only applies to targets on a 50mm base or less."
+    }
+  ],
+  "equipment": [
+    { "armouryItem": "common:shield", "fixed": true },
+    { "armouryItem": "common:heavy-armour", "fixed": true }
+  ],
+  "items": [],
+  "traits": [
+    {
+      "name": "For Honour and Glory!", 
+      "description": "<p>Jean le Porc quests only for glory and to be remembered in epic tales. If a Legendary Feat attempt is failed, re-roll the attempt.</p>"
+    }
+  ],
+  "tags": ["unique"],
+  "baseSize": 30
+}

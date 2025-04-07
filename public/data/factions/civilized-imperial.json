@@ -85,7 +85,7 @@
           "type": "ranged",
           "name": "Shot",
           "power": 8,
-          "special": "This attack may only be made once per Activation. If there are more Failures than Successes when rolling to Hit, the wielder takes 1 Hit that ignores Armour."
+          "special": "20\" range. This Attack may only be made once per Activation. If there are more Failures than Successes when rolling to Hit, the wielder takes 1 Hit that ignores Armour."
         }]
       }
     },

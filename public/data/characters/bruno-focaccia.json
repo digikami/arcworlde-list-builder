@@ -31,11 +31,11 @@
   ],
   "items": [],
   "traits": [
-    "swords-for-hire:personality",
     {
       "name": "Scarlet Blur", 
       "description": "If there is only one enemy Character in base contact, Bruno may re-roll all failed Defence rolls."
     }
   ],
+  "tags": ["unique"],
   "baseSize": 30
 }
