@@ -2,7 +2,7 @@
   "id": "forest-troll",
   "factionId": "bestiary",
   "name": "Forest Troll",
-  "class": ["monster"],
+  "class": ["Monster"],
   "baseCost": 220,
   "artwork": "/assets/artwork/forest-troll.jpg",
 

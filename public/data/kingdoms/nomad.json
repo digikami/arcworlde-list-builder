@@ -3,6 +3,7 @@
   "name": "The Nomads of the Wild",
   "factions": [
     "nomad-beastfolk",
-    "nomad-ourk"
+    "nomad-ourk",
+    "nomad-gremlins"
   ]
 }

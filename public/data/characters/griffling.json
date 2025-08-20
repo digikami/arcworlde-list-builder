@@ -2,7 +2,7 @@
   "id": "griffling",
   "factionId": "bestiary",
   "name": "Griffling",
-  "class": ["beast"],
+  "class": ["Beast"],
   "baseCost": 22,
   "artwork": "/assets/artwork/griffling.jpg",
 

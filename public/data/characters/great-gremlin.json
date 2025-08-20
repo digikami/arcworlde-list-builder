@@ -1,0 +1,48 @@
+{
+  "id": "great-gremlin",
+  "factionId": "nomad-gremlins",
+  "name": "The Great Gremlin",
+  "class": ["Commander"],
+  "baseCost": 100,
+  "artwork": "/assets/artwork/great-gremlin.jpg",
+
+  "ap": 4,
+  "move": 4,
+  "bravery": 9,
+  "hp": 9,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Stone Hammer",
+      "power": 7,
+      "special": "+3 Power if target is Prone."
+    },
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Enthusiastic Smack",
+      "power": 5,
+      "special": "Crit ignores Armour."
+    },
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Kneecap",
+      "power": 5,
+      "special": "+1 Power if the target is on a 40mm base or larger."
+    }
+  ],
+  "equipment": [],
+  "items": [],
+  "traits": [
+    "nomad-gremlins:burrow-dweller",
+    "nomad-gremlins:intimidating",
+    {
+      "name": "Clout Chaser",
+      "description": ""
+    }
+  ],
+  "tags": ["gremlin"],
+  "baseSize": 30
+}

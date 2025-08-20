@@ -1,0 +1,34 @@
+{
+  "id": "spitlizard",
+  "factionId": "nomad-gremlins",
+  "name": "Spitlizard",
+  "class": ["Beast"],
+  "baseCost": 30,
+  "artwork": "/assets/artwork/spitlizard.jpg",
+
+  "ap": 2,
+  "move": 6,
+  "bravery": 6,
+  "hp": 4,
+  "attacks": [
+    {
+      "type": "ranged",
+      "name": "Poison Spit",
+      "power": 6,
+      "special": "10\" range. Ignores Armour. If this Attack causes Damage, the target loses an additional 1HP at the start of their next Activation (even if it isn't in the same Round)."
+    },
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Bite",
+      "power": 4
+    }
+  ],
+  "equipment": [],
+  "items": [],
+  "traits": [
+    "bestiary:agile",
+    "nomad-gremlins:diminutive"
+  ],
+  "baseSize": 30
+}

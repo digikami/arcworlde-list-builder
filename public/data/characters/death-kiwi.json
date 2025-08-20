@@ -1,0 +1,37 @@
+{
+  "id": "death-kiwi",
+  "factionId": "bestiary",
+  "name": "Death Kiwi",
+  "class": ["Beast"],
+  "baseCost": 60,
+  "artwork": "/assets/artwork/death-kiwi.jpg",
+
+  "ap": 3,
+  "move": 8,
+  "bravery": 7,
+  "hp": 7,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Ripping Claws",
+      "power": 7,
+      "special": "+3 Power if this Character Charged into combat this Round."
+    },
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Peck",
+      "power": 4
+    }
+  ],
+  "equipment": [
+  ],
+  "items": [],
+  "traits": [
+    "bestiary:pack-hunter",
+    "bestiary:agile",
+    "bestiary:monstrous-mount"
+  ],
+  "baseSize": 40
+}

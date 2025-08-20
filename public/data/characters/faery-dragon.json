@@ -2,7 +2,7 @@
   "id": "faery-dragon",
   "factionId": "bestiary",
   "name": "Faery Dragon",
-  "class": ["beast"],
+  "class": ["Beast"],
   "baseCost": 100,
   "artwork": "/assets/artwork/faery-dragon.jpg",
 

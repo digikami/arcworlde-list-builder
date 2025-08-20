@@ -1,0 +1,30 @@
+{
+  "id": "gremlin-shaman",
+  "factionId": "nomad-gremlins",
+  "name": "Shaman",
+  "class": ["Mage"],
+  "baseCost": 60,
+  "artwork": "/assets/artwork/gremlin-shaman.jpg",
+
+  "ap": 3,
+  "move": 5,
+  "bravery": 8,
+  "hp": 6,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Poke in the Parts",
+      "power": 5,
+      "special": "A Crit reduces the target’s Movement by 1 for the rest of the Round."
+    }
+  ],
+  "equipment": [],
+  "items": [],
+  "traits": [
+    "nomad-gremlins:burrow-dweller",
+    "nomad-gremlins:born-slippy"
+  ],
+  "tags": ["gremlin"],
+  "baseSize": 30
+}

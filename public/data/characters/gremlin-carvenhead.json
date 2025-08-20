@@ -1,0 +1,35 @@
+{
+  "id": "gremlin-carvenhead",
+  "factionId": "nomad-gremlins",
+  "name": "Carvenhead",
+  "class": ["Irregular"],
+  "baseCost": 40,
+  "artwork": "/assets/artwork/gremlin-carvenhead.jpg",
+
+  "ap": 2,
+  "move": 4,
+  "bravery": 7,
+  "hp": 7,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Wooden Headbutt",
+      "power": 5
+    }
+  ],
+  "equipment": [
+    { "armouryItem": "common:light-armour", "fixed": true }
+  ],
+  "items": [],
+  "traits": [
+    "nomad-gremlins:burrow-dweller",
+    "nomad-gremlins:diminutive",
+    {
+      "name": "The Carven Idol",
+      "description": ""
+    }
+  ],
+  "tags": ["gremlin"],
+  "baseSize": 30
+}

@@ -1,0 +1,47 @@
+{
+  "id": "death-kiwi-alpha",
+  "factionId": "bestiary",
+  "name": "Death Kiwi Alpha",
+  "class": ["Monster"],
+  "baseCost": 100,
+  "artwork": "/assets/artwork/death-kiwi.jpg",
+
+  "ap": 4,
+  "move": 8,
+  "bravery": 9,
+  "hp": 12,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Rending Claws",
+      "power": 8,
+      "special": "+3 Power if this Character Charged into combat this Round."
+    },
+    {
+      "type": "ranged",
+      "name": "Avian Screech",
+      "power": 2,
+      "special": "6\" range. Effects all non-Kiwi Characters in range."
+    },
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Razor Peck",
+      "power": 5
+    }
+  ],
+  "equipment": [
+  ],
+  "items": [],
+  "traits": [
+    "bestiary:leader-of-the-pack",
+    "bestiary:agile",
+    "bestiary:monstrous-mount",
+    {
+      "name": "Alpha",
+      "description": ""
+    }
+  ],
+  "baseSize": 50
+}

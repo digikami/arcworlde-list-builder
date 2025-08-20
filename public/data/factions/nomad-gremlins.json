@@ -1,0 +1,112 @@
+{
+  "id": "nomad-gremlins",
+  "listable": true,
+  "name": "Gremlins",
+  "version": "Alpha 1.1",
+  "traits": [
+    {
+      "id": "born-slippy",
+      "name": "Born Slippy",
+      "description": ""
+    },
+    {
+      "id": "burrow-dweller",
+      "name": "Burrow Dweller",
+      "description": ""
+    },
+    {
+      "id": "intimidating",
+      "name": "Intimidating",
+      "description": ""
+    },
+    {
+      "id": "diminutive",
+      "name": "Diminutive",
+      "description": ""
+    }
+  ],
+  "cost_modifiers": [],
+  "spell_lists": [{
+    "id": "lore-of-mischief",
+    "name": "The Lore of Mischief",
+    "spells": [
+      {
+        "name": "Chittering Bugs",
+        "draw": 14,
+        "description": ""
+      }
+    ]
+  }],
+  "armoury": [
+    {
+      "id": "pilfered-scran",
+      "name": "Pilfered Scran",
+      "type": "Item",
+      "baseCost": 10,
+      "description": ""
+    },
+    {
+      "id": "gremlin-ranged-weapon",
+      "name": "Gremlin Ranged Weapon",
+      "type": "Gear",
+      "baseCost": 15,
+      "description": "",
+      "modifications": {
+        "attacks": [{
+          "type": "ranged",
+          "name": "Shot",
+          "power": 5,
+          "special": "12\" range."
+        }]
+      }
+    },
+    {
+      "id": "burrowing-tools",
+      "name": "Burrowing Tools",
+      "type": "Gear",
+      "baseCost": 20,
+      "allow": [{"traits": "nomad-gremlins:burrow-dweller"}],
+      "description": ""
+    },
+    {
+      "id": "shield-carriers",
+      "name": "Shield Carriers",
+      "type": "Gear",
+      "baseCost": 50,
+      "description": "<p>The Character gains +8HP and +1 Armour. The Great Gremlin will also have a 50mm base size.</p>",
+      "allow": [{"id": "great-gremlin"}],
+      "modifications": {
+        "hp": 8,
+        "baseSize": 50
+      }
+    },
+    {
+      "id": "poison-goop",
+      "name": "Poison Goop",
+      "type": "Item",
+      "baseCost": 5,
+      "description": "<p>One use only. During this Round, if a target has HP removed by an Attack from this Character, the target loses an additional 1HP at the start of their next Activation (even if it isn't in the same Round).</p>"
+    },
+    {
+      "id": "pterra-wings",
+      "name": "Pterra Wings",
+      "type": "Gear",
+      "baseCost": 20,
+      "allow": [{"traits": "nomad-gremlins:burrow-dweller"}],
+      "description": "<p>May only be equipped to Characters with the Burrow Dweller Trait. Bestows the Flight Trait (see Common Traits in the Core Roles) and +4 Movement. </p>",
+      "modifications": {
+        "move": 4,
+        "traits": ["bestiary:fly"]
+      }
+    }
+  ],
+  "characters": [
+    "great-gremlin",
+    "gremlin-shaman",
+    "gremlin-scamp",
+    "gremlin-trophy-hunter",
+    "gremlin-carvenhead",
+    "jungle-troll",
+    "spitlizard"
+  ]
+}

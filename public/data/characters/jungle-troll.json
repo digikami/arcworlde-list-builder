@@ -1,0 +1,58 @@
+{
+  "id": "jungle-troll",
+  "factionId": "nomad-gremlins",
+  "name": "Jungle Troll",
+  "class": ["Monster"],
+  "baseCost": 220,
+  "artwork": "/assets/artwork/jungle-troll.jpg",
+
+  "ap": 8,
+  "move": 5,
+  "bravery": 8,
+  "hp": 20,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Furious Flailing",
+      "power": 7,
+      "special": "Targets every Character (friend or foe) within 2\"."
+    },
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Pummel",
+      "power": 9,
+      "special": "If the target is on a smaller base size, move them back 2\" after this Attack has been made."
+    },
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Claw Slash",
+      "power": 6,
+      "special": "If a Critical Hit is rolled, remove 1 Armour or Shield from the target."
+    }
+  ],
+  "equipment": [
+  ],
+  "items": [],
+  "traits": [
+    "bestiary:split-activation",
+    "bestiary:fearsome",
+    "bestiary:dwindling-strength",
+    "bestiary:death-throes",
+    {
+      "name": "Long Arms",
+      "description": "Jungle Trolls may make Melee Attacks against targets up to 2” away, even if they aren’t in base contact. Attacks may still be made if there is a friendly Character between the Character and the target."
+    },
+    {
+      "name": "Hurl",
+      "description": ""
+    },
+    {
+      "name": "Swinger",
+      "description": ""
+    }
+  ],
+  "baseSize": 60
+}

@@ -2,7 +2,7 @@
   "id": "arcanid",
   "factionId": "bestiary",
   "name": "Arcanid",
-  "class": ["beast"],
+  "class": ["Beast"],
   "baseCost": 60,
   "artwork": "/assets/artwork/arcanid.jpg",
 

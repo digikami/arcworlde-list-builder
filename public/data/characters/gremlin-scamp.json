@@ -1,0 +1,37 @@
+{
+  "id": "gremlin-scamp",
+  "factionId": "nomad-gremlins",
+  "name": "Gremlin Scamp",
+  "class": ["Unit"],
+  "baseCost": 20,
+  "artwork": "/assets/artwork/gremlin-scamp.jpg",
+
+  "ap": 2,
+  "move": 5,
+  "bravery": 5,
+  "hp": 5,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Stabby Stab!",
+      "power": 5,
+      "special": "Each Critical Hit allows one more D6 to be rolled."
+    },
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Fast Attack",
+      "power": 3
+    }
+  ],
+  "equipment": [],
+  "items": [],
+  "traits": [
+    "nomad-gremlins:burrow-dweller",
+    "nomad-gremlins:born-slippy",
+    "nomad-gremlins:diminutive"
+  ],
+  "tags": ["gremlin"],
+  "baseSize": 30
+}
