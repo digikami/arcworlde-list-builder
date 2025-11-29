@@ -76,7 +76,12 @@
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="">Warband Member Card</h5>
-            <button class="btn btn-outline-secondary" @click="printCard"><i class="bi-cloud-download"></i></button>
+            <button class="btn btn-outline-secondary" :disabled="isRenderingPrint" @click="printCard">
+              <div v-if="isRenderingPrint" class="spinner-border spinner-border-sm" role="status">
+                <span class="visually-hidden">Processing...</span>
+              </div>
+              <i v-else class="bi-cloud-download"></i>
+            </button>
           </div>
           <div class="modal-body text-center">
             <div ref="memberCard" class="lh-0 a6">
@@ -160,7 +165,8 @@
         secrets: [],
         editFormValues: {
           name: this.member.get('name')
-        }
+        },
+        isRenderingPrint: false
       }
     },
     props: ['member', 'faction', 'common', 'list', 'duplicable', 'draggable'],
@@ -293,12 +299,15 @@
         })
       },
       printCard() {
+        this.isRenderingPrint = true;
         const settings = {
-          jsPDF: { format: 'a6', orientation: 'l' },
+          html2canvas: { windowWidth: 1980, scale: 4 },
+          jsPDF: { format: 'a6', orientation: 'l', putOnlyUsedFonts: true, compress: false },
           filename: 'character-card.pdf',
           image: { type: 'jpeg', quality: 1 }
         };
         html2pdf().from(this.$refs.memberCard).set(settings).save().then(() => {
+          this.isRenderingPrint = false;
           console.log('save complete');
         });
       }
