@@ -7,17 +7,19 @@
 @import "abstracts/variables";
 
 // Vendors - Part 1
-@import "node_modules/bootstrap/scss/functions";  // Import Bootstrap functions for use in variable definitions
+@import "../../node_modules/bootstrap/scss/functions";  // Import Bootstrap functions for use in variable definitions
 @import "vendors-extensions/bootstrap/variables"; // Edit Bootstrap variables in this file
-@import "node_modules/bootstrap/scss/utilities";  // Bootstrap Utility API (https://getbootstrap.com/docs/5.1/utilities/api/#add-utilities)
+// @import "../../node_modules/bootstrap/scss/maps";
+// @import "../../node_modules/bootstrap/scss/mixins";
+// @import "../../node_modules/bootstrap/scss/utilities";  // Bootstrap Utility API (https://getbootstrap.com/docs/5.1/utilities/api/#add-utilities)
 @import "vendors-extensions/bootstrap-icons/variables"; // Bootstrap Icon variables
 
 // Custom Utilities
 
 // Vendors - Part 2 
-@import "node_modules/bootstrap/scss/bootstrap"; // Import Bootstrap after utilites have been defined
-@import "node_modules/vue-multiselect/dist/vue-multiselect";
-@import "node_modules/bootstrap-icons/font/bootstrap-icons";
+@import "../../node_modules/bootstrap/scss/bootstrap"; // Import Bootstrap after utilites have been defined
+@import "../../node_modules/vue-multiselect/dist/vue-multiselect";
+@import "../../node_modules/bootstrap-icons/font/bootstrap-icons";
 
 // Base
 @import "base/base";

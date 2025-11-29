@@ -8,7 +8,7 @@
       </div>
     </div>
     <draggable
-      v-model="lists"
+      v-model="managedLists"
       handle=".handle"
       item-key="id"
       @start="drag=true"
@@ -115,7 +115,8 @@
           name: null,
           faction: null,
           subfaction: null
-        }
+        },
+        managedLists: []
       }
     },
     computed: {
@@ -149,6 +150,12 @@
     watches: ['kingdoms'],
     mounted() {
       this.assertTooltips();
+      this.managedLists = this.lists;
+    },
+    watch: {
+      lists(lists) {
+        this.managedLists = lists;
+      },
     },
     updated() {
       this.assertTooltips();

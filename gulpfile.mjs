@@ -1,26 +1,23 @@
 // Gulp setup
-const { src, dest, watch, series, parallel, lastRun } = require('gulp');
-const gulpLoadPlugins = require('gulp-load-plugins');
+import { src, dest, watch, series, parallel, lastRun } from 'gulp';
+import dartSass from 'sass';
+import gulpLoadPlugins from 'gulp-load-plugins';
+import autoprefixer from 'autoprefixer';
+import cssnanoPlugin from 'cssnano';
+import webpack from 'webpack';
+import webpackStream from 'webpack-stream';
+import webpackConfig from './webpack.config.js';
+import del from 'del';
+import imagemin from 'gulp-imagemin';
+
 const $ = gulpLoadPlugins({
+  config: process.env.npm_package_json,
   postRequireTransforms: {
     sass: function(sass) {
-      return sass(require('sass'));
+      return sass(dartSass);
     }
   }
 });
-
-// Styles setup
-const autoprefixer = require('autoprefixer');
-const cssnano = require('cssnano');
-
-// JS setup
-const webpack = require('webpack');
-const webpackStream = require('webpack-stream');
-const webpackConfig = require('./webpack.config.js');
-
-// General setup
-const del = require('del');
-const { resolve } = require('path');
 
 // Build SCSS
 function styles() {
@@ -34,7 +31,7 @@ function styles() {
     }).on('error', $.sass.logError))
     .pipe($.postcss([
       autoprefixer(),
-      cssnano({ safe: true, autoprefixer: false })
+      cssnanoPlugin({ safe: true, autoprefixer: false })
     ]))
     .pipe($.sourcemaps.write('.'))
     .pipe(dest('public/dist/styles'));
@@ -82,14 +79,14 @@ function svgIcons() {
 
 // Minify images
 function images() {
-  return src('src/images/**/*', { since: lastRun(images) })
-    .pipe($.imagemin())
+  return src('src/images/**/*', { encoding: false })
+    .pipe(imagemin())
     .pipe(dest('public/dist/images'));
 }
 
 // Deploy font files
 function fonts() {
-  return src(['src/fonts/**/*.{eot,svg,ttf,woff,woff2,otf}', 'node_modules/bootstrap-icons/font/**/*.{woff,woff2}'])
+  return src(['src/fonts/**/*.{eot,svg,ttf,woff,woff2,otf}', 'node_modules/bootstrap-icons/font/**/*.{woff,woff2}'], { encoding: false })
     .pipe(dest('public/dist/fonts'));
 }
 
@@ -97,12 +94,6 @@ function fonts() {
 // Clean the build directory
 function clean() {
   return del(['public/dist']);
-}
-
-// Measure the build size
-function measureSize() {
-  return src('public/dist/**/*')
-    .pipe($.size({ title: 'build', gzip: true }));
 }
 
 // Watches frontend files and rebuilds when they're updated
@@ -115,7 +106,6 @@ async function watchFrontendFiles() {
   watch('src/vue/**/*.vue', scripts);
   watch('src/vue/**/*.js', scripts);
   watch('src/images/**/*', images);
-  watch('src/svg-icons/**/*.svg', svgIcons);
   watch('src/fonts/**/*', fonts);
 }
 
@@ -125,26 +115,21 @@ async function runServer() {
 }
 
 // Task "build": Build the frontend (only the files used by the web project)
-const build = series(
+export const build = series(
   clean,
   lint,
-  parallel(styles, scripts, images, svgIcons, fonts),
-  measureSize
+  parallel(styles, scripts, images, fonts)
 );
 
 // Task "watch": Build the frontend, and rebuild frontend whenever source files are updated
-const buildWatch = series(
+export const buildWatch = series(
   build,
   watchFrontendFiles
 );
 
-const develop = parallel(
+export const develop = parallel(
   buildWatch,
   runServer
 );
 
-// Export the tasks
-exports.build = build;
-exports.buildWatch = buildWatch;
-exports.develop = develop;
-exports.default = build;
+export default build;

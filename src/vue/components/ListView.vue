@@ -1,5 +1,5 @@
 <template>
-  <div class="modal-header sticky-top bg-white">
+  <div class="modal-header sticky-top bg-white justify-content-between">
     <button class="btn btn-outline-secondary" :disabled="isRenderingPrint" @click="handlePrintRequest" data-bs-title="Print">
       <div v-if="isRenderingPrint" class="spinner-border spinner-border-sm" role="status">
         <span class="visually-hidden">Processing...</span>
