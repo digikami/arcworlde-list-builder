@@ -8,7 +8,6 @@ class Character extends BaseModel {
     data.armoury = data.armoury ?? [];
     data.equipment = data.equipment ?? []
     data.tags = data.tags ?? [];
-    data.species = data.species ?? "unknown";
     super(data);
   }
 

@@ -26,8 +26,7 @@
       "special": "Critical Hits cause the next Attack to have +1 Power. This does not stack."
     }
   ],
-  "equipment": [
-  ],
+  "equipment": [],
   "items": [],
   "traits": [
     "nomad-ourk:intimidating",

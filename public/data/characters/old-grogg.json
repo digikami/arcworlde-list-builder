@@ -33,8 +33,7 @@
       "special": "If a Crit is rolled, Old Grogg may make a single attempt to Gobble the target for only an Easy Feat."
     }
   ],
-  "equipment": [
-  ],
+  "equipment": [],
   "items": [],
   "traits": [
     "bestiary:split-activation",

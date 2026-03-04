@@ -19,8 +19,7 @@
       "special": "Any yfailed Hits against the target are dealt as Hits to an enemy Character within 3\" of the target."
     }
   ],
-  "equipment": [
-  ],
+  "equipment": [],
   "items": [],
   "traits": [
     "civilized-imperial:take-orders",

@@ -26,8 +26,7 @@
       "special": "Affects all Characters within 6\" and ignores Armour and Shields. On a Critical Hit, the target's Move stat is halved for this Round. This does stack."
     }
   ],
-  "equipment": [
-  ],
+  "equipment": [],
   "items": [],
   "traits": [
     "bestiary:agile"

@@ -40,8 +40,7 @@
       "special": "Affects all Characters within 2\". All Mages must pass a Bravery Test or automatically Overpower their Spells for the rest of the Round."
     }
   ],
-  "equipment": [
-  ],
+  "equipment": [],
   "items": [],
   "traits": [
     "bestiary:split-activation",

@@ -39,8 +39,7 @@
       "special": "Hits may be split between up to five target Characters. If a Critical Hit is rolled, the target Character suffers an extra Hit if they are the target of this Attack again this Activation."
     }
   ],
-  "equipment": [
-  ],
+  "equipment": [],
   "items": [],
   "traits": [
     "bestiary:split-activation",

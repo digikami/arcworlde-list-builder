@@ -25,8 +25,7 @@
       "special": "8\" range. Ignores Armour and Shields."
     }
   ],
-  "equipment": [
-  ],
+  "equipment": [],
   "items": [],
   "traits": [
     "nomad-ourk:intimidating",

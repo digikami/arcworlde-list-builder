@@ -27,8 +27,7 @@
       "special": "+2 Power if this Character is armed with a Shield."
     }
   ],
-  "equipment": [
-  ],
+  "equipment": [],
   "items": [],
   "traits": [
     "undead-ancient-dead:bones",

@@ -33,8 +33,7 @@
       "special": "May only be used against a Character on a 40mm base or less. On a Crit, the Target Character is Picked Up. They may not move, and if the Giant moves, they are taken with them and reamin in base contact. To escape the target must pass a Medium Feat in their Activation."
     }
   ],
-  "equipment": [
-  ],
+  "equipment": [],
   "items": [],
   "traits": [
     "bestiary:split-activation",

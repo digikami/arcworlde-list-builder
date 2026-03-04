@@ -33,8 +33,7 @@
       "special": "If a Critical Hit is rolled, remove 1 Armour or Shield from the target."
     }
   ],
-  "equipment": [
-  ],
+  "equipment": [],
   "items": [],
   "traits": [
     "bestiary:split-activation",

@@ -39,8 +39,7 @@
       "special": "Place a token up to 8\" away. Divide the Hits from this Attack between all Characters within 3” of the token. Add an additional +2 Hits against Flammable targets."
     }
   ],
-  "equipment": [
-  ],
+  "equipment": [],
   "items": [],
   "traits": [
     "bestiary:split-activation",

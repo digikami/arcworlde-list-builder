@@ -32,8 +32,7 @@
       "special": "Critical Hits ignore Armour"
     }
   ],
-  "equipment": [
-  ],
+  "equipment": [],
   "items": [],
   "traits": [
     "bestiary:split-activation",

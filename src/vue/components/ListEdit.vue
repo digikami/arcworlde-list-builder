@@ -214,7 +214,9 @@
             id: faction.id,
             name: faction.get('name'),
             members: faction.get('characters').filter((a) => {
-              return !(a.get("class").map((a) => a.toLowerCase()).includes("commander") && a.get('class').length == 1);
+              return !(
+                a.get('class').map((a) => a.toLowerCase()).includes("commander")
+              );
             }).map((character) => {
               return {
                 id: character.id,
@@ -231,7 +233,7 @@
               id: faction.id,
               name: faction.get('name'),
               members: faction.get('characters').filter((a) => {
-                return !(a.get("class").map((a) => a.toLowerCase()).includes("commander") && a.get('class').length == 1);
+                return !(a.get("class").map((a) => a.toLowerCase()).includes("commander"));
               }).filter((character) => {
                 return !(character.matches([{ tags: 'unique'}]) && this.list.get('members').find((member) => member.get('character').get('id') == character.get('id')));
               }).map((character) => {
