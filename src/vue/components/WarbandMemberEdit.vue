@@ -317,7 +317,7 @@
         this.isRenderingPrint = true;
         const settings = {
           html2canvas: { windowWidth: 1980, scale: 4 },
-          jsPDF: { format: 'a6', orientation: 'l', putOnlyUsedFonts: true, compress: this.secrets.includes('pdf-compression') ? true : false },
+          jsPDF: { format: 'a6', orientation: 'l', putOnlyUsedFonts: true, compress: true },
           filename: 'character-card.pdf',
           image: { type: 'jpeg', quality: 1 }
         };

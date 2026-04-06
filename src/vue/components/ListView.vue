@@ -62,7 +62,7 @@
         const settings = this.format === 'card'
           ? {
             html2canvas: { windowWidth: 1980, scale: 4 },
-            jsPDF: { format: 'a4', orientation: 'l', putOnlyUsedFonts: true, compress: this.secrets.includes('pdf-compression') ? true : false },
+            jsPDF: { format: 'a4', orientation: 'l', putOnlyUsedFonts: true, compress: true },
             image: { type: 'jpg', quality: 1 }
           }
           : {
