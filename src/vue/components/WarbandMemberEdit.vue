@@ -102,6 +102,8 @@
           <div class="btn-group">
             <multiselect
               @select="requestAddEquipment"
+              :custom-label="(opt) => `${opt.name} (${opt.cost} GP)`"
+              :show-labels="false"
               :options="equipmentDropdownOptions"
               openDirection="bottom"
               group-values="options"
@@ -109,7 +111,16 @@
               label="name"
               track-by="id"
               class="equipment-dropdown"
-            ></multiselect>
+            >
+              <template #option="slotProps">
+                <template v-if="slotProps.option.$isLabel">
+                  {{ slotProps.option.$groupLabel }}
+                </template>
+                <template v-else>
+                  {{ slotProps.option.name }} ({{ slotProps.option.cost }} GP)
+                </template>
+              </template>
+            </multiselect>
           </div>
         </div>
         <draggable
@@ -201,7 +212,8 @@
               return {
                 id: opt.get('id'),
                 name: opt.get('name'),
-                equipment: opt
+                equipment: opt,
+                cost: new WarbandEquipment({ armouryItem: opt }).totalCost(this.faction, this.member)
               }
             })
           })
@@ -215,7 +227,8 @@
             return {
               id: opt.get('id'),
               name: opt.get('name'),
-              equipment: opt
+              equipment: opt,
+              cost: new WarbandEquipment({ armouryItem: opt }).totalCost(this.faction, this.member)
             }
           })
         });
@@ -230,7 +243,8 @@
               return {
                 id: opt.get('id'),
                 name: opt.get('name'),
-                equipment: opt
+                equipment: opt,
+                cost: new WarbandEquipment({ armouryItem: opt }).totalCost(this.faction, this.member)
               }
             })
           })
@@ -244,7 +258,8 @@
             return {
               id: opt.get('id'),
               name: opt.get('name'),
-              equipment: opt
+              equipment: opt,
+              cost: new WarbandEquipment({ armouryItem: opt }).totalCost(this.faction, this.member)
             }
           })
         })
@@ -302,7 +317,7 @@
         this.isRenderingPrint = true;
         const settings = {
           html2canvas: { windowWidth: 1980, scale: 4 },
-          jsPDF: { format: 'a6', orientation: 'l', putOnlyUsedFonts: true, compress: false },
+          jsPDF: { format: 'a6', orientation: 'l', putOnlyUsedFonts: true, compress: this.secrets.includes('pdf-compression') ? true : false },
           filename: 'character-card.pdf',
           image: { type: 'jpeg', quality: 1 }
         };

@@ -74,13 +74,23 @@
           <multiselect
             @select="requestNewMember"
             :options="memberOptions"
+              :custom-label="(opt) => `${opt.name} (${opt.cost} GP)`"
+              :show-labels="false"
             openDirection="bottom"
             group-values="members"
             group-label="name"
-            label="name"
             track-by="id"
             class="equipment-dropdown"
-          ></multiselect>
+          >
+            <template #option="slotProps">
+              <template v-if="slotProps.option.$isLabel">
+                {{ slotProps.option.$groupLabel }}
+              </template>
+              <template v-else>
+                {{ slotProps.option.name}} ({{ slotProps.option.cost }} GP)
+              </template>
+            </template>
+          </multiselect>
         </div>
       </div>
       <div class="container py-3 px-0">
@@ -204,7 +214,8 @@
             return {
               id: character.id,
               name: character.get('name'),
-              character: character
+              character: character,
+              cost: this.list.getCharacterCost(new WarbandMember({ character, equipment: []})),
             };
           }).sort((a, b) => a.name == b.name ? 0 : (a.name < b.name ? -1 : 1 ))
         });
@@ -221,7 +232,8 @@
               return {
                 id: character.id,
                 name: character.get('name'),
-                character: character
+                character: character,
+                cost: this.list.getCharacterCost(new WarbandMember({ character, equipment: [] })),
               };
             }).sort((a, b) => a.name == b.name ? 0 : (a.name < b.name ? -1 : 1 ))
           }
@@ -240,7 +252,8 @@
                 return {
                   id: character.id,
                   name: character.get('name'),
-                  character: character
+                  character: character,
+                  cost: this.list.getCharacterCost(new WarbandMember({ character, equipment: [] })),
                 };
               }).sort((a, b) => a.name == b.name ? 0 : (a.name < b.name ? -1 : 1 ))
             }
