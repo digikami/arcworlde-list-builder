@@ -128,7 +128,7 @@
       "id": "monster-rider",
       "name": "Monster Rider",
       "type": "Animal Form",
-      "baseCost": 15,
+      "baseCost": 5,
       "allow": [{"traits": "nomad-beastfolk:animal-form"}],
       "description": "May use the Monstrous Mount Trait on any Beast, Monster, or Titan."
     }
