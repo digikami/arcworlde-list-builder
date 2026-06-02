@@ -1,13 +1,14 @@
 {
   "id": "common",
   "name": "Common",
+  "version": "2.23",
   "armoury": [
     {
       "id": "arcanite-token",
       "name": "Arcanite Token",
       "type": "Item",
       "baseCost": 10,
-      "description": "<p>One use only. When used, choose one effect:</p><ul><li>Grant +1AP to the Character for their Activation.</li><li>Add an extra D6 to any roll.</li><li>Allow another Spell to be cast.</li><li>Allow a D6 to be re-rolled.</li></ul>"
+      "description": "<p>One use only. When used, choose one effect:</p><ul><li>Grant +1AP to the Character for their Activation.</li><li>Add an extra D6 to any roll.</li><li>Allow another Spell to be cast.</li><li>Allow another card to be drawn from the ArcDeck</li><li>Allow a D6 to be re-rolled.</li></ul>"
     },
     {
       "id": "shield",
@@ -21,21 +22,21 @@
       "name": "Spear",
       "type": "Gear",
       "baseCost": 10,
-      "description": "<p>If equipped, a Character may make Melee Attacks against targets up to 2\" away, even if they aren't in base contact. Attacks may still be made if there is a friendly Character between the Character and the target.</p>"
+      "description": "<p>If equipped, a Character may make Melee Attacks against targets up to 2\" away, even if they aren't in base contact. Attacks may still be made if there is a friendly Character between the Character and the target.</p><p>In addition, if a Character Charges a Character armed with a Spear that isn't already in Melee Combat, they take D3 Hits before their first Attack is made.</p>"
     },
     {
       "id": "torch",
       "name": "Torch",
       "type": "Item",
-      "baseCost": 10,
-      "description": "<p>If equipped, a Character counts as Fearsome to Beasts and Monsters. In addition, the Character counts as Fearsome and has +1 Power on all Melee Attacks against Characters who are Flammable.</p><p>However, enemy Characters may re-roll Failures when attempting Feat rolls for Ranged Attacks against a Torch-carrying Character, as they are much easier to spot from afar.</p>"
+      "baseCost": 5,
+      "description": "<p>If equipped, a Character counts as Fearsome to Beasts and Monsters. In addition, the Character counts as Fearsome and has +1 Power on all Melee Attacks against Characters who are Flammable.</p>"
     },
     {
       "id": "two-handed-weapon",
       "name": "Two Handed Weapon",
       "type": "Gear",
       "baseCost": 10,
-      "description": "<p>If equipped, a Character gets +2 Power for all Melee Attacks. However, any of their own Critical Defends are discarded as if they were Failures.</p>",
+      "description": "<p>If equipped, a Character gets +2 Power for all Melee Attacks. However, they may not use a Shield and any of their own Critical Defends only count as Successes.</p>",
       "modifications": {
         "power": {
           "melee": 2
@@ -61,7 +62,7 @@
       "name": "Heavy Armour",
       "type": "Gear",
       "baseCost": 35,
-      "description": "<p>If equipped, a Character gains +2 Armour. This does not stack. In addition, any Leg It rolls are at +1 difficulty.</p>"
+      "description": "<p>If equipped, a Character gains +2 Armour. This does not stack. In addition, when Legging It the first roll is skipped and the Character falls Prone on a 5 or 6.</p>"
     }
   ],
   "traits": [
