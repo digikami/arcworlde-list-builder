@@ -3,7 +3,7 @@
   "factionId": "bestiary",
   "name": "Wild Unicorn",
   "class": ["Monster"],
-  "baseCost": 60,
+  "baseCost": 80,
   "artwork": "/assets/artwork/unicorn.jpg",
 
   "ap": 3,
