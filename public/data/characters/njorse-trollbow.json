@@ -15,6 +15,7 @@
       "ap": 2,
       "name": "Clumsy Wallop",
       "power": 7,
+      "modifiable": false,
       "special": "Targets every Character (friend or foe) within 2”."
     },
     {
