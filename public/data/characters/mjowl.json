@@ -1,0 +1,38 @@
+{
+  "id": "mjowl",
+  "factionId": "civilized-njorse",
+  "name": "Mjowl",
+  "class": ["Beast"],
+  "baseCost": 35,
+
+  "ap": 2,
+  "move": 7,
+  "bravery": 7,
+  "hp": 5,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Swoop",
+      "power": 7,
+      "special": "May target Characters within 2”. If target is on a 30mm base they are knocked Prone if more Successes than Failures are rolled."
+    },
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Talons",
+      "power": 4
+    }
+  ],
+  "equipment": [],
+  "items": [],
+  "traits": [
+    "bestiary:fly",
+    "bestiary:agile",
+    {
+      "name": "Well Trained",
+      "description": "Mjowls may be given the 'Strike Now!' order by the Thane."
+    }
+  ],
+  "baseSize": 30
+}

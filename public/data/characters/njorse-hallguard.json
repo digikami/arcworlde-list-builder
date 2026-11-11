@@ -1,0 +1,41 @@
+{
+  "id": "njorse-hallguard",
+  "factionId": "civilized-njorse",
+  "name": "Njorse Hallguard",
+  "class": ["Unit"],
+  "baseCost": 50,
+
+  "ap": 2,
+  "move": 4,
+  "bravery": 8,
+  "hp": 6,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Heavy Thrust",
+      "power": 6,
+      "special": "A Critical Hit allows the player to re-roll 1 failed Hit."
+    },
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Quick Slash",
+      "power": 4
+    }
+  ],
+  "equipment": [
+    { "armouryItem": "common:light-armour", "fixed": true }
+  ],
+  "items": [],
+  "traits": [
+    "civilized-njorse:take-orders",
+    "civilized-njorse:shield-wall",
+    "civilized-njorse:sternstal",
+    {
+      "name": "Honour Seeker",
+      "description": "At the start of their Activation, if an enemy Character is within 4” and neither of them are in Melee Combat, the Hallguard must take a Bravery Test. If this is failed, they must attempt to Charge the enemy Character."
+    }
+  ],
+  "baseSize": 30
+}

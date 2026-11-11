@@ -1,0 +1,40 @@
+{
+  "id": "njorse-huscarl",
+  "factionId": "civilized-njorse",
+  "name": "Njorse Huscarl",
+  "class": ["Elite"],
+  "baseCost": 80,
+
+  "ap": 3,
+  "move": 4,
+  "bravery": 9,
+  "hp": 7,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Hefty Chop",
+      "power": 7,
+      "special": "A Crit knocks the target Prone if they are on a 30 or 40mm base."
+    },
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Haft Whack",
+      "power": 4
+    }
+  ],
+  "equipment": [
+    { "armouryItem": "common:heavy-armour", "fixed": true }
+  ],
+  "items": [],
+  "traits": [
+    "civilized-njorse:take-orders",
+    "civilized-njorse:sternstal",
+    {
+      "name": "Heavy Armour Specialist",
+      "description": "These Characters may Leg It as normal whist equipped with Heavy Armour."
+    }
+  ],
+  "baseSize": 30
+}

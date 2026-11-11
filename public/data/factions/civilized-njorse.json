@@ -1,0 +1,102 @@
+{
+  "id": "civilized-njorse",
+  "name": "Njorse",
+  "listable": true,
+  "tags": ["njorse", "civilized"],
+  "traits": [
+    {
+      "id": "make-orders",
+      "name": "Make Orders",
+      "description": ""
+    },
+    {
+      "id": "take-orders",
+      "name": "Take Orders",
+      "description": ""
+    },
+    {
+      "id": "sternstal",
+      "name": "Sternstal",
+      "description": ""
+    },
+    {
+      "id": "shield-wall",
+      "name": "Shield Wall",
+      "description": ""
+    }
+  ],
+  "spell_lists": [
+    {
+      "id": "lore-of-frost",
+      "name": "Lore of Frost",
+      "spells": [
+        {
+          "name": "Icicle Spear",
+          "draw": 14,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "armoury": [
+    {
+      "id": "honeymead",
+      "name": "Honeymead",
+      "type": "Item",
+      "baseCost": 10,
+      "description": ""
+    },
+    {
+      "id": "njorse-throwing-weapon",
+      "name": "Njorse Throwing Weapon",
+      "type": "Item",
+      "baseCost": 5,
+      "description": "",
+      "modifications": {
+        "attacks": [{
+          "type": "ranged",
+          "name": "Shot",
+          "power": 4,
+          "special": "6\" range."
+        }]
+      }
+    },
+    {
+      "id": "frost-dragon-banner",
+      "name": "Frost Dragon Banner",
+      "type": "Item",
+      "baseCost": 20,
+      "description": ""
+    },
+    {
+      "id": "fjord-dragon-banner",
+      "name": "Fjord Dragon Banner",
+      "type": "Item",
+      "baseCost": 20,
+      "description": ""
+    },
+    {
+      "id": "mountain-troll-banner",
+      "name": "Mountain Troll Banner",
+      "type": "Item",
+      "baseCost": 20,
+      "description": ""
+    },
+    {
+      "id": "graven-banner",
+      "name": "Graven Banner",
+      "type": "Item",
+      "baseCost": 20,
+      "description": ""
+    }
+  ],
+  "characters": [
+    "njorse-thane",
+    "njorse-vala",
+    "njorse-hallguard",
+    "njorse-huscarl",
+    "njorse-tracker",
+    "njorse-trollbow",
+    "mjowl"
+  ]
+}

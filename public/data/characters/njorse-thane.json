@@ -1,0 +1,42 @@
+{
+  "id": "njorse-thane",
+  "factionId": "civilized-njorse",
+  "name": "Njorse Thane",
+  "class": ["Commander"],
+  "baseCost": 100,
+
+  "ap": 4,
+  "move": 4,
+  "bravery": 9,
+  "hp": 10,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Controlled Strike",
+      "power": 8,
+      "special": "If Crits are rolled, the rolls to defend those Hits are at Disadvantage."
+    },
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Lightning Thrust",
+      "power": 5,
+      "special": "+1 Power if the target has yet to Activate this Round."
+    }
+  ],
+  "equipment": [
+    { "armouryItem": "common:light-armour", "fixed": true }
+  ],
+  "items": [],
+  "traits": [
+    "civilized-njorse:make-orders",
+    "civilized-njorse:shield-wall",
+    "civilized-njorse:sternstal",
+    {
+      "name": "Skilled at Arms",
+      "description": "If equipped with multiple weapons, they may change them without needing an Easy Feat once per Activation."
+    }
+  ],
+  "baseSize": 30
+}

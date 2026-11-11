@@ -1,0 +1,31 @@
+{
+  "id": "njorse-vala",
+  "factionId": "civilized-njorse",
+  "name": "Vala",
+  "class": ["Mage"],
+  "baseCost": 80,
+
+  "ap": 3,
+  "move": 4,
+  "bravery": 8,
+  "hp": 6,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Frozen Blade",
+      "power": 4,
+      "special": "If a Crit is rolled, they take an additional 1 Hit if they are the target of a Spell from the Lore of Frost this Round."
+    }
+  ],
+  "equipment": [],
+  "items": [],
+  "traits": [
+    "civilized-njorse:sternstal",
+    {
+      "name": "Icy Nature",
+      "description": "Any non-Njorse Characters within 3” of the Vala are at -1 Movement. However, she counts as Flammable."
+    }
+  ],
+  "baseSize": 30
+}

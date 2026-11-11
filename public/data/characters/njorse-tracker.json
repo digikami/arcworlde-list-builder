@@ -1,0 +1,75 @@
+{
+  "id": "njorse-tracker",
+  "factionId": "civilized-njorse",
+  "name": "Njorse Tracker",
+  "class": ["Irregular"],
+  "baseCost": 100,
+
+  "ap": 2,
+  "move": 4,
+  "bravery": 8,
+  "hp": 6,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Gruff Chop",
+      "power": 6,
+      "special": "A Critical Hit allows the player to re-roll 1 failed Hit."
+    },
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Grumbling Blow",
+      "power": 4
+    }
+  ],
+  "equipment": [],
+  "items": [],
+  "traits": [
+    "civilized-njorse:sternstal",
+    {
+      "name": "Folk of the Wild",
+      "description": "Trackers may move through Diﬃcult Terrain as normal."
+    },
+    {
+      "name": "Animal Companions",
+      "description": "For an extra 15GP each, a Tracker may bring along as many Animal Companions as they wish."
+    }
+  ],
+  "armoury": [
+    {
+      "id": "feathered-friend",
+      "name": "Feathered Friend",
+      "type": "Animal Companion",
+      "baseCost": 15,
+      "description": "",
+      "allow": [{"id": "njorse-tracker"}]
+    },
+    {
+      "id": "sturdy-ally",
+      "name": "Sturdy Ally",
+      "type": "Animal Companion",
+      "baseCost": 15,
+      "description": "",
+      "allow": [{"id": "njorse-tracker"}]
+    },
+    {
+      "id": "fierce-fighter",
+      "name": "Fierce Fighter",
+      "type": "Animal Companion",
+      "baseCost": 15,
+      "description": "",
+      "allow": [{"id": "njorse-tracker"}]
+    },
+    {
+      "id": "dextrous-thief",
+      "name": "Dextrous Thief",
+      "type": "Animal Companion",
+      "baseCost": 15,
+      "description": "",
+      "allow": [{"id": "njorse-tracker"}]
+    }
+  ],
+  "baseSize": 30
+}

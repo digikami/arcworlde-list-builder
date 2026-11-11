@@ -1,0 +1,51 @@
+{
+  "id": "njorse-trollbow",
+  "factionId": "civilized-njorse",
+  "name": "Trollbow",
+  "class": ["Heavy"],
+  "baseCost": 200,
+
+  "ap": 5,
+  "move": 4,
+  "bravery": 8,
+  "hp": 20,
+  "attacks": [
+    {
+      "type": "melee",
+      "ap": 2,
+      "name": "Clumsy Wallop",
+      "power": 7,
+      "special": "Targets every Character (friend or foe) within 2”."
+    },
+    {
+      "type": "melee",
+      "ap": 1,
+      "name": "Rider's Attack",
+      "power": 5
+    },
+    {
+      "type": "ranged",
+      "name": "Trollbow Shot",
+      "power": 10,
+      "special": "20” range. This Ranged Attack requires a Hard Feat. +2 Power against Monsters and Titans."
+    }
+  ],
+  "equipment": [],
+  "items": [],
+  "traits": [
+    "civilized-njorse:sternstal",
+    {
+      "name": "Troll Rider",
+      "description": "Equipment may be taken by this Character, but the eﬀects of weapons are only added to the Rider's Attack."
+    },
+    {
+      "name": "Troll Bow",
+      "description": ""
+    },
+    {
+      "name": "Fear of Flame",
+      "description": "This Character reacts to Torches in the same way as Creatures."
+    }
+  ],
+  "baseSize": 60
+}
