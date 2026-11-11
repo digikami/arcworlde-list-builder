@@ -1,6 +1,7 @@
 {
   "id": "civilized-njorse",
   "name": "Njorse",
+  "version": "Alpha 1.0",
   "listable": true,
   "tags": ["njorse", "civilized"],
   "traits": [
