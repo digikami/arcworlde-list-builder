@@ -39,7 +39,7 @@ class WarbandMember extends BaseModel {
       }).then(() => {
         this.get('character').get('equipment').forEach((fixedEquip) => {
           if (this.get('equipment').filter((eqpJson) => {
-            return eqpJson.fixed && eqpJson.armouryItem == fixedEquip.armouryItem
+            return eqpJson.fixed && (eqpJson.armouryItem == fixedEquip.armouryItem?.id ?? fixedEquip.armouryItem);
           }).length == 0) {
             this.get('equipment').unshift(fixedEquip);
           }
