@@ -9,7 +9,7 @@
   "ap": 2,
   "move": 4,
   "bravery": 8,
-  "hp": 10,
+  "hp": 15,
   "attacks": [
     {
       "type": "melee",

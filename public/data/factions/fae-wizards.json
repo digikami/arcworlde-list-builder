@@ -2,6 +2,7 @@
   "id": "fae-wizards",
   "listable": true,
   "name": "Wizards",
+  "version": "2.24",
   "traits": [
     {
       "id": "thing-of-magic",

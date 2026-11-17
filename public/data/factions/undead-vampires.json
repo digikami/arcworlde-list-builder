@@ -2,7 +2,7 @@
   "id": "undead-vampires",
   "listable": true,
   "name": "Vampires",
-  "version": "Alpha",
+  "version": "2.24",
   "traits": [
     {
       "id": "enthrall",
@@ -55,6 +55,22 @@
       "description": "<p></p>"
     },
     {
+      "id": "",
+      "name": "Vauhemian Ranged Weapon",
+      "type": "Gear",
+      "baseCost": 15,
+      "description": "",
+      "allow": [{ "tags": "!vampire" }],
+      "modifications": {
+        "attacks": [{
+          "type": "ranged",
+          "name": "Shot",
+          "power": 5,
+          "special": "12\" range."
+        }]
+      }
+    },
+    {
       "id": "beguiling-temperment",
       "name": "Beguiling Temperament",
       "type": "Bloodline",
@@ -100,6 +116,19 @@
         "power": {
           "melee": 1
         }
+      }
+    },
+    {
+      "id": "feral",
+      "name": "Feral",
+      "type": "Bloodline",
+      "baseCost": 20,
+      "allow": [{ "tags": "vampire" }],
+      "description": "This Vampire may not use Gear. However, they gain the Agile Trait and +2AP each Activation they Charge. They are also on a 40mm base.",
+      "modifications": {
+        "traits": [{ "id": "bestiary:agile" }],
+        "baseSize": 40,
+        "allowedEquipment": [{ "type": "!Gear" }]
       }
     },
     {

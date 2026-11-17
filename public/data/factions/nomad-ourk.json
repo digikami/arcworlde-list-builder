@@ -2,6 +2,7 @@
   "id": "nomad-ourk",
   "listable": true,
   "name": "Ourk",
+  "version": "2.24",
   "commanderLimit": 2,
   "traits": [
     {

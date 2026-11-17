@@ -2,6 +2,7 @@
   "id": "nomad-beastfolk",
   "listable": true,
   "name": "Beastfolk",
+  "version": "2.24",
   "traits": [
     {
       "id": "beastkin",

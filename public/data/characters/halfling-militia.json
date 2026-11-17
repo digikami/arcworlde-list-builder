@@ -3,11 +3,11 @@
   "factionId": "civilized-halfling",
   "name": "Halfling Militia",
   "class": ["Unit"],
-  "baseCost": 40,
+  "baseCost": 30,
   "artwork": "/assets/artwork/halfling-militia.jpg",
 
   "ap": 2,
-  "move": 4,
+  "move": 3,
   "bravery": 7,
   "hp": 6,
   "attacks": [
@@ -28,6 +28,7 @@
   "equipment": [],
   "items": [],
   "traits": [
+    "civilized-halfling:stout",
     "civilized-halfling:take-orders"
   ],
   "baseSize": 30

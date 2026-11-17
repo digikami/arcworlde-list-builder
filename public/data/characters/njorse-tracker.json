@@ -3,7 +3,7 @@
   "factionId": "civilized-njorse",
   "name": "Njorse Tracker",
   "class": ["Irregular"],
-  "baseCost": 100,
+  "baseCost": 70,
 
   "ap": 2,
   "move": 4,

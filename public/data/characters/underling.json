@@ -2,7 +2,7 @@
   "id": "underling",
   "factionId": "fae-dark-lords",
   "name": "Underling",
-  "class": ["Unit"],
+  "class": ["Beast"],
   "baseCost": 20,
   "artwork": "/assets/artwork/underling.jpg",
 

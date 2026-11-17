@@ -2,7 +2,7 @@
   "id": "nomad-gremlins",
   "listable": true,
   "name": "Gremlins",
-  "version": "Alpha 1.1",
+  "version": "2.24",
   "traits": [
     {
       "id": "born-slippy",

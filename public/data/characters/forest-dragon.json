@@ -47,6 +47,7 @@
     "bestiary:dwindling-strength",
     "bestiary:death-throes",
     "bestiary:gobble",
+    "bestiary:titanic",
     {
       "name": "Advanced Fungal Regeneration",
       "description": "If this Character is not in base contact with an enemy Character at the end of an Activation, it regains D3 HP."

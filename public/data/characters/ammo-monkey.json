@@ -3,7 +3,7 @@
   "factionId": "civilized-imperial",
   "name": "Ammo Monkey",
   "class": ["Beast"],
-  "baseCost": 35,
+  "baseCost": 25,
   "artwork": "/assets/artwork/ammo-monkey.jpg",
 
   "ap": 2,
@@ -24,6 +24,11 @@
     {
       "id": "reloader",
       "name": "Reloader", 
+      "description": ""
+    },
+    {
+      "id": "opposable-thumbs",
+      "name": "Opposable Thumbs",
       "description": ""
     }
   ],

@@ -35,6 +35,10 @@
     {
       "name": "Mounted Specialist", 
       "description": ""
+    },
+    {
+      "name": "Haughty",
+      "description": ""
     }
   ],
   "baseSize": 30

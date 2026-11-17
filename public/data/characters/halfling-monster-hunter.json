@@ -3,11 +3,11 @@
   "factionId": "civilized-halfling",
   "name": "Halfling Monster Hunter",
   "class": ["Irregular"],
-  "baseCost": 60,
+  "baseCost": 50,
   "artwork": "/assets/artwork/halfling-monster-hunter.jpg",
 
   "ap": 3,
-  "move": 4,
+  "move": 3,
   "bravery": 8,
   "hp": 6,
   "attacks": [
@@ -19,6 +19,12 @@
       "special": "Re-roll all failed Hits against Monsters or Titans. These cannot be re-rolled again."
     },
     {
+      "type": "melee",
+      "ap": 1,
+      "name": "Cudgel",
+      "power": 4
+    },
+    {
       "type": "ranged",
       "name": "Lasso",
       "power": 3,
@@ -28,6 +34,7 @@
   "equipment": [],
   "items": [],
   "traits": [
+    "civilized-halfling:stout",
     {
       "name": "Traps",
       "description": ""

@@ -21,14 +21,8 @@
   "equipment": [],
   "items": [],
   "traits": [
-    {
-      "name": "Agile",
-      "description": ""
-    },
-    {
-      "name": "Pack Hunter",
-      "description": ""
-    },
+    "bestiary:agile",
+    "bestiary:pack-hunter",
     {
       "name": "Cling On",
       "description": ""

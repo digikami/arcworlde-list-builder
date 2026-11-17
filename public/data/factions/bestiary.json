@@ -2,6 +2,7 @@
   "id": "bestiary",
   "listable": true,
   "name": "Bestiary",
+  "version": "2.24",
   "traits": [
     {
       "id": "fly",
@@ -52,6 +53,11 @@
       "id": "monstrous-mount",
       "name": "Monstrous Mount",
       "description": "<p>Some Creatures can be ridden into battle by non-Creature Characters. Whilst mounted, riders count as being in Cover. Both riders and mounts are Activated at the same time and share the mount's base and movement Actions. Riders and mounts should be targeted separately by Attacks.</p><p>If mounts are Knocked Out, riders take D6 Hits and count as Prone. If riders are Knocked Out, the mount must take a Bravery Test.</p>"
+    },
+    {
+      "id": "titanic",
+      "name": "Titanic",
+      "description": "<p>Any creature with this Trait is amongst the largest to walk upon ArcWorlde. Up to 10AP may be spent per Activation, and to Leg It costs 2AP instead of 1.</p>"
     }
   ],
   "characters": [

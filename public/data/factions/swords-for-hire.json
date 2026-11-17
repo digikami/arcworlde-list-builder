@@ -2,6 +2,7 @@
   "id": "swords-for-hire",
   "listable": false,
   "name": "Swords for Hire",
+  "version": "2.24",
   "traits": [
     {
       "id": "fighting-for-coin",

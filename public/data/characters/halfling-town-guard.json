@@ -3,11 +3,11 @@
   "factionId": "civilized-halfling",
   "name": "Halfling Town Guard",
   "class": ["Elite"],
-  "baseCost": 70,
+  "baseCost": 50,
   "artwork": "/assets/artwork/halfling-town-guard.jpg",
 
   "ap": 3,
-  "move": 4,
+  "move": 3,
   "bravery": 8,
   "hp": 7,
   "attacks": [
@@ -30,6 +30,7 @@
   ],
   "items": [],
   "traits": [
+    "civilized-halfling:stout",
     "civilized-halfling:take-orders",
     {
       "name": "Bodyguard",

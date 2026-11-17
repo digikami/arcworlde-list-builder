@@ -16,7 +16,7 @@
       "ap": 2,
       "name": "Sparkle",
       "power": 5,
-      "special": "Every time this Attack is used, the Sprite loses 1AP."
+      "special": "Every time this Attack is used, the Sprite loses 1HP."
     },
     {
       "type": "melee",

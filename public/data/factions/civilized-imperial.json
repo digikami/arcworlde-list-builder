@@ -1,6 +1,7 @@
 {
   "id": "civilized-imperial",
   "name": "Imperials",
+  "version": "2.24",
   "listable": true,
   "tags": ["imperial", "civilized"],
   "traits": [
@@ -54,7 +55,7 @@
     {
       "id": "imperial-gryphon",
       "name": "Imperial Gryphon",
-      "type": "Item",
+      "type": "Gear",
       "baseCost": 15,
       "description": ""
     },
@@ -80,6 +81,7 @@
       "type": "Gear",
       "baseCost": 20,
       "description": "",
+      "allow": [{ "id": "imperial-trooper" }],
       "modifications": {
         "attacks": [{
           "type": "ranged",
@@ -92,16 +94,15 @@
     {
       "id": "arcloque-pistol",
       "name": "Arcloque Pistol",
-      "type": "Gear",
+      "type": "Item",
       "baseCost": 15,
       "description": "",
-      "allow": [{"id": "imperial-captain"}, {"id": "imperial-tinkerer"}, {"id": "imperial-dragoon"}],
       "modifications": {
         "attacks": [{
           "type": "ranged",
           "name": "Shot",
           "power": 7,
-          "special": "8\" range. This attack may only be made once per Activation. If there are more Failures than Successes when rolling to Hit, the wielder takes 1 Hit that ignores Armour."
+          "special": "8\" range. This Attack may only be made once per Arcloque Pistol per Activation. If there are more Failures than Successes when rolling to Hit, the wielder takes 1 Hit that ignores Armour. If the Character using it is not an Imperial Captain, Dragoon or Tinkerer this is increased to D3 Hits."
         }]
       }
     },

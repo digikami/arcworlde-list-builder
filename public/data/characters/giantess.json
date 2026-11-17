@@ -1,7 +1,7 @@
 {
   "id": "giantess",
   "factionId": "swords-for-hire",
-  "name": "Giant / Giantess",
+  "name": "Giant",
   "class": ["Sword for Hire", "Titan"],
   "baseCost": 600,
   "artwork": "/assets/artwork/giantess.jpg",
@@ -40,6 +40,7 @@
     "bestiary:dwindling-strength",
     "bestiary:death-throes",
     "bestiary:fearsome",
+    "bestiary:titanic",
     {
       "name": "Long Limbs", 
       "description": "This Character may Attack Characters in Melee up to 3\" away."

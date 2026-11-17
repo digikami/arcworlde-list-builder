@@ -2,6 +2,7 @@
   "id": "undead-raiders",
   "listable": true,
   "name": "Undead Raiders",
+  "version": "2.24",
   "traits": [
     {
       "id": "raiser-of-the-dead",

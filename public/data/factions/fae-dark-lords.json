@@ -2,6 +2,7 @@
   "id": "fae-dark-lords",
   "listable": true,
   "name": "Dark Lords",
+  "version": "2.24",
   "traits": [
     {
       "id": "dark-ones-will",

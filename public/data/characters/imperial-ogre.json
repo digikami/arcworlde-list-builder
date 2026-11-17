@@ -24,6 +24,12 @@
       "name": "Big Boot",
       "power": 5,
       "special": "+2 Power if the target is Prone."
+    },
+    {
+      "type": "ranged",
+      "name": "Volley Gun Shot",
+      "power": 6,
+      "special": "16\" range. This Attack requires a Hard Feat and may only be made once per Turn. Draw a line from the base of the Attacker to the Target. All Characters within 2” of this line are also targeted by this Attack. If there are more Failures than Successes when rolling to Hit, the wielder takes D3 Hits that ignores Armour."
     }
   ],
   "equipment": [],
@@ -35,21 +41,5 @@
       "description": ""
     }
   ],
-  "armoury": [{
-    "id": "volley-gun",
-    "name": "Volley Gun",
-    "type": "Gear",
-    "baseCost": 40,
-    "description": "",
-    "allow": [{"id": "imperial-ogre"}],
-    "modifications": {
-      "attacks": [{
-        "type": "ranged",
-        "name": "Volley Gun Shot",
-        "power": 6,
-        "special": "16\" range. This Attack requires a Hard Feat. Draw a line from the base of the Attacker to the Target. All Characters within 2\" of this line are also targeted by this Attack. If there are more Failures than Successes when rolling to Hit, the wielder takes D3 Hits that ignores Armour."
-      }]
-    }
-  }],
   "baseSize": 60
 }

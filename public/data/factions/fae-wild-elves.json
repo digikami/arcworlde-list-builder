@@ -2,6 +2,7 @@
   "id": "fae-wild-elves",
   "listable": true,
   "name": "Wild Elves",
+  "version": "2.24",
   "traits": [
     {
       "id": "summoner",

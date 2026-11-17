@@ -28,5 +28,5 @@
       "description": "<p>This Character loses 1HP each time it is Activated.</p>"
     }
   ],
-  "baseSize": 40
+  "baseSize": 30
 }

@@ -3,11 +3,11 @@
   "factionId": "civilized-halfling",
   "name": "Halfling Battle Cook",
   "class": ["Mage"],
-  "baseCost": 80,
+  "baseCost": 75,
   "artwork": "/assets/artwork/halfling-battle-cook.jpg",
 
   "ap": 3,
-  "move": 4,
+  "move": 3,
   "bravery": 8,
   "hp": 9,
   "attacks": [
@@ -22,7 +22,8 @@
   "equipment": [],
   "items": [],
   "traits": [
-    "civilized-halfling:make-orders"
+    "civilized-halfling:stout",
+    "civilized-halfling:take-orders"
   ],
   "baseSize": 30
 }

@@ -1,6 +1,7 @@
 {
   "id": "civilized-halfling",
   "name": "Halflings",
+  "version": "2.24",
   "listable": true,
   "tags": ["halfling", "civilized"],
   "traits": [
@@ -13,6 +14,11 @@
       "id": "take-orders",
       "name": "Take Orders",
       "description": ""
+    },
+    {
+      "id": "stout",
+      "name": "Stout",
+      "description": ""
     }
   ],
   "spell_lists": [
@@ -23,7 +29,36 @@
         {
           "name": "Hearty Veggie Soup",
           "draw": 14,
-          "description": ""
+          "description": "Up to three Characters regain 3 HP."
+        },
+        {
+          "name": "Marvellous Mutton Stew",
+          "draw": 16,
+          "description": "Up to three Characters may re-roll one failed Leg It roll this Round."
+        },
+        {
+          "name": "Bullox Burgers",
+          "draw": 17,
+          "description": "Up to three Characters may re-roll all failed Defence rolls until the end of the Round."
+        },
+        {
+          "name": "Cocklegriff Madras",
+          "draw": 20,
+          "description": "Up to three Characters gain the ‘Fired Up’ Attack until the end of the Round",
+          "modifications": {
+            "attacks": [{
+              "type": "melee",
+              "name": "Fired Up",
+              "power": 8,
+              "ap": 1,
+              "special": "+1 Power against Flammable targets. Every time this Attack is used this Character takes 1 Hit that ignores Armour."
+            }]
+          }
+        },
+        {
+          "name": "Mystery Meat Surprise",
+          "draw": 21,
+          "description": "Up to three Characters gain the effects of two Spells from this list."
         }
       ]
     }
@@ -82,6 +117,7 @@
       "description": "",
       "allow": [{"id": "halfling-battle-cook"}],
       "modifications": {
+        "move": 2,
         "baseSize": 40
       }
     },

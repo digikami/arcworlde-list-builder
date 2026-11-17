@@ -3,11 +3,11 @@
   "factionId": "civilized-halfling",
   "name": "Halfling Sheriff",
   "class": ["Commander"],
-  "baseCost": 80,
+  "baseCost": 75,
   "artwork": "/assets/artwork/halfling-sheriff.jpg",
 
   "ap": 4,
-  "move": 4,
+  "move": 3,
   "bravery": 9,
   "hp": 10,
   "attacks": [
@@ -16,7 +16,7 @@
       "ap": 2,
       "name": "Furious Wallop",
       "power": 8,
-      "special": "If a Critical Hit is rolled, reduce the target Character's AP by 1 or their next Activation. This does not stack."
+      "special": "If a Critical Hit is rolled, reduce the target Character's AP by 1 for their next Activation. This does not stack."
     },
     {
       "type": "melee",
@@ -31,6 +31,7 @@
   ],
   "items": [],
   "traits": [
+    "civilized-halfling:stout",
     "civilized-halfling:make-orders",
     {
       "id": "rousing-cheer",
