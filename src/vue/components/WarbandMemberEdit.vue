@@ -254,7 +254,7 @@
         options.push({
           id: 'common',
           name: 'Common',
-          options: this.common.get('armoury').map((opt) => {
+          options: this.common.get('armoury').filter((opt) => this.member.isAllowedEquipment(opt)).map((opt) => {
             return {
               id: opt.get('id'),
               name: opt.get('name'),
@@ -323,7 +323,6 @@
         };
         html2pdf().from(this.$refs.memberCard).set(settings).save().then(() => {
           this.isRenderingPrint = false;
-          console.log('save complete');
         });
       }
     }

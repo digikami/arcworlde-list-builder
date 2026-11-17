@@ -31,11 +31,19 @@ class Equipment extends BaseModel {
       let match = true;
       for (const key in terms) {
         let comp = this.get(key);
-        match = match && comp && ( 
-          comp == terms[key] ||
-          (Array.isArray(comp) && (comp.includes(terms[key]) || comp.map((item) => item.id).includes(terms[key]))) ||
-          (comp.id && comp.id == terms[key])
-        )
+        if (!comp) {
+          match = false;
+          continue;
+        }
+        let val = terms[key].startsWith('!') ? terms[key].substring(1) : terms[key];
+        let not = terms[key].startsWith('!');
+        let keyMatch = (
+          comp == val ||
+          (Array.isArray(comp) && (comp.includes(val) || comp.map((item) => item.id).includes(val))) ||
+          (comp.id && comp.id == val)
+        );
+        if (not) keyMatch = !keyMatch
+        match = match && keyMatch;
       }
       allowed = allowed || match;
     })

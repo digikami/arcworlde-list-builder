@@ -9,7 +9,7 @@ class WarbandMember extends BaseModel {
   constructor(data) {
     data.id = data.id ?? Utils.guid4();
     data.name = data.name ?? data.character.get('name');
-    data.equipment = data.equipment ?? Utils.clone(data.character.get('equipment'));
+    data.equipment = data.equipment ?? [];
     super(data)
   }
 
@@ -39,16 +39,23 @@ class WarbandMember extends BaseModel {
       }).then(() => {
         this.get('character').get('equipment').forEach((fixedEquip) => {
           if (this.get('equipment').filter((eqpJson) => {
-            return eqpJson.fixed && (eqpJson.armouryItem == fixedEquip.armouryItem?.id ?? fixedEquip.armouryItem);
+            const eqpId = eqpJson.armouryItem?.id ?? eqpJson.armouryItem;
+            const fixId = fixedEquip.armouryItem?.id ?? fixedEquip.armouryItem;
+            return eqpJson.fixed && eqpId === fixId;
           }).length == 0) {
             this.get('equipment').unshift(fixedEquip);
           }
         })
         return Promise.all(this.get('equipment').map((e) => {
           let wbe = new WarbandEquipment(e);
-          return wbe.loadData();
+          try {
+            return wbe.loadData();
+          } catch (e) {
+            // equipment not found, presumed removed
+            return null
+          }
         })).then((eqpData) => {
-          this.set('equipment', eqpData);
+          this.set('equipment', eqpData.filter(Boolean));
         })
       })
     ]).then(() => {
@@ -128,7 +135,12 @@ class WarbandMember extends BaseModel {
   }
 
   isAllowedEquipment(equip) {
-    return this.get('character').matches(equip.get('allow'));
+    let allowedEquipment = this.get('character').get('allowedEquipment') ?? [];
+    this.get('equipment').forEach((equipment) => {
+      allowedEquipment = equipment.modifyAllowedEquipment(allowedEquipment);
+    })
+    return this.get('character').matches(equip.get('allow')) &&
+      equip.matches(allowedEquipment.length ? allowedEquipment : undefined);
   }
 
   clone() {

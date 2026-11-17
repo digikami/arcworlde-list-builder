@@ -74,8 +74,8 @@
           <multiselect
             @select="requestNewMember"
             :options="memberOptions"
-              :custom-label="(opt) => `${opt.name} (${opt.cost} GP)`"
-              :show-labels="false"
+            :custom-label="(opt) => `${opt.name} (${opt.cost} GP)`"
+            :show-labels="false"
             openDirection="bottom"
             group-values="members"
             group-label="name"
@@ -286,8 +286,8 @@
           this.handleDirty();
         })
       },
-      requestNewMember(selection, equipment = []) {
-        let wbm = new WarbandMember({ character: selection.character, equipment: equipment });
+      requestNewMember(selection) {
+        let wbm = new WarbandMember({ character: selection.character, equipment: [] });
         wbm.loadData().then((m) => {
           this.list.get('members').push(m);
           this.handleDirty();

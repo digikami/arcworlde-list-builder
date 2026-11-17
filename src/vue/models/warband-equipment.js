@@ -82,6 +82,14 @@ class WarbandEquipment extends BaseModel {
     return size;
   }
 
+  modifyAllowedEquipment(allowedEquipment) {
+    let mods = this.get('armouryItem').get('modifications');
+    if (mods && mods.allowedEquipment) {
+      return [ ...allowedEquipment, ...mods.allowedEquipment ];
+    }
+    return allowedEquipment
+  }
+
   loadData() {
     return Promise.all([
       Equipment.find(this.get('armouryItem')).then((eq) => this.set('armouryItem', eq))
